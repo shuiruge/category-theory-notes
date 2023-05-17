@@ -25,10 +25,14 @@
   Category <math|<math-tt|Top>> has topology spaces as objects and continuous
   functions between topology spaces as morphisms.
 
+  A <strong|groupoid> is a category where every morphism is an isomorphism.
+
   Category <math|<math-tt|B>G> for any group <math|G> has <math|G> as its
   unique object and <math|g\<in\>G> as its morphism. Indeed, for
   <math|\<forall\>g\<in\>G>, <math|g:G\<rightarrow\>G> with
-  <math|g:h\<mapsto\>g h>.
+  <math|g:h\<mapsto\>g h>. <math|<math-tt|B>G> is also an alternative
+  definition of the group <math|G>. That is, a <strong|group> is a groupoid
+  with a single object.
 
   Category <math|<math-tt|Mat><rsub|<with|font|Bbb|K>>> for any field
   <math|<with|font|Bbb|K>> has positive integers as objects and a morphism
@@ -47,6 +51,22 @@
 
   Category <math|<math-tt|Set<rsub|\<ast\>>>> has basepointed sets as objects
   and basepointed maps as morphisms.
+
+  An <with|font-series|bold|endomorphism> is a morphism whose domain and
+  codomain are equal.
+
+  An <with|font-series|bold|automorphism> is an endomorphism that is also an
+  isomorphism.
+
+  A <with|font-series|bold|two-sided represented functor> of a local small
+  object <math|<math-tt|C>> is <math|<math-tt|C><around*|(|\<cdummy\>,\<cdummy\>|)>:<math-tt|C><rsup|op>\<times\><math-tt|C>\<rightarrow\><math-tt|Set>>,
+  where object <math|<around*|(|x,y|)>> is mapped to
+  <math|Hom<around*|(|x,y|)>>, and morphism <math|<around*|(|f,g|)>>, where
+  <math|f:w\<rightarrow\>x> and <math|g:y\<rightarrow\>z>, for
+  <math|\<forall\>\<varphi\>\<in\>Hom<around*|(|x,y|)>>, is mapped to
+  <math|g\<circ\>\<varphi\>\<circ\>f:w\<rightarrow\>z>.
+
+  \;
 </body>
 
 <\initial>
@@ -57,7 +77,7 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|1|../../../.TeXmacs/texts/scratch/no_name_2.tm>>
+    <associate|auto-1|<tuple|1|1>>
   </collection>
 </references>
 

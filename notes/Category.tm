@@ -160,7 +160,7 @@
     <math|A\<in\>ob<rsub|<math-ss|C>>> by <math|A\<in\><math-ss|C>>, and for
     each <math|A,B\<in\><math-ss|C>>, denote
     <math|f\<in\>mor<rsub|<math-ss|C>><around*|(|A,B|)>> by
-    <math|f:A\<rightarrow\>B>.
+    <math|f:A\<rightarrow\>B> or <math|A<above|\<longrightarrow\>|f>B>.
   </notation>
 
   Now, category becomes much more familiar to us. We can think the objects of
@@ -172,7 +172,7 @@
     [Category of Set] The <with|font-series|bold|category of sets>, denoted
     as <math|<math-ss|Set>>, has the collection of all sets as its objects,
     and for each <math|A,B\<in\><math-ss|Set>>, the collection of all
-    functions from <math|A> to <math|B> as the morphisms from <math|A> to
+    functions from <math|A> to <math|B> as its morphisms from <math|A> to
     <math|B>.
   </definition>
 
@@ -227,27 +227,31 @@
     object.
   </definition>
 
-  Because there is only one object, we can simplify the notation of morphism
-  like <math|f:A\<rightarrow\>B> to <math|f>, and denote <math|f\<in\>G> for
-  that <math|f> is a morphism of a group <math|G>.
+  <\notation>
+    Because there is only one object, we can simplify the notation of
+    morphism like <math|f:A\<rightarrow\>B> to <math|f>, and denote
+    <math|f\<in\><math-ss|G>> for that <math|f> is a morphism of a group
+    <math|<math-ss|G>>.
+  </notation>
 
   If we start at defining group by arrows, we have to declare that the
   properties (axioms) of group studied in algebra are satisfied.
 
   <\theorem>
-    Let <math|G> a group, then we have
+    Let <math|<math-ss|G>> a group, then we have
 
     <\itemize>
       <item><with|font-series|bold|associativity>: for
-      <math|\<forall\>f,g,h\<in\>G>, <math|<around*|(|f\<circ\>g|)>\<circ\>h=f\<circ\><around*|(|g\<circ\>h|)>>,
+      <math|\<forall\>f,g,h\<in\><math-ss|G>>,
+      <math|<around*|(|f\<circ\>g|)>\<circ\>h=f\<circ\><around*|(|g\<circ\>h|)>>,
 
       <item><with|font-series|bold|identity element>: there exists
-      <math|1\<in\>G> such that for <math|\<forall\>f\<in\>G>,
-      <math|f\<circ\>1=1\<circ\>f=f>.
+      <math|1\<in\><math-ss|G>> such that for
+      <math|\<forall\>f\<in\><math-ss|G>>, <math|f\<circ\>1=1\<circ\>f=f>.
 
       <item><with|font-series|bold|inverse element>: for
-      <math|\<forall\>f\<in\>G>, there exists <math|g\<in\>G> such that
-      <math|f\<circ\>g=g\<circ\>f=1>.
+      <math|\<forall\>f\<in\><math-ss|G>>, there exists
+      <math|g\<in\><math-ss|G>> such that <math|f\<circ\>g=g\<circ\>f=1>.
     </itemize>
   </theorem>
 
@@ -357,11 +361,11 @@
     <math|A> if it satisfies:
 
     <\itemize>
-      <item>for <math|\<forall\>a\<in\>A>, <math|a\<leftarrow\>x> and,
+      <item>for <math|\<forall\>a\<in\>A>, <math|x\<rightarrow\>a> and,
 
       <item>for <math|\<forall\>y\<in\>\<bbb-R\>> and
-      <math|\<forall\>a\<in\>A>, if <math|y\<leftarrow\>a>, then
-      <math|y\<leftarrow\>x>.
+      <math|\<forall\>a\<in\>A>, if <math|a\<rightarrow\>y>, then
+      <math|x\<rightarrow\>y>.
     </itemize>
   </definition>
 
@@ -369,19 +373,114 @@
   word weired also has the meaning of fate. Indeed, you are on the load to
   wonderland. By comparing the definition of infimum to that of supremum, we
   find all statements are the same except that we replaced supremum by
-  infimum and <math|\<rightarrow\>> by <math|\<leftarrow\>>. All about is
-  flipping the arrows. So, in category theory, it is possible to reclaim a
-  theorem about supremum by flipping the arrows, then we get a theorem about
-  infimum, without redo the proof!
+  infimum and <math|\<rightarrow\>> by <math|\<leftarrow\>>, or by exchanging
+  domain and codomain. All about is flipping the arrows. So, in category
+  theory, it is possible to reclaim a theorem about supremum by flipping the
+  arrows, then we get a theorem about infimum, without redo the proof!
 
-  <subsection|Duality Furnishes Free Lunch>
+  <subsection|Duality is Free Lunch>
 
   This is the power of duality. Two concepts are dual if we can get one from
   the other by flipping the arrows in the other. For example, supremum and
   infimum are dual. With duality, we can double the theorems in category
   theory without redo the proofs. The dual theorems are free!
 
-  <subsection|The Dual Category of <math|<math-ss|Set>> is Weired>
+  Another example comes from the duality of direct product and direct sum of
+  two objects in a category. You may have been familiar with the direct
+  product and the direct sum of two sets. Given two sets <math|A> and
+  <math|B>, recall that the direct product
+  <math|A\<times\>B\<assign\><around*|{|*<around*|(|a,b|)>\|a\<in\>A,b\<in\>B|}>>,
+  and that the direct sum, or the disjoint union,
+  <math|A\<cup\><rsub|d>B:=<around*|{|<around*|(|a,1|)>\|a\<in\>A|}>\<cup\><around*|{|<around*|(|b,2|)>\|b\<in\>B|}>>.
+  Again, for generalizing the concepts using category theory, we have to
+  re-write the concepts using arrows. And again, this re-writing looks weired
+  at the first sight.
+
+  <\definition>
+    [Direct Product of Two Objects] Given a category <math|<math-ss|C>>. For
+    any <math|A,B\<in\><math-ss|C>>, the <with|font-series|bold|direct
+    product> of <math|A> and <math|B> is another object
+    <math|C\<in\><math-ss|C>> together with two morphisms
+    <math|\<alpha\>:C\<rightarrow\>A> and <math|\<beta\>:C\<rightarrow\>B>
+    such that, for any <math|C<rprime|'>\<in\><math-ss|C>>, any
+    <math|\<alpha\><rprime|'>:C<rprime|'>\<rightarrow\>A> and
+    <math|\<beta\><rprime|'>:C<rprime|'>\<rightarrow\>B>, there exists an
+    unique morphism <math|\<gamma\>:C<rprime|'>\<rightarrow\>C> so that
+    <math|\<alpha\><rprime|'>=\<alpha\>\<circ\>\<gamma\>> and
+    <math|\<beta\><rprime|'>=\<beta\>\<circ\>\<gamma\>>.
+  </definition>
+
+  So, a direct product of objects <math|A> and <math|B> and a triplet
+  <math|<around*|(|C,\<alpha\>,\<beta\>|)>>. The same for direct sum.
+
+  <\definition>
+    [Direct Product of Sum Objects] Given a category <math|<math-ss|C>>. For
+    any <math|A,B\<in\><math-ss|C>>, the <with|font-series|bold|direct
+    product> of <math|A> and <math|B> is another object
+    <math|C\<in\><math-ss|C>> together with two morphisms
+    <math|\<alpha\>:A\<rightarrow\>C> and <math|\<beta\>:B\<rightarrow\>C>
+    such that, for any <math|C<rprime|'>\<in\><math-ss|C>>, any
+    <math|\<alpha\><rprime|'>:A\<rightarrow\>C<rprime|'>> and
+    <math|\<beta\><rprime|'>:B\<rightarrow\>C<rprime|'>>, there exists an
+    unique morphism <math|\<gamma\>:C\<rightarrow\>C<rprime|'>> so that
+    <math|\<alpha\><rprime|'>=\<gamma\>\<circ\>\<alpha\>> and
+    <math|\<beta\><rprime|'>=\<gamma\>\<circ\>\<beta\>>.
+  </definition>
+
+  Notice that flipping arrows in composition <math|f\<circ\>g> gives
+  <math|g\<circ\>f>. With the aid of this, we find that the definitions of
+  direct product and of direct sum are dual. Even though this is
+  superficially distinct from the definitions in set theory, but they are
+  equivalent, as you can check directly.
+
+  There are two benefits brought by re-writing by arrows. The first is about
+  generalization. Re-writing by arrows can generalize the concepts from set
+  theory to more mathematical domains, like group theory. Indeed, from these
+  new definitions, we get the direct product and direct sum of groups, in the
+  category <math|<math-ss|Grp>>.
+
+  The other benefits is about duality. To see this, we claim a non-trivial
+  theorem about direct product, and see that a non-trivial theorem about
+  direct sum is fulfilled on its own. This theorem claims that the direct
+  product is, in the sense of isomorphism, unique.
+
+  <\theorem>
+    [Uniqueness of Direct Product] Given a category <math|<math-ss|C>>. For
+    any <math|A,B\<in\><math-ss|C>> and any two direct products
+    <math|<around*|(|C,\<alpha\>,\<beta\>|)>> and
+    <math|<around*|(|C<rprime|'>,\<alpha\><rprime|'>,\<beta\><rprime|'>|)>>.
+    Then, there exists an unique isomorphism
+    <math|\<gamma\>:C<rprime|'>\<rightarrow\>C> such that
+    <math|\<alpha\><rprime|'>=\<alpha\>\<circ\>\<gamma\>> and
+    <math|\<beta\><rprime|'>=\<beta\>\<circ\>\<gamma\>>.
+  </theorem>
+
+  That is, <math|C> and <math|C<rprime|'>>, <math|\<alpha\>> and
+  <math|\<alpha\><rprime|'>>, <math|\<beta\>> and <math|\<beta\><rprime|'>>
+  are equivalent in the sense of isomorphism.
+
+  <\proof>
+    \;
+  </proof>
+
+  By flipping the arrows in the theorem and its proof, we get the theorem
+  claims that the direct sum is unique, in the sense of isomorphism.
+
+  <\theorem>
+    [Uniqueness of Direct Sum] Given a category <math|<math-ss|C>>. For any
+    <math|A,B\<in\><math-ss|C>> and any two direct products
+    <math|<around*|(|C,\<alpha\>,\<beta\>|)>> and
+    <math|<around*|(|C<rprime|'>,\<alpha\><rprime|'>,\<beta\><rprime|'>|)>>.
+    Then, there exists an unique isomorphism
+    <math|\<gamma\>:C\<rightarrow\>C<rprime|'>> such that
+    <math|\<alpha\><rprime|'>=\<gamma\>\<circ\>\<alpha\>> and
+    <math|\<beta\><rprime|'>=\<gamma\>\<circ\>\<beta\>>.
+  </theorem>
+
+  You see, it is free lunch.
+
+  <subsection|Morphisms in the Dual Category of <math|<math-ss|Set>> are Not
+  Maps>
 
   There are also dual categories. The dual of <math|<math-ss|Set>> is denoted
   by <math|<math-ss|Set><rsup|op>>, wherein all arrows are flipped. So, in
@@ -389,6 +488,75 @@
   even maps! Yet another example whose morphisms are not maps.
 
   <section|Functor>
+
+  <subsection|Functor is the Morphism of the Category of Categories>
+
+  We need some examples of category to introduce the next core concept of
+  category theory: functor. The first example is the category of topological
+  spaces.
+
+  <\definition>
+    [Category of Topological Spaces] The <with|font-series|bold|category of
+    topological spaces>, denoted as <math|<math-ss|Top>>, has the collection
+    of all topological spaces as its objects, and for each
+    <math|A,B\<in\><math-ss|Top>>, the collection of all continuous maps from
+    <math|A> to <math|B> as its morphisms from <math|A> to <math|B>.
+  </definition>
+
+  The next example is the categroy of groups.
+
+  <\definition>
+    [Category of Groups] The <with|font-series|bold|category of groups>,
+    denoted as <math|<math-ss|Grp>>, has the collection of all groups as its
+    objects, and for each <math|A,B\<in\><math-ss|Top>>, the collection of
+    all homomorphisms from <math|A> to <math|B> as its morphisms from
+    <math|A> to <math|B>.
+  </definition>
+
+  From these two examples, we find an almost free method to construct a
+  category out of objects. That is, a method to assign the morphisms. This
+  method employs the maps that preserve the structure of object as the
+  morphisms. For example, in <math|<math-ss|Top>>, the preserved structure is
+  continuity, and in <math|<math-ss|Grp>>, it is the group structure.
+
+  Notice that the objects of a category can be anything. So, it can also be
+  categories! To construct a category out of categories, the morphisms
+  between two categories can be the maps that preserve the structure of
+  category. These structure preserving maps in the category of categories are
+  functors.
+
+  <\definition>
+    [Functor] Given two categories <math|<math-ss|C>> and <math|<math-ss|D>>,
+    a <with|font-series|bold|functor> <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>
+    maps
+
+    <\itemize>
+      <item>for <math|\<forall\>A\<in\><math-ss|C>>,
+      <math|F<around*|(|A|)>\<in\><math-ss|D>>, and
+
+      <item>for <math|\<forall\>A,B\<in\><math-ss|C>> and
+      <math|\<forall\>f:A\<rightarrow\>B>,
+      <math|F<around*|(|f|)>:F<around*|(|A|)>\<rightarrow\>F<around*|(|B|)>>,
+    </itemize>
+
+    such that the structure of category is preserved, that is
+
+    <\itemize>
+      <item><with|font-series|bold|composition>: for
+      <math|\<forall\>A,B,C\<in\><math-ss|C>> and
+      <math|f:A\<rightarrow\>B,g:B\<rightarrow\>C>,
+      <math|F<around*|(|f\<circ\>g|)>=F<around*|(|f|)>\<circ\>F<around*|(|g|)>>,
+
+      <item><with|font-series|bold|identity>: for
+      <math|\<forall\>A\<in\><math-ss|C>><math|>,
+      <math|F<around*|(|1<rsub|A>|)>=1<rsub|F<around*|(|A|)>>>.
+    </itemize>
+  </definition>
+
+  Imagine a category as a series of diagrams with colored dots and arrows
+  between dots. The apply of a functor enlarges the size of the dots and
+  arrows, indicating that it has become another category, but the structure,
+  or form, of the diagrams are invariant.
 
   <section|Natural Transformation>
 </body>
@@ -405,47 +573,78 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|2.2|?>>
-    <associate|auto-11|<tuple|2.3|?>>
-    <associate|auto-12|<tuple|3|?>>
-    <associate|auto-13|<tuple|4|?>>
+    <associate|auto-10|<tuple|2.2|5>>
+    <associate|auto-11|<tuple|2.3|5>>
+    <associate|auto-12|<tuple|3|5>>
+    <associate|auto-13|<tuple|3.1|5>>
+    <associate|auto-14|<tuple|4|?>>
     <associate|auto-2|<tuple|1|1>>
-    <associate|auto-3|<tuple|1.1|2>>
-    <associate|auto-4|<tuple|1.2|3>>
+    <associate|auto-3|<tuple|1.1|1>>
+    <associate|auto-4|<tuple|1.2|2>>
     <associate|auto-5|<tuple|1.3|3>>
-    <associate|auto-6|<tuple|1.4|4>>
-    <associate|auto-7|<tuple|1.5|?>>
-    <associate|auto-8|<tuple|2|?>>
-    <associate|auto-9|<tuple|2.1|?>>
+    <associate|auto-6|<tuple|1.4|3>>
+    <associate|auto-7|<tuple|1.5|4>>
+    <associate|auto-8|<tuple|2|4>>
+    <associate|auto-9|<tuple|2.1|4>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|toc>
+      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Category,
+      Functor, and Natural Transformation>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-1><vspace|1fn>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Category>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-1><vspace|0.5fn>
+      <no-break><pageref|auto-2><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|1.1<space|2spc>A Proof can be Universal
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2>>
+      <no-break><pageref|auto-3>>
 
       <with|par-left|<quote|1tab>|1.2<space|2spc>Category is about Arrows
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3>>
+      <no-break><pageref|auto-4>>
 
       <with|par-left|<quote|1tab>|1.3<space|2spc>Objects may not be Sets
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4>>
-
-      <with|par-left|<quote|1tab>|1.4<space|2spc>Morphisms may not be
-      Functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
+
+      <with|par-left|<quote|1tab>|1.4<space|2spc>Morphisms may not be Maps
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6>>
 
       <with|par-left|<quote|1tab>|1.5<space|2spc>Category Describes
       Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6>>
+      <no-break><pageref|auto-7>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Duality>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Supremum and Infimum are
+      Dual <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9>>
+
+      <with|par-left|<quote|1tab>|2.2<space|2spc>Duality Furnishes Free Lunch
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10>>
+
+      <with|par-left|<quote|1tab>|2.3<space|2spc>The Dual Category of
+      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>
+      is Weired <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Functor>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-12><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Natural
+      Transformation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-13><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
