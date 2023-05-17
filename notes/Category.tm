@@ -124,7 +124,9 @@
 
       <item>for each <math|A,B\<in\>ob<rsub|<math-ss|C>>>, a collection of
       <with|font-series|bold|morphisms> from <math|A> to <math|B>,
-      <math|mor<rsub|<math-ss|C>><around*|(|A,B|)>>,
+      <math|mor<rsub|<math-ss|C>><around*|(|A,B|)>>, where <math|A> is the
+      <with|font-series|bold|domain> and <math|B> the
+      <with|font-series|bold|codomain>,
 
       <item>for each <math|f\<in\>mor<rsub|<math-ss|C>><around*|(|A,B|)>> and
       <math|g\<in\>mor<rsub|<math-ss|C>><around*|(|B,C|)>>, a
@@ -169,7 +171,7 @@
   category of sets.
 
   <\definition>
-    [Category of Set] The <with|font-series|bold|category of sets>, denoted
+    [Category of Sets] The <with|font-series|bold|category of sets>, denoted
     as <math|<math-ss|Set>>, has the collection of all sets as its objects,
     and for each <math|A,B\<in\><math-ss|Set>>, the collection of all
     functions from <math|A> to <math|B> as its morphisms from <math|A> to
@@ -329,8 +331,6 @@
 
   The proof now becomes trivial.
 
-  <section|Duality>
-
   <subsection|Supremum and Infimum are Dual>
 
   Arrows can represent many mathematical objects. For example, in
@@ -373,25 +373,31 @@
   word weired also has the meaning of fate. Indeed, you are on the load to
   wonderland. By comparing the definition of infimum to that of supremum, we
   find all statements are the same except that we replaced supremum by
-  infimum and <math|\<rightarrow\>> by <math|\<leftarrow\>>, or by exchanging
-  domain and codomain. All about is flipping the arrows. So, in category
-  theory, it is possible to reclaim a theorem about supremum by flipping the
-  arrows, then we get a theorem about infimum, without redo the proof!
+  infimum and domain by codomain (for instance, replaced
+  <math|y\<rightarrow\>x> by <math|x\<rightarrow\>y>). Two statements are
+  <with|font-series|bold|dual> if you can get one from the other by simply
+  flipping all the arrows in the statement. We say that supremum and infimum
+  are dual.
 
-  <subsection|Duality is Free Lunch>
+  <subsection|Morphisms in the Dual Category of <math|<math-ss|Set>> are Not
+  Maps>
 
-  This is the power of duality. Two concepts are dual if we can get one from
-  the other by flipping the arrows in the other. For example, supremum and
-  infimum are dual. With duality, we can double the theorems in category
-  theory without redo the proofs. The dual theorems are free!
+  There are also dual categories. The dual of <math|<math-ss|Set>> is denoted
+  by <math|<math-ss|Set><rsup|op>>, wherein all arrows are flipped. So, in
+  <math|<math-ss|Set><rsup|op>>, we find that arrows are not functions, not
+  even maps! Yet another example whose morphisms are not maps.
 
-  Another example comes from the duality of direct product and direct sum of
-  two objects in a category. You may have been familiar with the direct
-  product and the direct sum of two sets. Given two sets <math|A> and
-  <math|B>, recall that the direct product
-  <math|A\<times\>B\<assign\><around*|{|*<around*|(|a,b|)>\|a\<in\>A,b\<in\>B|}>>,
-  and that the direct sum, or the disjoint union,
-  <math|A\<cup\><rsub|d>B:=<around*|{|<around*|(|a,1|)>\|a\<in\>A|}>\<cup\><around*|{|<around*|(|b,2|)>\|b\<in\>B|}>>.
+  <subsection|Arrows Generalize Concepts and Theorems from One Domain to
+  Every Domain in Mathemtatics>
+
+  Why category theory? Or say, why arrows? One benefit of re-claim everything
+  in arrows is the ability of generalizing a concept in one domain to every
+  domain in mathematics. An example comes from generalizing the Cartesian
+  product, also called direct product, in the set theory.
+
+  You have been familiar with the direct product of two sets. Given two sets
+  <math|A> and <math|B>, recall that the direct product
+  <math|A\<times\>B\<assign\><around*|{|*<around*|(|a,b|)>\|a\<in\>A,b\<in\>B|}>>.
   Again, for generalizing the concepts using category theory, we have to
   re-write the concepts using arrows. And again, this re-writing looks weired
   at the first sight.
@@ -411,38 +417,25 @@
   </definition>
 
   So, a direct product of objects <math|A> and <math|B> and a triplet
-  <math|<around*|(|C,\<alpha\>,\<beta\>|)>>. The same for direct sum.
+  <math|<around*|(|C,\<alpha\>,\<beta\>|)>>. Applying to
+  <math|<math-ss|Set>>, as you can check directly, it goes back to the
+  Cartesian product of two sets. We can also apply it to
+  <math|<math-ss|Grp>>, which furnishes the group direct product:
 
   <\definition>
-    [Direct Product of Sum Objects] Given a category <math|<math-ss|C>>. For
-    any <math|A,B\<in\><math-ss|C>>, the <with|font-series|bold|direct
-    product> of <math|A> and <math|B> is another object
-    <math|C\<in\><math-ss|C>> together with two morphisms
-    <math|\<alpha\>:A\<rightarrow\>C> and <math|\<beta\>:B\<rightarrow\>C>
-    such that, for any <math|C<rprime|'>\<in\><math-ss|C>>, any
-    <math|\<alpha\><rprime|'>:A\<rightarrow\>C<rprime|'>> and
-    <math|\<beta\><rprime|'>:B\<rightarrow\>C<rprime|'>>, there exists an
-    unique morphism <math|\<gamma\>:C\<rightarrow\>C<rprime|'>> so that
-    <math|\<alpha\><rprime|'>=\<gamma\>\<circ\>\<alpha\>> and
-    <math|\<beta\><rprime|'>=\<gamma\>\<circ\>\<beta\>>.
+    [Group Direct Product] Given two groups <math|G> and <math|H>, the
+    <with|font-series|bold|group direct product> of <math|G> and <math|H> is
+    defined as <math|<around*|{|<around*|(|g,h|)>\|g\<in\>G,h\<in\>H|}>>
+    equipped with group multiplication <math|<around*|(|g,h|)>\<times\><around*|(|g<rprime|'>,h<rprime|'>|)>\<assign\><around*|(|g\<circ\>g<rprime|'>,h\<cdot\>h<rprime|'>|)>>
+    where <math|\<circ\>> is the muliplication of <math|G> and
+    <math|\<cdot\>> of <math|H>.
   </definition>
 
-  Notice that flipping arrows in composition <math|f\<circ\>g> gives
-  <math|g\<circ\>f>. With the aid of this, we find that the definitions of
-  direct product and of direct sum are dual. Even though this is
-  superficially distinct from the definitions in set theory, but they are
-  equivalent, as you can check directly.
+  It is like the Cartesian product, but extra structure are implied.
 
-  There are two benefits brought by re-writing by arrows. The first is about
-  generalization. Re-writing by arrows can generalize the concepts from set
-  theory to more mathematical domains, like group theory. Indeed, from these
-  new definitions, we get the direct product and direct sum of groups, in the
-  category <math|<math-ss|Grp>>.
-
-  The other benefits is about duality. To see this, we claim a non-trivial
-  theorem about direct product, and see that a non-trivial theorem about
-  direct sum is fulfilled on its own. This theorem claims that the direct
-  product is, in the sense of isomorphism, unique.
+  Also, all specific categories would be benefited from a theorem claimed in
+  category theory. Such as the uniqueness of direct product in the sense of
+  isomorphism.
 
   <\theorem>
     [Uniqueness of Direct Product] Given a category <math|<math-ss|C>>. For
@@ -463,29 +456,52 @@
     \;
   </proof>
 
-  By flipping the arrows in the theorem and its proof, we get the theorem
-  claims that the direct sum is unique, in the sense of isomorphism.
+  This theorem holds not only for Cartesian product of sets, but also, for
+  instance, for the group direct product.
 
-  <\theorem>
-    [Uniqueness of Direct Sum] Given a category <math|<math-ss|C>>. For any
-    <math|A,B\<in\><math-ss|C>> and any two direct products
-    <math|<around*|(|C,\<alpha\>,\<beta\>|)>> and
-    <math|<around*|(|C<rprime|'>,\<alpha\><rprime|'>,\<beta\><rprime|'>|)>>.
-    Then, there exists an unique isomorphism
-    <math|\<gamma\>:C\<rightarrow\>C<rprime|'>> such that
+  <subsection|Duality is Free Lunch>
+
+  Another benefit of viewing everything in arrows is duality. In category
+  theory, it is natural to think what would happen if we flip all the arrows.
+  Just like the relation between supremum and infimum, it is natural to ask
+  what if we flip all the arrows in the definition of direct product. This
+  furnishes a new concept we called direct sum.
+
+  <\definition>
+    [Direct Sum of Two Objects] Given a category <math|<math-ss|C>>. For any
+    <math|A,B\<in\><math-ss|C>>, the <with|font-series|bold|direct product>
+    of <math|A> and <math|B> is another object <math|C\<in\><math-ss|C>>
+    together with two morphisms <math|\<alpha\>:A\<rightarrow\>C> and
+    <math|\<beta\>:B\<rightarrow\>C> such that, for any
+    <math|C<rprime|'>\<in\><math-ss|C>>, any
+    <math|\<alpha\><rprime|'>:A\<rightarrow\>C<rprime|'>> and
+    <math|\<beta\><rprime|'>:B\<rightarrow\>C<rprime|'>>, there exists an
+    unique morphism <math|\<gamma\>:C\<rightarrow\>C<rprime|'>> so that
     <math|\<alpha\><rprime|'>=\<gamma\>\<circ\>\<alpha\>> and
     <math|\<beta\><rprime|'>=\<gamma\>\<circ\>\<beta\>>.
-  </theorem>
+  </definition>
 
-  You see, it is free lunch.
+  Again, a direct sum of objects <math|A> and <math|B> and a triplet
+  <math|<around*|(|C,\<alpha\>,\<beta\>|)>>. Comparing with direct product,
+  direct sum is nothing but flipping all the arrows in the statement of
+  direct product.
 
-  <subsection|Morphisms in the Dual Category of <math|<math-ss|Set>> are Not
-  Maps>
+  Applying to <math-ss|<math|Set>>, as it can be directly checked, we get the
+  disjoint union of two sets. Given two sets <math|A> and <math|B>, recall
+  that the disjoint union <math|A\<cup\><rsub|d>B:=<around*|{|<around*|(|a,1|)>\|a\<in\>A|}>\<cup\><around*|{|<around*|(|b,2|)>\|b\<in\>B|}>>.
+  This is a surprise, since, unlike the duality between supremum and infimum,
+  Cartesian product and disjoint union do not look like a pair at the first
+  sight!
 
-  There are also dual categories. The dual of <math|<math-ss|Set>> is denoted
-  by <math|<math-ss|Set><rsup|op>>, wherein all arrows are flipped. So, in
-  <math|<math-ss|Set><rsup|op>>, we find that arrows are not functions, not
-  even maps! Yet another example whose morphisms are not maps.
+  Recall the theorem that direct product is unique in the sense of
+  isomorphism. If we also flip all the arrows in the statement of the
+  theorem, as well as in the statement of its proof, then we get another
+  theorem: direct sum is unique in the sense of isomorphism, without re-do
+  the proof!
+
+  As a summary, the duality in category theory furnishes free lunch, which
+  include not only the dual concepts that are very generic, but also the dual
+  theorems that need no proof. All about is flipping arrows.
 
   <section|Functor>
 
@@ -573,19 +589,19 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|2.2|5>>
-    <associate|auto-11|<tuple|2.3|5>>
-    <associate|auto-12|<tuple|3|5>>
-    <associate|auto-13|<tuple|3.1|5>>
-    <associate|auto-14|<tuple|4|?>>
+    <associate|auto-10|<tuple|1.8|5>>
+    <associate|auto-11|<tuple|1.9|5>>
+    <associate|auto-12|<tuple|2|5>>
+    <associate|auto-13|<tuple|2.1|5>>
+    <associate|auto-14|<tuple|3|?>>
     <associate|auto-2|<tuple|1|1>>
     <associate|auto-3|<tuple|1.1|1>>
     <associate|auto-4|<tuple|1.2|2>>
     <associate|auto-5|<tuple|1.3|3>>
     <associate|auto-6|<tuple|1.4|3>>
     <associate|auto-7|<tuple|1.5|4>>
-    <associate|auto-8|<tuple|2|4>>
-    <associate|auto-9|<tuple|2.1|4>>
+    <associate|auto-8|<tuple|1.6|4>>
+    <associate|auto-9|<tuple|1.7|4>>
   </collection>
 </references>
 
