@@ -7,98 +7,6 @@
 
   <with|font|TeX Gyre Schola|><section|Category>
 
-  <subsection|A Proof can be Universal>
-
-  In this section, we give an simple example to illustrate how a proof can be
-  universal. This example relates to discrete topology.
-
-  <\definition>
-    [Discrete Topology] Given a set <math|S>, the
-    <with|font-series|bold|discrete topology> of <math|S> assigns all subsets
-    of <math|S> as open. By equiping with the discrete topology, we build a
-    topological space <math|D<around*|(|S|)>>.
-  </definition>
-
-  It is not too weired to regard <math|D> as a map, which can be thought as a
-  topological space constructor that assign the discrete topology to a set.
-  This is the starting point: viewing everything from the perspective of
-  arrows.
-
-  Consider a function <math|f> from the set <math|S> to a topological space
-  <math|X>. Now, we can construct a map from <math|D<around*|(|S|)>> to
-  <math|X> freely. Namely, the <math|g> that maps from
-  <math|D<around*|(|S|)>> to <math|X> as the same way that <math|f> maps from
-  <math|S> to the set of <math|X>. We claim that <math|g> is continuous. The
-  inverse of an open set of <math|X> is a subset of <math|S>, which is an
-  open set of <math|D<around*|(|S|)>>. So, the inverse of any open set is
-  open, meaning that <math|g> is continuous. Also, given <math|f>, <math|g>
-  is the unique map such that <math|g\<circ\>D=f>. So, we summarize the above
-  as
-
-  <\theorem>
-    Let <math|D> the discrete topology. Then, for any function <math|f>
-    mapping from set to topological space, there exists an unique continuous
-    map <math|g> such that <math|g\<circ\>D=f>.
-  </theorem>
-
-  Even thought this theorem is quite trivial, there exists a non-trivial
-  aspects about it. That is, the relation claimed in the theorem holds only
-  for discrete topology. In fact, two topological spaces can be the same even
-  though they are superficially distinct. In this situation, there will be an
-  isomophism between the two topological spaces. With these preliminaries, we
-  claim the following theorem.
-
-  <\theorem>
-    [Universal Property of Discrete Topology] Given a topology <math|T>, if
-    for any function <math|f> mapping from set to topological space, there
-    exists an unique continuous map <math|g> such that <math|g\<circ\>T=f>,
-    then there exists an isomorphism <math|\<varphi\>> such that
-    <math|\<varphi\>\<circ\>T=D>.
-  </theorem>
-
-  Again, we declared the previous fact in a little weired way, wherein maps
-  are employed instead of sets and topological spaces. In the general way of
-  speaking, this theorem claimed that if there exists another topology
-  <math|T> such that the previous theorem of <math|D> holds also for
-  <math|T>, then for any set <math|S>, the two topological spaces
-  <math|T<around*|(|S|)>> and <math|D<around*|(|S|)>> are isomorphic.
-
-  <\proof>
-    In the condition, the only variants is <math|f>. So, the proof must be
-    done by substituting the <math|f> by multiple specific arrows.
-
-    First, we try to substitute <math|f> by <math|D>, implying an unique
-    continuous map <math|\<varphi\>> such that <math|\<varphi\>\<circ\>T=D>.
-    Now, we are to prove that <math|\<varphi\>> is isomorphic, meaning that
-    there is a continuous map <math|\<psi\>> such that
-    <math|\<psi\>\<circ\>\<varphi\>=1>, the identity map.
-
-    As we have known, the theorem holds for <math|T=D>. In this case, we
-    substitute <math|f> by <math|T>, implying an unique continuous map
-    <math|\<psi\>> such that <math|\<psi\>\<circ\>D=T>. So, we have
-    <math|T=\<psi\>\<circ\>D=\<psi\>\<circ\><around*|(|\<varphi\>\<circ\>T|)>=<around*|(|\<psi\>\<circ\>\<varphi\>|)>\<circ\>T>,
-    where we have employed the associativity of function composition.
-
-    All left is to prove <math|\<psi\>\<circ\>\<varphi\>=1>. To do so,
-    substitute <math|f> by <math|T>, implying an unique continuous map
-    <math|\<zeta\>> such that <math|\<zeta\>\<circ\>T=T>. However, we find
-    both <math|1> and <math|\<psi\>\<circ\>\<varphi\>> can serve this
-    <math|\<zeta\>>. The uniqueness of <math|\<zeta\>> implies that
-    <math|\<psi\>\<circ\>\<varphi\>=1>. So, we find an isomprohism
-    <math|\<varphi\>>, inverse of which is <math|\<psi\>>, such that
-    <math|\<varphi\>\<circ\>T=D>.
-  </proof>
-
-  Notice in the proof, we substituted the variant <math|f> by multiple
-  specific arrows: <math|T> and <math|D>, with the aid of associativity of
-  function composition and identity map, we arrive at the final conclusion.
-  We did not even employ any topology knowledge! So, this theorem can be
-  extended to more general situation, beyond topology. This is what arrows
-  bring to us: a generic, thus abstract, way of thinking mathematics.
-
-  But, before abstracting the theorem to a more general form, we have to
-  introduce some concepts that help us describe arrows and related objects.
-
   <subsection|Category is about Arrows>
 
   Category is the fundamental element of category theory. A category consists
@@ -209,7 +117,8 @@
     objects <math|A,B\<in\><math-ss|C>>, a morphism <math|f:A\<rightarrow\>B>
     is an <with|font-series|bold|isomorphism> if there exists
     <math|g:B\<rightarrow\>A> such that <math|g\<circ\>f=1<rsub|A>> and
-    <math|f\<circ\>g=1<rsub|B>>.
+    <math|f\<circ\>g=1<rsub|B>>. Denote <math|A\<cong\>B> if <math|A> and
+    <math|B> are isomorphic.
   </definition>
 
   With the aid of isomorphism, we definition the groupid.
@@ -313,23 +222,15 @@
   maps. In <math|<math-ss|Poset>>, morphisms are \Pno greater than\Qs or \Pis
   subset of\Qs.
 
-  <subsection|Category Describes Universality>
+  <subsection|Isomorphic Objects should be Viewed as One>
 
-  Now, equipped with category, we can describe the generalized theorem on the
-  universal property we met in the discrete topology.
-
-  <\theorem>
-    [Universal Property in Category] For a morphism
-    <math|h:A\<rightarrow\>B>, we say that <math|h> satisfies the universal
-    property if, for any morphism <math|f:A\<rightarrow\>C>, there exists
-    unique morphism <math|g:B\<rightarrow\>C> such that <math|f=g\<circ\>h>.
-    Then we claim that, given two morphisms <math|h:A\<rightarrow\>B> and
-    <math|h<rprime|'>:A\<rightarrow\>B<rprime|'>>, if the universal property
-    holds for both of them, then there must be an isomorphism
-    <math|\<varphi\>> such that <math|h<rprime|'>=\<varphi\>\<circ\>h>.
-  </theorem>
-
-  The proof now becomes trivial.
+  Isomorphic topological spaces are the same. The same is for the isomorphic
+  groups, isomorphic vector spaces, and so on. So, we should view isomorphic
+  objects are one object. If visualizing a category as diagrams of dots and
+  arrows between dots, then we should pinch two isomorphic objects together.
+  This leads to equivalent, but simplified, diagrams. The category obtained
+  by pinching isomorphic objects as one in category <math|<math-ss|C>> is
+  called the <with|font-series|bold|skeleton> of <math|<math-ss|C>>.
 
   <subsection|Supremum and Infimum are Dual>
 
@@ -464,24 +365,6 @@
   This theorem holds not only for Cartesian product of sets, but also, for
   instance, for the group direct product.
 
-  <subsection|Sub-Blah is Nothing but An Arrow>
-
-  Yet another example illustrating that arrows help generalize concepts is
-  the sub-blah. For instance, subset, subgroup, and subspace in topology.
-  These relates to subobject, which is the concept generalized by arrows.
-
-  <\definition>
-    [Subobject] Given a category <math|<math-ss|C>>, for each
-    <math|A,B\<in\><math-ss|C>>, <math|B> is a
-    <with|font-series|bold|subobject> of <math|A> if there exists a morphism
-    <math|f:A\<rightarrow\>B>.
-  </definition>
-
-  This holds naturally for <math|<math-ss|Set>>, where morphism is map. Since
-  morphisms in <math|<math-ss|Grp>> or <math|<math-ss|Top>> are structure
-  preserving maps, then this definition holds also for subgroup or subspace
-  of toplogy.
-
   <subsection|Duality is Free Lunch>
 
   Another benefit of viewing everything in arrows is duality. In category
@@ -571,12 +454,11 @@
     maps
 
     <\itemize>
-      <item>for <math|\<forall\>A\<in\><math-ss|C>>,
+      <item>for each <math|A\<in\><math-ss|C>>,
       <math|F<around*|(|A|)>\<in\><math-ss|D>>, and
 
-      <item>for <math|\<forall\>A,B\<in\><math-ss|C>> and
-      <math|\<forall\>f:A\<rightarrow\>B>,
-      <math|F<around*|(|f|)>:F<around*|(|A|)>\<rightarrow\>F<around*|(|B|)>>,
+      <item>for each <math|A,B\<in\><math-ss|C>> and each
+      <math|f:A\<rightarrow\>B>, <math|F<around*|(|f|)>:F<around*|(|A|)>\<rightarrow\>F<around*|(|B|)>>,
     </itemize>
 
     such that the structure of category is preserved, that is
@@ -594,136 +476,12 @@
   </definition>
 
   Imagine a category as a series of diagrams with colored dots and arrows
-  between dots. The apply of a functor enlarges the size of the dots and
-  arrows, indicating that it has become another category, but the structure,
-  or form, of the diagrams are invariant.
+  between dots. The apply of a functor changes the shape of the dots and
+  arrows, for instance from simple dots to stars, or from straight arrows to
+  curved arrows. This means it has become another category, but the
+  structure, or form, of the diagrams are invariant.
 
   <section|Natural Transformation>
-
-  <subsection|Discrete Category is as Simple as Aplysia>
-
-  Aplysia is an invertebrate animal living in the sea. It has a simple neural
-  system, with large neurons. Because of this simplicity, we can do more
-  experiments on it quickly and easily. Aplysia, thus, contribute quite a lot
-  in the study of neural science.
-
-  In category theory, there are some categories like aplysia. For example, a
-  monoid is a category where the <math|ob> is simple (<math|ob> has only one
-  element). Now, we introduce the opposing example, the distrete category,
-  where <math|mor> is simple (<math|mor<around*|(|A,B|)>> has only one
-  element, for each <math|A,B\<in\>ob>).
-
-  <\definition>
-    [Discrete Category] A <with|font-series|bold|discrete category>
-    <math|<math-ss|D>> is a category in which for each
-    <math|A\<in\><math-ss|D>>, <math|mor<rsub|<math-ss|D>><around*|(|A,A|)>=<around*|{|1<rsub|A>|}>>,
-    and for each <math|A,B\<in\><math-ss|D>> with <math|A\<neq\>B>,
-    <math|mor<rsub|<math-ss|D>><around*|(|A,B|)>=\<oslash\>>. That is, there
-    is only identity morphism from an object to itself; and there is not
-    morphism between distinct objects.
-  </definition>
-
-  So, a discrete category can be directly constructed out of a set. It is
-  free of charge. You may remember the discrete topology, which is the same
-  situation. (So, you may think the universal property held by the discrete
-  topology may be held also for discrete category. That is, given a set
-  <math|S>, for any category <math|<math-ss|X>> and any function
-  <math|f:S\<rightarrow\><math-ss|X>>, there exists an unique functor
-  <math|F:<math-ss|D>\<rightarrow\><math-ss|X>> such that
-  <math|f=F\<circ\><math-ss|D>>, where the <math|<math-ss|D>> indicates the
-  constructor, as in the case of discrete topology. If so, then by the
-  theorem of uniqueness, discrete category is the unique, up to isomorphism,
-  category that satisfies this universal property.)
-
-  What is a functor between two discrete categories? It is quite simple: just
-  a function between the <math|ob>s of them. So, in discrete categories,
-  functor is reduced to function, which would be much better for
-  understanding, since set theory is much familiar for us.
-
-  As we will see, the concept natural transformation is quite complicated and
-  abstract. Discrete category would be an aplysia for illustrating what
-  natural transformation is.
-
-  <subsection|Haskell's Compiler can Make Magic>
-
-  In Haskell <\footnote>
-    A concise cheat sheet of Haskell syntax can be found on
-    <hlink|Hackage|https://hackage.haskell.org/package/CheatSheet-1.10/src/CheatSheet.pdf>.
-  </footnote>, there is a category called <math|<math-ss|Hask>>, in which
-  objects are types and morphisms are functions between types. For instance,
-  <samp|Int> is a type, and <samp|Float> is another. A function <samp|floor>
-  converts a <samp|Float> to an <samp|Int>, as
-
-  <\code>
-    floor :: Float -\<gtr\> Int
-  </code>
-
-  Functor is everywhere in Haskell. For example, <samp|List> is a functor.
-  Indeed, list as a functor accepts a type (category) <samp|a> to furnish
-  another type <samp|List a>, applying to morphism as follow.
-
-  <\code>
-    instance Functor List where
-
-    \ \ -- Applied to morphism
-
-    \ \ fmap :: a -\<gtr\> b -\<gtr\> List a -\<gtr\> List b
-
-    \ \ fmap = map
-  </code>
-
-  \P<samp|Maybe>\Q is another functor. It is used for substituting the
-  <samp|None> in Python for an unified data type. It consists of
-  <samp|Nothing> (for <samp|None>) and <samp|Just x> for any variable
-  <samp|x>, applying to morphism as follow.
-
-  <\code>
-    <\code>
-      instance Functor Maybe where
-
-      \ \ -- Applied to morphism
-
-      \ \ fmap :: a -\<gtr\> b -\<gtr\> Maybe a -\<gtr\> Maybe b
-
-      \ \ fmap f Nothing = Nothing
-
-      \ \ fmap f Just x = Just (f x)
-    </code>
-  </code>
-
-  In haskell, you can do some magic. For example, given a list, we first map
-  a function <math|f> to every element of the list, and then get the head of
-  the mapped list. And if the given list is empty, <samp|Nothing> shoud be
-  returned. So, we have
-
-  <\code>
-    head :: List a -\<gtr\> Maybe a
-  </code>
-
-  In fact, the <samp|a> is irrelevant to our operation. So <samp|head> is a
-  map between two functors <samp|List> and <samp|Maybe>. Interestingly, the
-  compiler knows that, for any function <samp|f>,
-
-  <\code>
-    head . (fmap f) == (fmap f) . head
-  </code>
-
-  Notice that the type of LHS and of RHS of the equality are different:
-
-  <\code>
-    -- Let f :: a -\<gtr\> b
-
-    LHS :: List a -\<gtr\> List b -\<gtr\> Maybe b
-
-    RHS :: List a -\<gtr\> Maybe a -\<gtr\> Maybe b
-  </code>
-
-  With this, we can compute <samp|head> before <samp|fmap> on a list, which
-  would be much faster if the list size is large. The reason why the compiler
-  knows this property is that <samp|head> is declared as natural
-  transformation, for which this very property is ensured. As you can see,
-  declaring some function as natural transformation is very important in
-  Haskell.
 
   <subsection|Natural Transformation is the Morphism of the Category of
   Functors>
@@ -731,71 +489,129 @@
   As we have defined category, and as we have built a category out of
   categories by defining functor, we can also build a category out of
   functors by defining natural transformation. Precisely, given two
-  categories <math|<math-ss|C>> and <math|<math-ss|D>>, we have the
-  collection of all functors from <math|<math-ss|C>> to <math-ss|D> as
-  objects. But, given two functor <math|F,G:<math-ss|C>\<rightarrow\><math-ss|D>>,
-  what is the morphism between <math|F> and <math|G>?
+  categories <math|<math-ss|C>> and <math|<math-ss|D>>, a category of
+  functors from <math|<math-ss|C>> to <math|<math-ss|D>>, denoted by
+  <math|<around*|[|<math-ss|C>,<math-ss|D>|]>>, has the collection of all
+  functors from <math|<math-ss|C>> to <math-ss|D> as its objects.
 
-  Remember the case in <math|<math-ss|Top>> and <math|<math-ss|Grp>>, for
-  which we construct the category out of the objects; the morphism between
-  two objects are the structure perserving map. The same goes for the
-  category of functors, in which we know what the objects are and have to
-  define the morphisms. So, what is the structure of functor? For each
-  <math|A,B\<in\><math-ss|C>> and <math|f:A\<rightarrow\>B>, while <math|F>
-  maps <math|A> to <math|F<around*|(|A|)>> and <math|B> to
-  <math|F<around*|(|B|)>>, it shall also map <math|f> to
-  <math|F<around*|(|f|)>>. In another word,
-  <math|F<around*|(|f|)>\<circ\>F=F\<circ\>f>. This is the structure of
-  functor. You can imagine that all dots and arrows are transformed to
-  another style, with the forms of diagram invariant.\ 
-
-  So, letting <math|\<alpha\>:F\<rightarrow\>G> be the morphism from <math|F>
-  to <math|G>, while <math|\<alpha\>> maps <math|F<around*|(|A|)>> to
-  <math|G<around*|(|A|)>> and <math|F<around*|(|B|)>> to
-  <math|G<around*|(|B|)>>, it shall also map <math|F<around*|(|f|)>> to
-  <math|G<around*|(|f|)>>. In another word,
-  <math|G<around*|(|f|)>\<circ\>\<alpha\>=\<alpha\>\<circ\>F<around*|(|f|)>>.
-  With the same metaphor, the action of <math|\<alpha\>> is like changing the
-  style of dots and arrows from style <math|F> to style <math|G>.
-
-  Notice that this is consistent with the <samp|head> in Haskell. Given any
-  two specific types (two objects) <samp|a> and <samp|b>, <math|F f>
-  corresponds to the <samp|fmap f> on <samp|List>, and <math|G f> to the
-  <samp|fmap f> on <samp|Maybe>. The statement
-  <math|G<around*|(|f|)>\<circ\>\<alpha\>=\<alpha\>\<circ\>F<around*|(|f|)>>,
-  then, corresponds to <samp|(fmap f) . head == head . (fmap f)>.
-
-  As a summary, we have introduced the structure preserving map between
-  functors, called natural transformation, as follow.
+  But, given two functor <math|F,G:<math-ss|C>\<rightarrow\><math-ss|D>>,
+  what is the morphism between <math|F> and <math|G>? Remember
+  <math|<math-ss|Top>> and <math|<math-ss|Grp>>, in which we constructed the
+  category out of the objects; morphism between two objects are structure
+  preserving map. The same goes for the category of functors, in which we
+  know what the objects are and have to define the morphisms. The structure
+  preserving map is natural transformation.
 
   <\definition>
     [Natural Transformation] Given two categories <math|<math-ss|C>> and
     <math|<math-ss|D>>, and two functors <math|F,G:<math-ss|C>\<rightarrow\><math-ss|D>>,
-    map <math|\<alpha\>:F\<rightarrow\>G> is a <with|font-series|bold|natural
-    transformation> <math|\<alpha\>> is defined as the family
-    <math|<around*|{|\<alpha\><rsub|A>:F<around*|(|A|)>\<rightarrow\>G<around*|(|A|)>\|A\<in\><math-ss|C>|}>>
-    that satisfies the axiom:
-
-    <\itemize>
-      <item>for each <math|A,B\<in\><math-ss|C>> and each
-      <math|f:A\<rightarrow\>B>, we have <math|G<around*|(|f|)>\<circ\>\<alpha\><rsub|A>=\<alpha\><rsub|B>\<circ\>F<around*|(|f|)>>.
-    </itemize>
+    a <with|font-series|bold|natural transformation>
+    <math|\<alpha\>:F\<rightarrow\>G> is a family of morphisms in
+    <math|<math-ss|D>>, <math|<around*|{|\<alpha\><rsub|A>:F<around*|(|A|)>\<rightarrow\>G<around*|(|A|)>\|\<forall\>A\<in\><math-ss|C>|}>>,
+    such that for each <math|A,B\<in\><math-ss|C>> and each
+    <math|f:A\<rightarrow\>B>, we have <math|G<around*|(|f|)>\<circ\>\<alpha\><rsub|A>=\<alpha\><rsub|B>\<circ\>F<around*|(|f|)>>.
+    The <math|\<alpha\><rsub|A>> is called a
+    <with|font-series|bold|component> of <math|\<alpha\>>.
   </definition>
 
-  <\notation>
-    The category of functors between category <math|<math-ss|C>> and category
-    <math|<math-ss|D>> is denoted by <math|<around*|[|<math-ss|C>,<math-ss|D>|]>>.
-  </notation>
+  Remember the metaphor for functor, wherein the action of a functor is like
+  applying a style to the dots and arrows of the diagrams, the action of
+  <math|\<alpha\>> is like changing the style of dots and arrows from style
+  <math|F> to style <math|G>. So, with natural transformation, the structure
+  of functor is preserved.
 
-  <subsection|Isomorphic Objects should be Viewed as One>
+  <subsection|Natural Isomorphism is Equivalent to Isomorphisms of Category.>
 
-  Isomorphic topological spaces are the same. The same is for the isomorphic
-  groups, isomorphic vector spaces, and so on. So, we should view isomorphic
-  objects are one object. If visualizing a category as diagrams of dots and
-  arrows between dots, then we should pinch two isomorphic objects together.
-  This leads to equivalent, but simplified, diagrams. The category obtained
-  by pinching isomorphic objects as one in category <math|<math-ss|C>> is
-  called the <with|font-series|bold|skeleton> of <math|<math-ss|C>>.
+  With the category of functors, we can discuss whether two functors are
+  equivalent or not. This relates to the isomorphism between functors. Since
+  a morphisim in this category is called a natural transformation, an
+  isomorphism is called a natural isomorphism. Given the general definition
+  of isomorphism, a natural transformation <math|\<alpha\>:F\<rightarrow\>G>
+  is <with|font-series|bold|natural isomorphic> between functors
+  <math|F,G:<math-ss|C>\<rightarrow\><math-ss|D>>, if there exists a natural
+  transformation <math|\<beta\>:G\<rightarrow\>F> such that
+  <math|\<beta\>\<circ\>\<alpha\>=1<rsub|F>> and
+  <math|\<alpha\>\<circ\>\<beta\>=1<rsub|G>>. As usual, if natural
+  isomorphism exists between <math|F> and <math|G>, then denote
+  <math|F\<cong\>G>.
+
+  This definition is quite complicated, since it is an isomorphism on
+  <math|<around*|[|<math-ss|C>,<math-ss|D>|]>>, which we are not familiar
+  with. But, because <math|\<alpha\>> is a family of morphisms on category
+  <math|<math-ss|D>>, we can first consider a much simplier case, that is,
+  <math|\<alpha\><rsub|A>:F<around*|(|A|)>\<rightarrow\>G<around*|(|A|)>> is
+  isomorphic. This isomorphism is of category <math|<math-ss|D>>, instead of
+  <math|<around*|[|<math-ss|C>,<math-ss|D>|]>>. So, we guess, or hope, that,
+  if for each <math|A\<in\><math-ss|C>>, there exists a morphism on
+  <math|<math-ss|D>>, <math|\<beta\><rsub|A>:G<around*|(|A|)>\<rightarrow\>F<around*|(|A|)>>,
+  such that <math|\<alpha\><rsub|A>\<circ\>\<beta\><rsub|A>=1<rsub|G<around*|(|A|)>>>
+  and <math|\<beta\><rsub|A>\<circ\>a<rsub|A>=1<rsub|F<around*|(|A|)>>>, then
+  the family of <math|\<beta\><rsub|A>> might be the correct natural
+  transformation <math|\<beta\>> we need.
+
+  <\lemma>
+    <label|lemma: Natural Isomorphism>[Natural Isomorphism] A natural
+    transformation <math|\<alpha\>> is a natural isomorphism if and only if
+    each component of <math|\<alpha\>> is an isomorphism.
+  </lemma>
+
+  <\proof>
+    The relation <math|\<beta\>\<circ\>\<alpha\>=1<rsub|F>> means that
+    <math|\<beta\>\<circ\>\<alpha\>> acts as <math|1<rsub|F>>. What does the
+    natural transformation <math|1<rsub|F>> acts? For each
+    <math|A\<in\><math-ss|C>>, <math|<around*|(|1<rsub|F>|)><rsub|A>=1<rsub|F<around*|(|A|)>>>;
+    and the relation <math|F<around*|(|f|)>\<circ\><around*|(|1<rsub|F>|)><rsub|A>=<around*|(|1<rsub|F>|)><rsub|A>\<circ\>F<around*|(|f|)>>
+    should hold. But, if <math|<around*|(|1<rsub|F>|)><rsub|A>=1<rsub|F<around*|(|A|)>>>,
+    then the relation becomes <math|F<around*|(|f|)>\<circ\>1<rsub|F<around*|(|A|)>>=1<rsub|F<around*|(|B|)>>\<circ\>F<around*|(|f|)>>,
+    which is fulfilled on its own. So, the relation
+    <math|\<beta\>\<circ\>\<alpha\>=1<rsub|F>> simply means, for each
+    <math|A\<in\><math-ss|C>>, <math|\<beta\><rsub|A>\<circ\>\<alpha\><rsub|A>=1<rsub|F<around*|(|A|)>>>.
+    The same statement holds for <math|\<alpha\>\<circ\>\<beta\>=1<rsub|G>>,
+    that is, <math|\<alpha\><rsub|A>\<circ\>\<beta\><rsub|A>=1<rsub|G<around*|(|A|)>>>.
+    So, we find the conclusion that <math|\<alpha\>> is a natural isomorphism
+    on <math|<around*|[|<math-ss|C>,<math-ss|D>|]>> if and only if for each
+    <math|A\<in\><math-ss|C>>, <math|\<alpha\><rsub|A>> is an isomorphism on
+    <math|<math-ss|D>>.
+  </proof>
+
+  With this lemma, a isomorphism on <math|<around*|[|<math-ss|C>,<math-ss|D>|]>>
+  now reduces to a family of isomorphisms on <math|<math-ss|D>>, which is
+  quite familiar to us.
+
+  <subsection|Natural Isomorphism Describes Equivalence between Categories>
+
+  Given two categories <math|<math-ss|C>> and <math|<math-ss|D>>, how can we
+  say they are equivalent? A natural possibility is using isomorphic functor.
+  Precisely, there exist functors <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>
+  and <math|G:<math-ss|<math|<math-ss|D>\<rightarrow\>>C>>, such that
+  <math|G\<circ\>F=1<rsub|<math-ss|C>>> and
+  <math|F\<circ\>G=1<rsub|<math-ss|D>>>. Even though this definition is quite
+  natural, however, it is not true. The reason is that there exist isomorphic
+  objects. For instance, if <math|G\<circ\>F<around*|(|A|)>=B>, which is not
+  equal, but isomorphic, to <math|A>, then the categories can still be
+  equivalent. So, instead of <math|G\<circ\>F<around*|(|A|)>=A>, as
+  <math|G\<circ\>F=1<rsub|<math-ss|C>>> indicates, we should say
+  <math|G\<circ\>F<around*|(|A|)>\<cong\>A>. By lemma <reference|lemma:
+  Natural Isomorphism>, <math|G\<circ\>F\<cong\>1<rsub|<math-ss|C>>> means,
+  for each <math|A\<in\><math-ss|C>>, there exists an isomorphism
+  <math|\<alpha\><rsub|A>:<around*|(|G\<circ\>F|)><around*|(|A|)>\<rightarrow\>A>,
+  that is <math|<around*|(|G\<circ\>F|)><around*|(|A|)>\<cong\>A>. This
+  implies that, instead of <math|G\<circ\>F=1<rsub|<math-ss|C>>>, the correct
+  condition for equivalence should be <math|G\<circ\>F\<cong\>1<rsub|<math-ss|C>>>.
+  The same, <math|F\<circ\>G\<cong\>1<rsub|<math-ss|D>>>.
+
+  <\definition>
+    [Equivalent Categories] Categories <math|<math-ss|C>> and
+    <math|<math-ss|D>> are <with|font-series|bold|equivalent> if there exist
+    functors <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
+    <math|G:<math-ss|<math|<math-ss|D>\<rightarrow\>>C>> such that
+    <math|><math|G\<circ\>F\<cong\>1<rsub|<math-ss|C>>> and
+    <math|F\<circ\>G\<cong\>1<rsub|<math-ss|D>>>.
+  </definition>
+
+  Historically, functor is defined for describing natural transformation, and
+  natural transformation, or natural isomorphism, is defined for describing
+  equivalence between categories.
 </body>
 
 <\initial>
@@ -810,30 +626,24 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1.8|5>>
-    <associate|auto-11|<tuple|1.9|5>>
-    <associate|auto-12|<tuple|1.10|6>>
-    <associate|auto-13|<tuple|2|6>>
-    <associate|auto-14|<tuple|2.1|7>>
-    <associate|auto-15|<tuple|3|7>>
-    <associate|auto-16|<tuple|3.1|8>>
-    <associate|auto-17|<tuple|3.2|8>>
-    <associate|auto-18|<tuple|3.3|8>>
-    <associate|auto-19|<tuple|3.4|9>>
+    <associate|auto-10|<tuple|1.8|4>>
+    <associate|auto-11|<tuple|2|5>>
+    <associate|auto-12|<tuple|2.1|5>>
+    <associate|auto-13|<tuple|3|6>>
+    <associate|auto-14|<tuple|3.1|6>>
+    <associate|auto-15|<tuple|3.2|6>>
+    <associate|auto-16|<tuple|3.3|7>>
+    <associate|auto-17|<tuple|3.4|?>>
     <associate|auto-2|<tuple|1|1>>
-    <associate|auto-20|<tuple|3.5|10>>
-    <associate|auto-21|<tuple|3.5|10>>
     <associate|auto-3|<tuple|1.1|1>>
     <associate|auto-4|<tuple|1.2|2>>
-    <associate|auto-5|<tuple|1.3|3>>
-    <associate|auto-6|<tuple|1.4|4>>
-    <associate|auto-7|<tuple|1.5|4>>
+    <associate|auto-5|<tuple|1.3|2>>
+    <associate|auto-6|<tuple|1.4|3>>
+    <associate|auto-7|<tuple|1.5|3>>
     <associate|auto-8|<tuple|1.6|4>>
-    <associate|auto-9|<tuple|1.7|5>>
-    <associate|footnote-1|<tuple|1|8>>
-    <associate|footnote-2|<tuple|2|?>>
-    <associate|footnr-1|<tuple|1|8>>
-    <associate|footnr-2|<tuple|2|?>>
+    <associate|auto-9|<tuple|1.7|4>>
+    <associate|lemma: Natural Isomorphism|<tuple|22|?>>
+    <associate|theorem: Natural Isomorphism|<tuple|22|?>>
   </collection>
 </references>
 
@@ -849,84 +659,64 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|1.1<space|2spc>A Proof can be Universal
+      <with|par-left|<quote|1tab>|1.1<space|2spc>Category is about Arrows
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|1tab>|1.2<space|2spc>Category is about Arrows
+      <with|par-left|<quote|1tab>|1.2<space|2spc>Objects may not be Sets
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>>
 
-      <with|par-left|<quote|1tab>|1.3<space|2spc>Objects may not be Sets
+      <with|par-left|<quote|1tab>|1.3<space|2spc>Morphisms may not be Maps
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|1tab>|1.4<space|2spc>Morphisms may not be Maps
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.4<space|2spc>Isomorphic Objects should be
+      Viewed as One <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      <with|par-left|<quote|1tab>|1.5<space|2spc>Category Describes
-      Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.5<space|2spc>Supremum and Infimum are
+      Dual <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|1tab>|1.6<space|2spc>Supremum and Infimum are
-      Dual <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8>>
-
-      <with|par-left|<quote|1tab>|1.7<space|2spc>Surjection and Injection are
-      Dual <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9>>
-
-      <with|par-left|<quote|1tab>|1.8<space|2spc>Morphisms in the Dual
+      <with|par-left|<quote|1tab>|1.6<space|2spc>Morphisms in the Dual
       Category of <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>
       are Not Maps <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-10>>
+      <no-break><pageref|auto-8>>
 
-      <with|par-left|<quote|1tab>|1.9<space|2spc>Arrows Generalize Concepts
+      <with|par-left|<quote|1tab>|1.7<space|2spc>Arrows Generalize Concepts
       and Theorems from One Area to Every Area in Mathemtatics
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11>>
+      <no-break><pageref|auto-9>>
 
-      <with|par-left|<quote|1tab>|1.10<space|2spc>Sub-Blah is Nothing but An
-      Arrow <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-12>>
-
-      <with|par-left|<quote|1tab>|1.11<space|2spc>Duality is Free Lunch
+      <with|par-left|<quote|1tab>|1.8<space|2spc>Duality is Free Lunch
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13>>
+      <no-break><pageref|auto-10>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Functor>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-14><vspace|0.5fn>
+      <no-break><pageref|auto-11><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|2.1<space|2spc>Functor is the Morphism of
       the Category of Categories <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15>>
+      <no-break><pageref|auto-12>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Natural
       Transformation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16><vspace|0.5fn>
+      <no-break><pageref|auto-13><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|3.1<space|2spc>Discrete Category is as
-      Simple as Aplysia <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17>>
-
-      <with|par-left|<quote|1tab>|3.2<space|2spc>Haskell's Compiler can Make
-      Magic <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>>
-
-      <with|par-left|<quote|1tab>|3.3<space|2spc>Natural Transformation is
+      <with|par-left|<quote|1tab>|3.1<space|2spc>Natural Transformation is
       the Morphism of the Category of Functors
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19>>
+      <no-break><pageref|auto-14>>
 
-      <with|par-left|<quote|1tab>|3.4<space|2spc>Isomorphic Objects should be
-      Viewed as One <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20>>
+      <with|par-left|<quote|1tab>|3.2<space|2spc>Natural means Canonical
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-15>>
 
-      <with|par-left|<quote|1tab>|3.5<space|2spc>What is Equivalence between
-      Categories? <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21>>
+      <with|par-left|<quote|1tab>|3.3<space|2spc>Natural Isomorphism
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16>>
     </associate>
   </collection>
 </auxiliary>
