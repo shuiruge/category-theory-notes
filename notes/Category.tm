@@ -589,11 +589,13 @@
   natural, however, it is not true. The reason is that there exist isomorphic
   objects. For instance, if <math|G\<circ\>F<around*|(|A|)>=B>, which is not
   equal, but isomorphic, to <math|A>, then the categories can still be
-  equivalent. So, instead of <math|G\<circ\>F<around*|(|A|)>=A>, as
-  <math|G\<circ\>F=1<rsub|<math-ss|C>>> indicates, we should say
-  <math|G\<circ\>F<around*|(|A|)>\<cong\>A>. By lemma <reference|lemma:
-  Natural Isomorphism>, <math|G\<circ\>F\<cong\>1<rsub|<math-ss|C>>> means,
-  for each <math|A\<in\><math-ss|C>>, there exists an isomorphism
+  equivalent. This reflects our previous idea that isomorphic objects should
+  be pinched together as one. So, instead of
+  <math|G\<circ\>F<around*|(|A|)>=A>, as <math|G\<circ\>F=1<rsub|<math-ss|C>>>
+  indicates, we should say <math|G\<circ\>F<around*|(|A|)>\<cong\>A>. By
+  lemma <reference|lemma: Natural Isomorphism>,
+  <math|G\<circ\>F\<cong\>1<rsub|<math-ss|C>>> means, for each
+  <math|A\<in\><math-ss|C>>, there exists an isomorphism
   <math|\<alpha\><rsub|A>:<around*|(|G\<circ\>F|)><around*|(|A|)>\<rightarrow\>A>,
   that is <math|<around*|(|G\<circ\>F|)><around*|(|A|)>\<cong\>A>. This
   implies that, instead of <math|G\<circ\>F=1<rsub|<math-ss|C>>>, the correct
@@ -626,14 +628,13 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1.8|4>>
+    <associate|auto-10|<tuple|1.8|5>>
     <associate|auto-11|<tuple|2|5>>
     <associate|auto-12|<tuple|2.1|5>>
     <associate|auto-13|<tuple|3|6>>
     <associate|auto-14|<tuple|3.1|6>>
     <associate|auto-15|<tuple|3.2|6>>
     <associate|auto-16|<tuple|3.3|7>>
-    <associate|auto-17|<tuple|3.4|?>>
     <associate|auto-2|<tuple|1|1>>
     <associate|auto-3|<tuple|1.1|1>>
     <associate|auto-4|<tuple|1.2|2>>
@@ -642,8 +643,7 @@
     <associate|auto-7|<tuple|1.5|3>>
     <associate|auto-8|<tuple|1.6|4>>
     <associate|auto-9|<tuple|1.7|4>>
-    <associate|lemma: Natural Isomorphism|<tuple|22|?>>
-    <associate|theorem: Natural Isomorphism|<tuple|22|?>>
+    <associate|lemma: Natural Isomorphism|<tuple|22|7>>
   </collection>
 </references>
 
@@ -710,11 +710,13 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14>>
 
-      <with|par-left|<quote|1tab>|3.2<space|2spc>Natural means Canonical
+      <with|par-left|<quote|1tab>|3.2<space|2spc>Natural Isomorphism is
+      Equivalent to Isomorphisms of Category.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>>
 
       <with|par-left|<quote|1tab>|3.3<space|2spc>Natural Isomorphism
+      Describes Equivalence between Categories
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-16>>
     </associate>
