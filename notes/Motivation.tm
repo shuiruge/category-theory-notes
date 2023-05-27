@@ -5,11 +5,17 @@
 <\body>
   <chapter|Motivation>
 
-  This note is about the basic category theory. There have been many books on
-  category theory, almost all of them contains many examples from multiple
-  areas of mathematics. In this note, however, we focus on the pure aspects,
-  trying to understand the core concepts of category theory in an intuitive
-  way. Examples are shown only when it is essential.
+  This note is about the basic aspects of category theory. There have been
+  many books on category theory, almost all of them contains many examples
+  from multiple areas of mathematics. These examples, however, needs
+  mathematical background on many areas, making it hard to read.
+
+  In this note we focus on the pure aspects, trying to understand the core
+  concepts of category theory in an intuitive way. Examples are shown only
+  when it is essential.
+
+  The writing style follows the suggestions given by <em|<hlink|How to Think
+  Like a Mathematician|https://www.amazon.com/How-Think-Like-Mathematician-Undergraduate/dp/052171978X>>.
 </body>
 
 <\initial>
@@ -21,6 +27,9 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
+    <associate|auto-2|<tuple|1|?>>
+    <associate|productTitle|<tuple|1|?>>
+    <associate|title|<tuple|1|?>>
   </collection>
 </references>
 
