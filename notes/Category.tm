@@ -20,7 +20,9 @@
   shape or form. This can be easily illustrated in topology, where the two
   isomorphic tologogical space share the same form (but may not the same
   shape). But semantically, this is far from what arrow should mean. So, the
-  question is why mathematician use the word morphism for arrow.
+  question is why mathematician use the word morphism for arrow. A guess is
+  that it may come from homomorphism; and in algebra, a homomorphism is an
+  arrow between algebric structures.
 
   <\definition>
     [Category] A <with|font-series|bold|category> <math|<math-ss|C>> consists
@@ -39,7 +41,7 @@
       <item>for each <math|f\<in\>mor<rsub|<math-ss|C>><around*|(|A,B|)>> and
       <math|g\<in\>mor<rsub|<math-ss|C>><around*|(|B,C|)>>, a
       <with|font-series|bold|composition> of <math|f> and <math|g> that
-      furnishes an arrow <math|g\<circ\>f\<in\>mor<rsub|<math-ss|C>><around*|(|A,C|)>>,
+      furnishes a morphism <math|g\<circ\>f\<in\>mor<rsub|<math-ss|C>><around*|(|A,C|)>>,
       and
 
       <item>for each <math|A\<in\>ob<rsub|<math-ss|C>>>, an
@@ -70,13 +72,14 @@
     <math|A\<in\>ob<rsub|<math-ss|C>>> by <math|A\<in\><math-ss|C>>, and for
     each <math|A,B\<in\><math-ss|C>>, denote
     <math|f\<in\>mor<rsub|<math-ss|C>><around*|(|A,B|)>> by
-    <math|f:A\<rightarrow\>B> or <math|A<above|\<longrightarrow\>|f>B>.
+    <math|f:A\<rightarrow\>B>, <math|A<above|\<longrightarrow\>|f>B>, or
+    <math|f\<in\><math-ss|C><around*|(|A,B|)>>.
   </notation>
 
   Now, category becomes much more familiar to us. We can think the objects of
   <math|<math-ss|C>> as sets, and morphism as function, which is the map
-  between sets. Indeed, the collection of functions does form a category: the
-  category of sets.
+  between sets. Indeed, the collection of sets and functions does form a
+  category: the category of sets.
 
   <\definition>
     [Category of Sets] The <with|font-series|bold|category of sets>, denoted
@@ -92,7 +95,7 @@
   axioms, or restrictions, than the category itself, thus may blind us to the
   potential power of arrows.
 
-  Indeed, there exists categories whose objects are not sets, or whose
+  Indeed, there exist categories whose objects are not sets, or whose
   morphisms are not maps. So, a better way of thinking category is keeping
   objects and morphisms abstract. You can think objects as dots and morphisms
   as arrows between the dots.
@@ -139,8 +142,8 @@
   arrows!
 
   <\definition>
-    [Group as Category] A group is a groupid in which there is only one
-    object.
+    [Group as Category] A <with|font-series|bold|group> is a groupid in which
+    there is only one object.
   </definition>
 
   <\notation>
@@ -187,9 +190,9 @@
   and poset.
 
   <\definition>
-    [Preorder] Given a set <math|S>, a preorder <math|P> on <math|S> is a
-    subset of <math|S\<times\>S> such that the following axioms are
-    satisfied:
+    [Preorder] Given a set <math|S>, a <with|font-series|bold|preorder>
+    <math|P> on <math|S> is a subset of <math|S\<times\>S> such that the
+    following axioms are satisfied:
 
     <\itemize>
       <item><with|font-series|bold|reflexivity>: for
@@ -226,16 +229,6 @@
   The category <math|<math-ss|Poset>> illustrates that morphisms are not
   maps. In <math|<math-ss|Poset>>, morphisms are \Pno greater than\Qs or \Pis
   subset of\Qs.
-
-  <subsection|Isomorphic Objects should be Viewed as One>
-
-  Isomorphic topological spaces are the same. The same is for the isomorphic
-  groups, isomorphic vector spaces, and so on. So, we should view isomorphic
-  objects are one object. If visualizing a category as diagrams of dots and
-  arrows between dots, then we should pinch two isomorphic objects together.
-  This leads to equivalent, but simplified, diagrams. The category obtained
-  by pinching isomorphic objects as one in category <math|<math-ss|C>> is
-  called the <with|font-series|bold|skeleton> of <math|<math-ss|C>>.
 
   <subsection|Supremum and Infimum are Dual>
 
@@ -298,6 +291,8 @@
   <math|<math-ss|Set><rsup|op>>, we find that arrows are not functions, not
   even maps! Yet another example whose morphisms are not maps.
 
+  <section|Why Category?>
+
   <subsection|Arrows Generalize Concepts and Theorems from One Area to Every
   Area in Mathemtatics>
 
@@ -342,7 +337,8 @@
     <math|\<cdot\>> of <math|H>.
   </definition>
 
-  It is like the Cartesian product, but extra structure are implied.
+  It is like the Cartesian product, but extra structure are
+  <with|font-shape|italic|implied<underline|>>.
 
   Also, all specific categories would be benefited from a theorem claimed in
   category theory. Such as the uniqueness of direct product in the sense of
@@ -364,13 +360,13 @@
   are equivalent in the sense of isomorphism.
 
   <\proof>
-    \;
+    TODO
   </proof>
 
   This theorem holds not only for Cartesian product of sets, but also, for
   instance, for the group direct product.
 
-  <subsection|Duality is Free Lunch>
+  <subsection|Duality Helps Create New Concepts and Theorems, Freely!>
 
   Another benefit of viewing everything in arrows is duality. In category
   theory, it is natural to think what would happen if we exchange domain and
@@ -436,7 +432,7 @@
   <\definition>
     [Category of Groups] The <with|font-series|bold|category of groups>,
     denoted as <math|<math-ss|Grp>>, has the collection of all groups as its
-    objects, and for each <math|A,B\<in\><math-ss|Top>>, the collection of
+    objects, and for each <math|A,B\<in\><math-ss|Grp>>, the collection of
     all homomorphisms from <math|A> to <math|B> as its morphisms from
     <math|A> to <math|B>.
   </definition>
@@ -480,10 +476,10 @@
     </itemize>
   </definition>
 
-  Imagine a category as a series of diagrams with colored dots and arrows
-  between dots. The apply of a functor changes the style of the dots and
-  arrows. This means it has become another category, but the structure, or
-  form, of the diagrams are invariant.
+  Imagine a category as a series of diagrams with dots and arrows between
+  dots. The apply of a functor changes the style of the dots and arrows. This
+  means it has become another category, but the structure, or form, of the
+  diagrams are invariant.
 
   <big-figure|<with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|10|10|center>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|<graphics||<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|5.42865185565502|-0.47136654160574>|<point|6.13617264147325|-0.73667444212168>|<point|6.30831345718367|-0.7490071659333>>>|<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|2.91499493485914|1.29343409088504>|<point|3.88780817867444|1.69771971729064>|<point|5.11330096872604|1.47030868408518>>>|<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|6.37671424386824|-0.48793279084535>|<point|5.5302366|-0.22262329488028>|<point|5.45443292226485|-0.23525724116947>>>|<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|2.89139747623464|1.17159446929622>|<point|4.57171538997984|1.03262094237466>|<point|5.13888843672232|1.27173709009268>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|2.53596940635004|1.43240628826565>|<point|2.51070493485914|1.05338409088502>|<point|2.71286461206504|1.07865198346342>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|3.06657972914404|-0.04574160431275>|<point|3.04131525765314|-0.42476380169336>|<point|3.24347493485914|-0.39949590911496>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|3.56657972914404|-1.34574160431275>|<point|3.54131525765314|-1.72476380169336>|<point|3.74347493485914|-1.69949590911496>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|6.62938871535924|-0.50056659346475>|<point|6.60412424386824|-0.87958879084535>|<point|6.80628392107424|-0.85432089826697>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|5.07273067136726|-0.13447839506878>|<point|5.04746619987632|-0.51350059244938>|<point|5.24962587708229|-0.488232699871>>>|<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|2.89929930389694|-0.02708247539253>|<point|2.57081975766064|0.74358501766211>|<point|2.62136898110294|0.90780541718586>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|5.3708826856891|1.53638578327385>|<point|5.34561821419816|1.15736358589324>|<point|5.54777789140415|1.18263147847162>>>|<with|color|dark
   magenta|line-width|2ln|arrow-end|\<gtr\>|<line|<point|-1|0>|<point|1.0|0.0>>>|<math-at|F|<point|-0.2|0.2>>|<with|fill-color|#a0a0a0|<carc|<point|-5.39575027085596|-1.34574160431275>|<point|-5.42101474234686|-1.72476380169336>|<point|-5.21885506514086|-1.69949590911496>>>|<with|fill-color|#a0a0a0|<carc|<point|-5.89575027085596|-0.04574160431275>|<point|-5.92101474234686|-0.42476380169336>|<point|-5.71885506514086|-0.39949590911496>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|-6.06303069610306|-0.02708247539253>|<point|-6.39151024233936|0.74358501766211>|<point|-6.34096101889706|0.90780541718586>>>|<with|fill-color|#a0a0a0|<carc|<point|-6.42636059364996|1.43240628826565>|<point|-6.45162506514086|1.05338409088502>|<point|-6.24946538793496|1.07865198346342>>>|<with|fill-color|#a0a0a0|<carc|<point|-3.88959932863274|-0.13447839506878>|<point|-3.91486380012368|-0.51350059244938>|<point|-3.71270412291771|-0.488232699871>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|-6.07093252376536|1.17159446929622>|<point|-4.39061461002016|1.03262094237466>|<point|-3.82344156327768|1.27173709009268>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|-6.04733506514086|1.29343409088504>|<point|-5.07452182132556|1.69771971729064>|<point|-3.84902903127396|1.47030868408518>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|-3.53367814434498|-0.47136654160574>|<point|-2.82615735852675|-0.73667444212168>|<point|-2.65401654281633|-0.7490071659333>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|-2.58561575613176|-0.48793279084535>|<point|-3.4320934|-0.22262329488028>|<point|-3.50789707773515|-0.23525724116947>>>|<with|fill-color|#a0a0a0|<carc|<point|-2.33294128464076|-0.50056659346475>|<point|-2.35820575613176|-0.87958879084535>|<point|-2.15604607892576|-0.85432089826697>>>|<with|fill-color|#a0a0a0|<carc|<point|-3.5914473143109|1.53638578327385>|<point|-3.61671178580184|1.15736358589324>|<point|-3.41455210859585|1.18263147847162>>>>>|The
@@ -493,8 +489,7 @@
 
   <section|Natural Transformation>
 
-  <subsection|Natural Transformation is the Morphism of the Category of
-  Functors>
+  <subsection|Natural Transformation is Morphism of the Category of Functors>
 
   As we have defined category, and as we have built a category out of
   categories by defining functor, we can also build a category out of
@@ -555,7 +550,7 @@
   a morphisim in this category is called a natural transformation, an
   isomorphism is called a natural isomorphism. Given the general definition
   of isomorphism, a natural transformation <math|\<alpha\>:F\<rightarrow\>G>
-  is <with|font-series|bold|natural isomorphic> between functors
+  is <with|font-series|bold|natural isomorphism> between functors
   <math|F,G:<math-ss|C>\<rightarrow\><math-ss|D>>, if there exists a natural
   transformation <math|\<beta\>:G\<rightarrow\>F> such that
   <math|\<beta\>\<circ\>\<alpha\>=1<rsub|F>> and
@@ -565,7 +560,7 @@
 
   This definition is quite complicated, since it is an isomorphism on
   <math|<around*|[|<math-ss|C>,<math-ss|D>|]>>, which we are not familiar
-  with. But, because <math|\<alpha\>> is a family of morphisms on category
+  with. But, because <math|\<alpha\>> is a family of morphisms of category
   <math|<math-ss|D>>, we can first consider a much simplier case, that is,
   <math|\<alpha\><rsub|A>:F<around*|(|A|)>\<rightarrow\>G<around*|(|A|)>> is
   isomorphic. This isomorphism is of category <math|<math-ss|D>>, instead of
@@ -606,6 +601,26 @@
   now reduces to a family of isomorphisms on <math|<math-ss|D>>, which is
   quite familiar to us.
 
+  <subsection|Isomorphic Objects should be Viewed as One>
+
+  Isomorphic topological spaces are the same. So it is for the isomorphic
+  groups, isomorphic vector spaces, and so on. This means we should view
+  isomorphic objects are one object. Regarding to morphisms, consider
+  isomorphic objects <math|X> and <math|Y>, and another object <math|Z> of
+  the same category. If <math|X> and <math|Y> are viewed as one, then there
+  should be bijections between <math|mor<around*|(|X,Z|)>> and
+  <math|mor<around*|(|Y,Z|)>>, and between <math|mor<around*|(|Z,X|)>> and
+  <math|mor<around*|(|Z,Y|)>>.
+
+  If visualizing a category as diagrams of dots and arrows between dots, then
+  we should pinch two isomorphic objects together. This leads to equivalent,
+  but simplified, diagrams. The category obtained by pinching isomorphic
+  objects as one in category <math|<math-ss|C>> is called the
+  <with|font-series|bold|skeleton> of <math|<math-ss|C>>.
+
+  Currently, this viewpoint is simply for intuition. Later in TODO, we will
+  prove this fact seriously.
+
   <subsection|Natural Isomorphism Describes Equivalence between Categories>
 
   Given two categories <math|<math-ss|C>> and <math|<math-ss|D>>, how can we
@@ -618,12 +633,11 @@
   objects. For instance, if <math|G\<circ\>F<around*|(|A|)>=B>, which is not
   equal, but isomorphic, to <math|A>, then the categories can still be
   equivalent. This reflects our previous idea that isomorphic objects should
-  be pinched together as one. So, instead of
-  <math|G\<circ\>F<around*|(|A|)>=A>, as <math|G\<circ\>F=1<rsub|<math-ss|C>>>
-  indicates, we should say <math|G\<circ\>F<around*|(|A|)>\<cong\>A>. By
-  lemma <reference|lemma: Natural Isomorphism>,
-  <math|G\<circ\>F\<cong\>1<rsub|<math-ss|C>>> means, for each
-  <math|A\<in\><math-ss|C>>, there exists an isomorphism
+  be viewed as one. So, instead of <math|G\<circ\>F<around*|(|A|)>=A>, as
+  <math|G\<circ\>F=1<rsub|<math-ss|C>>> indicates, we should say
+  <math|G\<circ\>F<around*|(|A|)>\<cong\>A>. By lemma <reference|lemma:
+  Natural Isomorphism>, <math|G\<circ\>F\<cong\>1<rsub|<math-ss|C>>> means,
+  for each <math|A\<in\><math-ss|C>>, there exists an isomorphism
   <math|\<alpha\><rsub|A>:<around*|(|G\<circ\>F|)><around*|(|A|)>\<rightarrow\>A>,
   that is <math|<around*|(|G\<circ\>F|)><around*|(|A|)>\<cong\>A>. This
   implies that, instead of <math|G\<circ\>F=1<rsub|<math-ss|C>>>, the correct
@@ -656,24 +670,25 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1.7|4>>
-    <associate|auto-11|<tuple|1.8|5>>
-    <associate|auto-12|<tuple|2|5>>
-    <associate|auto-13|<tuple|2.1|5>>
+    <associate|auto-10|<tuple|2.1|4>>
+    <associate|auto-11|<tuple|2.2|5>>
+    <associate|auto-12|<tuple|3|5>>
+    <associate|auto-13|<tuple|3.1|5>>
     <associate|auto-14|<tuple|2|6>>
-    <associate|auto-15|<tuple|3|7>>
-    <associate|auto-16|<tuple|3.1|7>>
+    <associate|auto-15|<tuple|4|7>>
+    <associate|auto-16|<tuple|4.1|7>>
     <associate|auto-17|<tuple|3|7>>
-    <associate|auto-18|<tuple|3.2|7>>
-    <associate|auto-19|<tuple|3.3|8>>
+    <associate|auto-18|<tuple|4.2|7>>
+    <associate|auto-19|<tuple|4.3|8>>
     <associate|auto-2|<tuple|1|1>>
+    <associate|auto-20|<tuple|4.4|8>>
     <associate|auto-3|<tuple|1.1|1>>
     <associate|auto-4|<tuple|1|2>>
     <associate|auto-5|<tuple|1.2|2>>
     <associate|auto-6|<tuple|1.3|3>>
     <associate|auto-7|<tuple|1.4|3>>
-    <associate|auto-8|<tuple|1.5|3>>
-    <associate|auto-9|<tuple|1.6|4>>
+    <associate|auto-8|<tuple|1.5|4>>
+    <associate|auto-9|<tuple|2|4>>
     <associate|lemma: Natural Isomorphism|<tuple|22|8>>
   </collection>
 </references>
@@ -689,14 +704,14 @@
       <tuple|normal|<surround|<hidden-binding|<tuple>|2>||The apply of a
       functor changes the style of the dots and arrows. The left hand side is
       the original diagrams, and the right hand side is the one with the
-      <with|mode|<quote|math>|F>-style.>|<pageref|auto-14>>
+      style <with|mode|<quote|math>|F>.>|<pageref|auto-14>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3>||The action of
       <with|mode|<quote|math>|\<alpha\>> is like changing the style of dots
       and arrows from style <with|mode|<quote|math>|F> to style
       <with|mode|<quote|math>|G>. The left hand side is the diagrams with the
-      <with|mode|<quote|math>|F>-style, and the right hand side is the one
-      with the <with|mode|<quote|math>|G>-style.>|<pageref|auto-17>>
+      style <with|mode|<quote|math>|F>, and the right hand side is the one
+      with the style <with|mode|<quote|math>|G>.>|<pageref|auto-17>>
     </associate>
     <\associate|toc>
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Category,
@@ -720,54 +735,58 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      <with|par-left|<quote|1tab>|1.4<space|2spc>Isomorphic Objects should be
-      Viewed as One <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.4<space|2spc>Supremum and Infimum are
+      Dual <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|1tab>|1.5<space|2spc>Supremum and Infimum are
-      Dual <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8>>
-
-      <with|par-left|<quote|1tab>|1.6<space|2spc>Morphisms in the Dual
+      <with|par-left|<quote|1tab>|1.5<space|2spc>Morphisms in the Dual
       Category of <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>
       are Not Maps <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9>>
+      <no-break><pageref|auto-8>>
 
-      <with|par-left|<quote|1tab>|1.7<space|2spc>Arrows Generalize Concepts
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Why
+      Category?> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Arrows Generalize Concepts
       and Theorems from One Area to Every Area in Mathemtatics
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>>
 
-      <with|par-left|<quote|1tab>|1.8<space|2spc>Duality is Free Lunch
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.2<space|2spc>Duality Helps Create New
+      Concepts and New Theorem, Freely! <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Functor>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Functor>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|2.1<space|2spc>Functor is the Morphism of
+      <with|par-left|<quote|1tab>|3.1<space|2spc>Functor is the Morphism of
       the Category of Categories <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Natural
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Natural
       Transformation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|3.1<space|2spc>Natural Transformation is
-      the Morphism of the Category of Functors
+      <with|par-left|<quote|1tab>|4.1<space|2spc>Natural Transformation is
+      Morphism of the Category of Functors
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-16>>
 
-      <with|par-left|<quote|1tab>|3.2<space|2spc>Natural Isomorphism is
+      <with|par-left|<quote|1tab>|4.2<space|2spc>Natural Isomorphism is
       Equivalent to Isomorphisms of Category.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-18>>
 
-      <with|par-left|<quote|1tab>|3.3<space|2spc>Natural Isomorphism
+      <with|par-left|<quote|1tab>|4.3<space|2spc>Isomorphic Objects should be
+      Viewed as One <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-19>>
+
+      <with|par-left|<quote|1tab>|4.4<space|2spc>Natural Isomorphism
       Describes Equivalence between Categories
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19>>
+      <no-break><pageref|auto-20>>
     </associate>
   </collection>
 </auxiliary>
