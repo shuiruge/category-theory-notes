@@ -15,8 +15,7 @@
   the morphisms to (or from) this object in the category, and what the word
   defined means.
 
-  <subsection|Morphisms with Fixed Codomain (or Domain) can be Represented by
-  a Functor>
+  <subsection|Morphisms with Fixed Codomain can be Represented by a Functor>
 
   Given the object, there will be many morphisms with this object as codomain
   (or domain). But, for the convenience of discussion, it would be better to
@@ -26,11 +25,11 @@
   by a morphism <math|Y\<rightarrow\><math-ss|C><around*|(|Y,X|)>>. And, in
   addition, we hope that this morphism will preserve the structure of
   category, which is important when we are discussing category theory. This
-  leads to a functor brings <math|Y> to <math|<math-ss|C><around*|(|Y,X|)>>.
-  Notice that, for a small category, <math|<math-ss|C><around*|(|Y,X|)>> is a
-  set. So, this is a functor from <math|<math-ss|C>> to <math|<math-ss|Set>>.
-  In fact, it is from <math|<math-ss|C><rsup|op>>, the dual category of
-  <math|<math-ss|C>>.
+  leads to a functor that brings <math|Y> to
+  <math|<math-ss|C><around*|(|Y,X|)>>. Notice that, for a small category,
+  <math|<math-ss|C><around*|(|Y,X|)>> is a set. So, this is a functor from
+  <math|<math-ss|C>> to <math|<math-ss|Set>>. In fact, it is from
+  <math|<math-ss|C><rsup|op>>, the dual category of <math|<math-ss|C>>.
 
   <\definition>
     [Representable Functor] Given a small category <math|<math-ss|C>>, and
@@ -44,17 +43,18 @@
       and
 
       <item>for each <math|Y,Z\<in\><math-ss|C>> and each
-      <math|f:Z\<rightarrow\>Y>, <math|<math-ss|C><around*|(|-,X|)><around*|(|f|)>\<assign\>\<varphi\>\<mapsto\>\<varphi\>\<circ\>f>.
+      <math|f:Z\<rightarrow\>Y>, <math|<math-ss|C><around*|(|-,X|)><around*|(|f|)>\<assign\>\<varphi\>\<mapsto\>\<varphi\>\<circ\>f>.<\footnote>
+        You should not mix <math|\<mapsto\>> with <math|\<rightarrow\>>. The
+        former denotes the element-wise map from a set to another set, while
+        the later is an abstract morphism.
+      </footnote>
     </itemize>
-
-    Verily, <math|f<rsup|\<ast\>>:<math-ss|C><around*|(|Y,X|)>\<rightarrow\><math-ss|C><around*|(|Z,X|)>>.
   </definition>
 
   The first item brings <math|Y> to <math|<math-ss|C><around*|(|Y,X|)>>,
   while the second preserves the structure of category.
 
-  To show that an object <math|X> is equivalent to the functor
-  <math|<math-ss|C><around*|(|-,X|)>>, we\ 
+  <subsection|>
 
   Our aim is to declare that <math|X\<cong\><math-ss|C><around*|(|-,X|)>>.
   This is not a well defined relation, since the left hand side is an object,
@@ -75,7 +75,7 @@
     <item>for each <math|X,Y\<in\>C> and each <math|f:X\<rightarrow\>Y>,
     <math|\<cal-Y\><around*|(|f|)>:<math-ss|C><around*|(|-,X|)>\<rightarrow\><math-ss|C><around*|(|-,Y|)>>
     is a natural transformation with component
-    <math|\<cal-Y\><around*|(|f|)><rsub|Z><around*|(|\<varphi\>|)>\<assign\>f\<circ\>\<varphi\>>,
+    <math|\<cal-Y\><around*|(|f|)><rsub|Z>\<assign\>\<varphi\>\<mapsto\>f\<circ\>\<varphi\>>,
     for any <math|Z\<in\><math-ss|C>> and
     <math|\<varphi\>\<in\><math-ss|C><around*|(|Z,X|)>>.
   </itemize>
@@ -83,6 +83,39 @@
   The letter <math|\<cal-Y\>> for Yoneda Nobuo, a Japanese mathematician and
   computer scientist. Then, the <math|X\<cong\><math-ss|C><around*|(|-,X|)>>
   simply means <math|<math-ss|C>\<cong\>\<cal-Y\><around*|(|<math-ss|C>|)>>.
+
+  To prove <math|<math-ss|C>\<cong\>\<cal-Y\><around*|(|<math-ss|C>|)>>, we
+  have to introduce a some concepts and a lemma for an equivalent statement
+  of natural isomorphism.
+
+  <\definition>
+    [Fully Faithful Functor] Given small categories <math|<math-ss|C>> and
+    <math|<math-ss|D>>, a functor <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>
+    is <with|font-series|bold|fully faithful> if for each
+    <math|X,Y\<in\><math-ss|C>>, the functorial map on morphisms,
+    <math|F:<math-ss|C><around*|(|X,Y|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|X|)>,F<around*|(|Y|)>|)>>,
+    is bijective.
+  </definition>
+
+  <\lemma>
+    Given small categories <math|<math-ss|C>> and <math|<math-ss|D>>, and a
+    functor <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>, <math|<math-ss|C>>
+    and <math|F<around*|(|<math-ss|C>|)>>, as a subcategory of
+    <math|<math-ss|D>>, is equivalent if and only if <math|F> is fully
+    faithful.
+  </lemma>
+
+  <\proof>
+    \;
+  </proof>
+
+  With this lemma, to prove <math|<math-ss|C>\<cong\>\<cal-Y\><around*|(|<math-ss|C>|)>>
+  is to prove that functor <math|\<cal-Y\>> is fully faithful. That is, there
+  exists a bijection between <math|<math-ss|C><around*|(|X,Y|)>> and
+  <math|Nat<around*|(|<math-ss|C><around*|(|-,X|)>,<math-ss|C><around*|(|-,Y|)>|)>>,
+  where <math|>for any two functors <math|F> and <math|G>,
+  <math|Nat<around*|(|F,G|)>> denotes the collection of natural
+  transformations from <math|F> to <math|G>.
 </body>
 
 <\initial>
@@ -93,10 +126,13 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|1|../../../.TeXmacs/texts/scratch/no_name_2.tm>>
-    <associate|auto-2|<tuple|1|1|../../../.TeXmacs/texts/scratch/no_name_2.tm>>
-    <associate|auto-3|<tuple|1.1|1|../../../.TeXmacs/texts/scratch/no_name_2.tm>>
-    <associate|auto-4|<tuple|1.2|1|../../../.TeXmacs/texts/scratch/no_name_2.tm>>
+    <associate|auto-1|<tuple|1|1>>
+    <associate|auto-2|<tuple|1|1>>
+    <associate|auto-3|<tuple|1.1|1>>
+    <associate|auto-4|<tuple|1.2|1>>
+    <associate|auto-5|<tuple|1.3|?>>
+    <associate|footnote-1|<tuple|1|?>>
+    <associate|footnr-1|<tuple|1|?>>
   </collection>
 </references>
 

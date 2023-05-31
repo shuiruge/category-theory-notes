@@ -100,11 +100,6 @@
   objects and morphisms abstract. You can think objects as dots and morphisms
   as arrows between the dots.
 
-  <big-figure|<with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|10|10|center>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|<graphics||<with|fill-color|#a0a0a0|<carc|<point|0.310400671367257|0.16552160493122>|<point|0.285136199876317|-0.21350059244938>|<point|0.487295877082287|-0.188232699871>>>|<with|fill-color|#a0a0a0|<carc|<point|-2.22636059364996|1.73240628826565>|<point|-2.25162506514086|1.35338409088502>|<point|-2.04946538793496|1.37865198346342>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|-1.86303069610306|0.27291752460747>|<point|-2.19151024233936|1.04358501766211>|<point|-2.14096101889706|1.20780541718586>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|-1.87093252376536|1.47159446929622>|<point|-0.190614610020164|1.33262094237466>|<point|0.376558436722317|1.57173709009268>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|-1.84733506514086|1.59343409088504>|<point|-0.874521821325564|1.99771971729064>|<point|0.350970968726037|1.77030868408518>>>|<with|fill-color|#a0a0a0|<carc|<point|1.86705871535924|-0.20056659346475>|<point|1.84179424386824|-0.57958879084535>|<point|2.04395392107424|-0.55432089826697>>>|<with|fill-color|#a0a0a0|<carc|<point|0.608552685689098|1.83638578327385>|<point|0.583288214198159|1.45736358589324>|<point|0.785447891404148|1.48263147847162>>>|<with|fill-color|#a0a0a0|<carc|<point|-1.69575027085596|0.25425839568725>|<point|-1.72101474234686|-0.12476380169336>|<point|-1.51885506514086|-0.0994959091149598>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|0.666321855655019|-0.17136654160574>|<point|1.37384264147325|-0.43667444212168>|<point|1.54598345718367|-0.4490071659333>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|1.61438424386824|-0.18793279084535>|<point|0.7679066|0.0773767051197201>|<point|0.692102922264849|0.06474275883053>>>|<with|fill-color|#a0a0a0|<carc|<point|-1.19575027085596|-1.04574160431275>|<point|-1.22101474234686|-1.42476380169336>|<point|-1.01885506514086|-1.39949590911496>>>>>|You
-  can think objects as dots and morphisms as arrows between the dots. There
-  are three disconnected diagrams in this figure. For convenience, identity
-  morphisms are not shown.>
-
   <subsection|Objects may not be Sets>
 
   We know that <hlink|the symmetry group of rectangle is dihedral group
@@ -476,16 +471,33 @@
     </itemize>
   </definition>
 
+  Then, by composition and identity, the axioms of functor are preserved.
+  Indeed, for morphisms <math|f>, <math|g>, and <math|h> in category
+  <math|<math-ss|C>>, we have
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|<around*|(|F<around*|(|f|)>\<circ\>F<around*|(|g|)>|)>\<circ\>F<around*|(|h|)>>>|<row|<cell|<around*|{|composition
+    of F|}>=>|<cell|F<around*|(|f\<circ\>g|)>\<circ\>F<around*|(|h|)>>>|<row|<cell|=>|<cell|F<around*|(|<around*|(|f\<circ\>g|)>\<circ\>h|)>>>|<row|<cell|<around*|{|associativity
+    of <math-ss|C>|}>=>|<cell|F<around*|(|f\<circ\><around*|(|g\<circ\>h|)>|)>>>|<row|<cell|<around*|{|composition
+    of F|}>=>|<cell|F<around*|(|f|)>\<circ\>F<around*|(|g\<circ\>h|)>>>|<row|<cell|=>|<cell|F<around*|(|f|)>\<circ\><around*|(|F<around*|(|g|)>\<circ\>F<around*|(|h|)>|)>,>>>>
+  </align>
+
+  so the associativity axiom is preserved. And, for any
+  <math|A,B\<in\><math-ss|C>> and <math|f:A\<rightarrow\>B>, we have
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|F<around*|(|f|)>\<circ\>F<around*|(|1<rsub|A>|)>>>|<row|<cell|<around*|{|identity
+    of F|}>=>|<cell|F<around*|(|f|)>\<circ\>1<rsub|F<around*|(|A|)>>>>|<row|<cell|<around*|{|identity
+    of <math-ss|D>|}>=>|<cell|1<rsub|F<around*|(|B|)>>\<circ\>F<around*|(|f|)>>>|<row|<cell|<around*|{|identity
+    of F|}>=>|<cell|F<around*|(|1<rsub|B>|)>\<circ\>F<around*|(|f|)>,>>>>
+  </align>
+
+  so the identity axiom is preserved.
+
   Imagine a category as a series of diagrams with dots and arrows between
   dots. The apply of a functor changes the style of the dots and arrows. This
   means it has become another category, but the structure, or form, of the
   diagrams are invariant.
-
-  <big-figure|<with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|10|10|center>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|<graphics||<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|5.42865185565502|-0.47136654160574>|<point|6.13617264147325|-0.73667444212168>|<point|6.30831345718367|-0.7490071659333>>>|<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|2.91499493485914|1.29343409088504>|<point|3.88780817867444|1.69771971729064>|<point|5.11330096872604|1.47030868408518>>>|<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|6.37671424386824|-0.48793279084535>|<point|5.5302366|-0.22262329488028>|<point|5.45443292226485|-0.23525724116947>>>|<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|2.89139747623464|1.17159446929622>|<point|4.57171538997984|1.03262094237466>|<point|5.13888843672232|1.27173709009268>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|2.53596940635004|1.43240628826565>|<point|2.51070493485914|1.05338409088502>|<point|2.71286461206504|1.07865198346342>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|3.06657972914404|-0.04574160431275>|<point|3.04131525765314|-0.42476380169336>|<point|3.24347493485914|-0.39949590911496>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|3.56657972914404|-1.34574160431275>|<point|3.54131525765314|-1.72476380169336>|<point|3.74347493485914|-1.69949590911496>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|6.62938871535924|-0.50056659346475>|<point|6.60412424386824|-0.87958879084535>|<point|6.80628392107424|-0.85432089826697>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|5.07273067136726|-0.13447839506878>|<point|5.04746619987632|-0.51350059244938>|<point|5.24962587708229|-0.488232699871>>>|<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|2.89929930389694|-0.02708247539253>|<point|2.57081975766064|0.74358501766211>|<point|2.62136898110294|0.90780541718586>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|5.3708826856891|1.53638578327385>|<point|5.34561821419816|1.15736358589324>|<point|5.54777789140415|1.18263147847162>>>|<with|color|dark
-  magenta|line-width|2ln|arrow-end|\<gtr\>|<line|<point|-1|0>|<point|1.0|0.0>>>|<math-at|F|<point|-0.2|0.2>>|<with|fill-color|#a0a0a0|<carc|<point|-5.39575027085596|-1.34574160431275>|<point|-5.42101474234686|-1.72476380169336>|<point|-5.21885506514086|-1.69949590911496>>>|<with|fill-color|#a0a0a0|<carc|<point|-5.89575027085596|-0.04574160431275>|<point|-5.92101474234686|-0.42476380169336>|<point|-5.71885506514086|-0.39949590911496>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|-6.06303069610306|-0.02708247539253>|<point|-6.39151024233936|0.74358501766211>|<point|-6.34096101889706|0.90780541718586>>>|<with|fill-color|#a0a0a0|<carc|<point|-6.42636059364996|1.43240628826565>|<point|-6.45162506514086|1.05338409088502>|<point|-6.24946538793496|1.07865198346342>>>|<with|fill-color|#a0a0a0|<carc|<point|-3.88959932863274|-0.13447839506878>|<point|-3.91486380012368|-0.51350059244938>|<point|-3.71270412291771|-0.488232699871>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|-6.07093252376536|1.17159446929622>|<point|-4.39061461002016|1.03262094237466>|<point|-3.82344156327768|1.27173709009268>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|-6.04733506514086|1.29343409088504>|<point|-5.07452182132556|1.69771971729064>|<point|-3.84902903127396|1.47030868408518>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|-3.53367814434498|-0.47136654160574>|<point|-2.82615735852675|-0.73667444212168>|<point|-2.65401654281633|-0.7490071659333>>>|<with|arrow-end|\|\<gtr\>|<arc|<point|-2.58561575613176|-0.48793279084535>|<point|-3.4320934|-0.22262329488028>|<point|-3.50789707773515|-0.23525724116947>>>|<with|fill-color|#a0a0a0|<carc|<point|-2.33294128464076|-0.50056659346475>|<point|-2.35820575613176|-0.87958879084535>|<point|-2.15604607892576|-0.85432089826697>>>|<with|fill-color|#a0a0a0|<carc|<point|-3.5914473143109|1.53638578327385>|<point|-3.61671178580184|1.15736358589324>|<point|-3.41455210859585|1.18263147847162>>>>>|The
-  apply of a functor changes the style of the dots and arrows. The left hand
-  side is the original diagrams, and the right hand side is the one with the
-  style <math|F>.>
 
   <section|Natural Transformation>
 
@@ -519,29 +531,29 @@
     <with|font-series|bold|component> of <math|\<alpha\>>.
   </definition>
 
+  <big-figure|<image|/home/shuiruge/Downloads/natural-transformation.png|250pt|85pt||>|Indicates
+  the natural transformation <math|\<tau\>:S\<rightarrow\>T>. Copied from
+  <hlink|Mac Lane|https://en.wikipedia.org/wiki/Categories_for_the_Working_Mathematician>.>
+
+  As the figure indicates, associativity of functor is preserved. TODO:
+  explain further. Also, note that <math|G<around*|(|f|)>\<circ\>\<alpha\><rsub|A>=\<alpha\><rsub|B>\<circ\>F<around*|(|f|)>>
+  holds for <math|f=1<rsub|A>> automatically. Indeed, remind that, for any
+  <math|g:X\<rightarrow\>Y>, identity ensures
+  <math|1<rsub|Y>\<circ\>g=g\<circ\>1<rsub|X>>. Letting
+  <math|g=\<alpha\><rsub|A>>, <math|X=F<around*|(|A|)>>, and
+  <math|Y=G<around*|(|A|)>>, we find <math|1<rsub|G<around*|(|A|)>>\<circ\>\<alpha\><rsub|A>=\<alpha\><rsub|A>\<circ\>1<rsub|F<around*|(|A|)>>>.
+  Since <math|F> and <math|G> are functors, we have
+  <math|G<around*|(|1<rsub|A>|)>=1<rsub|G<around*|(|A|)>>> and
+  <math|F<around*|(|1<rsub|A>|)>=1<rsub|F<around*|(|A|)>>>; then the relation
+  becomes <math|G<around*|(|1<rsub|A>|)>\<circ\>\<alpha\><rsub|A>=\<alpha\><rsub|A>\<circ\>F<around*|(|1<rsub|A>|)>>,
+  which is the <math|G<around*|(|f|)>\<circ\>\<alpha\><rsub|A>=\<alpha\><rsub|B>\<circ\>F<around*|(|f|)>>
+  holds for <math|f=1<rsub|A>>.
+
   Remember the metaphor for functor, wherein the action of a functor is like
   applying a style to the dots and arrows of the diagrams, the action of
   <math|\<alpha\>> is like changing the style of dots and arrows from style
   <math|F> to style <math|G>. So, with natural transformation, the structure
   of functor is preserved.
-
-  <big-figure|<with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|10|10|center>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|<graphics||<with|arrow-end|\<gtr\>|color|dark
-  green|line-width|2ln|<arc|<point|5.42865185565502|-0.47136654160574>|<point|6.13617264147325|-0.73667444212168>|<point|6.30831345718367|-0.7490071659333>>>|<with|arrow-end|\<gtr\>|color|dark
-  green|line-width|2ln|<arc|<point|2.91499493485914|1.29343409088504>|<point|3.88780817867444|1.69771971729064>|<point|5.11330096872604|1.47030868408518>>>|<with|arrow-end|\<gtr\>|color|dark
-  green|line-width|2ln|<arc|<point|6.37671424386824|-0.48793279084535>|<point|5.5302366|-0.22262329488028>|<point|5.45443292226485|-0.23525724116947>>>|<with|arrow-end|\<gtr\>|color|dark
-  green|line-width|2ln|<arc|<point|2.89139747623464|1.17159446929622>|<point|4.57171538997984|1.03262094237466>|<point|5.13888843672232|1.27173709009268>>>|<with|color|dark
-  green|line-width|2ln|fill-color|#faa|<carc|<point|2.53596940635004|1.43240628826565>|<point|2.51070493485914|1.05338409088502>|<point|2.71286461206504|1.07865198346342>>>|<with|color|dark
-  green|line-width|2ln|fill-color|#faa|<carc|<point|3.06657972914404|-0.04574160431275>|<point|3.04131525765314|-0.42476380169336>|<point|3.24347493485914|-0.39949590911496>>>|<with|color|dark
-  green|line-width|2ln|fill-color|#faa|<carc|<point|3.56657972914404|-1.34574160431275>|<point|3.54131525765314|-1.72476380169336>|<point|3.74347493485914|-1.69949590911496>>>|<with|color|dark
-  green|line-width|2ln|fill-color|#faa|<carc|<point|6.62938871535924|-0.50056659346475>|<point|6.60412424386824|-0.87958879084535>|<point|6.80628392107424|-0.85432089826697>>>|<with|color|dark
-  green|line-width|2ln|fill-color|#faa|<carc|<point|5.07273067136726|-0.13447839506878>|<point|5.04746619987632|-0.51350059244938>|<point|5.24962587708229|-0.488232699871>>>|<with|arrow-end|\<gtr\>|color|dark
-  green|line-width|2ln|<arc|<point|2.89929930389694|-0.02708247539253>|<point|2.57081975766064|0.74358501766211>|<point|2.62136898110294|0.90780541718586>>>|<with|color|dark
-  green|line-width|2ln|fill-color|#faa|<carc|<point|5.3708826856891|1.53638578327385>|<point|5.34561821419816|1.15736358589324>|<point|5.54777789140415|1.18263147847162>>>|<with|color|dark
-  magenta|line-width|2ln|arrow-end|\<gtr\>|<line|<point|-1|0>|<point|1.0|0.0>>>|<math-at|\<alpha\>|<point|-0.2|0.2>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|-5.39575027085596|-1.34574160431275>|<point|-5.42101474234686|-1.72476380169336>|<point|-5.21885506514086|-1.69949590911496>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|-5.89575027085596|-0.04574160431275>|<point|-5.92101474234686|-0.42476380169336>|<point|-5.71885506514086|-0.39949590911496>>>|<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|-6.06303069610306|-0.02708247539253>|<point|-6.39151024233936|0.74358501766211>|<point|-6.34096101889706|0.90780541718586>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|-6.42636059364996|1.43240628826565>|<point|-6.45162506514086|1.05338409088502>|<point|-6.24946538793496|1.07865198346342>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|-3.88959932863274|-0.13447839506878>|<point|-3.91486380012368|-0.51350059244938>|<point|-3.71270412291771|-0.488232699871>>>|<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|-6.07093252376536|1.17159446929622>|<point|-4.39061461002016|1.03262094237466>|<point|-3.82344156327768|1.27173709009268>>>|<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|-6.04733506514086|1.29343409088504>|<point|-5.07452182132556|1.69771971729064>|<point|-3.84902903127396|1.47030868408518>>>|<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|-3.53367814434498|-0.47136654160574>|<point|-2.82615735852675|-0.73667444212168>|<point|-2.65401654281633|-0.7490071659333>>>|<with|arrow-end|\|\<gtr\>|color|red|<arc|<point|-2.58561575613176|-0.48793279084535>|<point|-3.4320934|-0.22262329488028>|<point|-3.50789707773515|-0.23525724116947>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|-2.33294128464076|-0.50056659346475>|<point|-2.35820575613176|-0.87958879084535>|<point|-2.15604607892576|-0.85432089826697>>>|<with|fill-color|#a0a0a0|color|red|<carc|<point|-3.5914473143109|1.53638578327385>|<point|-3.61671178580184|1.15736358589324>|<point|-3.41455210859585|1.18263147847162>>>>>|The
-  action of <math|\<alpha\>> is like changing the style of dots and arrows
-  from style <math|F> to style <math|G>. The left hand side is the diagrams
-  with the style <math|F>, and the right hand side is the one with the style
-  <math|G>.>
 
   <subsection|Natural Isomorphism is Equivalent to Isomorphisms of Category.>
 
@@ -670,25 +682,25 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|2.1|4>>
-    <associate|auto-11|<tuple|2.2|5>>
-    <associate|auto-12|<tuple|3|5>>
-    <associate|auto-13|<tuple|3.1|5>>
-    <associate|auto-14|<tuple|2|6>>
-    <associate|auto-15|<tuple|4|7>>
-    <associate|auto-16|<tuple|4.1|7>>
-    <associate|auto-17|<tuple|3|7>>
-    <associate|auto-18|<tuple|4.2|7>>
-    <associate|auto-19|<tuple|4.3|8>>
+    <associate|auto-10|<tuple|2.2|4>>
+    <associate|auto-11|<tuple|3|5>>
+    <associate|auto-12|<tuple|3.1|5>>
+    <associate|auto-13|<tuple|4|5>>
+    <associate|auto-14|<tuple|4.1|6>>
+    <associate|auto-15|<tuple|1|7>>
+    <associate|auto-16|<tuple|4.2|7>>
+    <associate|auto-17|<tuple|4.3|7>>
+    <associate|auto-18|<tuple|4.4|7>>
+    <associate|auto-19|<tuple|4.4|8>>
     <associate|auto-2|<tuple|1|1>>
     <associate|auto-20|<tuple|4.4|8>>
     <associate|auto-3|<tuple|1.1|1>>
-    <associate|auto-4|<tuple|1|2>>
-    <associate|auto-5|<tuple|1.2|2>>
-    <associate|auto-6|<tuple|1.3|3>>
-    <associate|auto-7|<tuple|1.4|3>>
-    <associate|auto-8|<tuple|1.5|4>>
-    <associate|auto-9|<tuple|2|4>>
+    <associate|auto-4|<tuple|1.2|2>>
+    <associate|auto-5|<tuple|1.3|2>>
+    <associate|auto-6|<tuple|1.4|3>>
+    <associate|auto-7|<tuple|1.5|3>>
+    <associate|auto-8|<tuple|2|4>>
+    <associate|auto-9|<tuple|2.1|4>>
     <associate|lemma: Natural Isomorphism|<tuple|22|8>>
   </collection>
 </references>
@@ -754,7 +766,7 @@
       <no-break><pageref|auto-10>>
 
       <with|par-left|<quote|1tab>|2.2<space|2spc>Duality Helps Create New
-      Concepts and New Theorem, Freely! <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Concepts and Theorems, Freely! <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Functor>
