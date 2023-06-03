@@ -5,7 +5,7 @@
 <\body>
   <chapter|Preface>
 
-  <subsection|Motivation>
+  <section|Motivation>
 
   This note is about the basic aspects of category theory. There have been
   many books on category theory, almost all of them contains many examples
@@ -18,7 +18,7 @@
   concept, no matter it is known or new to us, \ Examples are shown only when
   it is essential.
 
-  <subsection|Writing Style>
+  <section|Writing Style>
 
   The writing style follows the suggestions given by <em|<hlink|How to Think
   Like a Mathematician|https://www.amazon.com/How-Think-Like-Mathematician-Undergraduate/dp/052171978X>>.
@@ -31,13 +31,11 @@
     <item>Definitions are bold.
   </itemize>
 
-  \ 
+  <section|Technique Limitation>
 
-  <subsection|TODO>
-
-  Since itt is hard to draw diagrams in <TeXmacs>, commutative diagrams are
-  not shown. But, this is a good place to participate in building category
-  theory on your own.
+  It is hard to draw diagrams in <TeXmacs>. So, all the commutative diagrams
+  are drawn by <hlink|quiver|https://q.uiver.app/> online, and pasted to the
+  text by screenshot.
 </body>
 
 <\initial>
@@ -51,7 +49,7 @@
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|1|1>>
     <associate|auto-3|<tuple|2|1>>
-    <associate|auto-4|<tuple|3|1>>
+    <associate|auto-4|<tuple|3|?>>
   </collection>
 </references>
 
@@ -69,10 +67,6 @@
       <with|par-left|<quote|1tab>|2<space|2spc>Writing Style
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
-
-      <with|par-left|<quote|1tab>|3<space|2spc>TODO
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4>>
     </associate>
   </collection>
 </auxiliary>

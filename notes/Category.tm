@@ -355,7 +355,7 @@
   are equivalent in the sense of isomorphism.
 
   <\proof>
-    TODO
+    Left to reader.
   </proof>
 
   This theorem holds not only for Cartesian product of sets, but also, for
@@ -408,7 +408,7 @@
 
   <section|Functor>
 
-  <subsection|Functor is the Morphism of the Category of Categories>
+  <subsection|Structure Preserving Map Builds Category out of Objects>
 
   We need some examples of category to introduce the next core concept of
   category theory: functor. The first example is the category of topological
@@ -438,6 +438,8 @@
   morphisms. For example, in <math|<math-ss|Top>>, the preserved structure is
   continuity, and in <math|<math-ss|Grp>>, it is the group structure.
 
+  <subsection|Functor is the Morphism of the Category of Categories>
+
   Notice that the objects of a category can be anything. So, it can also be
   categories! To construct a category out of categories, the morphisms
   between two categories can be the maps that preserve the structure of
@@ -447,14 +449,15 @@
   <\definition>
     [Functor] Given two categories <math|<math-ss|C>> and <math|<math-ss|D>>,
     a <with|font-series|bold|functor> <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>
-    maps
+    is a map that takes
 
     <\itemize>
       <item>for each <math|A\<in\><math-ss|C>>,
       <math|F<around*|(|A|)>\<in\><math-ss|D>>, and
 
       <item>for each <math|A,B\<in\><math-ss|C>> and each
-      <math|f:A\<rightarrow\>B>, <math|F<around*|(|f|)>:F<around*|(|A|)>\<rightarrow\>F<around*|(|B|)>>,
+      <math|f\<in\><math-ss|C><around*|(|A,B|)>>,
+      <math|F<around*|(|f|)>\<in\><math-ss|D><around*|(|F<around*|(|A|)>,F<around*|(|B|)>|)>>,
     </itemize>
 
     such that the structure of category is preserved, that is
@@ -471,9 +474,34 @@
     </itemize>
   </definition>
 
-  Then, by composition and identity, the axioms of functor are preserved.
-  Indeed, for morphisms <math|f>, <math|g>, and <math|h> in category
-  <math|<math-ss|C>>, we have
+  <big-figure|<image|figures/functor.png|0.5par|||>|<label|figure: Functor>
+  Indicates the functor <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>. This
+  diagram commutes.>
+
+  Functor as morphism does build a category of categories. Indeed, functors
+  can be composed by extending the commuative diagram <reference|figure:
+  Functor> to the right (figure <reference|figure: Functor Composition>).
+  Identity functor is the one that maps everything in a category to itself.
+  Finally, associativity and identity axioms can be checked directly.
+
+  <big-figure|<image|figures/functor-composition.png|0.75par|||>|<label|figure:
+  Functor Composition> Extending the commuative diagram <reference|figure:
+  Functor> to the right. This diagram commutes.>
+
+  Imagine a category as a series of diagrams with dots and arrows between
+  dots. The apply of a functor changes the style of the dots and arrows. This
+  means it has become another category, but the structure, or form, of the
+  diagrams are invariant.
+
+  <subsection|Functor Preserves the Structure of Category>
+
+  It should be checked that functor preserves the structure of category.
+  Comparing with the definition of category, functor has preserved
+  composition and identity. So, we just have to prove that the axioms of
+  category are also preserved.
+
+  Directly, for each <math|A<above|\<rightarrow\>|f>B<above|\<rightarrow\>|g>C<above|\<rightarrow\>|h>D>
+  in <math|<math-ss|C>>, we have
 
   <\align>
     <tformat|<table|<row|<cell|>|<cell|<around*|(|F<around*|(|f|)>\<circ\>F<around*|(|g|)>|)>\<circ\>F<around*|(|h|)>>>|<row|<cell|<around*|{|composition
@@ -482,8 +510,8 @@
     of F|}>=>|<cell|F<around*|(|f|)>\<circ\>F<around*|(|g\<circ\>h|)>>>|<row|<cell|=>|<cell|F<around*|(|f|)>\<circ\><around*|(|F<around*|(|g|)>\<circ\>F<around*|(|h|)>|)>,>>>>
   </align>
 
-  so the associativity axiom is preserved. And, for any
-  <math|A,B\<in\><math-ss|C>> and <math|f:A\<rightarrow\>B>, we have
+  so the associativity axiom is preserved. And, for each
+  <math|f:A\<rightarrow\>B> in <math|<math-ss|C>>, since
 
   <\align>
     <tformat|<table|<row|<cell|>|<cell|F<around*|(|f|)>\<circ\>F<around*|(|1<rsub|A>|)>>>|<row|<cell|<around*|{|identity
@@ -492,12 +520,115 @@
     of F|}>=>|<cell|F<around*|(|1<rsub|B>|)>\<circ\>F<around*|(|f|)>,>>>>
   </align>
 
-  so the identity axiom is preserved.
+  the identity axiom is preserved.
 
-  Imagine a category as a series of diagrams with dots and arrows between
-  dots. The apply of a functor changes the style of the dots and arrows. This
-  means it has become another category, but the structure, or form, of the
-  diagrams are invariant.
+  <subsection|Surjective Functor May Not be Full>
+
+  Since functor preserves the structure of category, the image of a functor
+  should be a subcategory of the codomain of the functor. Explicitly, given a
+  functor <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>, the image
+  <math|F<around*|(|<math-ss|C>|)>> is a subcategory of <math|<math-ss|D>>.
+  Naturally, we can consider if the subcategory
+  <math|F<around*|(|<math-ss|C>|)>> is <math|<math-ss|D>> itself. Naturally,
+  you may think that <math|F<around*|(|<math-ss|C>|)>=<math-ss|D>> if for
+  each object <math|A<rprime|'>\<in\><math-ss|D>>, there exists an object
+  <math|A\<in\><math-ss|C>> such that <math|F<around*|(|A|)>=A<rprime|'>>.
+  This, however, is not true.
+
+  A functor is not a map. In fact, it has two maps as components: the map on
+  objects and that on morphisms. So, <math|F<around*|(|<math-ss|C>|)>> can
+  still be a proper subcategory of <math|<math-ss|D>> even though the map
+  <math|F:ob<rsub|<math-ss|C>>\<rightarrow\>ob<rsub|<math-ss|D>>> is
+  surjective, as long as for some objects <math|A,B\<in\><math-ss|C>>, the
+  map <math|F:<math-ss|C><around*|(|A,B|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|A|)>,F<around*|(|B|)>|)>>
+  is not. So, for functor, we have to distinguish two kinds of surjection.
+  One is that the map <math|F:ob<rsub|<math-ss|C>>\<rightarrow\>ob<rsub|<math-ss|D>>>
+  is surjective, for which we say <math|F> is
+  <with|font-series|bold|surjective on objects>. The other is that, for every
+  <math|A,B\<in\><math-ss|C>>, the map <math|F:<math-ss|C><around*|(|A,B|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|A|)>,F<around*|(|B|)>|)>>
+  is surjective, for which we say <math|F> is <with|font-series|bold|full>.
+
+  Surjection on objects and fullness are two independent properties of
+  functor. We may find a functor is not surjective on objects, but is full.
+  That is, there is object in <math|<math-ss|D>> that is out of the image of
+  <math|F>, but for every two objects in the image of <math|F>, say
+  <math|F<around*|(|A|)>> and <math|F<around*|(|B|)>>, the map on morphisms
+  <math|F:<math-ss|C><around*|(|A,B|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|A|)>,F<around*|(|B|)>|)>>
+  is surjective.
+
+  <subsection|Injective Functor May Not be Faithful>
+
+  The same discussion applies for the injection of functor. Again, you may
+  think that <math|F<around*|(|<math-ss|C>|)>> can still be multiple-to-one
+  correspondent to <math|<math-ss|C>> even though the map
+  <math|F:ob<rsub|<math-ss|C>>\<rightarrow\>ob<rsub|<math-ss|D>>> is
+  injective, as long as for some objects <math|A,B\<in\><math-ss|C>>, the map
+  <math|F:<math-ss|C><around*|(|A,B|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|A|)>,F<around*|(|B|)>|)>>
+  is not. So, again, there are two kinds of injection. One is that map
+  <math|F:ob<rsub|<math-ss|C>>\<rightarrow\>ob<rsub|<math-ss|D>>> is
+  injective, for which we say <math|F> is <with|font-series|bold|injective on
+  objects>. The other is that, for every <math|A,B\<in\><math-ss|C>>, the map
+  <math|F:<math-ss|C><around*|(|A,B|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|A|)>,F<around*|(|B|)>|)>>
+  is injective, for which we say <math|F> is
+  <with|font-series|bold|faithful>.
+
+  For the same reason, injection on objects and faithfulness are two
+  independent properties of functor.
+
+  <subsection|Image of Functor May Not be a Category>
+
+  The image of a group homomorphism is a subgroup of the codomain. But, this
+  is not generally true for category. (Remind that group is the category with
+  single object.)
+
+  What is the problem? Since functor preserves the structure of category, the
+  composition, identity, and the axioms of associativity and identity of
+  category are automatically fulfilled. All left is the closure of
+  composition.
+
+  Consider a functor <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>, the
+  generic pattern to be examed would be <math|F<around*|(|A|)><above|\<rightarrow\>|F<around*|(|f|)>>F<around*|(|B|)><above|\<rightarrow\>|F<around*|(|g|)>>F<around*|(|C|)>>
+  in the image <math|F<around*|(|<math-ss|C>|)>>. The problem is if
+  <math|F<around*|(|g|)>\<circ\>F<around*|(|f|)>> still in the
+  <math|F<around*|(|<math-ss|C>|)>>? By the axiom of composition,
+  <math|F<around*|(|g|)>\<circ\>F<around*|(|f|)>=F<around*|(|g\<circ\>f|)>>.
+  So, that <math|F<around*|(|g|)>\<circ\>F<around*|(|f|)>> is in
+  <math|F<around*|(|<math-ss|C>|)>> is equivalent to that <math|g\<circ\>f>
+  is in <math|<math-ss|C>>. The later is only possible when the domain of
+  <math|g> is exactly the codomain of <math|f>, but this may not be true. For
+  instance, let <math|A<above|\<rightarrow\>|f>B> and
+  <math|B<rprime|'><above|\<rightarrow\>|g>C> with
+  <math|F<around*|(|B|)>=F<around*|(|B<rprime|'>|)>>, then <math|g\<circ\>f>
+  does not exist at all, neither does <math|F<around*|(|g\<circ\>f|)>>. So,
+  <math|F<around*|(|g|)>\<circ\>F<around*|(|f|)>> is not in
+  <math|F<around*|(|<math-ss|C>|)>>, and <math|F<around*|(|<math-ss|C>|)>> is
+  not a category.
+
+  Why is it so? The key point in this analysis is
+  <math|F<around*|(|B|)>=F<around*|(|B<rprime|'>|)>>. It is this construction
+  that destoried the <math|g\<circ\>f>. In other words, <math|F> is not
+  injective on objects.
+
+  Contrarily, when <math|F> does be injective on objects, then there must be
+  an unique <math|B> that is mapped to <math|F<around*|(|B|)>>. In this case,
+  there is no choice but <math|A<above|\<rightarrow\>|f>B<above|\<rightarrow\>|g>C>.
+  This means <math|g\<circ\>f> exists in <math|<math-ss|C>>, so does the
+  <math|F<around*|(|g\<circ\>f|)>>, or <math|F<around*|(|g|)>\<circ\>F<around*|(|f|)>>,
+  in <math|F<around*|(|<math-ss|C>|)>>. So, the closure of
+  <math|F<around*|(|<math-ss|C>|)>> is satisfied. Now,
+  <math|F<around*|(|<math-ss|C>|)>> becomes a category.
+
+  We conclude this section by a theorem.
+
+  <\theorem>
+    <label|theorem: Functorial Image as Category>[Functorial Image as
+    Category] Given a functor <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>,
+    the image <math|F<around*|(|<math-ss|C>|)>> is a category if and only if
+    <math|F> is injective on objects.
+  </theorem>
+
+  In the case of group, there is only one object, so a functor, or group
+  homomorphism, is always injective on objects.
 
   <section|Natural Transformation>
 
@@ -509,51 +640,53 @@
   categories <math|<math-ss|C>> and <math|<math-ss|D>>, a category of
   functors from <math|<math-ss|C>> to <math|<math-ss|D>>, denoted by
   <math|<around*|[|<math-ss|C>,<math-ss|D>|]>>, has the collection of all
-  functors from <math|<math-ss|C>> to <math-ss|D> as its objects.
-
-  But, given two functor <math|F,G:<math-ss|C>\<rightarrow\><math-ss|D>>,
-  what is the morphism between <math|F> and <math|G>? Remember
-  <math|<math-ss|Top>> and <math|<math-ss|Grp>>, in which we constructed the
-  category out of the objects; morphism between two objects are structure
-  preserving map. The same goes for the category of functors, in which we
-  know what the objects are and have to define the morphisms. The structure
-  preserving map is natural transformation.
+  functors from <math|<math-ss|C>> to <math-ss|D> as its objects. In
+  addition, for any two functors <math|F,G:<math-ss|C>\<rightarrow\><math-ss|D>>,
+  the morphism from <math|F> to <math|G> is a natural transformation.
 
   <\definition>
-    [Natural Transformation] Given two categories <math|<math-ss|C>> and
-    <math|<math-ss|D>>, and two functors <math|F,G:<math-ss|C>\<rightarrow\><math-ss|D>>,
-    a <with|font-series|bold|natural transformation>
-    <math|\<alpha\>:F\<rightarrow\>G> is a family of morphisms in
-    <math|<math-ss|D>>, <math|<around*|{|\<alpha\><rsub|A>:F<around*|(|A|)>\<rightarrow\>G<around*|(|A|)>\|\<forall\>A\<in\><math-ss|C>|}>>,
+    [Natural Transformation] Given two functors
+    <math|F,G:<math-ss|C>\<rightarrow\><math-ss|D>>, a
+    <with|font-series|bold|natural transformation>
+    <math|\<eta\>:F\<rightarrow\>G> is a family of morphisms in
+    <math|<math-ss|D>>, <math|<around*|{|\<eta\><rsub|A>:F<around*|(|A|)>\<rightarrow\>G<around*|(|A|)>\|\<forall\>A\<in\><math-ss|C>|}>>,
     such that for each <math|A,B\<in\><math-ss|C>> and each
-    <math|f:A\<rightarrow\>B>, we have <math|G<around*|(|f|)>\<circ\>\<alpha\><rsub|A>=\<alpha\><rsub|B>\<circ\>F<around*|(|f|)>>.
-    The <math|\<alpha\><rsub|A>> is called a
-    <with|font-series|bold|component> of <math|\<alpha\>>.
+    <math|f:A\<rightarrow\>B>, we have <math|G<around*|(|f|)>\<circ\>\<eta\><rsub|A>=\<eta\><rsub|B>\<circ\>F<around*|(|f|)>>.
+    The <math|\<eta\><rsub|A>> is called a <with|font-series|bold|component>
+    of <math|\<eta\>>.
   </definition>
 
-  <big-figure|<image|/home/shuiruge/Downloads/natural-transformation.png|250pt|85pt||>|Indicates
-  the natural transformation <math|\<tau\>:S\<rightarrow\>T>. Copied from
-  <hlink|Mac Lane|https://en.wikipedia.org/wiki/Categories_for_the_Working_Mathematician>.>
+  <\remark>
+    [Component] With the aid of component, natural transformation, which is
+    originally designed as a morphism between functors, now reduces to simply
+    a collection of morphisms between objects (in the target category
+    <math|<math-ss|D>>), which has already been defined. Comparing with
+    morphism between functors, morphsim between objects is much familiar to
+    us. So, this definition of natural transformation with component is easy
+    to understand and would be easy to use.
+  </remark>
 
-  As the figure indicates, associativity of functor is preserved. TODO:
-  explain further. Also, note that <math|G<around*|(|f|)>\<circ\>\<alpha\><rsub|A>=\<alpha\><rsub|B>\<circ\>F<around*|(|f|)>>
-  holds for <math|f=1<rsub|A>> automatically. Indeed, remind that, for any
-  <math|g:X\<rightarrow\>Y>, identity ensures
-  <math|1<rsub|Y>\<circ\>g=g\<circ\>1<rsub|X>>. Letting
-  <math|g=\<alpha\><rsub|A>>, <math|X=F<around*|(|A|)>>, and
-  <math|Y=G<around*|(|A|)>>, we find <math|1<rsub|G<around*|(|A|)>>\<circ\>\<alpha\><rsub|A>=\<alpha\><rsub|A>\<circ\>1<rsub|F<around*|(|A|)>>>.
-  Since <math|F> and <math|G> are functors, we have
-  <math|G<around*|(|1<rsub|A>|)>=1<rsub|G<around*|(|A|)>>> and
-  <math|F<around*|(|1<rsub|A>|)>=1<rsub|F<around*|(|A|)>>>; then the relation
-  becomes <math|G<around*|(|1<rsub|A>|)>\<circ\>\<alpha\><rsub|A>=\<alpha\><rsub|A>\<circ\>F<around*|(|1<rsub|A>|)>>,
-  which is the <math|G<around*|(|f|)>\<circ\>\<alpha\><rsub|A>=\<alpha\><rsub|B>\<circ\>F<around*|(|f|)>>
-  holds for <math|f=1<rsub|A>>.
+  <big-figure|<image|figures/natural-transformation.png|0.7par|||>|<label|figure:
+  Natural Transformation> Indicates the natural transformation
+  <math|\<eta\>:F\<rightarrow\>G>. The diagram commutes.>
+
+  Natural transformation as morphism does build a category of functors.
+  Indeed, natural transformation can be composed by extending the commuative
+  diagram <reference|figure: Natural Transformation> to the right (in the
+  same way as figure <reference|figure: Functor Composition> for functor).
+  Identity natural transformation has identity morphism as its component
+  (recall that components of a natural transformation are simply morphisms in
+  the target category). Finally, associativity and identity axioms can be
+  checked directly.
 
   Remember the metaphor for functor, wherein the action of a functor is like
   applying a style to the dots and arrows of the diagrams, the action of
-  <math|\<alpha\>> is like changing the style of dots and arrows from style
-  <math|F> to style <math|G>. So, with natural transformation, the structure
-  of functor is preserved.
+  <math|\<eta\>> is like changing the style of dots and arrows from style
+  <math|F> to style <math|G>.
+
+  <subsection|Natural Transformation Preserves the Structure of Functor>
+
+  TODO
 
   <subsection|Natural Isomorphism is Equivalent to Isomorphisms of Category.>
 
@@ -685,15 +818,22 @@
     <associate|auto-10|<tuple|2.2|4>>
     <associate|auto-11|<tuple|3|5>>
     <associate|auto-12|<tuple|3.1|5>>
-    <associate|auto-13|<tuple|4|5>>
-    <associate|auto-14|<tuple|4.1|6>>
-    <associate|auto-15|<tuple|1|7>>
-    <associate|auto-16|<tuple|4.2|7>>
-    <associate|auto-17|<tuple|4.3|7>>
-    <associate|auto-18|<tuple|4.4|7>>
-    <associate|auto-19|<tuple|4.4|8>>
+    <associate|auto-13|<tuple|3.2|5>>
+    <associate|auto-14|<tuple|1|6>>
+    <associate|auto-15|<tuple|2|6>>
+    <associate|auto-16|<tuple|3.3|6>>
+    <associate|auto-17|<tuple|3.4|7>>
+    <associate|auto-18|<tuple|3.5|7>>
+    <associate|auto-19|<tuple|3.6|7>>
     <associate|auto-2|<tuple|1|1>>
-    <associate|auto-20|<tuple|4.4|8>>
+    <associate|auto-20|<tuple|4|8>>
+    <associate|auto-21|<tuple|4.1|8>>
+    <associate|auto-22|<tuple|3|8>>
+    <associate|auto-23|<tuple|4.2|?>>
+    <associate|auto-24|<tuple|4.3|?>>
+    <associate|auto-25|<tuple|4.4|?>>
+    <associate|auto-26|<tuple|4.5|?>>
+    <associate|auto-27|<tuple|4.6|?>>
     <associate|auto-3|<tuple|1.1|1>>
     <associate|auto-4|<tuple|1.2|2>>
     <associate|auto-5|<tuple|1.3|2>>
@@ -701,29 +841,31 @@
     <associate|auto-7|<tuple|1.5|3>>
     <associate|auto-8|<tuple|2|4>>
     <associate|auto-9|<tuple|2.1|4>>
-    <associate|lemma: Natural Isomorphism|<tuple|22|8>>
+    <associate|figure: Functor|<tuple|1|6>>
+    <associate|figure: Functor Composition|<tuple|2|6>>
+    <associate|figure: Natural Transformation|<tuple|3|7>>
+    <associate|lemma: Fully Faithful Functor|<tuple|26|?>>
+    <associate|lemma: Natural Isomorphism|<tuple|24|8>>
+    <associate|section: Fully Faithful Factor Induces Equivalent
+    Category|<tuple|4.6|?>>
+    <associate|theorem: Functorial Image as Category|<tuple|21|?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|figure>
-      <tuple|normal|<surround|<hidden-binding|<tuple>|1>||You can think
-      objects as dots and morphisms as arrows between the dots. There are
-      three disconnected diagrams in this figure. For convenience, identity
-      morphisms are not shown.>|<pageref|auto-4>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|1>|| Indicates the
+      functor <with|mode|<quote|math>|F:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>.
+      This diagram commutes.>|<pageref|auto-14>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|2>||The apply of a
-      functor changes the style of the dots and arrows. The left hand side is
-      the original diagrams, and the right hand side is the one with the
-      style <with|mode|<quote|math>|F>.>|<pageref|auto-14>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|2>|| Extending the
+      commuative diagram <reference|figure: Functor> to the right. This
+      diagram commutes.>|<pageref|auto-15>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|3>||The action of
-      <with|mode|<quote|math>|\<alpha\>> is like changing the style of dots
-      and arrows from style <with|mode|<quote|math>|F> to style
-      <with|mode|<quote|math>|G>. The left hand side is the diagrams with the
-      style <with|mode|<quote|math>|F>, and the right hand side is the one
-      with the style <with|mode|<quote|math>|G>.>|<pageref|auto-17>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|3>|| Indicates the
+      natural transformation <with|mode|<quote|math>|\<eta\>:F\<rightarrow\>G>.
+      The diagram commutes.>|<pageref|auto-19>>
     </associate>
     <\associate|toc>
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Category,
@@ -741,64 +883,72 @@
 
       <with|par-left|<quote|1tab>|1.2<space|2spc>Objects may not be Sets
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-5>>
+      <no-break><pageref|auto-4>>
 
       <with|par-left|<quote|1tab>|1.3<space|2spc>Morphisms may not be Maps
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6>>
+      <no-break><pageref|auto-5>>
 
       <with|par-left|<quote|1tab>|1.4<space|2spc>Supremum and Infimum are
       Dual <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-7>>
+      <no-break><pageref|auto-6>>
 
       <with|par-left|<quote|1tab>|1.5<space|2spc>Morphisms in the Dual
       Category of <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>
       are Not Maps <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8>>
+      <no-break><pageref|auto-7>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Why
       Category?> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9><vspace|0.5fn>
+      <no-break><pageref|auto-8><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|2.1<space|2spc>Arrows Generalize Concepts
       and Theorems from One Area to Every Area in Mathemtatics
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-10>>
+      <no-break><pageref|auto-9>>
 
       <with|par-left|<quote|1tab>|2.2<space|2spc>Duality Helps Create New
       Concepts and Theorems, Freely! <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11>>
+      <no-break><pageref|auto-10>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Functor>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-12><vspace|0.5fn>
+      <no-break><pageref|auto-11><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|3.1<space|2spc>Functor is the Morphism of
+      <with|par-left|<quote|1tab>|3.1<space|2spc>Structure Preserving Map
+      Builds Category out of Objects <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-12>>
+
+      <with|par-left|<quote|1tab>|3.2<space|2spc>Functor is the Morphism of
       the Category of Categories <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
+      <with|par-left|<quote|1tab>|3.3<space|2spc>Functor Preserves the
+      Structure of Category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Natural
       Transformation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15><vspace|0.5fn>
+      <no-break><pageref|auto-17><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|4.1<space|2spc>Natural Transformation is
       Morphism of the Category of Functors
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16>>
+      <no-break><pageref|auto-18>>
 
       <with|par-left|<quote|1tab>|4.2<space|2spc>Natural Isomorphism is
       Equivalent to Isomorphisms of Category.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>>
+      <no-break><pageref|auto-20>>
 
       <with|par-left|<quote|1tab>|4.3<space|2spc>Isomorphic Objects should be
       Viewed as One <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19>>
+      <no-break><pageref|auto-21>>
 
       <with|par-left|<quote|1tab>|4.4<space|2spc>Natural Isomorphism
       Describes Equivalence between Categories
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20>>
+      <no-break><pageref|auto-22>>
     </associate>
   </collection>
 </auxiliary>

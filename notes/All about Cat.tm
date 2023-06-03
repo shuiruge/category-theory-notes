@@ -8,17 +8,14 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-1><vspace|0.5fn>
 
-    <with|par-left|1tab|1<space|2spc>Motivation
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-2>>
+    1.1<space|2spc>Motivation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-2>
 
-    <with|par-left|1tab|2<space|2spc>Writing Style
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-3>>
+    1.2<space|2spc>Writing Style <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-3>
 
-    <with|par-left|1tab|3<space|2spc>TODO
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-4>>
+    1.3<space|2spc>Technique Limitation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-4>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Category,
     Functor, and Natural Transformation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
@@ -63,29 +60,53 @@
     2.3<space|2spc>Functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-15>
 
-    <with|par-left|1tab|2.3.1<space|2spc>Functor is the Morphism of the
-    Category of Categories <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|2.3.1<space|2spc>Structure Preserving Map Builds
+    Category out of Objects <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-16>>
+
+    <with|par-left|1tab|2.3.2<space|2spc>Functor is the Morphism of the
+    Category of Categories <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-17>>
+
+    <with|par-left|1tab|2.3.3<space|2spc>Functor Preserves the Structure of
+    Category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-20>>
+
+    <with|par-left|1tab|2.3.4<space|2spc>Surjective Functor May Not be Full
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-21>>
+
+    <with|par-left|1tab|2.3.5<space|2spc>Injective Functor May Not be
+    Faithful <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-22>>
+
+    <with|par-left|1tab|2.3.6<space|2spc>Image of Functor May Not be a
+    Category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-23>>
 
     2.4<space|2spc>Natural Transformation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-17>
+    <no-break><pageref|auto-24>
 
     <with|par-left|1tab|2.4.1<space|2spc>Natural Transformation is Morphism
     of the Category of Functors <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-18>>
+    <no-break><pageref|auto-25>>
 
-    <with|par-left|1tab|2.4.2<space|2spc>Natural Isomorphism is Equivalent to
+    <with|par-left|1tab|2.4.2<space|2spc>Natural Transformation Preserves the
+    Structure of Functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-27>>
+
+    <with|par-left|1tab|2.4.3<space|2spc>Natural Isomorphism is Equivalent to
     Isomorphisms of Category. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-20>>
+    <no-break><pageref|auto-28>>
 
-    <with|par-left|1tab|2.4.3<space|2spc>Isomorphic Objects should be Viewed
+    <with|par-left|1tab|2.4.4<space|2spc>Isomorphic Objects should be Viewed
     as One <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-21>>
+    <no-break><pageref|auto-29>>
 
-    <with|par-left|1tab|2.4.4<space|2spc>Natural Isomorphism Describes
+    <with|par-left|1tab|2.4.5<space|2spc>Natural Isomorphism Describes
     Equivalence between Categories <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-22>>
+    <no-break><pageref|auto-30>>
   </table-of-contents>
 
   <include|Preface.tm>
@@ -104,60 +125,78 @@
     <associate|auto-1|<tuple|1|3|Preface.tm>>
     <associate|auto-10|<tuple|2.1.4|7|Category.tm>>
     <associate|auto-11|<tuple|2.1.5|7|Category.tm>>
-    <associate|auto-12|<tuple|2.2|7|Category.tm>>
-    <associate|auto-13|<tuple|2.2.1|7|Category.tm>>
+    <associate|auto-12|<tuple|2.2|8|Category.tm>>
+    <associate|auto-13|<tuple|2.2.1|8|Category.tm>>
     <associate|auto-14|<tuple|2.2.2|8|Category.tm>>
     <associate|auto-15|<tuple|2.3|9|Category.tm>>
     <associate|auto-16|<tuple|2.3.1|9|Category.tm>>
-    <associate|auto-17|<tuple|2.4|10|Category.tm>>
-    <associate|auto-18|<tuple|2.4.1|10|Category.tm>>
-    <associate|auto-19|<tuple|2.1|10|Category.tm>>
-    <associate|auto-2|<tuple|1|3|Preface.tm>>
-    <associate|auto-20|<tuple|2.4.2|10|Category.tm>>
-    <associate|auto-21|<tuple|2.4.3|11|Category.tm>>
-    <associate|auto-22|<tuple|2.4.4|11|Category.tm>>
-    <associate|auto-3|<tuple|2|3|Preface.tm>>
-    <associate|auto-4|<tuple|3|3|Preface.tm>>
+    <associate|auto-17|<tuple|2.3.2|9|Category.tm>>
+    <associate|auto-18|<tuple|2.1|9|Category.tm>>
+    <associate|auto-19|<tuple|2.2|10|Category.tm>>
+    <associate|auto-2|<tuple|1.1|3|Preface.tm>>
+    <associate|auto-20|<tuple|2.3.3|10|Category.tm>>
+    <associate|auto-21|<tuple|2.3.4|10|Category.tm>>
+    <associate|auto-22|<tuple|2.3.5|11|Category.tm>>
+    <associate|auto-23|<tuple|2.3.6|11|Category.tm>>
+    <associate|auto-24|<tuple|2.4|11|Category.tm>>
+    <associate|auto-25|<tuple|2.4.1|11|Category.tm>>
+    <associate|auto-26|<tuple|2.3|12|Category.tm>>
+    <associate|auto-27|<tuple|2.4.2|12|Category.tm>>
+    <associate|auto-28|<tuple|2.4.3|12|Category.tm>>
+    <associate|auto-29|<tuple|2.4.4|13|Category.tm>>
+    <associate|auto-3|<tuple|1.2|3|Preface.tm>>
+    <associate|auto-30|<tuple|2.4.5|13|Category.tm>>
+    <associate|auto-4|<tuple|1.3|3|Preface.tm>>
     <associate|auto-5|<tuple|2|5|Category.tm>>
     <associate|auto-6|<tuple|2.1|5|Category.tm>>
     <associate|auto-7|<tuple|2.1.1|5|Category.tm>>
     <associate|auto-8|<tuple|2.1.2|6|Category.tm>>
     <associate|auto-9|<tuple|2.1.3|6|Category.tm>>
-    <associate|lemma: Natural Isomorphism|<tuple|2.22|10|Category.tm>>
-    <associate|part:Category.tm|<tuple|3|5>>
+    <associate|figure: Functor|<tuple|2.1|9|Category.tm>>
+    <associate|figure: Functor Composition|<tuple|2.2|10|Category.tm>>
+    <associate|figure: Natural Transformation|<tuple|2.3|12|Category.tm>>
+    <associate|lemma: Natural Isomorphism|<tuple|2.24|12|Category.tm>>
+    <associate|part:Category.tm|<tuple|1.3|5>>
     <associate|part:Preface.tm|<tuple|?|3>>
+    <associate|theorem: Functorial Image as
+    Category|<tuple|2.21|11|Category.tm>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|figure>
-      <tuple|normal|<surround|<hidden-binding|<tuple>|2.1>||Indicates the
-      natural transformation <with|mode|<quote|math>|\<tau\>:S\<rightarrow\>T>.
-      Copied from <locus|<id|%12367278-83181B8--62EC173>|<link|hyperlink|<id|%12367278-83181B8--62EC173>|<url|https://en.wikipedia.org/wiki/Categories_for_the_Working_Mathematician>>|Mac
-      Lane>.>|<pageref|auto-19>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|2.1>|| Indicates the
+      functor <with|mode|<quote|math>|F:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>.
+      This diagram commutes.>|<pageref|auto-18>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|2.2>|| Extending the
+      commuative diagram <reference|figure: Functor> to the right. This
+      diagram commutes.>|<pageref|auto-19>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|2.3>|| Indicates the
+      natural transformation <with|mode|<quote|math>|\<eta\>:F\<rightarrow\>G>.
+      The diagram commutes.>|<pageref|auto-26>>
     </associate>
     <\associate|parts>
       <tuple|Preface.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
 
-      <tuple|Category.tm|chapter-nr|1|section-nr|0|subsection-nr|3>
+      <tuple|Category.tm|chapter-nr|1|section-nr|3|subsection-nr|0>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Preface>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|1<space|2spc>Motivation
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2>>
+      1.1<space|2spc>Motivation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2>
 
-      <with|par-left|<quote|1tab>|2<space|2spc>Writing Style
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3>>
+      1.2<space|2spc>Writing Style <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-3>
 
-      <with|par-left|<quote|1tab>|3<space|2spc>TODO
+      1.3<space|2spc>Technique Limitation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4>>
+      <no-break><pageref|auto-4>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Category,
       Functor, and Natural Transformation>
@@ -203,32 +242,56 @@
       2.3<space|2spc>Functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>
 
-      <with|par-left|<quote|1tab>|2.3.1<space|2spc>Functor is the Morphism of
-      the Category of Categories <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.3.1<space|2spc>Structure Preserving Map
+      Builds Category out of Objects <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-16>>
+
+      <with|par-left|<quote|1tab>|2.3.2<space|2spc>Functor is the Morphism of
+      the Category of Categories <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-17>>
+
+      <with|par-left|<quote|1tab>|2.3.3<space|2spc>Functor Preserves the
+      Structure of Category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-20>>
+
+      <with|par-left|<quote|1tab>|2.3.4<space|2spc>Surjective Functor May Not
+      be Full <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-21>>
+
+      <with|par-left|<quote|1tab>|2.3.5<space|2spc>Injective Functor May Not
+      be Faithful <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-22>>
+
+      <with|par-left|<quote|1tab>|2.3.6<space|2spc>Image of Functor May Not
+      be a Category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-23>>
 
       2.4<space|2spc>Natural Transformation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17>
+      <no-break><pageref|auto-24>
 
       <with|par-left|<quote|1tab>|2.4.1<space|2spc>Natural Transformation is
       Morphism of the Category of Functors
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>>
+      <no-break><pageref|auto-25>>
 
-      <with|par-left|<quote|1tab>|2.4.2<space|2spc>Natural Isomorphism is
+      <with|par-left|<quote|1tab>|2.4.2<space|2spc>Natural Transformation
+      Preserves the Structure of Functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-27>>
+
+      <with|par-left|<quote|1tab>|2.4.3<space|2spc>Natural Isomorphism is
       Equivalent to Isomorphisms of Category.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20>>
+      <no-break><pageref|auto-28>>
 
-      <with|par-left|<quote|1tab>|2.4.3<space|2spc>Isomorphic Objects should
+      <with|par-left|<quote|1tab>|2.4.4<space|2spc>Isomorphic Objects should
       be Viewed as One <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21>>
+      <no-break><pageref|auto-29>>
 
-      <with|par-left|<quote|1tab>|2.4.4<space|2spc>Natural Isomorphism
+      <with|par-left|<quote|1tab>|2.4.5<space|2spc>Natural Isomorphism
       Describes Equivalence between Categories
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>>
+      <no-break><pageref|auto-30>>
     </associate>
   </collection>
 </auxiliary>
