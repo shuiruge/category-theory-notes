@@ -7,7 +7,7 @@
 
   <with|font|TeX Gyre Schola|><section|Category>
 
-  <subsection|Category is about Arrows>
+  <subsection|Category is about arrows>
 
   Category is the fundamental element of category theory. A category consists
   of arrows and objects, which are employed to declare arrows: where an arrow
@@ -100,7 +100,7 @@
   objects and morphisms abstract. You can think objects as dots and morphisms
   as arrows between the dots.
 
-  <subsection|Objects may not be Sets>
+  <subsection|Objects may not be sets>
 
   We know that <hlink|the symmetry group of rectangle is dihedral group
   <math|D<rsub|2>>|https://proofwiki.org/wiki/Definition:Symmetry_Group_of_Rectangle>.
@@ -179,7 +179,7 @@
   abstract algebra, we find that the unique object in this category is not
   set, and that discussing what the object should be is meaningless.
 
-  <subsection|Morphisms may not be Maps>
+  <subsection|Morphisms may not be maps>
 
   To illustrate that morphisms may not be maps, we need to define preorder
   and poset.
@@ -225,7 +225,7 @@
   maps. In <math|<math-ss|Poset>>, morphisms are \Pno greater than\Qs or \Pis
   subset of\Qs.
 
-  <subsection|Supremum and Infimum are Dual>
+  <subsection|Supremum and infimum are dual>
 
   Arrows can represent many mathematical objects. For example, in
   <math-ss|<math|Poset>> with set <math|\<bbb-R\>> and preorder
@@ -274,8 +274,8 @@
   codomain for each morphism in the statement. We say that supremum and
   infimum are dual.
 
-  <subsection|Morphisms in the Dual Category of <math|<math-ss|Set>> are Not
-  Maps>
+  <subsection|Morphisms in the dual category of <math|<math-ss|Set>> are not
+  maps>
 
   There are also dual categories. Given a category <math|<math-ss|C>>, its
   <with|font-series|bold|dual category>, denoted by
@@ -288,8 +288,8 @@
 
   <section|Why Category?>
 
-  <subsection|Arrows Generalize Concepts and Theorems from One Area to Every
-  Area in Mathemtatics>
+  <subsection|Arrows generalize concepts and theorems from one area to every
+  area in mathemtatics>
 
   Why category theory? Or say, why arrows? One benefit of re-claim everything
   in arrows is the ability of generalizing a concept in one area to area
@@ -408,7 +408,7 @@
 
   <section|Functor>
 
-  <subsection|Structure Preserving Map Builds Category out of Objects>
+  <subsection|Structure preserving map builds category out of objects>
 
   We need some examples of category to introduce the next core concept of
   category theory: functor. The first example is the category of topological
@@ -438,7 +438,7 @@
   morphisms. For example, in <math|<math-ss|Top>>, the preserved structure is
   continuity, and in <math|<math-ss|Grp>>, it is the group structure.
 
-  <subsection|Functor is the Morphism of the Category of Categories>
+  <subsection|Functor is the morphism of the category of categories>
 
   Notice that the objects of a category can be anything. So, it can also be
   categories! To construct a category out of categories, the morphisms
@@ -493,7 +493,7 @@
   means it has become another category, but the structure, or form, of the
   diagrams are invariant.
 
-  <subsection|Functor Preserves the Structure of Category>
+  <subsection|Functor preserves the structure of category>
 
   It should be checked that functor preserves the structure of category.
   Comparing with the definition of category, functor has preserved
@@ -522,7 +522,7 @@
 
   the identity axiom is preserved.
 
-  <subsection|Surjective Functor May Not be Full>
+  <subsection|Surjective functor may not be full>
 
   Since functor preserves the structure of category, the image of a functor
   should be a subcategory of the codomain of the functor. Explicitly, given a
@@ -556,7 +556,7 @@
   <math|F:<math-ss|C><around*|(|A,B|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|A|)>,F<around*|(|B|)>|)>>
   is surjective.
 
-  <subsection|Injective Functor May Not be Faithful>
+  <subsection|Injective functor may not be faithful>
 
   The same discussion applies for the injection of functor. Again, you may
   think that <math|F<around*|(|<math-ss|C>|)>> can still be multiple-to-one
@@ -575,7 +575,7 @@
   For the same reason, injection on objects and faithfulness are two
   independent properties of functor.
 
-  <subsection|Image of Functor May Not be a Category>
+  <subsection|Image of functor may not be a category>
 
   The image of a group homomorphism is a subgroup of the codomain. But, this
   is not generally true for category. (Remind that group is the category with
@@ -632,7 +632,7 @@
 
   <section|Natural Transformation>
 
-  <subsection|Natural Transformation is Morphism of the Category of Functors>
+  <subsection|Natural transformation is morphism of the category of functors>
 
   As we have defined category, and as we have built a category out of
   categories by defining functor, we can also build a category out of
@@ -684,11 +684,11 @@
   <math|\<eta\>> is like changing the style of dots and arrows from style
   <math|F> to style <math|G>.
 
-  <subsection|Natural Transformation Preserves the Structure of Functor>
+  <subsection|Natural transformation preserves the structure of functor>
 
   TODO
 
-  <subsection|Natural Isomorphism is Equivalent to Isomorphisms of Category.>
+  <subsection|Natural isomorphism is equivalent to isomorphisms of category.>
 
   With the category of functors, we can discuss whether two functors are
   equivalent or not. This relates to the isomorphism between functors. Since
@@ -746,7 +746,7 @@
   now reduces to a family of isomorphisms on <math|<math-ss|D>>, which is
   quite familiar to us.
 
-  <subsection|Isomorphic Objects should be Viewed as One>
+  <subsection|Isomorphic objects should be viewed as one>
 
   Isomorphic topological spaces are the same. So it is for the isomorphic
   groups, isomorphic vector spaces, and so on. This means we should view
@@ -766,7 +766,7 @@
   Currently, this viewpoint is simply for intuition. Later in TODO, we will
   prove this fact seriously.
 
-  <subsection|Natural Isomorphism Describes Equivalence between Categories>
+  <subsection|Natural isomorphism describes equivalence between categories>
 
   Given two categories <math|<math-ss|C>> and <math|<math-ss|D>>, how can we
   say they are equivalent? A natural possibility is using isomorphic functor.
@@ -829,10 +829,10 @@
     <associate|auto-20|<tuple|4|8>>
     <associate|auto-21|<tuple|4.1|8>>
     <associate|auto-22|<tuple|3|8>>
-    <associate|auto-23|<tuple|4.2|?>>
-    <associate|auto-24|<tuple|4.3|?>>
-    <associate|auto-25|<tuple|4.4|?>>
-    <associate|auto-26|<tuple|4.5|?>>
+    <associate|auto-23|<tuple|4.2|9>>
+    <associate|auto-24|<tuple|4.3|9>>
+    <associate|auto-25|<tuple|4.4|9>>
+    <associate|auto-26|<tuple|4.5|9>>
     <associate|auto-27|<tuple|4.6|?>>
     <associate|auto-3|<tuple|1.1|1>>
     <associate|auto-4|<tuple|1.2|2>>
@@ -843,12 +843,9 @@
     <associate|auto-9|<tuple|2.1|4>>
     <associate|figure: Functor|<tuple|1|6>>
     <associate|figure: Functor Composition|<tuple|2|6>>
-    <associate|figure: Natural Transformation|<tuple|3|7>>
-    <associate|lemma: Fully Faithful Functor|<tuple|26|?>>
-    <associate|lemma: Natural Isomorphism|<tuple|24|8>>
-    <associate|section: Fully Faithful Factor Induces Equivalent
-    Category|<tuple|4.6|?>>
-    <associate|theorem: Functorial Image as Category|<tuple|21|?>>
+    <associate|figure: Natural Transformation|<tuple|3|8>>
+    <associate|lemma: Natural Isomorphism|<tuple|24|9>>
+    <associate|theorem: Functorial Image as Category|<tuple|21|8>>
   </collection>
 </references>
 
@@ -865,7 +862,7 @@
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3>|| Indicates the
       natural transformation <with|mode|<quote|math>|\<eta\>:F\<rightarrow\>G>.
-      The diagram commutes.>|<pageref|auto-19>>
+      The diagram commutes.>|<pageref|auto-22>>
     </associate>
     <\associate|toc>
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Category,
@@ -927,28 +924,44 @@
       Structure of Category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-16>>
 
+      <with|par-left|<quote|1tab>|3.4<space|2spc>Surjective Functor May Not
+      be Full <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-17>>
+
+      <with|par-left|<quote|1tab>|3.5<space|2spc>Injective Functor May Not be
+      Faithful <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-18>>
+
+      <with|par-left|<quote|1tab>|3.6<space|2spc>Image of Functor May Not be
+      a Category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-19>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Natural
       Transformation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17><vspace|0.5fn>
+      <no-break><pageref|auto-20><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|4.1<space|2spc>Natural Transformation is
       Morphism of the Category of Functors
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>>
-
-      <with|par-left|<quote|1tab>|4.2<space|2spc>Natural Isomorphism is
-      Equivalent to Isomorphisms of Category.
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20>>
-
-      <with|par-left|<quote|1tab>|4.3<space|2spc>Isomorphic Objects should be
-      Viewed as One <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>>
 
-      <with|par-left|<quote|1tab>|4.4<space|2spc>Natural Isomorphism
+      <with|par-left|<quote|1tab>|4.2<space|2spc>Natural Transformation
+      Preserves the Structure of Functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-23>>
+
+      <with|par-left|<quote|1tab>|4.3<space|2spc>Natural Isomorphism is
+      Equivalent to Isomorphisms of Category.
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-24>>
+
+      <with|par-left|<quote|1tab>|4.4<space|2spc>Isomorphic Objects should be
+      Viewed as One <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-25>>
+
+      <with|par-left|<quote|1tab>|4.5<space|2spc>Natural Isomorphism
       Describes Equivalence between Categories
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>>
+      <no-break><pageref|auto-26>>
     </associate>
   </collection>
 </auxiliary>
