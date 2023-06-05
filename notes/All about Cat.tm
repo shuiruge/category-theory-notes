@@ -112,6 +112,8 @@
   <include|Preface.tm>
 
   <include|Category.tm>
+
+  <include|Representation.tm>
 </body>
 
 <\initial>
@@ -146,7 +148,17 @@
     <associate|auto-29|<tuple|2.4.4|13|Category.tm>>
     <associate|auto-3|<tuple|1.2|3|Preface.tm>>
     <associate|auto-30|<tuple|2.4.5|13|Category.tm>>
+    <associate|auto-31|<tuple|3|?|Representation.tm>>
+    <associate|auto-32|<tuple|3.1|?|Representation.tm>>
+    <associate|auto-33|<tuple|3.1.1|?|Representation.tm>>
+    <associate|auto-34|<tuple|3.1.2|?|Representation.tm>>
+    <associate|auto-35|<tuple|3.1|?|Representation.tm>>
+    <associate|auto-36|<tuple|3.1.3|?|Representation.tm>>
+    <associate|auto-37|<tuple|3.2|?|Representation.tm>>
+    <associate|auto-38|<tuple|3.1.4|?|Representation.tm>>
+    <associate|auto-39|<tuple|3.1.5|?|Representation.tm>>
     <associate|auto-4|<tuple|1.3|3|Preface.tm>>
+    <associate|auto-40|<tuple|3.3|?|Representation.tm>>
     <associate|auto-5|<tuple|2|5|Category.tm>>
     <associate|auto-6|<tuple|2.1|5|Category.tm>>
     <associate|auto-7|<tuple|2.1.1|5|Category.tm>>
@@ -155,9 +167,14 @@
     <associate|figure: Functor|<tuple|2.1|9|Category.tm>>
     <associate|figure: Functor Composition|<tuple|2.2|10|Category.tm>>
     <associate|figure: Natural Transformation|<tuple|2.3|12|Category.tm>>
+    <associate|figure: Representable Functor|<tuple|3.1|?|Representation.tm>>
+    <associate|figure: The f_* is Natural
+    Transformation|<tuple|3.2|?|Representation.tm>>
+    <associate|figure: Yoneda functor is full|<tuple|3.3|?|Representation.tm>>
     <associate|lemma: Natural Isomorphism|<tuple|2.24|12|Category.tm>>
     <associate|part:Category.tm|<tuple|1.3|5>>
     <associate|part:Preface.tm|<tuple|?|3>>
+    <associate|part:Representation.tm|<tuple|2.25|?>>
     <associate|theorem: Functorial Image as
     Category|<tuple|2.21|11|Category.tm>>
   </collection>
