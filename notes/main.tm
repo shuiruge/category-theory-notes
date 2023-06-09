@@ -202,22 +202,22 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-61>>
 
-    <with|par-left|1tab|3.4.6<space|2spc>Infimum is the limit on
+    <with|par-left|2tab|3.4.5.1<space|2spc>Infimum is the limit on
     <with|mode|math|<rigid|<with|mode|text|<with|font-family|ss|font-shape|right|Poset>>>>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-62>>
 
-    <with|par-left|1tab|3.4.7<space|2spc>Supremum is the colimit on
+    <with|par-left|2tab|3.4.5.2<space|2spc>Supremum is the colimit on
     <with|mode|math|<rigid|<with|mode|text|<with|font-family|ss|font-shape|right|Poset>>>>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-63>>
 
-    <with|par-left|1tab|3.4.8<space|2spc>Cartesian product is the limit on
+    <with|par-left|2tab|3.4.5.3<space|2spc>Cartesian product is the limit on
     <with|mode|math|<rigid|<with|mode|text|<with|font-family|ss|font-shape|right|Set>>>>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-64>>
 
-    <with|par-left|1tab|3.4.9<space|2spc>Adjoint union is the colimit on
+    <with|par-left|2tab|3.4.5.4<space|2spc>Adjoint union is the colimit on
     <with|mode|math|<rigid|<with|mode|text|<with|font-family|ss|font-shape|right|Set>>>>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-65>>
@@ -296,10 +296,10 @@
     <associate|auto-6|<tuple|2.1|5|Category.tm>>
     <associate|auto-60|<tuple|3.7|22|Representation.tm>>
     <associate|auto-61|<tuple|3.4.5|22|Representation.tm>>
-    <associate|auto-62|<tuple|3.4.6|22|Representation.tm>>
-    <associate|auto-63|<tuple|3.4.7|22|Representation.tm>>
-    <associate|auto-64|<tuple|3.4.8|22|Representation.tm>>
-    <associate|auto-65|<tuple|3.4.9|22|Representation.tm>>
+    <associate|auto-62|<tuple|3.4.5.1|22|Representation.tm>>
+    <associate|auto-63|<tuple|3.4.5.2|22|Representation.tm>>
+    <associate|auto-64|<tuple|3.4.5.3|22|Representation.tm>>
+    <associate|auto-65|<tuple|3.4.5.4|22|Representation.tm>>
     <associate|auto-7|<tuple|2.1.1|5|Category.tm>>
     <associate|auto-8|<tuple|2.1.2|6|Category.tm>>
     <associate|auto-9|<tuple|2.1.3|6|Category.tm>>
@@ -600,22 +600,22 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-61>>
 
-      <with|par-left|<quote|1tab>|3.4.6<space|2spc>Infimum is the limit on
+      <with|par-left|<quote|2tab>|3.4.5.1<space|2spc>Infimum is the limit on
       <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Poset>>>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-62>>
 
-      <with|par-left|<quote|1tab>|3.4.7<space|2spc>Supremum is the colimit on
-      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Poset>>>>
+      <with|par-left|<quote|2tab>|3.4.5.2<space|2spc>Supremum is the colimit
+      on <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Poset>>>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-63>>
 
-      <with|par-left|<quote|1tab>|3.4.8<space|2spc>Cartesian product is the
+      <with|par-left|<quote|2tab>|3.4.5.3<space|2spc>Cartesian product is the
       limit on <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-64>>
 
-      <with|par-left|<quote|1tab>|3.4.9<space|2spc>Adjoint union is the
+      <with|par-left|<quote|2tab>|3.4.5.4<space|2spc>Adjoint union is the
       colimit on <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-65>>

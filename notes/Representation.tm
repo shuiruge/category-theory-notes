@@ -583,10 +583,10 @@
   like if re-written in arrows, such as supremum and infimum, Cartesian
   product and adjoint union. They are weired at the first sight, making you
   wonder how they are constructed. In fact, limit is the tool that constructs
-  them all, without too much effort. In the following sections, we are to
-  show how universal cone can be used to construct them explicitly.
+  them all, without too much effort. In this section, we are to show how
+  limit can be used to construct them explicitly.
 
-  <subsection|Infimum is the limit on <math|<math-ss|Poset>>>
+  <subsubsection|Infimum is the limit on <math|<math-ss|Poset>>>
 
   In definition <reference|definition: Infimum in Category>, we roughly
   showed what infimum would be like in the framework of category theory.
@@ -606,15 +606,15 @@
   <math|\<bbb-R\>>. So, infimum is a universal cone, or a limit, on poset
   category.
 
-  <subsection|Supremum is the colimit on <math|<math-ss|Poset>>>
+  <subsubsection|Supremum is the colimit on <math|<math-ss|Poset>>>
 
   The same goes for its dual, supremum. If we flip the arrows in the
   definitions of limit, we get the dual, colimit . So, directly, we find
   supremum is the colimit on <math|<math-ss|Poset>>.
 
-  <subsection|Cartesian product is the limit on <math|<math-ss|Set>>>
+  <subsubsection|Cartesian product is the limit on <math|<math-ss|Set>>>
 
-  <subsection|Adjoint union is the colimit on <math|<math-ss|Set>>>
+  <subsubsection|Adjoint union is the colimit on <math|<math-ss|Set>>>
 </body>
 
 <\initial>
@@ -646,18 +646,17 @@
     <associate|auto-26|<tuple|4.4|8>>
     <associate|auto-27|<tuple|7|8>>
     <associate|auto-28|<tuple|4.5|8>>
-    <associate|auto-29|<tuple|4.6|?>>
+    <associate|auto-29|<tuple|4.5.1|8>>
     <associate|auto-3|<tuple|1.1|1>>
-    <associate|auto-30|<tuple|4.7|?>>
-    <associate|auto-31|<tuple|4.8|?>>
-    <associate|auto-32|<tuple|4.9|?>>
+    <associate|auto-30|<tuple|4.5.2|8>>
+    <associate|auto-31|<tuple|4.5.3|8>>
+    <associate|auto-32|<tuple|4.5.4|8>>
     <associate|auto-4|<tuple|1.2|1>>
     <associate|auto-5|<tuple|1.3|1>>
     <associate|auto-6|<tuple|2|1>>
     <associate|auto-7|<tuple|2.1|1>>
     <associate|auto-8|<tuple|2.2|1>>
     <associate|auto-9|<tuple|1|2>>
-    <associate|definition: Infimum in Category|<tuple|14|?>>
     <associate|definition: Universal Element|<tuple|7|5>>
     <associate|figure: Cone|<tuple|5|7>>
     <associate|figure: Cone Functor|<tuple|6|7>>
@@ -794,9 +793,29 @@
       of cone functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-26>>
 
-      <with|par-left|<quote|1tab>|4.5<space|2spc>Universal cone is all you
-      need <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|4.5<space|2spc>Limit is all you need
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-28>>
+
+      <with|par-left|<quote|2tab>|4.5.1<space|2spc>Infimum is the limit on
+      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Poset>>>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-29>>
+
+      <with|par-left|<quote|2tab>|4.5.2<space|2spc>Supremum is the colimit on
+      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Poset>>>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-30>>
+
+      <with|par-left|<quote|2tab>|4.5.3<space|2spc>Cartesian product is the
+      limit on <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-31>>
+
+      <with|par-left|<quote|2tab>|4.5.4<space|2spc>Adjoint union is the
+      colimit on <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-32>>
     </associate>
   </collection>
 </auxiliary>
