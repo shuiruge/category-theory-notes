@@ -19,11 +19,11 @@
   isomorphism. And isomorphism is constructed from iso-morphe-ism, where
   morphe, a Greek word, means shape or form. So, isomorphism means equal
   shape or form. This can be easily illustrated in topology, where the two
-  isomorphic tologogical space share the same form (but may not the same
+  isomorphic topological space share the same form (but may not the same
   shape). But semantically, this is far from what arrow should mean. So, the
   question is why mathematician use the word morphism for arrow. A guess is
   that it may come from homomorphism; and in algebra, a homomorphism is an
-  arrow between algebric structures.
+  arrow between algebraic structures.
 
   <\definition>
     [Category] A <with|font-series|bold|category> <math|<math-ss|C>> consists
@@ -49,7 +49,7 @@
       <with|font-series|bold|identity> <math|1<rsub|A>\<in\>mor<rsub|<math-ss|C>><around*|(|A,A|)>>,
     </itemize>
 
-    such that the following axioms are satisified:
+    such that the following axioms are satisfied:
 
     <\itemize>
       <item><with|font-series|bold|associativity>: for each
@@ -106,7 +106,7 @@
   We know that <hlink|the symmetry group of rectangle is dihedral group
   <math|D<rsub|2>>|https://proofwiki.org/wiki/Definition:Symmetry_Group_of_Rectangle>.
   The group elements are operations: identity, rotation of <math|180>
-  degrees, and reflections along vertical and horizental directions. The
+  degrees, and reflections along vertical and horizontal directions. The
   operand is unique: the rectangle. These operations can be viewed as arrows
   from the rectangle to itself. So, this symmetry group describes a category,
   called <math|<math-ss|B>D<rsub|2>>. The axioms of category are satisfied
@@ -186,15 +186,15 @@
   and poset.
 
   <\definition>
-    [Preorder] Given a set <math|S>, a <with|font-series|bold|preorder>
-    <math|P> on <math|S> is a subset of <math|S\<times\>S> such that the
-    following axioms are satisfied:
+    <label|definition: Preorder>[Preorder] Given a set <math|S>, a
+    <with|font-series|bold|preorder> <math|P> on <math|S> is a subset of
+    <math|S\<times\>S> such that the following axioms are satisfied:
 
     <\itemize>
       <item><with|font-series|bold|reflexivity>: for
       <math|\<forall\>a\<in\>S>, <math|<around*|(|a,a|)>\<in\>P>, and
 
-      <item><with|font-series|bold|tansitivity> for
+      <item><with|font-series|bold|transitivity> for
       <math|\<forall\>a,b,c\<in\>S>, if <math|<around*|(|a,b|)>\<in\>P> and
       <math|<around*|(|b,c|)>\<in\>P>, then <math|<around*|(|a,c|)>\<in\>P>.
     </itemize>
@@ -209,10 +209,10 @@
   <\definition>
     <label|definition: Poset>[Poset] A preordered set, or
     <with|font-series|bold|poset>, <math|<around*|(|S,P|)>> is a set <math|S>
-    equiped with a preorder <math|P> on <math|S>.
+    equipped with a preorder <math|P> on <math|S>.
   </definition>
 
-  With these prelimiaries, we claim that a poset is a category.
+  With these preliminaries, we claim that a poset is a category.
 
   <\definition>
     <label|definition: Poset as Category>[Poset as Category] Given poset
@@ -234,7 +234,7 @@
 
   <\definition>
     [Supremum in Category] Given a subset <math|A\<subset\>\<bbb-R\>>. An
-    <math|x\<in\>\<bbb-R\>> is the <with|font-series|bold|supermum> of
+    <math|x\<in\>\<bbb-R\>> is the <with|font-series|bold|supremum> of
     <math|A> if it satisfies:
 
     <\itemize>
@@ -246,7 +246,7 @@
     </itemize>
   </definition>
 
-  This is, again, a weired definition on supremum. But, if you check
+  This is, again, a weird definition on supremum. But, if you check
   carefully, you can see that this definition is equivalent to that studied
   in analysis. Also, we can define the infimum in the same fashion.
 
@@ -264,8 +264,8 @@
     </itemize>
   </definition>
 
-  Weired again, but now you may have been familiar with the weired. Hint: the
-  word weired also has the meaning of fate. Indeed, you are on the load to
+  Weird again, but now you may have been familiar with the weird. Hint: the
+  word weird also has the meaning of fate. Indeed, you are on the load to
   wonderland. By comparing the definition of infimum to that of supremum, we
   find all statements are the same except that we replaced supremum by
   infimum and domain by codomain (for instance, replaced
@@ -290,7 +290,7 @@
   <section|Why Category?>
 
   <subsection|Arrows generalize concepts and theorems from one area to every
-  area in mathemtatics>
+  area in mathematics>
 
   Why category theory? Or say, why arrows? One benefit of re-claim everything
   in arrows is the ability of generalizing a concept in one area to area
@@ -301,16 +301,16 @@
   sets <math|A> and <math|B>, recall that the Cartesian product
   <math|A\<times\>B\<assign\><around*|{|*<around*|(|a,b|)>\|a\<in\>A,b\<in\>B|}>>.
   Again, for generalizing the concepts using category theory, we have to
-  re-write the concepts using arrows. And again, this re-writing looks weired
+  re-write the concepts using arrows. And again, this re-writing looks weird
   at the first sight.
 
   <\definition>
-    [Product of Two Objects] Given a category <math|<math-ss|C>>. For any
-    <math|A,B\<in\><math-ss|C>>, the <with|font-series|bold|product> of
-    <math|A> and <math|B> is another object <math|C\<in\><math-ss|C>>
-    together with two morphisms <math|\<alpha\>:C\<rightarrow\>A> and
-    <math|\<beta\>:C\<rightarrow\>B> such that, for any
-    <math|C<rprime|'>\<in\><math-ss|C>>, any
+    <label|definition: Product of Two Objects>[Product of Two Objects] Given
+    a category <math|<math-ss|C>>. For any <math|A,B\<in\><math-ss|C>>, the
+    <with|font-series|bold|product> of <math|A> and <math|B> is another
+    object <math|C\<in\><math-ss|C>> together with two morphisms
+    <math|\<alpha\>:C\<rightarrow\>A> and <math|\<beta\>:C\<rightarrow\>B>
+    such that, for any <math|C<rprime|'>\<in\><math-ss|C>>, any
     <math|\<alpha\><rprime|'>:C<rprime|'>\<rightarrow\>A> and
     <math|\<beta\><rprime|'>:C<rprime|'>\<rightarrow\>B>, there exists a
     unique morphism <math|\<gamma\>:C<rprime|'>\<rightarrow\>C> so that
@@ -329,7 +329,7 @@
     <with|font-series|bold|group direct product> of <math|G> and <math|H> is
     defined as <math|<around*|{|<around*|(|g,h|)>\|g\<in\>G,h\<in\>H|}>>
     equipped with group multiplication <math|<around*|(|g,h|)>\<times\><around*|(|g<rprime|'>,h<rprime|'>|)>\<assign\><around*|(|g\<circ\>g<rprime|'>,h\<cdot\>h<rprime|'>|)>>
-    where <math|\<circ\>> is the muliplication of <math|G> and
+    where <math|\<circ\>> is the multiplication of <math|G> and
     <math|\<cdot\>> of <math|H>.
   </definition>
 
@@ -372,12 +372,12 @@
   we called coproduct.
 
   <\definition>
-    [Coproduct of Two Objects] Given a category <math|<math-ss|C>>. For any
-    <math|A,B\<in\><math-ss|C>>, the <with|font-series|bold|coproduct> of
-    <math|A> and <math|B> is another object <math|C\<in\><math-ss|C>>
-    together with two morphisms <math|\<alpha\>:A\<rightarrow\>C> and
-    <math|\<beta\>:B\<rightarrow\>C> such that, for any
-    <math|C<rprime|'>\<in\><math-ss|C>>, any
+    <label|definition: Coproduct of Two Objects>[Coproduct of Two Objects]
+    Given a category <math|<math-ss|C>>. For any <math|A,B\<in\><math-ss|C>>,
+    the <with|font-series|bold|coproduct> of <math|A> and <math|B> is another
+    object <math|C\<in\><math-ss|C>> together with two morphisms
+    <math|\<alpha\>:A\<rightarrow\>C> and <math|\<beta\>:B\<rightarrow\>C>
+    such that, for any <math|C<rprime|'>\<in\><math-ss|C>>, any
     <math|\<alpha\><rprime|'>:A\<rightarrow\>C<rprime|'>> and
     <math|\<beta\><rprime|'>:B\<rightarrow\>C<rprime|'>>, there exists a
     unique morphism <math|\<gamma\>:C\<rightarrow\>C<rprime|'>> so that
@@ -423,7 +423,7 @@
     <math|A> to <math|B> as its morphisms from <math|A> to <math|B>.
   </definition>
 
-  The next example is the categroy of groups.
+  The next example is the category of groups.
 
   <\definition>
     [Category of Groups] The <with|font-series|bold|category of groups>,
@@ -480,13 +480,13 @@
   diagram commutes.>
 
   Functor as morphism does build a category of categories. Indeed, functors
-  can be composed by extending the commuative diagram <reference|figure:
+  can be composed by extending the commutative diagram <reference|figure:
   Functor> to the right (figure <reference|figure: Functor Composition>).
   Identity functor is the one that maps everything in a category to itself.
   Finally, associativity and identity axioms can be checked directly.
 
   <big-figure|<image|figures/functor-composition.png|0.75par|||>|<label|figure:
-  Functor Composition> Extending the commuative diagram <reference|figure:
+  Functor Composition> Extending the commutative diagram <reference|figure:
   Functor> to the right. This diagram commutes.>
 
   Imagine a category as a series of diagrams with dots and arrows between
@@ -605,7 +605,8 @@
   composition.
 
   Consider a functor <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>, the
-  generic pattern to be examed would be <math|F<around*|(|A|)><above|\<rightarrow\>|F<around*|(|f|)>>F<around*|(|B|)><above|\<rightarrow\>|F<around*|(|g|)>>F<around*|(|C|)>>
+  generic pattern to be examined would be
+  <math|F<around*|(|A|)><above|\<rightarrow\>|F<around*|(|f|)>>F<around*|(|B|)><above|\<rightarrow\>|F<around*|(|g|)>>F<around*|(|C|)>>
   in the image <math|F<around*|(|<math-ss|C>|)>>. The problem is if
   <math|F<around*|(|g|)>\<circ\>F<around*|(|f|)>> still in the
   <math|F<around*|(|<math-ss|C>|)>>? By the axiom of composition,
@@ -624,7 +625,7 @@
 
   Why is it so? The key point in this analysis is
   <math|F<around*|(|B|)>=F<around*|(|B<rprime|'>|)>>. It is this construction
-  that destoried the <math|g\<circ\>f>. In other words, <math|F> is not
+  that destroyed the <math|g\<circ\>f>. In other words, <math|F> is not
   injective on objects.
 
   Contrarily, when <math|F> does be injective on objects, then there must be
@@ -679,7 +680,7 @@
     originally designed as a morphism between functors, now reduces to simply
     a collection of morphisms between objects (in the target category
     <math|<math-ss|D>>), which has already been defined. Comparing with
-    morphism between functors, morphsim between objects is much familiar to
+    morphism between functors, morphism between objects is much familiar to
     us. So, this definition of natural transformation with component is easy
     to understand and would be easy to use.
   </remark>
@@ -689,7 +690,7 @@
   <math|\<eta\>:F\<rightarrow\>G>. The diagram commutes.>
 
   Natural transformation as morphism does build a category of functors.
-  Indeed, natural transformation can be composed by extending the commuative
+  Indeed, natural transformation can be composed by extending the commutative
   diagram <reference|figure: Natural Transformation> to the right (in the
   same way as figure <reference|figure: Functor Composition> for functor).
   Identity natural transformation has identity morphism as its component
@@ -710,7 +711,7 @@
 
   With the category of functors, we can discuss whether two functors are
   equivalent or not. This relates to the isomorphism between functors. Since
-  a morphisim in this category is called a natural transformation, an
+  a morphism in this category is called a natural transformation, an
   isomorphism is called a natural isomorphism. Given the general definition
   of isomorphism, a natural transformation <math|\<alpha\>:F\<rightarrow\>G>
   is <with|font-series|bold|natural isomorphism> between functors
@@ -724,7 +725,7 @@
   This definition is quite complicated, since it is an isomorphism on
   <math|<around*|[|<math-ss|C>,<math-ss|D>|]>>, which we are not familiar
   with. But, because <math|\<alpha\>> is a family of morphisms of category
-  <math|<math-ss|D>>, we can first consider a much simplier case, that is,
+  <math|<math-ss|D>>, we can first consider a much simpler case, that is,
   <math|\<alpha\><rsub|A>:F<around*|(|A|)>\<rightarrow\>G<around*|(|A|)>> is
   isomorphic. This isomorphism is of category <math|<math-ss|D>>, instead of
   <math|<around*|[|<math-ss|C>,<math-ss|D>|]>>. So, we guess, or hope, that,
@@ -878,10 +879,13 @@
     <associate|auto-8|<tuple|2|4>>
     <associate|auto-9|<tuple|2.1|4>>
     <associate|chapter: Category, Functor, and Natural
-    Transformation|<tuple|1|?>>
+    Transformation|<tuple|1|1>>
+    <associate|definition: Coproduct of Two Objects|<tuple|17|?>>
     <associate|definition: Infimum in Category|<tuple|13|3>>
     <associate|definition: Poset|<tuple|10|3>>
     <associate|definition: Poset as Category|<tuple|11|3>>
+    <associate|definition: Preorder|<tuple|9|?>>
+    <associate|definition: Product of Two Objects|<tuple|14|?>>
     <associate|figure: Functor|<tuple|1|6>>
     <associate|figure: Functor Composition|<tuple|2|6>>
     <associate|figure: Natural Transformation|<tuple|3|8>>

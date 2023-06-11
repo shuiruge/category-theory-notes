@@ -49,7 +49,7 @@
     <no-break><pageref|auto-12>
 
     <with|par-left|1tab|2.2.1<space|2spc>Arrows generalize concepts and
-    theorems from one area to every area in mathemtatics
+    theorems from one area to every area in mathematics
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-13>>
 
@@ -200,27 +200,28 @@
 
     <with|par-left|1tab|3.4.5<space|2spc>Limit is all you need
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-61>>
-
-    <with|par-left|2tab|3.4.5.1<space|2spc>Infimum is the limit on
-    <with|mode|math|<rigid|<with|mode|text|<with|font-family|ss|font-shape|right|Poset>>>>
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-62>>
 
-    <with|par-left|2tab|3.4.5.2<space|2spc>Supremum is the colimit on
-    <with|mode|math|<rigid|<with|mode|text|<with|font-family|ss|font-shape|right|Poset>>>>
+    <with|par-left|2tab|3.4.5.1<space|2spc>Infimum (supremum) is the limit
+    (colimit) on poset <with|mode|math|\<bbb-R\>>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-63>>
 
-    <with|par-left|2tab|3.4.5.3<space|2spc>Cartesian product is the limit on
-    <with|mode|math|<rigid|<with|mode|text|<with|font-family|ss|font-shape|right|Set>>>>
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|2tab|3.4.5.2<space|2spc>Product (coproduct) is a limit
+    (colimit) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-64>>
 
-    <with|par-left|2tab|3.4.5.4<space|2spc>Adjoint union is the colimit on
-    <with|mode|math|<rigid|<with|mode|text|<with|font-family|ss|font-shape|right|Set>>>>
+    3.5<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-66>
+
+    <with|par-left|1tab|3.5.1<space|2spc>Embedding in the framework of
+    category theory is the right way to extend category theory
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-65>>
+    <no-break><pageref|auto-67>>
+
+    <with|par-left|1tab|3.5.2<space|2spc>\PTypes\Q help to restrict the
+    possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-68>>
   </table-of-contents>
 
   <include|Preface.tm>
@@ -275,46 +276,55 @@
     <associate|auto-40|<tuple|3.2.1|15|Representation.tm>>
     <associate|auto-41|<tuple|3.2.2|15|Representation.tm>>
     <associate|auto-42|<tuple|3.1|16|Representation.tm>>
-    <associate|auto-43|<tuple|3.2.3|17|Representation.tm>>
+    <associate|auto-43|<tuple|3.2.3|16|Representation.tm>>
     <associate|auto-44|<tuple|3.2|17|Representation.tm>>
     <associate|auto-45|<tuple|3.2.4|17|Representation.tm>>
-    <associate|auto-46|<tuple|3.2.5|18|Representation.tm>>
+    <associate|auto-46|<tuple|3.2.5|17|Representation.tm>>
     <associate|auto-47|<tuple|3.3|18|Representation.tm>>
     <associate|auto-48|<tuple|3.2.6|18|Representation.tm>>
-    <associate|auto-49|<tuple|3.3|19|Representation.tm>>
+    <associate|auto-49|<tuple|3.3|18|Representation.tm>>
     <associate|auto-5|<tuple|2|5|Category.tm>>
-    <associate|auto-50|<tuple|3.3.1|19|Representation.tm>>
+    <associate|auto-50|<tuple|3.3.1|18|Representation.tm>>
     <associate|auto-51|<tuple|3.4|19|Representation.tm>>
     <associate|auto-52|<tuple|3.3.2|19|Representation.tm>>
-    <associate|auto-53|<tuple|3.4|20|Representation.tm>>
+    <associate|auto-53|<tuple|3.4|19|Representation.tm>>
     <associate|auto-54|<tuple|3.4.1|20|Representation.tm>>
     <associate|auto-55|<tuple|3.4.2|20|Representation.tm>>
-    <associate|auto-56|<tuple|3.5|21|Representation.tm>>
+    <associate|auto-56|<tuple|3.5|20|Representation.tm>>
     <associate|auto-57|<tuple|3.4.3|21|Representation.tm>>
     <associate|auto-58|<tuple|3.6|21|Representation.tm>>
     <associate|auto-59|<tuple|3.4.4|21|Representation.tm>>
     <associate|auto-6|<tuple|2.1|5|Category.tm>>
     <associate|auto-60|<tuple|3.7|22|Representation.tm>>
-    <associate|auto-61|<tuple|3.4.5|22|Representation.tm>>
-    <associate|auto-62|<tuple|3.4.5.1|22|Representation.tm>>
-    <associate|auto-63|<tuple|3.4.5.2|22|Representation.tm>>
-    <associate|auto-64|<tuple|3.4.5.3|22|Representation.tm>>
-    <associate|auto-65|<tuple|3.4.5.4|22|Representation.tm>>
+    <associate|auto-61|<tuple|3.8|22|Representation.tm>>
+    <associate|auto-62|<tuple|3.4.5|22|Representation.tm>>
+    <associate|auto-63|<tuple|3.4.5.1|22|Representation.tm>>
+    <associate|auto-64|<tuple|3.4.5.2|23|Representation.tm>>
+    <associate|auto-65|<tuple|3.9|23|Representation.tm>>
+    <associate|auto-66|<tuple|3.5|23|Representation.tm>>
+    <associate|auto-67|<tuple|3.5.1|23|Representation.tm>>
+    <associate|auto-68|<tuple|3.5.2|23|Representation.tm>>
     <associate|auto-7|<tuple|2.1.1|5|Category.tm>>
     <associate|auto-8|<tuple|2.1.2|6|Category.tm>>
     <associate|auto-9|<tuple|2.1.3|6|Category.tm>>
     <associate|chapter: Category, Functor, and Natural
     Transformation|<tuple|2|5|Category.tm>>
+    <associate|definition: Coproduct of Two
+    Objects|<tuple|2.17|8|Category.tm>>
     <associate|definition: Infimum in Category|<tuple|2.13|7|Category.tm>>
     <associate|definition: Poset|<tuple|2.10|7|Category.tm>>
     <associate|definition: Poset as Category|<tuple|2.11|7|Category.tm>>
+    <associate|definition: Preorder|<tuple|2.9|6|Category.tm>>
+    <associate|definition: Product of Two Objects|<tuple|2.14|8|Category.tm>>
     <associate|definition: Universal Element|<tuple|3.7|19|Representation.tm>>
-    <associate|figure: Cone|<tuple|3.5|21|Representation.tm>>
+    <associate|figure: Colimit|<tuple|3.8|22|Representation.tm>>
+    <associate|figure: Cone|<tuple|3.5|20|Representation.tm>>
     <associate|figure: Cone Functor|<tuple|3.6|21|Representation.tm>>
     <associate|figure: Functor|<tuple|2.1|9|Category.tm>>
     <associate|figure: Functor Composition|<tuple|2.2|10|Category.tm>>
     <associate|figure: Limit|<tuple|3.7|22|Representation.tm>>
     <associate|figure: Natural Transformation|<tuple|2.3|12|Category.tm>>
+    <associate|figure: Product is Limit|<tuple|3.9|23|Representation.tm>>
     <associate|figure: Representable Functor|<tuple|3.1|16|Representation.tm>>
     <associate|figure: The f_* is Natural
     Transformation|<tuple|3.2|17|Representation.tm>>
@@ -328,7 +338,7 @@
     <associate|part:Preface.tm|<tuple|?|3>>
     <associate|part:Representation.tm|<tuple|2.5.1|15>>
     <associate|section: From Representability to
-    Universality|<tuple|3.3|19|Representation.tm>>
+    Universality|<tuple|3.3|18|Representation.tm>>
     <associate|section: Representable Functor and Yoneda
     Functor|<tuple|3.2|15|Representation.tm>>
     <associate|theorem: Functorial Image as
@@ -344,7 +354,7 @@
       This diagram commutes.>|<pageref|auto-18>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|2.2>|| Extending the
-      commuative diagram <reference|figure: Functor> to the right. This
+      commutative diagram <reference|figure: Functor> to the right. This
       diagram commutes.>|<pageref|auto-19>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|2.3>|| Indicates the
@@ -368,7 +378,7 @@
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.5>|| The left hand
       side indicates the indexing category
       <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>.
-      And the right hand side indicats the cone from
+      And the right hand side indicates the cone from
       <with|mode|<quote|math>|X> to <with|mode|<quote|math>|D>. The green
       arrows are for functor <with|mode|<quote|math>|Const<rsub|X>>, and the
       red ones for functor <with|mode|<quote|math>|D>, wherein maps on
@@ -385,6 +395,19 @@
       limit. The dash arrow is for implication. As an instance, the indexing
       category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
       is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-60>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|3.8>|| Indicates the
+      colimit. The dash arrow is for implication. As an instance, the
+      indexing category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
+      is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-61>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|3.9>|| Indicates that
+      product is a limit. The left hand side is the indexing category. There
+      is no morphism (except the hidden identities) since it is a discrete
+      category. The name of the object is irrelevant, so the two objects are
+      shown as dots. The right hand side is the commutative diagram for the
+      definition of product. The green arrows is for the constant functor,
+      and red arrows for the diagram functor.>|<pageref|auto-65>>
     </associate>
     <\associate|parts>
       <tuple|Preface.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
@@ -441,7 +464,7 @@
       <no-break><pageref|auto-12>
 
       <with|par-left|<quote|1tab>|2.2.1<space|2spc>Arrows generalize concepts
-      and theorems from one area to every area in mathemtatics
+      and theorems from one area to every area in mathematics
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
@@ -598,27 +621,28 @@
 
       <with|par-left|<quote|1tab>|3.4.5<space|2spc>Limit is all you need
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-61>>
-
-      <with|par-left|<quote|2tab>|3.4.5.1<space|2spc>Infimum is the limit on
-      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Poset>>>>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-62>>
 
-      <with|par-left|<quote|2tab>|3.4.5.2<space|2spc>Supremum is the colimit
-      on <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Poset>>>>
+      <with|par-left|<quote|2tab>|3.4.5.1<space|2spc>Infimum (supremum) is
+      the limit (colimit) on poset <with|mode|<quote|math>|\<bbb-R\>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-63>>
 
-      <with|par-left|<quote|2tab>|3.4.5.3<space|2spc>Cartesian product is the
-      limit on <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|3.4.5.2<space|2spc>Product (coproduct) is a
+      limit (colimit) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-64>>
 
-      <with|par-left|<quote|2tab>|3.4.5.4<space|2spc>Adjoint union is the
-      colimit on <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>
+      3.5<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-66>
+
+      <with|par-left|<quote|1tab>|3.5.1<space|2spc>Embedding in the framework
+      of category theory is the right way to extend category theory
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-65>>
+      <no-break><pageref|auto-67>>
+
+      <with|par-left|<quote|1tab>|3.5.2<space|2spc>\PTypes\Q help to restrict
+      the possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-68>>
     </associate>
   </collection>
 </auxiliary>
