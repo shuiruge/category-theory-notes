@@ -523,7 +523,8 @@
 
   the identity axiom is preserved.
 
-  <subsection|Surjective functor may not be full>
+  <subsection|Surjective functor may not be full><label|section: Surjective
+  functor may not be full>
 
   Since functor preserves the structure of category, the image of a functor
   should be a subcategory of the codomain of the functor. Explicitly, given a
@@ -557,7 +558,8 @@
   <math|F:<math-ss|C><around*|(|A,B|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|A|)>,F<around*|(|B|)>|)>>
   is surjective.
 
-  <subsection|Injective functor may not be faithful>
+  <subsection|Injective functor may not be faithful><label|section: Injective
+  functor may not be faithful>
 
   The same discussion applies for the injection of functor. Again, you may
   think that <math|F<around*|(|<math-ss|C>|)>> can still be multiple-to-one
@@ -592,6 +594,37 @@
       X\<cong\>Y\<Leftrightarrow\>F<around*|(|X|)>\<cong\>F<around*|(|Y|)>.
     </equation*>
   </lemma>
+
+  <\proof>
+    First, we are to prove that <math|X\<cong\>Y\<Rightarrow\>F<around*|(|X|)>\<cong\>F<around*|(|Y|)>>.
+    The <math|X\<cong\>Y> means there exists
+    <math|\<alpha\>:X\<rightarrow\>Y> and <math|\<beta\>:Y\<rightarrow\>Z>
+    such that <math|\<beta\>\<circ\>\<alpha\>=1<rsub|X>> and
+    <math|\<alpha\>\<circ\>\<beta\>=1<rsub|Y>>. By the composition axiom, we
+    have <math|F<around*|(|\<beta\>\<circ\>\<alpha\>|)>=F<around*|(|\<beta\>|)>\<circ\>F<around*|(|\<alpha\>|)>>.
+    And by the identity axiom, we have <math|F<around*|(|1<rsub|X>|)>=1<rsub|F<around*|(|X|)>>>.
+    So, we have <math|F<around*|(|\<beta\>|)>\<circ\>F<around*|(|\<alpha\>|)>=1<rsub|F<around*|(|X|)>>>.
+    The same, we get <math|F<around*|(|\<alpha\>|)>\<circ\>F<around*|(|\<beta\>|)>=1<rsub|F<around*|(|Y|)>>>.
+    This simply means <math|F<around*|(|X|)>\<cong\>F<around*|(|Y|)>>.
+
+    Then, we are to prove that <math|F<around*|(|X|)>\<cong\>F<around*|(|Y|)>\<Rightarrow\>X\<cong\>Y>.
+    The <math|F<around*|(|X|)>\<cong\>F<around*|(|Y|)>> means there exists
+    <math|\<omega\>:F<around*|(|X|)>\<rightarrow\>F<around*|(|Y|)>> and
+    <math|\<zeta\>:F<around*|(|Y|)>\<rightarrow\>F<around*|(|X|)>> such that
+    <math|\<zeta\>\<circ\>\<omega\>=1<rsub|F<around*|(|X|)>>> and
+    <math|\<omega\>\<circ\>\<zeta\>=1<rsub|F<around*|(|Y|)>>>. Since <math|F>
+    is full, we must have <math|\<alpha\>:X\<rightarrow\>Y> and
+    <math|\<beta\>:Y\<rightarrow\>X> such that
+    <math|\<omega\>=F<around*|(|\<alpha\>|)>> and
+    <math|\<zeta\>=F<around*|(|\<beta\>|)>>. By the composition axiom, we
+    have <math|\<zeta\>\<circ\>\<omega\>=F<around*|(|\<beta\>|)>\<circ\>F<around*|(|\<alpha\>|)>=F<around*|(|\<beta\>\<circ\>\<alpha\>|)>>.
+    By the identity axiom, <math|1<rsub|F<around*|(|X|)>>=F<around*|(|1<rsub|X>|)>>.
+    So, we have <math|F<around*|(|\<beta\>\<circ\>\<alpha\>|)>=F<around*|(|1<rsub|X>|)>>.
+    Since <math|F> is faithful, this implies
+    <math|\<beta\>\<circ\>\<alpha\>=1<rsub|X>>. The same, we get
+    <math|\<alpha\>\<circ\>\<beta\>=1<rsub|Y>>. This simply means
+    <math|X\<cong\>Y>.
+  </proof>
 
   <subsection|Image of functor may not be a category>
 
@@ -861,13 +894,13 @@
     <associate|auto-18|<tuple|3.5|7>>
     <associate|auto-19|<tuple|3.6|7>>
     <associate|auto-2|<tuple|1|1>>
-    <associate|auto-20|<tuple|3.7|7>>
+    <associate|auto-20|<tuple|3.7|8>>
     <associate|auto-21|<tuple|4|8>>
     <associate|auto-22|<tuple|4.1|8>>
-    <associate|auto-23|<tuple|3|8>>
+    <associate|auto-23|<tuple|3|9>>
     <associate|auto-24|<tuple|4.2|9>>
     <associate|auto-25|<tuple|4.3|9>>
-    <associate|auto-26|<tuple|4.4|9>>
+    <associate|auto-26|<tuple|4.4|10>>
     <associate|auto-27|<tuple|4.5|10>>
     <associate|auto-28|<tuple|5|10>>
     <associate|auto-29|<tuple|5.1|10>>
@@ -875,22 +908,24 @@
     <associate|auto-4|<tuple|1.2|2>>
     <associate|auto-5|<tuple|1.3|2>>
     <associate|auto-6|<tuple|1.4|3>>
-    <associate|auto-7|<tuple|1.5|3>>
+    <associate|auto-7|<tuple|1.5|4>>
     <associate|auto-8|<tuple|2|4>>
     <associate|auto-9|<tuple|2.1|4>>
     <associate|chapter: Category, Functor, and Natural
     Transformation|<tuple|1|1>>
-    <associate|definition: Coproduct of Two Objects|<tuple|17|?>>
+    <associate|definition: Coproduct of Two Objects|<tuple|17|5>>
     <associate|definition: Infimum in Category|<tuple|13|3>>
     <associate|definition: Poset|<tuple|10|3>>
     <associate|definition: Poset as Category|<tuple|11|3>>
-    <associate|definition: Preorder|<tuple|9|?>>
-    <associate|definition: Product of Two Objects|<tuple|14|?>>
+    <associate|definition: Preorder|<tuple|9|3>>
+    <associate|definition: Product of Two Objects|<tuple|14|4>>
     <associate|figure: Functor|<tuple|1|6>>
     <associate|figure: Functor Composition|<tuple|2|6>>
-    <associate|figure: Natural Transformation|<tuple|3|8>>
+    <associate|figure: Natural Transformation|<tuple|3|9>>
     <associate|lemma: Fully Faithful Functor|<tuple|21|7>>
     <associate|lemma: Natural Isomorphism|<tuple|25|9>>
+    <associate|section: Injective functor may not be faithful|<tuple|3.5|?>>
+    <associate|section: Surjective functor may not be full|<tuple|3.4|?>>
     <associate|theorem: Functorial Image as Category|<tuple|22|8>>
   </collection>
 </references>
@@ -903,7 +938,7 @@
       This diagram commutes.>|<pageref|auto-14>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|2>|| Extending the
-      commuative diagram <reference|figure: Functor> to the right. This
+      commutative diagram <reference|figure: Functor> to the right. This
       diagram commutes.>|<pageref|auto-15>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3>|| Indicates the
@@ -946,7 +981,7 @@
       <no-break><pageref|auto-8><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|2.1<space|2spc>Arrows generalize concepts
-      and theorems from one area to every area in mathemtatics
+      and theorems from one area to every area in mathematics
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
 
