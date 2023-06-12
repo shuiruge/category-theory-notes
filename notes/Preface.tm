@@ -39,9 +39,9 @@
 
   <section|How to Read>
 
-  While reading this book, it is strongly suggested to draw commutative
-  diagrams whenever it is needed. You will find it quite easy if you do keep
-  drawing commutative diagrams and quite difficult if not.
+  While reading this book, it is strongly suggested to <with|color|red|draw
+  commutative diagrams whenever it is needed>. You will find it quite easy if
+  you do keep drawing commutative diagrams and quite difficult if not.
 </body>
 
 <\initial>

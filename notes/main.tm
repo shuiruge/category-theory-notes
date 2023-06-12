@@ -201,30 +201,33 @@
     functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-60>>
 
-    <with|par-left|1tab|3.4.5<space|2spc>Limit is all you need
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|3.4.5<space|2spc>Infimum is a limit on poset
+    <with|mode|math|\<bbb-R\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-63>>
 
-    <with|par-left|2tab|3.4.5.1<space|2spc>Infimum (supremum) is the limit
-    (colimit) on poset <with|mode|math|\<bbb-R\>>
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|3.4.6<space|2spc>Product is a limit with discrete
+    indexing category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-64>>
 
-    <with|par-left|2tab|3.4.5.2<space|2spc>Product (coproduct) is a limit
-    (colimit) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-65>>
+    <with|par-left|1tab|3.4.7<space|2spc>Limit is everywhere in mathematics
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-66>>
+
+    <with|par-left|1tab|3.4.8<space|2spc>Guess: limit is first-order logic
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-67>>
 
     3.5<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-67>
+    <no-break><pageref|auto-68>
 
     <with|par-left|1tab|3.5.1<space|2spc>Embedding in the framework of
     category theory is the right way to extend category theory
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-68>>
+    <no-break><pageref|auto-69>>
 
     <with|par-left|1tab|3.5.2<space|2spc>\PTypes\Q help to restrict the
     possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-69>>
+    <no-break><pageref|auto-70>>
   </table-of-contents>
 
   <include|Preface.tm>
@@ -302,20 +305,20 @@
     <associate|auto-61|<tuple|3.7|22|Representation.tm>>
     <associate|auto-62|<tuple|3.8|22|Representation.tm>>
     <associate|auto-63|<tuple|3.4.5|23|Representation.tm>>
-    <associate|auto-64|<tuple|3.4.5.1|23|Representation.tm>>
-    <associate|auto-65|<tuple|3.4.5.2|23|Representation.tm>>
-    <associate|auto-66|<tuple|3.9|23|Representation.tm>>
-    <associate|auto-67|<tuple|3.5|23|Representation.tm>>
-    <associate|auto-68|<tuple|3.5.1|23|Representation.tm>>
-    <associate|auto-69|<tuple|3.5.2|24|Representation.tm>>
+    <associate|auto-64|<tuple|3.4.6|23|Representation.tm>>
+    <associate|auto-65|<tuple|3.9|23|Representation.tm>>
+    <associate|auto-66|<tuple|3.4.7|23|Representation.tm>>
+    <associate|auto-67|<tuple|3.4.8|23|Representation.tm>>
+    <associate|auto-68|<tuple|3.5|24|Representation.tm>>
+    <associate|auto-69|<tuple|3.5.1|24|Representation.tm>>
     <associate|auto-7|<tuple|2.1|5|Category.tm>>
+    <associate|auto-70|<tuple|3.5.2|24|Representation.tm>>
     <associate|auto-8|<tuple|2.1.1|5|Category.tm>>
     <associate|auto-9|<tuple|2.1.2|6|Category.tm>>
     <associate|chapter: Category, Functor, and Natural
     Transformation|<tuple|2|5|Category.tm>>
     <associate|definition: Coproduct of Two
     Objects|<tuple|2.17|8|Category.tm>>
-    <associate|definition: Infimum in Category|<tuple|2.13|7|Category.tm>>
     <associate|definition: Poset|<tuple|2.10|7|Category.tm>>
     <associate|definition: Poset as Category|<tuple|2.11|7|Category.tm>>
     <associate|definition: Preorder|<tuple|2.9|6|Category.tm>>
@@ -341,12 +344,16 @@
     <associate|part:Category.tm|<tuple|1.4|5>>
     <associate|part:Preface.tm|<tuple|?|3>>
     <associate|part:Representation.tm|<tuple|2.5.1|15>>
+    <associate|section: Arrows generalize concepts and theorems from one area
+    to every area in mathematics|<tuple|2.2.1|7|Category.tm>>
     <associate|section: From Representability to
     Universality|<tuple|3.3|19|Representation.tm>>
     <associate|section: Injective functor may not be
     faithful|<tuple|2.3.5|11|Category.tm>>
     <associate|section: Representable Functor and Yoneda
     Functor|<tuple|3.2|15|Representation.tm>>
+    <associate|section: Supremum and infimum are
+    dual|<tuple|2.1.4|7|Category.tm>>
     <associate|section: Surjective functor may not be
     full|<tuple|2.3.4|10|Category.tm>>
     <associate|theorem: Functorial Image as
@@ -415,7 +422,7 @@
       category. The name of the object is irrelevant, so the two objects are
       shown as dots. The right hand side is the commutative diagram for the
       definition of product. The green arrows is for the constant functor,
-      and red arrows for the diagram functor.>|<pageref|auto-66>>
+      and red arrows for the diagram functor.>|<pageref|auto-65>>
     </associate>
     <\associate|parts>
       <tuple|Preface.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
@@ -630,30 +637,34 @@
       representation of cone functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-60>>
 
-      <with|par-left|<quote|1tab>|3.4.5<space|2spc>Limit is all you need
+      <with|par-left|<quote|1tab>|3.4.5<space|2spc>Infimum is a limit on
+      poset <with|mode|<quote|math>|\<bbb-R\>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-63>>
 
-      <with|par-left|<quote|2tab>|3.4.5.1<space|2spc>Infimum (supremum) is
-      the limit (colimit) on poset <with|mode|<quote|math>|\<bbb-R\>>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|3.4.6<space|2spc>Product is a limit with
+      discrete indexing category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-64>>
 
-      <with|par-left|<quote|2tab>|3.4.5.2<space|2spc>Product (coproduct) is a
-      limit (colimit) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-65>>
+      <with|par-left|<quote|1tab>|3.4.7<space|2spc>Limit is everywhere in
+      mathematics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-66>>
+
+      <with|par-left|<quote|1tab>|3.4.8<space|2spc>Guess: limit is
+      first-order logic <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-67>>
 
       3.5<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-67>
+      <no-break><pageref|auto-68>
 
       <with|par-left|<quote|1tab>|3.5.1<space|2spc>Embedding in the framework
       of category theory is the right way to extend category theory
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-68>>
+      <no-break><pageref|auto-69>>
 
       <with|par-left|<quote|1tab>|3.5.2<space|2spc>\PTypes\Q help to restrict
       the possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-69>>
+      <no-break><pageref|auto-70>>
     </associate>
   </collection>
 </auxiliary>

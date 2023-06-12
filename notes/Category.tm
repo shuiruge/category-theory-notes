@@ -226,7 +226,8 @@
   maps. In <math|<math-ss|Poset>>, morphisms are \Pno greater than\Qs or \Pis
   subset of\Qs.
 
-  <subsection|Supremum and infimum are dual>
+  <subsection|Supremum and infimum are dual><label|section: Supremum and
+  infimum are dual>
 
   Arrows can represent many mathematical objects. For example, in
   <math-ss|<math|Poset>> with set <math|\<bbb-R\>> and preorder
@@ -251,9 +252,9 @@
   in analysis. Also, we can define the infimum in the same fashion.
 
   <\definition>
-    <label|definition: Infimum in Category>[Infimum in Category] Given a
-    subset <math|A\<subset\>\<bbb-R\>>. An <math|x\<in\>\<bbb-R\>> is the
-    <with|font-series|bold|infimum> of <math|A> if it satisfies:
+    [Infimum in Category] Given a subset <math|A\<subset\>\<bbb-R\>>. An
+    <math|x\<in\>\<bbb-R\>> is the <with|font-series|bold|infimum> of
+    <math|A> if it satisfies:
 
     <\itemize>
       <item>for <math|\<forall\>a\<in\>A>, <math|x\<rightarrow\>a> and,
@@ -290,7 +291,8 @@
   <section|Why Category?>
 
   <subsection|Arrows generalize concepts and theorems from one area to every
-  area in mathematics>
+  area in mathematics><label|section: Arrows generalize concepts and theorems
+  from one area to every area in mathematics>
 
   Why category theory? Or say, why arrows? One benefit of re-claim everything
   in arrows is the ability of generalizing a concept in one area to area
@@ -924,8 +926,11 @@
     <associate|figure: Natural Transformation|<tuple|3|9>>
     <associate|lemma: Fully Faithful Functor|<tuple|21|7>>
     <associate|lemma: Natural Isomorphism|<tuple|25|9>>
-    <associate|section: Injective functor may not be faithful|<tuple|3.5|?>>
-    <associate|section: Surjective functor may not be full|<tuple|3.4|?>>
+    <associate|section: Arrows generalize concepts and theorems from one area
+    to every area in mathematics|<tuple|2.1|?>>
+    <associate|section: Injective functor may not be faithful|<tuple|3.5|7>>
+    <associate|section: Supremum and infimum are dual|<tuple|1.4|?>>
+    <associate|section: Surjective functor may not be full|<tuple|3.4|7>>
     <associate|theorem: Functorial Image as Category|<tuple|22|8>>
   </collection>
 </references>
