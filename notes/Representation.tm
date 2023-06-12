@@ -440,17 +440,17 @@
   <math|I\<assign\><around*|{|1,\<ldots\>,n|}>> as an \Pindexing set\Q, and
   <math|f<around*|(|i|)>\<assign\>x<rsub|i>>.
 
-  Back to category theory, the indexing set analyzes to indexing category
-  <math|<math-ss|I>>, and the function <math|f> analyzes to functor
-  <math|F:<math-ss|I>\<rightarrow\><math-ss|C>>. Indexing category is used
-  for filtering the objects and morphisms in <math|<math-ss|C>>, so that the
-  image is a part of <math|<math-ss|C>>, that is, a diagram. We summarize the
-  previous analysis as follow.
+  Back to category theory, the indexing set analyzes to a small category
+  <math|<math-ss|I>> called indexing category, and the function <math|f>
+  analyzes to functor <math|F:<math-ss|I>\<rightarrow\><math-ss|C>>. Indexing
+  category is used for filtering the objects and morphisms in
+  <math|<math-ss|C>>, so that the image is a part of <math|<math-ss|C>>, that
+  is, a diagram. We summarize the previous analysis as follow.
 
   <\definition>
-    [Diagram] Let <math|<math-ss|I>> and <math|<math-ss|C>> categories. An
-    <with|font-series|bold|<math|<math-ss|I>>-shaped diagram> in
-    <math|<math-ss|C>> is a functor <math|F:<math-ss|I>\<rightarrow\><math-ss|C>>.
+    [Diagram] Let <math|<math-ss|I>> a small category and <math|<math-ss|C>>
+    a category. An <with|font-series|bold|<math|<math-ss|I>>-shaped diagram>
+    in <math|<math-ss|C>> is a functor <math|F:<math-ss|I>\<rightarrow\><math-ss|C>>.
     It is small or locally small if <math|<math-ss|C>> is small or locally
     small respectively.
   </definition>
@@ -467,8 +467,8 @@
   object to a functor.
 
   <\definition>
-    [Constant Functor] Given categories <math|<math-ss|C>> and
-    <math|<math-ss|D>>, for each <math|X\<in\><math-ss|D>>, the
+    [Constant Functor] Let <math|<math-ss|C>> and <math|<math-ss|D>>
+    categories. For each <math|X\<in\><math-ss|D>>, the
     <with|font-series|bold|constant functor> of <math|X>,
     <math|Const<rsub|X>:<math-ss|C>\<rightarrow\><math-ss|D>>, is defined by
 
@@ -485,8 +485,8 @@
   object, or its constant functor, and a diagram.
 
   <\definition>
-    [Cone] Let <math|<math-ss|I>> and <math|<math-ss|C>> are categories. For
-    each object <math|X\<in\><math-ss|C>> and each diagram
+    [Cone] Let <math|<math-ss|I>> a small category and <math|<math-ss|C>> a
+    category. For each object <math|X\<in\><math-ss|C>> and each diagram
     <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>, a cone from <math|X> to
     <math|D> is a natural transformation <math|\<lambda\>:Const<rsub|X>\<rightarrow\>D>.
   </definition>
@@ -502,8 +502,8 @@
   <subsection|Cone functor generates cones>
 
   Notice a cone consists two parts: the summit object, and the diagram. Let
-  <math|<math-ss|I>> and <math|<math-ss|C>> categories. Given a summit object
-  <math|X\<in\><math-ss|C>> and a diagram
+  <math|<math-ss|I>> a small category and <math|<math-ss|C>> a category.
+  Given a summit object <math|X\<in\><math-ss|C>> and a diagram
   <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>, the natural transformation
   <math|\<lambda\>:Const<rsub|X>\<rightarrow\>D> is not unique. There can be
   a plenty of such natural transformations, depending on how many morphisms
@@ -528,9 +528,10 @@
   that is <math|\<lambda\><rsub|A>\<circ\>f>.
 
   <\definition>
-    [Cone Functor] Let <math|<math-ss|I>> and <math|<math-ss|C>> categories.
-    For each diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>, the cone
-    functor <math|Cone<around*|(|-,D|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
+    [Cone Functor] Let <math|<math-ss|I>> a small category and
+    <math|<math-ss|C>> a category. For each diagram
+    <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>, the cone functor
+    <math|Cone<around*|(|-,D|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
     is defined by
 
     <\itemize>
@@ -567,8 +568,8 @@
   Element> to here, with some replacement for cone functor.
 
   <\definition>
-    [Universal Cone] Let <math|<math-ss|I>> a category and <math|<math-ss|C>>
-    a locally small category. For a locally small diagram
+    [Universal Cone] Let <math|<math-ss|I>> a small category and
+    <math|<math-ss|C>> a locall small category. For a locally small diagram
     <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>, a
     <with|font-series|bold|universal cone> is a pair
     <math|><math|<around*|(|lim<rsub|<math-ss|I>>D,e|)>> where <math|lim
@@ -750,7 +751,6 @@
     <associate|auto-33|<tuple|5|10>>
     <associate|auto-34|<tuple|5.1|10>>
     <associate|auto-35|<tuple|5.2|10>>
-    <associate|auto-36|<tuple|5.2|10>>
     <associate|auto-4|<tuple|1.2|1>>
     <associate|auto-5|<tuple|1.3|1>>
     <associate|auto-6|<tuple|2|1>>
@@ -920,22 +920,18 @@
       mathematics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-32>>
 
-      <with|par-left|<quote|1tab>|4.8<space|2spc>Guess: limit is first-order
-      logic <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>>
-
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Summary>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34><vspace|0.5fn>
+      <no-break><pageref|auto-33><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|5.1<space|2spc>Embedding in the framework
       of category theory is the right way to extend category theory
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>>
+      <no-break><pageref|auto-34>>
 
       <with|par-left|<quote|1tab>|5.2<space|2spc>\PTypes\Q help to restrict
       the possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36>>
+      <no-break><pageref|auto-35>>
     </associate>
   </collection>
 </auxiliary>
