@@ -122,98 +122,98 @@
     recursion <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-34>>
 
+    <with|par-left|1tab|2.5.2<space|2spc>Proof in category theory is easy
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-35>>
+
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Representation>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-35><vspace|0.5fn>
+    <no-break><pageref|auto-36><vspace|0.5fn>
 
     3.1<space|2spc>Preliminary: Small Category (TODO)
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-36>
+    <no-break><pageref|auto-37>
 
     <with|par-left|1tab|3.1.1<space|2spc>The set of all sets implies
     Russell's paradox <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-37>>
+    <no-break><pageref|auto-38>>
 
     <with|par-left|1tab|3.1.2<space|2spc>Class extends set to avoid Russell's
     paradox <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-38>>
+    <no-break><pageref|auto-39>>
 
     <with|par-left|1tab|3.1.3<space|2spc>Category can be small or locally
     small <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-39>>
+    <no-break><pageref|auto-40>>
 
     3.2<space|2spc>Representable Functor and Yoneda Functor
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-40>
+    <no-break><pageref|auto-41>
 
     <with|par-left|1tab|3.2.1<space|2spc>Object equals to its relations with
     others and with itself <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-41>>
+    <no-break><pageref|auto-42>>
 
     <with|par-left|1tab|3.2.2<space|2spc>Morphisms with fixed codomain can be
     represented by a functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-42>>
+    <no-break><pageref|auto-43>>
 
     <with|par-left|1tab|3.2.3<space|2spc>Yoneda functor connects an object to
     its representable functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-44>>
+    <no-break><pageref|auto-45>>
 
     <with|par-left|1tab|3.2.4<space|2spc>On objects, Yoneda functor is
     injective but not surjective <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-46>>
+    <no-break><pageref|auto-47>>
 
     <with|par-left|1tab|3.2.5<space|2spc>Yoneda functor is fully faithful
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-47>>
+    <no-break><pageref|auto-48>>
 
     <with|par-left|1tab|3.2.6<space|2spc>All is arrow
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-49>>
+    <no-break><pageref|auto-50>>
 
     3.3<space|2spc>From Representability to Universality
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-50>
+    <no-break><pageref|auto-51>
 
     <with|par-left|1tab|3.3.1<space|2spc>Functor is representable if there
     exists universal element <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-51>>
+    <no-break><pageref|auto-52>>
 
     <with|par-left|1tab|3.3.2<space|2spc>Representation is Unique
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-53>>
+    <no-break><pageref|auto-54>>
 
     3.4<space|2spc>Cone and Limit <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-54>
+    <no-break><pageref|auto-55>
 
     <with|par-left|1tab|3.4.1<space|2spc>Diagram as a part of category is a
     functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-55>>
+    <no-break><pageref|auto-56>>
 
     <with|par-left|1tab|3.4.2<space|2spc>Cone irradiates diagram
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-56>>
+    <no-break><pageref|auto-57>>
 
     <with|par-left|1tab|3.4.3<space|2spc>Cone functor generates cones
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-58>>
+    <no-break><pageref|auto-59>>
 
     <with|par-left|1tab|3.4.4<space|2spc>Limit is the representation of cone
     functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-60>>
+    <no-break><pageref|auto-61>>
 
     <with|par-left|1tab|3.4.5<space|2spc>Infimum is a limit on poset
     <with|mode|math|\<bbb-R\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-63>>
+    <no-break><pageref|auto-64>>
 
     <with|par-left|1tab|3.4.6<space|2spc>Product is a limit with discrete
     indexing category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-64>>
+    <no-break><pageref|auto-65>>
 
     <with|par-left|1tab|3.4.7<space|2spc>Limit is everywhere in mathematics
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-66>>
-
-    <with|par-left|1tab|3.4.8<space|2spc>Guess: limit is first-order logic
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-67>>
 
@@ -273,42 +273,42 @@
     <associate|auto-32|<tuple|2.4.5|13|Category.tm>>
     <associate|auto-33|<tuple|2.5|13|Category.tm>>
     <associate|auto-34|<tuple|2.5.1|13|Category.tm>>
-    <associate|auto-35|<tuple|3|15|Representation.tm>>
-    <associate|auto-36|<tuple|3.1|15|Representation.tm>>
-    <associate|auto-37|<tuple|3.1.1|15|Representation.tm>>
-    <associate|auto-38|<tuple|3.1.2|15|Representation.tm>>
-    <associate|auto-39|<tuple|3.1.3|15|Representation.tm>>
+    <associate|auto-35|<tuple|2.5.2|14|Category.tm>>
+    <associate|auto-36|<tuple|3|15|Representation.tm>>
+    <associate|auto-37|<tuple|3.1|15|Representation.tm>>
+    <associate|auto-38|<tuple|3.1.1|15|Representation.tm>>
+    <associate|auto-39|<tuple|3.1.2|15|Representation.tm>>
     <associate|auto-4|<tuple|1.3|3|Preface.tm>>
-    <associate|auto-40|<tuple|3.2|15|Representation.tm>>
-    <associate|auto-41|<tuple|3.2.1|15|Representation.tm>>
-    <associate|auto-42|<tuple|3.2.2|15|Representation.tm>>
-    <associate|auto-43|<tuple|3.1|17|Representation.tm>>
-    <associate|auto-44|<tuple|3.2.3|17|Representation.tm>>
-    <associate|auto-45|<tuple|3.2|17|Representation.tm>>
-    <associate|auto-46|<tuple|3.2.4|18|Representation.tm>>
-    <associate|auto-47|<tuple|3.2.5|18|Representation.tm>>
-    <associate|auto-48|<tuple|3.3|18|Representation.tm>>
-    <associate|auto-49|<tuple|3.2.6|19|Representation.tm>>
+    <associate|auto-40|<tuple|3.1.3|15|Representation.tm>>
+    <associate|auto-41|<tuple|3.2|15|Representation.tm>>
+    <associate|auto-42|<tuple|3.2.1|15|Representation.tm>>
+    <associate|auto-43|<tuple|3.2.2|15|Representation.tm>>
+    <associate|auto-44|<tuple|3.1|17|Representation.tm>>
+    <associate|auto-45|<tuple|3.2.3|17|Representation.tm>>
+    <associate|auto-46|<tuple|3.2|17|Representation.tm>>
+    <associate|auto-47|<tuple|3.2.4|18|Representation.tm>>
+    <associate|auto-48|<tuple|3.2.5|18|Representation.tm>>
+    <associate|auto-49|<tuple|3.3|18|Representation.tm>>
     <associate|auto-5|<tuple|1.4|3|Preface.tm>>
-    <associate|auto-50|<tuple|3.3|19|Representation.tm>>
-    <associate|auto-51|<tuple|3.3.1|19|Representation.tm>>
-    <associate|auto-52|<tuple|3.4|19|Representation.tm>>
-    <associate|auto-53|<tuple|3.3.2|20|Representation.tm>>
-    <associate|auto-54|<tuple|3.4|20|Representation.tm>>
-    <associate|auto-55|<tuple|3.4.1|20|Representation.tm>>
-    <associate|auto-56|<tuple|3.4.2|20|Representation.tm>>
-    <associate|auto-57|<tuple|3.5|21|Representation.tm>>
-    <associate|auto-58|<tuple|3.4.3|21|Representation.tm>>
-    <associate|auto-59|<tuple|3.6|21|Representation.tm>>
+    <associate|auto-50|<tuple|3.2.6|19|Representation.tm>>
+    <associate|auto-51|<tuple|3.3|19|Representation.tm>>
+    <associate|auto-52|<tuple|3.3.1|19|Representation.tm>>
+    <associate|auto-53|<tuple|3.4|19|Representation.tm>>
+    <associate|auto-54|<tuple|3.3.2|20|Representation.tm>>
+    <associate|auto-55|<tuple|3.4|20|Representation.tm>>
+    <associate|auto-56|<tuple|3.4.1|20|Representation.tm>>
+    <associate|auto-57|<tuple|3.4.2|20|Representation.tm>>
+    <associate|auto-58|<tuple|3.5|21|Representation.tm>>
+    <associate|auto-59|<tuple|3.4.3|21|Representation.tm>>
     <associate|auto-6|<tuple|2|5|Category.tm>>
-    <associate|auto-60|<tuple|3.4.4|22|Representation.tm>>
-    <associate|auto-61|<tuple|3.7|22|Representation.tm>>
-    <associate|auto-62|<tuple|3.8|22|Representation.tm>>
-    <associate|auto-63|<tuple|3.4.5|23|Representation.tm>>
-    <associate|auto-64|<tuple|3.4.6|23|Representation.tm>>
-    <associate|auto-65|<tuple|3.9|23|Representation.tm>>
-    <associate|auto-66|<tuple|3.4.7|23|Representation.tm>>
-    <associate|auto-67|<tuple|3.4.8|23|Representation.tm>>
+    <associate|auto-60|<tuple|3.6|21|Representation.tm>>
+    <associate|auto-61|<tuple|3.4.4|22|Representation.tm>>
+    <associate|auto-62|<tuple|3.7|22|Representation.tm>>
+    <associate|auto-63|<tuple|3.8|22|Representation.tm>>
+    <associate|auto-64|<tuple|3.4.5|23|Representation.tm>>
+    <associate|auto-65|<tuple|3.4.6|23|Representation.tm>>
+    <associate|auto-66|<tuple|3.9|23|Representation.tm>>
+    <associate|auto-67|<tuple|3.4.7|23|Representation.tm>>
     <associate|auto-68|<tuple|3.5|24|Representation.tm>>
     <associate|auto-69|<tuple|3.5.1|24|Representation.tm>>
     <associate|auto-7|<tuple|2.1|5|Category.tm>>
@@ -343,7 +343,7 @@
     <associate|lemma: Natural Isomorphism|<tuple|2.25|13|Category.tm>>
     <associate|part:Category.tm|<tuple|1.4|5>>
     <associate|part:Preface.tm|<tuple|?|3>>
-    <associate|part:Representation.tm|<tuple|2.5.1|15>>
+    <associate|part:Representation.tm|<tuple|2.5.2|15>>
     <associate|section: Arrows generalize concepts and theorems from one area
     to every area in mathematics|<tuple|2.2.1|7|Category.tm>>
     <associate|section: From Representability to
@@ -377,18 +377,18 @@
       The diagram commutes.>|<pageref|auto-28>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.1>||Indicates
-      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,X|)>:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><rsup|op>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>.>|<pageref|auto-43>>
+      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,X|)>:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><rsup|op>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>.>|<pageref|auto-44>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.2>|| Indicates that
       the <with|mode|<quote|math>|f<rsub|\<ast\>>> is a natural
       transformation from <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,X|)>>
       to <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,Y|)>>.
-      The inner circle indicates the element-wise map.>|<pageref|auto-45>>
+      The inner circle indicates the element-wise map.>|<pageref|auto-46>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.3>|| The dash arrow
-      indicates what is implied.>|<pageref|auto-48>>
+      indicates what is implied.>|<pageref|auto-49>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|3.4>||>|<pageref|auto-52>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|3.4>||>|<pageref|auto-53>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.5>|| The left hand
       side indicates the indexing category
@@ -399,22 +399,22 @@
       red ones for functor <with|mode|<quote|math>|D>, wherein maps on
       morphisms are not shown. As usual, identities are hidden. Since the
       <with|mode|<quote|math>|\<lambda\>> is a natural transformation, the
-      right hand side commutes.>|<pageref|auto-57>>
+      right hand side commutes.>|<pageref|auto-58>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.6>|| Indicates the
       map on <with|mode|<quote|math>|f>. As an instance, the indexing
       category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
-      is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-59>>
+      is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-60>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.7>|| Indicates the
       limit. The dash arrow is for implication. As an instance, the indexing
       category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
-      is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-61>>
+      is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-62>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.8>|| Indicates the
       colimit. The dash arrow is for implication. As an instance, the
       indexing category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
-      is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-62>>
+      is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-63>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.9>|| Indicates that
       product is a limit. The left hand side is the indexing category. There
@@ -422,14 +422,14 @@
       category. The name of the object is irrelevant, so the two objects are
       shown as dots. The right hand side is the commutative diagram for the
       definition of product. The green arrows is for the constant functor,
-      and red arrows for the diagram functor.>|<pageref|auto-65>>
+      and red arrows for the diagram functor.>|<pageref|auto-66>>
     </associate>
     <\associate|parts>
       <tuple|Preface.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
 
       <tuple|Category.tm|chapter-nr|1|section-nr|4|subsection-nr|0>
 
-      <tuple|Representation.tm|chapter-nr|2|section-nr|5|subsection-nr|1>
+      <tuple|Representation.tm|chapter-nr|2|section-nr|5|subsection-nr|2>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Preface>
@@ -555,103 +555,103 @@
       by recursion <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-34>>
 
+      <with|par-left|<quote|1tab>|2.5.2<space|2spc>Proof in category theory
+      is easy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-35>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Representation>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35><vspace|0.5fn>
+      <no-break><pageref|auto-36><vspace|0.5fn>
 
       3.1<space|2spc>Preliminary: Small Category (TODO)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36>
+      <no-break><pageref|auto-37>
 
       <with|par-left|<quote|1tab>|3.1.1<space|2spc>The set of all sets
       implies Russell's paradox <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>>
+      <no-break><pageref|auto-38>>
 
       <with|par-left|<quote|1tab>|3.1.2<space|2spc>Class extends set to avoid
       Russell's paradox <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>>
+      <no-break><pageref|auto-39>>
 
       <with|par-left|<quote|1tab>|3.1.3<space|2spc>Category can be small or
       locally small <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>>
+      <no-break><pageref|auto-40>>
 
       3.2<space|2spc>Representable Functor and Yoneda Functor
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40>
+      <no-break><pageref|auto-41>
 
       <with|par-left|<quote|1tab>|3.2.1<space|2spc>Object equals to its
       relations with others and with itself
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-41>>
+      <no-break><pageref|auto-42>>
 
       <with|par-left|<quote|1tab>|3.2.2<space|2spc>Morphisms with fixed
       codomain can be represented by a functor
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42>>
+      <no-break><pageref|auto-43>>
 
       <with|par-left|<quote|1tab>|3.2.3<space|2spc>Yoneda functor connects an
       object to its representable functor
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-44>>
+      <no-break><pageref|auto-45>>
 
       <with|par-left|<quote|1tab>|3.2.4<space|2spc>On objects, Yoneda functor
       is injective but not surjective <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-46>>
+      <no-break><pageref|auto-47>>
 
       <with|par-left|<quote|1tab>|3.2.5<space|2spc>Yoneda functor is fully
       faithful <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-47>>
+      <no-break><pageref|auto-48>>
 
       <with|par-left|<quote|1tab>|3.2.6<space|2spc>All is arrow
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-49>>
+      <no-break><pageref|auto-50>>
 
       3.3<space|2spc>From Representability to Universality
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-50>
+      <no-break><pageref|auto-51>
 
       <with|par-left|<quote|1tab>|3.3.1<space|2spc>Functor is representable
       if there exists universal element <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-51>>
+      <no-break><pageref|auto-52>>
 
       <with|par-left|<quote|1tab>|3.3.2<space|2spc>Representation is Unique
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53>>
+      <no-break><pageref|auto-54>>
 
       3.4<space|2spc>Cone and Limit <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-54>
+      <no-break><pageref|auto-55>
 
       <with|par-left|<quote|1tab>|3.4.1<space|2spc>Diagram as a part of
       category is a functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-55>>
+      <no-break><pageref|auto-56>>
 
       <with|par-left|<quote|1tab>|3.4.2<space|2spc>Cone irradiates diagram
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-56>>
+      <no-break><pageref|auto-57>>
 
       <with|par-left|<quote|1tab>|3.4.3<space|2spc>Cone functor generates
       cones <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-58>>
+      <no-break><pageref|auto-59>>
 
       <with|par-left|<quote|1tab>|3.4.4<space|2spc>Limit is the
       representation of cone functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-60>>
+      <no-break><pageref|auto-61>>
 
       <with|par-left|<quote|1tab>|3.4.5<space|2spc>Infimum is a limit on
       poset <with|mode|<quote|math>|\<bbb-R\>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-63>>
+      <no-break><pageref|auto-64>>
 
       <with|par-left|<quote|1tab>|3.4.6<space|2spc>Product is a limit with
       discrete indexing category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-64>>
+      <no-break><pageref|auto-65>>
 
       <with|par-left|<quote|1tab>|3.4.7<space|2spc>Limit is everywhere in
       mathematics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-66>>
-
-      <with|par-left|<quote|1tab>|3.4.8<space|2spc>Guess: limit is
-      first-order logic <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-67>>
 
       3.5<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>

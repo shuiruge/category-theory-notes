@@ -871,6 +871,24 @@
 
   So, the basic conceptions, which are category, functor, and natural
   transformation, were defined recursively.
+
+  <subsection|Proof in category theory is easy>
+
+  As you might noticed, the proof in category theory is almost nothing but
+  expanding definitions. Once you have clearly realized what the concepts
+  mean, you get the proof.
+
+  Why is proof in category theory so easy? An educated guess is that category
+  theory is quite fundamental. In analysis, almost for every critical
+  concept, there are a plenty of lemmas, theorems, and corollaries related to
+  this concept. This is because analysis is not fundamental, and is supported
+  by other mathematical areas, such as set theory, topology, and linear
+  algebra (for higher dimension). So, to prove a theorem, there would be a
+  large amount of combinations of the more fundamental lemmas, theorems, and
+  corollaries. The proof, thus, cannot be generally easy. But, for category
+  theory, there is no other mathematical area that supports, and the
+  combination is quite limited. Even though most proofs in category theory
+  are trivial, the theorems to be proven are generally quite far-reaching.
 </body>
 
 <\initial>
@@ -907,6 +925,7 @@
     <associate|auto-28|<tuple|5|10>>
     <associate|auto-29|<tuple|5.1|10>>
     <associate|auto-3|<tuple|1.1|1>>
+    <associate|auto-30|<tuple|5.2|?>>
     <associate|auto-4|<tuple|1.2|2>>
     <associate|auto-5|<tuple|1.3|2>>
     <associate|auto-6|<tuple|1.4|3>>
@@ -916,7 +935,6 @@
     <associate|chapter: Category, Functor, and Natural
     Transformation|<tuple|1|1>>
     <associate|definition: Coproduct of Two Objects|<tuple|17|5>>
-    <associate|definition: Infimum in Category|<tuple|13|3>>
     <associate|definition: Poset|<tuple|10|3>>
     <associate|definition: Poset as Category|<tuple|11|3>>
     <associate|definition: Preorder|<tuple|9|3>>
@@ -927,9 +945,9 @@
     <associate|lemma: Fully Faithful Functor|<tuple|21|7>>
     <associate|lemma: Natural Isomorphism|<tuple|25|9>>
     <associate|section: Arrows generalize concepts and theorems from one area
-    to every area in mathematics|<tuple|2.1|?>>
+    to every area in mathematics|<tuple|2.1|4>>
     <associate|section: Injective functor may not be faithful|<tuple|3.5|7>>
-    <associate|section: Supremum and infimum are dual|<tuple|1.4|?>>
+    <associate|section: Supremum and infimum are dual|<tuple|1.4|3>>
     <associate|section: Surjective functor may not be full|<tuple|3.4|7>>
     <associate|theorem: Functorial Image as Category|<tuple|22|8>>
   </collection>
