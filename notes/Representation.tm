@@ -56,8 +56,8 @@
   Given the object, there will be many morphisms with this object as codomain
   (or domain). But, for the convenience of discussion, it would be better to
   use one morphism to represent them all. Precisely, consider a locally small
-  category. For each <math|X\<in\><math-ss|C>>, we are to represent the
-  collection <math|<around*|{|<math-ss|C><around*|(|Y,X|)>\|\<forall\>Y\<in\><math-ss|C>|}>>
+  category <math|<math-ss|C>>. For each <math|X\<in\><math-ss|C>>, we are to
+  represent the collection <math|<around*|{|<math-ss|C><around*|(|Y,X|)>\|\<forall\>Y\<in\><math-ss|C>|}>>
   by a map <math|Y\<rightarrow\><math-ss|C><around*|(|Y,X|)>>. Say, a map
   <math|<math-ss|C><around*|(|-,X|)>:Y\<rightarrow\><math-ss|C><around*|(|Y,X|)>>.
   In addition, we hope that this map will preserve the structure of category,
@@ -129,8 +129,8 @@
   each <math|Y\<in\><math-ss|C>> when <math|<math-ss|C>> is locally small.)
 
   <\definition>
-    [Representable Functor] Given a locally small category
-    <math|<math-ss|C>>. For any object <math|X\<in\><math-ss|C>>, functor
+    [Representable Functor] Let <math|<math-ss|C>> a locally small category.
+    For any object <math|X\<in\><math-ss|C>>, functor
     <math|<math-ss|C><around*|(|-,X|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
     is defined by
 
@@ -209,7 +209,7 @@
   summarize the definition as follow.
 
   <\definition>
-    [Yoneda functor] Given a locally small category <math|<math-ss|C>>,
+    [Yoneda functor] Let <math|<math-ss|C>> a locally small category. A
     functor <math|\<cal-Y\>:<math-ss|C>\<rightarrow\><around*|[|<math-ss|C><rsup|op>,<math-ss|Set>|]>>
     defined by
 
@@ -295,7 +295,7 @@
   We conclude the analysis in this section as follow.
 
   <\lemma>
-    Given a locally small category <math|<math-ss|C>>, for each
+    Let <math|<math-ss|C>> a locally small category. We have, for each
     <math|X,Y\<in\><math-ss|C>>, <math|<math-ss|C><around*|(|X,Y|)>\<cong\><math-ss|Nat><around*|(|<math-ss|C><around*|(|-,X|)>,<math-ss|C><around*|(|-,Y|)>|)>>.
   </lemma>
 
@@ -449,7 +449,7 @@
 
   <\definition>
     [Diagram] Let <math|<math-ss|I>> a small category and <math|<math-ss|C>>
-    a category. An <with|font-series|bold|<math|<math-ss|I>>-shaped diagram>
+    a category. An <math|<math-ss|I>>-shaped <with|font-series|bold|diagram>
     in <math|<math-ss|C>> is a functor <math|F:<math-ss|I>\<rightarrow\><math-ss|C>>.
     It is small or locally small if <math|<math-ss|C>> is small or locally
     small respectively.
@@ -485,10 +485,9 @@
   object, or its constant functor, and a diagram.
 
   <\definition>
-    [Cone] Let <math|<math-ss|I>> a small category and <math|<math-ss|C>> a
-    category. For each object <math|X\<in\><math-ss|C>> and each diagram
-    <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>, a cone from <math|X> to
-    <math|D> is a natural transformation <math|\<lambda\>:Const<rsub|X>\<rightarrow\>D>.
+    [Cone] For each diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>> and
+    each object <math|X\<in\><math-ss|C>>, a cone from <math|X> to <math|D>
+    is a natural transformation <math|\<lambda\>:Const<rsub|X>\<rightarrow\>D>.
   </definition>
 
   <big-figure|<image|figures/cone.png|0.75par|||>|<label|figure: Cone> The
@@ -501,10 +500,9 @@
 
   <subsection|Cone functor generates cones>
 
-  Notice a cone consists two parts: the summit object, and the diagram. Let
-  <math|<math-ss|I>> a small category and <math|<math-ss|C>> a category.
-  Given a summit object <math|X\<in\><math-ss|C>> and a diagram
-  <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>, the natural transformation
+  Notice a cone consists two parts: the diagram and the summit object. Given
+  a diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>> and a summit object
+  <math|X\<in\><math-ss|C>>, the natural transformation
   <math|\<lambda\>:Const<rsub|X>\<rightarrow\>D> is not unique. There can be
   a plenty of such natural transformations, depending on how many morphisms
   there are between objects in <math|<math-ss|C>>. We can collect these
@@ -528,9 +526,8 @@
   that is <math|\<lambda\><rsub|A>\<circ\>f>.
 
   <\definition>
-    [Cone Functor] Let <math|<math-ss|I>> a small category and
-    <math|<math-ss|C>> a category. For each diagram
-    <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>, the cone functor
+    [Cone Functor] For each diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>,
+    the <with|font-series|bold|cone functor>
     <math|Cone<around*|(|-,D|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
     is defined by
 
@@ -557,9 +554,9 @@
   Universality>, for a locally small category <math|<math-ss|C>>, a functor
   <math|F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>> can be represented
   by an object in <math|<math-ss|C>>, if universal element exists. Given a
-  diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>, where
-  <math|<math-ss|C>> is locally small. A cone functor
-  <math|Cone<around*|(|-,D|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
+  diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>> where
+  <math|<math-ss|C>> is locally small (or say, a locally small diagram), a
+  cone functor <math|Cone<around*|(|-,D|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
   thus can be represented by an object in <math|<math-ss|C>>, which we call
   the limit of <math|D>, if universal cone exists.
 
@@ -568,8 +565,7 @@
   Element> to here, with some replacement for cone functor.
 
   <\definition>
-    [Universal Cone] Let <math|<math-ss|I>> a small category and
-    <math|<math-ss|C>> a locall small category. For a locally small diagram
+    [Universal Cone] For a locally small diagram
     <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>, a
     <with|font-series|bold|universal cone> is a pair
     <math|><math|<around*|(|lim<rsub|<math-ss|I>>D,e|)>> where <math|lim
@@ -641,10 +637,10 @@
 
   In section <reference|section: Arrows generalize concepts and theorems from
   one area to every area in mathematics>, we showed what Cartesian product
-  would be like in the framework of category theory. Given a category
-  <math|<math-ss|C>>. For any <math|A,B\<in\><math-ss|C>>, the product of
-  <math|A> and <math|B> is another object <math|C\<in\><math-ss|C>> together
-  with two morphisms <math|\<alpha\>:C\<rightarrow\>A> and
+  would be like in the framework of category theory. Let <math|<math-ss|C>> a
+  category. For any <math|A,B\<in\><math-ss|C>>, the product of <math|A> and
+  <math|B> is another object <math|C\<in\><math-ss|C>> together with two
+  morphisms <math|\<alpha\>:C\<rightarrow\>A> and
   <math|\<beta\>:C\<rightarrow\>B> such that, for any
   <math|C<rprime|'>\<in\><math-ss|C>>, any
   <math|\<alpha\><rprime|'>:C<rprime|'>\<rightarrow\>A> and
