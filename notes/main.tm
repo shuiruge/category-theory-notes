@@ -290,11 +290,11 @@
     <associate|auto-48|<tuple|3.2.5|18|Representation.tm>>
     <associate|auto-49|<tuple|3.3|18|Representation.tm>>
     <associate|auto-5|<tuple|1.4|3|Preface.tm>>
-    <associate|auto-50|<tuple|3.2.6|18|Representation.tm>>
+    <associate|auto-50|<tuple|3.2.6|19|Representation.tm>>
     <associate|auto-51|<tuple|3.3|19|Representation.tm>>
     <associate|auto-52|<tuple|3.3.1|19|Representation.tm>>
     <associate|auto-53|<tuple|3.4|19|Representation.tm>>
-    <associate|auto-54|<tuple|3.3.2|19|Representation.tm>>
+    <associate|auto-54|<tuple|3.3.2|20|Representation.tm>>
     <associate|auto-55|<tuple|3.4|20|Representation.tm>>
     <associate|auto-56|<tuple|3.4.1|20|Representation.tm>>
     <associate|auto-57|<tuple|3.4.2|20|Representation.tm>>
@@ -302,15 +302,15 @@
     <associate|auto-59|<tuple|3.4.3|21|Representation.tm>>
     <associate|auto-6|<tuple|2|5|Category.tm>>
     <associate|auto-60|<tuple|3.6|21|Representation.tm>>
-    <associate|auto-61|<tuple|3.4.4|21|Representation.tm>>
+    <associate|auto-61|<tuple|3.4.4|22|Representation.tm>>
     <associate|auto-62|<tuple|3.7|22|Representation.tm>>
     <associate|auto-63|<tuple|3.8|22|Representation.tm>>
-    <associate|auto-64|<tuple|3.4.5|22|Representation.tm>>
+    <associate|auto-64|<tuple|3.4.5|23|Representation.tm>>
     <associate|auto-65|<tuple|3.4.6|23|Representation.tm>>
     <associate|auto-66|<tuple|3.9|23|Representation.tm>>
     <associate|auto-67|<tuple|3.4.7|23|Representation.tm>>
-    <associate|auto-68|<tuple|3.5|23|Representation.tm>>
-    <associate|auto-69|<tuple|3.5.1|23|Representation.tm>>
+    <associate|auto-68|<tuple|3.5|24|Representation.tm>>
+    <associate|auto-69|<tuple|3.5.1|24|Representation.tm>>
     <associate|auto-7|<tuple|2.1|5|Category.tm>>
     <associate|auto-70|<tuple|3.5.2|24|Representation.tm>>
     <associate|auto-8|<tuple|2.1.1|5|Category.tm>>
@@ -323,7 +323,7 @@
     <associate|definition: Poset as Category|<tuple|2.11|7|Category.tm>>
     <associate|definition: Preorder|<tuple|2.9|6|Category.tm>>
     <associate|definition: Product of Two Objects|<tuple|2.14|8|Category.tm>>
-    <associate|definition: Universal Element|<tuple|3.8|19|Representation.tm>>
+    <associate|definition: Universal Element|<tuple|3.10|19|Representation.tm>>
     <associate|figure: Colimit|<tuple|3.8|22|Representation.tm>>
     <associate|figure: Cone|<tuple|3.5|21|Representation.tm>>
     <associate|figure: Cone Functor|<tuple|3.6|21|Representation.tm>>
@@ -338,7 +338,9 @@
     <associate|figure: Universal Element|<tuple|3.4|19|Representation.tm>>
     <associate|figure: Yoneda functor is full|<tuple|3.3|18|Representation.tm>>
     <associate|footnote-3.1|<tuple|3.1|15|Representation.tm>>
+    <associate|footnote-3.2|<tuple|3.2|18|Representation.tm>>
     <associate|footnr-3.1|<tuple|3.1|15|Representation.tm>>
+    <associate|footnr-3.2|<tuple|3.7|18|Representation.tm>>
     <associate|lemma: Fully Faithful Functor|<tuple|2.21|11|Category.tm>>
     <associate|lemma: Natural Isomorphism|<tuple|2.25|13|Category.tm>>
     <associate|part:Category.tm|<tuple|1.4|5>>
@@ -388,7 +390,9 @@
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.3>|| The dash arrow
       indicates what is implied.>|<pageref|auto-49>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|3.4>||>|<pageref|auto-53>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|3.4>|| Indicates how
+      the <with|mode|<quote|math>|e> in a universal element is
+      defined.>|<pageref|auto-53>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.5>|| The left hand
       side indicates the indexing category

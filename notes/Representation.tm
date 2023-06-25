@@ -226,8 +226,8 @@
       <math|f<rsub|*\<ast\>><around*|(|\<varphi\>|)>\<assign\>f\<circ\>\<varphi\>>
     </itemize>
 
-    is called the <with|font-series|bold|Yoneda functor> of
-    <math|<math-ss|C>>.
+    is called the <with|font-series|bold|Yoneda functor> (or
+    <with|font-series|bold|Yoneda embedding>) of <math|<math-ss|C>>.
   </definition>
 
   As discussed in sections <reference|section: Surjective functor may not be
@@ -292,11 +292,41 @@
   <math|<math-ss|C><around*|(|X,Y|)>> to <math|<math-ss|Nat><around*|(|<math-ss|C><around*|(|-,X|)>,<math-ss|C><around*|(|-,Y|)>|)>>
   surjective is injective.
 
-  We conclude the analysis in this section as follow.
+  We conclude the analysis in this section as follow.<\footnote>
+    This lemma can be generalized as follow. First, for a locally small
+    category <math|<math-ss|C>>, functor from <math|<math-ss|C><rsup|op>> to
+    <math|<math-ss|Set>> is quite useful so that it should have name,
+    presheaf.
+
+    <\definition>
+      Let <math|<math-ss|C>> a locally small category. Functor from
+      <math|<math-ss|C><rsup|op>> to <math|<math-ss|Set>> is called a
+      <with|font-series|bold|presheaf> on <math|<math-ss|C>>.
+    </definition>
+
+    <\lemma>
+      Let <math|<math-ss|C>> a locally small category and <math|F> a presheaf
+      on <math|<math-ss|C>>. We have, for each <math|X\<in\><math-ss|C>>,
+
+      <\equation*>
+        F<around*|(|X|)>\<cong\><math-ss|Nat><around*|(|<math-ss|C><around*|(|-,X|)>,F|)>.
+      </equation*>
+    </lemma>
+
+    This lemma is called <with|font-series|bold|Yoneda lemma>. In the case
+    <math|F=<math-ss|C><around*|(|-,Y|)>>, we go back to our lemma.
+
+    The trick for proving Yoneda lemma is the same as that for proving our
+    lemma. For this reason, we left the proof of Yoneda lemma to reader.
+  </footnote>
 
   <\lemma>
     Let <math|<math-ss|C>> a locally small category. We have, for each
-    <math|X,Y\<in\><math-ss|C>>, <math|<math-ss|C><around*|(|X,Y|)>\<cong\><math-ss|Nat><around*|(|<math-ss|C><around*|(|-,X|)>,<math-ss|C><around*|(|-,Y|)>|)>>.
+    <math|X,Y\<in\><math-ss|C>>,
+
+    <\equation*>
+      <math-ss|C><around*|(|X,Y|)>\<cong\><math-ss|Nat><around*|(|<math-ss|C><around*|(|-,X|)>,<math-ss|C><around*|(|-,Y|)>|)>.
+    </equation*>
   </lemma>
 
   <\theorem>
@@ -362,7 +392,8 @@
   <math|e> is employed for identity in group theory.)
 
   <big-figure|<image|figures/yoneda-3.png|0.75par|||>|<label|figure:
-  Universal Element>>
+  Universal Element> Indicates how the <math|e> in a universal element is
+  defined.>
 
   <\definition>
     <label|definition: Universal Element>[Universal Element] Given a functor
@@ -753,7 +784,7 @@
     <associate|auto-7|<tuple|2.1|1>>
     <associate|auto-8|<tuple|2.2|1>>
     <associate|auto-9|<tuple|1|2>>
-    <associate|definition: Universal Element|<tuple|8|5>>
+    <associate|definition: Universal Element|<tuple|10|5>>
     <associate|figure: Colimit|<tuple|8|8>>
     <associate|figure: Cone|<tuple|5|7>>
     <associate|figure: Cone Functor|<tuple|6|7>>
@@ -764,7 +795,9 @@
     <associate|figure: Universal Element|<tuple|4|5>>
     <associate|figure: Yoneda functor is full|<tuple|3|4>>
     <associate|footnote-1|<tuple|1|1>>
+    <associate|footnote-2|<tuple|2|?>>
     <associate|footnr-1|<tuple|1|1>>
+    <associate|footnr-2|<tuple|7|?>>
     <associate|section: From Representability to Universality|<tuple|3|5>>
     <associate|section: Representable Functor and Yoneda Functor|<tuple|2|1>>
   </collection>
