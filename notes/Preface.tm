@@ -42,6 +42,16 @@
   While reading this book, it is strongly suggested to <with|color|red|draw
   commutative diagrams whenever it is needed>. You will find it quite easy if
   you do keep drawing commutative diagrams and quite difficult if not.
+
+  <section|Notations>
+
+  Since category theory is the math of arrows, we use arrow notation
+  <math|\<rightarrow\>> thoroughly. This means the notation like
+  <math|\<Rightarrow\>> and the words like \Pnatural in <math|X>\Q are
+  avoided. Instead, for <math|A\<rightarrow\>B>, by recognizing the \Ptype\Q
+  of <math|A> and <math|B>, we know this arrow indicates a functor if both
+  <math|A> and <math|B> are categories, a natural transformation if both are
+  functors, and so on.
 </body>
 
 <\initial>
@@ -57,6 +67,7 @@
     <associate|auto-3|<tuple|2|1>>
     <associate|auto-4|<tuple|3|1>>
     <associate|auto-5|<tuple|4|1>>
+    <associate|auto-6|<tuple|5|?>>
   </collection>
 </references>
 

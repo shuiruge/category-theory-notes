@@ -293,20 +293,25 @@
   surjective is injective.
 
   We conclude the analysis in this section as follow.<\footnote>
-    This lemma can be generalized as follow. First, for a locally small
-    category <math|<math-ss|C>>, functor from <math|<math-ss|C><rsup|op>> to
-    <math|<math-ss|Set>> is quite useful so that it should have name,
-    presheaf.
+    For a locally small category <math|<math-ss|C>>, functor from
+    <math|<math-ss|C><rsup|op>> to <math|<math-ss|Set>> is quite useful so
+    that it should have name, presheaf.
 
     <\definition>
-      Let <math|<math-ss|C>> a locally small category. Functor from
-      <math|<math-ss|C><rsup|op>> to <math|<math-ss|Set>> is called a
+      [Presheaf] Let <math|<math-ss|C>> a locally small category. Functor
+      from <math|<math-ss|C><rsup|op>> to <math|<math-ss|Set>> is called a
       <with|font-series|bold|presheaf> on <math|<math-ss|C>>.
     </definition>
 
+    So, the category <math|<around*|[|<math-ss|C><rsup|op>,<math-ss|Set>|]>>
+    is also called the <with|font-series|bold|category of presheaves> on
+    <math|<math-ss|C>>. With presheaf defined, we generalize our lemma as
+    follow.
+
     <\lemma>
-      Let <math|<math-ss|C>> a locally small category and <math|F> a presheaf
-      on <math|<math-ss|C>>. We have, for each <math|X\<in\><math-ss|C>>,
+      [Yoneda Lemma]<label|lemma: Yoneda Lemma> Let <math|<math-ss|C>> a
+      locally small category and <math|F> a presheaf on <math|<math-ss|C>>.
+      We have, for each <math|X\<in\><math-ss|C>>,
 
       <\equation*>
         F<around*|(|X|)>\<cong\><math-ss|Nat><around*|(|<math-ss|C><around*|(|-,X|)>,F|)>.
@@ -353,7 +358,9 @@
   <section|From Representability to Universality><label|section: From
   Representability to Universality>
 
-  <subsection|Functor is representable if there exists universal element>
+  <subsection|Functor is representable if there exists universal
+  element><label|section: Functor is representable if there exists universal
+  element>
 
   By section <reference|section: Representable Functor and Yoneda Functor>,
   we know that there is a fully faithful functor (Yoneda functor) from
@@ -378,18 +385,16 @@
   So, suppose that there exists <math|<wide|F|^>\<in\><math-ss|C>> and
   natural isomorphism <math|\<varphi\>:F\<rightarrow\><math-ss|C><around*|(|-,<wide|F|^>|)>>
   with inverse <math|\<psi\>:<math-ss|C><around*|(|-,<wide|F|^>|)>\<rightarrow\>F>.
-  So, the figure <reference|figure: Universal Element> commutes. It indicates
-  that there exists <math|<wide|F|^>> and
-  <math|e\<in\>F<around*|(|<wide|F|^>|)>> such that, for every
-  <math|f:X\<rightarrow\><wide|F|^>>, there exists an element in
-  <math|F<around*|(|X|)>> that can be represented as
-  <math|F<around*|(|f|)><around*|(|e|)>>. Since the <math|\<psi\><rsub|X>> is
-  isomorphic, the inverse should also be true: for every element
-  <math|x\<in\>F<around*|(|X|)>>, there is a unique
-  <math|f:X\<rightarrow\><wide|F|^>> that can represent <math|x> as
-  <math|F<around*|(|f|)><around*|(|e|)>>. (We employed the notation <math|e>
-  since it relates to identity <math|1<rsub|<wide|F|^>>>. Recall that
-  <math|e> is employed for identity in group theory.)
+  So, the figure <reference|figure: Universal Element> commutes. It implies
+  how the <math|\<psi\>> works. Given <math|X\<in\><math-ss|C>>, the
+  component <math|\<psi\><rsub|X>> maps an object
+  <math|f\<in\><math-ss|C><around*|(|X,<wide|F|^>|)>> to
+  <math|F<around*|(|f|)><around*|(|e|)>>. Since <math|\<psi\><rsub|X>> is
+  isomorphic, we have, for every object <math|x\<in\>F<around*|(|X|)>>, there
+  is a unique <math|f\<in\><math-ss|C><around*|(|X,<wide|F|^>|)>> such that
+  <math|x=F<around*|(|f|)><around*|(|e|)>>. (We employed the notation
+  <math|e> since it relates to identity <math|1<rsub|<wide|F|^>>>. Recall
+  that <math|e> is employed for identity in group theory.)
 
   <big-figure|<image|figures/yoneda-3.png|0.75par|||>|<label|figure:
   Universal Element> Indicates how the <math|e> in a universal element is
@@ -410,13 +415,19 @@
   With the definition of universal element, the previous analysis can be
   summarized as follow.
 
-  <\proposition>
-    [Universal Element] A functor <math|F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
-    is representable if and only if there exists a universal element of
-    <math|F>.
-  </proposition>
+  <\theorem>
+    <label|theorem: Universal Element>[Universal Element] A functor
+    <math|F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>> is representable
+    if and only if there exists a universal element of <math|F>. And given
+    the universal element of <math|F>, <math|<around*|(|<wide|F|^>,e|)>>, the
+    natural isomorphism <math|\<psi\>:<math-ss|C><around*|(|-,<wide|F|^>|)>\<rightarrow\>F>
+    has component <math|\<psi\><rsub|X><around*|(|f|)>=F<around*|(|f|)><around*|(|e|)>>
+    for each <math|X\<in\><math-ss|C>> and each
+    <math|f:X\<rightarrow\><wide|F|^>>.
+  </theorem>
 
-  <subsection|Representation is Unique>
+  <subsection|Representation is unique><label|section: Representation is
+  unique>
 
   Yoneda functor is fully faithful. By lemma <reference|lemma: Fully Faithful
   Functor>, an isomorphism in the codomain category implies an isomorphism in
@@ -719,6 +730,367 @@
   This is the general pattern of first-order logic. So, an educated guess is
   that limit is everywhere since first-order logic is everywhere.
 
+  <section|Adjunction>
+
+  <subsection|Adjoint functors represents each other>
+
+  Let <math|<math-ss|C>> and <math|<math-ss|D>> locally small
+  categories.<\footnote>
+    One way of introducing adjunction is as follow. This material is quite
+    long and somehow irrelevant to the main stream. So, it is stated at here,
+    a footnote.
+
+    Recall that, in a locally small category <math|<math-ss|C>>, an object
+    <math|Y\<in\><math-ss|C>> corresponds to a representable functor
+    <math|<math-ss|C><around*|(|-,Y|)>;<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>.
+    Conversely, a functor (or say, presheaf)
+    <math|F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>> is representable
+    if there exists a universal element <math|<wide|F|^>\<in\><math-ss|C>>
+    such that <math|F<around*|(|X|)>\<cong\><math-ss|C><around*|(|X,<wide|F|^>|)>>
+    natural in <math|X> (here we omit the <math|e> paired with
+    <math|<wide|F|^>>). While discussing representable functor,
+    <math|<math-ss|C>> is the only category under consideration.
+
+    A natural way of generalizing the previous ideas is to consider more
+    categories, say two. Also, we should consider a functor that connects
+    them. That is, let <math|<math-ss|C>> and <math|<math-ss|D>> locally
+    small categories, and functor <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>.
+    What is the generalization of representable functor
+    <math|<math-ss|C><around*|(|-,Y|)>> herein? We should insert <math|F>
+    into it. There are only two possible ways. One way of insertion is
+    <math|<math-ss|D><around*|(|-,F<around*|(|Y|)>|)>>. Notice that we have
+    replaced <math|<math-ss|C>> with <math|<math-ss|D>>, since the
+    <math|F<around*|(|-|)>> is in <math|<math-ss|D>>. This is nothing but a
+    representable functor on <math|<math-ss|D>>, like
+    <math|<math-ss|D><around*|(|-,Z|)>>, thus not a generalization. The other
+    way of insertion is <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>,
+    where <math|Y\<in\><math-ss|D>>. This indeed is a generalization, since
+    it cannot be directly re-written as a representable functor.
+
+    <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>> is indeed a functor.
+    In fact, <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>,
+    sending <math|f:B\<rightarrow\>A> to <math|<around*|(|F<around*|(|f|)>|)><rsup|\<ast\>>:<math-ss|D><around*|(|F<around*|(|A|)>,Y|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|B|)>,Y|)>>.
+    Axioms of composition and identity are directly implied from the
+    functoriality of <math|F> and the definition of pullback
+    <math|<around*|(|-|)><rsup|\<ast\>>>.
+
+    Interestingly, <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>> is
+    presheaf. So, it is natural to ask when
+    <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>> would be
+    representable. This means there exists <math|<wide|Y|^>\<in\><math-ss|D>>
+    and natural isomorphism <math|\<varphi\>:<math-ss|C><around*|(|-,<wide|Y|^>|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>.
+    Notice that, when <math|F> is given, the universal element
+    <math|<wide|Y|^>\<in\><math-ss|C>> depends only on the
+    <math|Y\<in\><math-ss|D>>. So, it is natural to consider the map from
+    <math|Y> to <math|<wide|Y|^>>. Remind that, in category theory, a map
+    between categories is useful only when it is functorial. So, let us
+    expect what would happen if there is a functor
+    <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> such that
+    <math|<wide|Y|^>=G<around*|(|Y|)>>.
+
+    For <math|G>, the variable is <math|Y>. Substituting
+    <math|<wide|Y|^>=G<around*|(|Y|)>> to component <math|\<varphi\><rsub|X>>
+    for an <math|X\<in\><math-ss|C>>, we get
+    <math|\<varphi\><rsub|X>:<math-ss|C><around*|(|X,G<around*|(|Y|)>|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|X|)>,Y|)>>.
+    At the first sight, this is also a map with the <math|Y> as variable,
+    that is, <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|X|)>,\<ast\>|)>>,
+    where we employed \P<math|\<ast\>>\Q as placeholder. Surprisingly, it can
+    be recognized that this expression is in fact a representation of the
+    functor <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>> by the
+    object <math|F<around*|(|X|)>> <\footnote>
+      This is valid, since <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>>
+      is a copresheaf on <math|<math-ss|D>>, which is a functor of the
+      \Ptype\Q <math|<math-ss|D>\<rightarrow\><math-ss|Set>>. The
+      <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>> can be viewd
+      as a generalization of the copresheaf
+      <math|<math-ss|C><around*|(|X,\<ast\>|)>> from single category to
+      multiple, as what we have done for presheaf
+      <math|<math-ss|C><around*|(|-,Y|)>>.
+    </footnote>. This hints that we should consider varying both <math|X> and
+    <math|Y>. That is, consider bi-functor
+    <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>:<math-ss|C><rsup|op>\<times\><math-ss|D>\<rightarrow\><math-ss|Set>>
+    that maps <math|<around*|(|X,Y|)>> to
+    <math|<math-ss|D><around*|(|F<around*|(|X|)>,Y|)>>, and bi-functor
+    <math|<math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>:<math-ss|C><rsup|op>\<times\><math-ss|D>\<rightarrow\><math-ss|Set>>
+    that maps <math|<around*|(|X,Y|)>> to
+    <math|<math-ss|C><around*|(|X,G<around*|(|Y|)>|)>>, as well as natural
+    isomorphism <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>,
+    whose component should be double index, like <math|\<varphi\><rsub|X,Y>>,
+    that furnishes the representations.
+  </footnote> For a functor <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>, we
+  have (bi-) functor <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>:<math-ss|C><rsup|op>\<times\><math-ss|D>\<rightarrow\><math-ss|Set>>.
+  We employed <math|-> as placeholder for the first variable and
+  <math|\<ast\>> for the second. The same, for a functor
+  <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>, we have (bi-) functor
+  <math|<math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>:<math-ss|C><rsup|op>\<times\><math-ss|D>\<rightarrow\><math-ss|Set>>.
+  Interestingly, for each <math|X\<in\><math-ss|C>>,
+  <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>> is a co-presheaf,
+  and <math|<math-ss|D><around*|(|F<around*|(|X|)>,\<ast\>|)>> is a
+  representable functor of co-presheaf. As discussed in section
+  <reference|section: Functor is representable if there exists universal
+  element>, it is possible that the later is the representable functor of the
+  former, that is, there is a natural isomorphism
+
+  <\equation*>
+    \<varphi\><rsub|X>:<math-ss|D><around*|(|F<around*|(|X|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>
+  </equation*>
+
+  for each <math|X> given <\footnote>
+    Up to now, the <math|\<varphi\><rsub|X>> is itself a natural
+    transformation, instead of a component of some natural transformation
+    called <math|\<varphi\>>; the <math|X> simply hints for the dependence on
+    <math|X>. But, as we will see later, this subscript does also hint for a
+    component. It is for this reason that we employed this confusing
+    notation.
+  </footnote>. The same, for each <math|Y\<in\><math-ss|D>>,
+  <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>> is a presheaf, and
+  <math|<math-ss|C><around*|(|-,G<around*|(|Y|)>|)>> is a representable
+  functor of presheaf. So, it is also possible that the later is the
+  representable functor of the former, that is, there is a natural
+  isomorphism
+
+  <\equation*>
+    \<varphi\><rsub|Y>:<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|Y|)>|)>
+  </equation*>
+
+  for each <math|Y> given. This hints for a wonderful natural isomorphism
+  <math|\<varphi\>>
+
+  <\equation*>
+    \<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>.
+  </equation*>
+
+  Notice that component of <math|\<varphi\>> has double index,
+  <math|\<varphi\><rsub|X,Y>:<math-ss|D><around*|(|F<around*|(|X|)>,Y|)>\<rightarrow\><math-ss|C><around*|(|X,G<around*|(|Y|)>|)>>
+  for each <math|X\<in\><math-ss|C>> and each <math|Y\<in\><math-ss|D>>.
+
+  <\big-figure|<image|figures/adjoint.png|0.8par|||>>
+    <label|figure: Adjoint> Indicates the natural isomorphism
+    <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
+    \PNatural in <math|X>\Q means varying the first variable, and \Pnatural
+    in <math|Y>\Q varies the second. The commuative diagrams have been
+    rotated by <math|90<rsup|\<circ\>>> for convenience.
+  </big-figure>
+
+  As a summary, we have a natural isomorphism with double index component
+  <math|\<varphi\><rsub|X,Y>:<math-ss|D><around*|(|F<around*|(|X|)>,Y|)>\<rightarrow\><math-ss|C><around*|(|X,G<around*|(|Y|)>|)>>
+  for each <math|X\<in\><math-ss|C>> and each <math|Y\<in\><math-ss|D>>. On
+  one side, <math|\<varphi\><rsub|X,\<ast\>>:<math-ss|D><around*|(|F<around*|(|X|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>>
+  means that <math|F<around*|(|X|)>> represents
+  <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>>; and on the other
+  side, <math|\<varphi\><rsub|-,Y>:<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|Y|)>|)>>
+  indicates that <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>> is
+  represented by <math|G<around*|(|Y|)>>. This structure tightly connects the
+  two functors <math|F> and <math|G>, just like the adjunction in vector
+  space, that is, two linear transformations <math|f> and <math|g> are
+  adjoint if <math|<around*|\<langle\>|f<around*|(|u|)>,v|\<rangle\>>=<around*|\<langle\>|u,g<around*|(|v|)>|\<rangle\>>>
+  for each vectors <math|u> and <math|v>, where bracket indicates inner
+  product.
+
+  <\definition>
+    [Adjoint & Adjunction] Let <math|<math-ss|C>> and <math|<math-ss|D>>
+    locally small categories. Functors <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>
+    and <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> are
+    <with|font-series|bold|adjoint>, denoted by <math|F\<dashv\>G>, if there
+    exists a natural isomorphsim <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
+    The <math|\<varphi\>> is called an <with|font-series|bold|adjunction>.<\footnote>
+      In some texture, for instance MacLane, adjunction is defined as the
+      triplet <math|<around*|(|F,G,\<varphi\>|)>>. However, the
+      <math|\<varphi\>> itself, like any other morphism, has indicated what
+      the domain and codomain are, that is, the
+      <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>> and
+      <math|<math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>> respectively,
+      from which we read out <math|F> and <math|G>.
+    </footnote>
+  </definition>
+
+  <subsection|Adjoint is unique>
+
+  As discussed in section <reference|section: Representation is unique>,
+  representation is unique up to isomorphism. So, it is natural to wonder if
+  the adjoint of a functor is unique.
+
+  <\theorem>
+    [Adjoint is Unique] If <math|F\<dashv\>G> and
+    <math|F\<dashv\>G<rprime|'>>, then we have <math|G> and
+    <math|G<rprime|'>> are natural isomorphic. The same goes for <math|F>.
+  </theorem>
+
+  <\proof>
+    For each <math|Y\<in\><math-ss|D>>, <math|\<varphi\><rsub|-,Y>:<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|Y|)>|)>>
+    indicates that <math|G<around*|(|Y|)>> represents
+    <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>. Since representation
+    is unique up to isomorphism, if <math|G<around*|(|Y|)>> and
+    <math|G<rprime|'><around*|(|Y|)>> both represents
+    <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>, then we should have
+    <math|G<around*|(|Y|)>\<cong\>G<rprime|'><around*|(|Y|)>> for each
+    <math|Y\<in\><math-ss|D>>. This simply means <math|G> and
+    <math|G<rprime|'>> are natural isomorphic. The same goes for <math|F>.
+  </proof>
+
+  With this uniqueness, we can say <math|F> is <with|font-shape|italic|the>
+  <with|font-series|bold|left adjoint> of <math|G>, and <math|G> is
+  <with|font-shape|italic|the> <with|font-series|bold|right adjoint> of
+  <math|F>.
+
+  <subsection|Unit and counit are universal elements>
+
+  Recall the condition for being representable, lemma <reference|theorem:
+  Universal Element>, that <math|G<around*|(|Y|)>> can represent
+  <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>> if and only if
+  <math|G<around*|(|Y|)>>, equipped with <math|\<varepsilon\><rsub|Y>:F\<circ\>G<around*|(|Y|)>\<rightarrow\>Y>,
+  is a universal element of <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>.
+  That is, for each <math|X\<in\><math-ss|C>> and each
+  <math|f:F<around*|(|X|)>\<rightarrow\>Y>, there exists a unique
+  <math|f<rsup|\<sharp\>>:X\<rightarrow\>G<around*|(|Y|)>> such that
+  <math|f=F<around*|(|f<rsup|\<sharp\>>|)><rsup|\<ast\>><around*|(|\<varepsilon\><rsub|Y>|)>\<equiv\>\<varepsilon\><rsub|Y>\<circ\>F<around*|(|f<rsup|\<sharp\>>|)>>.
+  And the <math|\<varepsilon\><rsub|Y>> can be induced from
+  <math|\<varphi\><rsub|-,Y><rsup|-1>:<math-ss|C><around*|(|-,G<around*|(|Y|)>|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>
+  as <math|\<varepsilon\><rsub|Y>=\<varphi\><rsub|G<around*|(|Y|)>,Y><rsup|-1><around*|(|1<rsub|G<around*|(|Y|)>>|)>>.
+
+  The same, <math|F<around*|(|X|)>> can represent
+  <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>> if and only if
+  <math|F<around*|(|X|)>>, eqiupped with <math|\<eta\><rsub|X>:X\<rightarrow\>G\<circ\>F<around*|(|X|)>>,
+  is a universal element of <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>>.
+  That is, for each <math|Y\<in\><math-ss|D>>, and each
+  <math|g:X\<rightarrow\>G<around*|(|Y|)>>, there exists a unique
+  <math|g<rsup|\<sharp\>>:F<around*|(|X|)>\<rightarrow\>Y> such that
+  <math|g=G<around*|(|g<rsup|\<sharp\>>|)><rsub|\<ast\>><around*|(|\<eta\><rsub|X>|)>\<equiv\>G<around*|(|g<rsup|\<sharp\>>|)>\<circ\>\<eta\><rsub|X>>.
+  And the <math|\<eta\><rsub|X>> can be induced from
+  <math|\<varphi\><rsub|X,\<ast\>>:<math-ss|D><around*|(|F<around*|(|X|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>>
+  as <math|\<eta\><rsub|X>\<assign\>\<varphi\><rsub|X,F<around*|(|X|)>><around*|(|1<rsub|F<around*|(|X|)>>|)>>.
+
+  <big-figure|<image|figures/adjoint-1.png|0.8par|||>|<label|figure: Adjoint
+  and Universal Element> Indicates the universal elements. In both triangles,
+  bottoms are fixed and top vertices are arbitrarily chosen.>
+
+  It is natural to wonder the relation between <math|\<eta\><rsub|X>> and
+  <math|\<eta\><rsub|X<rprime|'>>> for distinct object
+  <math|X,X<rprime|'>\<in\><math-ss|C>>. A tedious but simple derivation
+  <\footnote>
+    Left to reader. Hint: use figure <reference|figure: Adjoint> with some
+    replacements, together with the definition of <math|\<eta\><rsub|X>>;
+    simply focus on how the maps act on element.
+  </footnote> tells that <math|\<eta\><rsub|X>> is in fact a component of a
+  natural transformation <math|\<eta\>:1<rsub|<math-ss|C>>\<rightarrow\>G\<circ\>F>,
+  called unit. The same, <math|\<varepsilon\><rsub|Y>> is in fact a component
+  of a natural transformation <math|\<varepsilon\>:F\<circ\>G\<rightarrow\>1<rsub|<math-ss|D>>>,
+  called counit. So, we find that unit and counit are \Puniversal arrows\Q,
+  indicated by the bottom lines in figure <reference|figure: Adjoint and
+  Universal Element>. The reason why counit is the \Pduality\Q of unit is
+  reflected in figure <reference|figure: Adjoint and Universal Element>: the
+  right side can be obtained by flipping the arrows in the left side.
+  <\footnote>
+    <\question>
+      Is this \Pduality\Q really a duality? And if so, in what sense?
+    </question>
+  </footnote>
+
+  <big-figure|<image|figures/adjoint-2.png|0.8par|||>|Indicates that
+  <math|\<eta\>> and <math|\<varepsilon\>> are natural transformations.>
+
+  Also by lemma <reference|theorem: Universal Element>, from
+  <math|\<eta\><rsub|X>> we can construct the adjunction <math|\<varphi\>>.
+  Indeed, for each <math|f:F<around*|(|X|)>\<rightarrow\>Y>, we have
+  <math|\<varphi\><rsub|X,Y><around*|(|f|)>=<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)><around*|(|f|)><around*|(|\<eta\><rsub|X>|)>>.
+  From figure <reference|figure: Adjoint>, we can read out
+  <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)><around*|(|f|)>=G<around*|(|f|)><rsub|\<ast\>>>
+  and by the definition of pushforward <math|g<rsub|\<ast\>><around*|(|h|)>=g\<circ\>h>,
+  we arrive at
+
+  <\equation*>
+    \<varphi\><rsub|X,Y><around*|(|f|)>=G<around*|(|f|)>\<circ\>\<eta\><rsub|X>.
+  </equation*>
+
+  Interestingly, in category theory, we can directly check whether we have
+  derived correctly or not by \Ptype checking\Q! By recalling the types
+  <math|\<eta\><rsub|X>:X\<rightarrow\>G\<circ\>F<around*|(|X|)>> and
+  <math|f:F<around*|(|X|)>\<rightarrow\>Y>, we find
+  <math|\<varphi\><rsub|X,Y><around*|(|f|)>:X<above|\<longrightarrow\>|\<eta\><rsub|X>>G\<circ\>F<around*|(|X|)><above|\<longrightarrow\>|G<around*|(|f|)>>G<around*|(|Y|)>>,
+  which is the correct \Ptype\Q.
+
+  Now, we find that adjunction <math|\<varphi\>> is uniquely determined by
+  the functor <math|G> and unit <math|\<eta\>>. Applying the same analysis to
+  counit, we can write down <math|\<varphi\><rsup|-1>> explicitly by the
+  functor <math|F> and counit <math|\<varepsilon\>>. This builds up a
+  one-to-one relationship between adjunction and unit: once we have an
+  adjunction, we get the unit; and once we have a unit, we also gain the
+  adjunction.
+
+  In the end, we clear up the previous analysis, summarizing this section as
+  follow.
+
+  <\definition>
+    [Universal Morphism] Let <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> a
+    functor. Given <math|W\<in\><math-ss|C>> and <math|X\<in\><math-ss|D>>, a
+    morphism <math|u:X\<rightarrow\>F<around*|(|W|)>> in <math|<math-ss|D>>
+    is universal if for each <math|V\<in\><math-ss|C>> and each
+    <math|f:X\<rightarrow\>F<around*|(|V|)>>, there is a unique
+    <math|f<rsup|\<sharp\>>:W\<rightarrow\>V>, such that
+    <math|f=F<around*|(|f<rsup|\<sharp\>>|)>\<circ\>u>.
+  </definition>
+
+  <big-figure|<image|figures/adjoint-3.png|0.3par|||>|Indicates universal
+  morphism.>
+
+  <\definition>
+    [Unit & Counit] Let <math|<math-ss|C>> and <math|<math-ss|D>> locally
+    small categories. Given functors <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>
+    and <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>, a natural
+    transformation <math|\<eta\>:1<rsub|<math-ss|C>>\<rightarrow\>G\<circ\>F>
+    is a <with|font-series|bold|unit> if each of its component, which is a
+    morphism in <math|<math-ss|C>>, is universal. Dually, a natural
+    transformation <math|\<varepsilon\>:F\<circ\>G\<rightarrow\>1<rsub|<math-ss|D>>>
+    is a <with|font-series|bold|counit> if each of its component is
+    co-universal.
+  </definition>
+
+  <\theorem>
+    [Adjunction & Unit] An adjunction can be uniquely determined by its unit,
+    and vice versa.
+  </theorem>
+
+  <subsection|Free and forgetful functors are adjoint>
+
+  A vector space is a set equipped with some extra structure. The same goes
+  for a group, a topological space, and so on. So, we can extract the
+  underlying set by forgetting the extra structure. That is, a map that takes
+  a vector space, and returns the underlying set.
+
+  In the language of category theory, everything starts at categories. The
+  category of vector spaces on field <math|\<bbb-R\>>, denoted by
+  <math|<math-ss|Vect><rsub|\<bbb-R\>>>, has vector spaces as objects and
+  linear transformations as morphisms. In addition, map should be functorial.
+  That is, the map that forgets the linear structure should be is a functor
+  <math|U:<math-ss|Vect><rsub|\<bbb-R\>>\<rightarrow\><math-ss|Set>>, the
+  forgetful functor.
+
+  Besides, a vector space can be constructed out of a set without introducing
+  extra information. To be explicit, consider a set
+  <math|<around*|{|x,y,z|}>> where the elements are abstract, a vector space
+  on field <math|\<bbb-R\>> can be built by
+  <math|\<alpha\>x+\<beta\>y+\<gamma\>z> for each
+  <math|\<alpha\>,\<beta\>,\<gamma\>\<in\>\<bbb-R\>>, that is, using the set
+  as bases. In addition, linear transformation can be induced by function
+  <math|f> on <math|<around*|{|x,y,z|}>> as
+  <math|L<around*|(|\<alpha\>x+\<beta\>y+\<gamma\>z|)>\<assign\>\<alpha\>f<around*|(|x|)>+\<beta\>f<around*|(|y|)>+\<gamma\>f<around*|(|z|)>>.
+  So, we have constructed a vector space out of a set freely <\footnote>
+    \PFree\Q means free of charge.
+  </footnote>! The same goes for free group, discrete topological space, and
+  so on.
+
+  Again, in the language of category theory, the free construction should be
+  described by a functor <math|F:<math-ss|Set>\<rightarrow\><math-ss|Vect><rsub|\<bbb-R\>>>,
+  the free functor.
+
+  At the first sight, the forgetting and the free construction have nothing
+  to do with each other. In fact, they are deeply connected: the forgetful
+  functor and the free functor are adjoint!
+
+  To see why they are adjoint, we have to figure out what the unit and counit
+  are and to check whether they are universal or not. can be found
+  <hlink|here|https://www.math3ma.com/blog/what-is-an-adjunction-part-2#:~:text=forgetful%20adjunction.-,The%20unit,.,-Notice%20the%20clarity>.
+
   <section|Summary>
 
   <subsection|Embedding in the framework of category theory is the right way
@@ -755,11 +1127,11 @@
     <associate|auto-12|<tuple|2.4|3>>
     <associate|auto-13|<tuple|2.5|4>>
     <associate|auto-14|<tuple|3|4>>
-    <associate|auto-15|<tuple|2.6|4>>
+    <associate|auto-15|<tuple|2.6|5>>
     <associate|auto-16|<tuple|3|5>>
     <associate|auto-17|<tuple|3.1|5>>
     <associate|auto-18|<tuple|4|5>>
-    <associate|auto-19|<tuple|3.2|5>>
+    <associate|auto-19|<tuple|3.2|6>>
     <associate|auto-2|<tuple|1|1>>
     <associate|auto-20|<tuple|4|6>>
     <associate|auto-21|<tuple|4.1|6>>
@@ -777,14 +1149,25 @@
     <associate|auto-32|<tuple|4.7|9>>
     <associate|auto-33|<tuple|5|10>>
     <associate|auto-34|<tuple|5.1|10>>
-    <associate|auto-35|<tuple|5.2|10>>
+    <associate|auto-35|<tuple|10|10>>
+    <associate|auto-36|<tuple|5.2|?>>
+    <associate|auto-37|<tuple|5.3|?>>
+    <associate|auto-38|<tuple|11|?>>
+    <associate|auto-39|<tuple|12|?>>
     <associate|auto-4|<tuple|1.2|1>>
+    <associate|auto-40|<tuple|13|?>>
+    <associate|auto-41|<tuple|5.4|?>>
+    <associate|auto-42|<tuple|6|?>>
+    <associate|auto-43|<tuple|6.1|?>>
+    <associate|auto-44|<tuple|6.2|?>>
     <associate|auto-5|<tuple|1.3|1>>
     <associate|auto-6|<tuple|2|1>>
     <associate|auto-7|<tuple|2.1|1>>
     <associate|auto-8|<tuple|2.2|1>>
     <associate|auto-9|<tuple|1|2>>
     <associate|definition: Universal Element|<tuple|10|5>>
+    <associate|figure: Adjoint|<tuple|10|?>>
+    <associate|figure: Adjoint and Universal Element|<tuple|11|?>>
     <associate|figure: Colimit|<tuple|8|8>>
     <associate|figure: Cone|<tuple|5|7>>
     <associate|figure: Cone Functor|<tuple|6|7>>
@@ -795,11 +1178,36 @@
     <associate|figure: Universal Element|<tuple|4|5>>
     <associate|figure: Yoneda functor is full|<tuple|3|4>>
     <associate|footnote-1|<tuple|1|1>>
-    <associate|footnote-2|<tuple|2|?>>
+    <associate|footnote-10|<tuple|10|?>>
+    <associate|footnote-11|<tuple|11|?>>
+    <associate|footnote-12|<tuple|12|?>>
+    <associate|footnote-2|<tuple|2|4>>
+    <associate|footnote-3|<tuple|3|?>>
+    <associate|footnote-4|<tuple|4|?>>
+    <associate|footnote-5|<tuple|5|?>>
+    <associate|footnote-6|<tuple|6|?>>
+    <associate|footnote-7|<tuple|7|?>>
+    <associate|footnote-8|<tuple|8|?>>
+    <associate|footnote-9|<tuple|9|?>>
     <associate|footnr-1|<tuple|1|1>>
-    <associate|footnr-2|<tuple|7|?>>
+    <associate|footnr-10|<tuple|10|?>>
+    <associate|footnr-11|<tuple|1|?>>
+    <associate|footnr-12|<tuple|12|?>>
+    <associate|footnr-2|<tuple|7|4>>
+    <associate|footnr-3|<tuple|3|?>>
+    <associate|footnr-4|<tuple|4|?>>
+    <associate|footnr-5|<tuple|5|?>>
+    <associate|footnr-6|<tuple|6|?>>
+    <associate|footnr-7|<tuple|7|?>>
+    <associate|footnr-8|<tuple|1|?>>
+    <associate|footnr-9|<tuple|9|?>>
+    <associate|lemma: Yoneda Lemma|<tuple|7|4>>
     <associate|section: From Representability to Universality|<tuple|3|5>>
+    <associate|section: Functor is representable if there exists universal
+    element|<tuple|3.1|?>>
     <associate|section: Representable Functor and Yoneda Functor|<tuple|2|1>>
+    <associate|section: Representation is unique|<tuple|3.2|6>>
+    <associate|theorem: Universal Element|<tuple|11|5>>
   </collection>
 </references>
 
@@ -818,7 +1226,9 @@
       <tuple|normal|<surround|<hidden-binding|<tuple>|3>|| The dash arrow
       indicates what is implied.>|<pageref|auto-14>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|4>||>|<pageref|auto-18>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|4>|| Indicates how the
+      <with|mode|<quote|math>|e> in a universal element is
+      defined.>|<pageref|auto-18>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|5>|| The left hand side
       indicates the indexing category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>.
@@ -913,7 +1323,7 @@
       there exists universal element <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-17>>
 
-      <with|par-left|<quote|1tab>|3.2<space|2spc>Representation is Unique
+      <with|par-left|<quote|1tab>|3.2<space|2spc>Representation is unique
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>>
 
