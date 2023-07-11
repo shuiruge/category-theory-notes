@@ -1098,14 +1098,15 @@
 
   For any set <math|Y> given, the <with|font-series|bold|product-hom
   adjunction> relates the <with|font-series|bold|product functor>
-  <math|-\<times\>Y:<math-ss|Set>\<rightarrow\><math-ss|Set>>, and the
-  functor <math|<math-ss|Set><around*|(|Y,-|)>:<math-ss|Set>\<rightarrow\><math-ss|Set>>
+  <math|-\<times\>Y:<math-ss|Set>\<rightarrow\><math-ss|Set>> that maps a set
+  <math|X> to Cartesian product <math|X\<times\>Y>, and the functor
+  <math|<math-ss|Set><around*|(|Y,-|)>:<math-ss|Set>\<rightarrow\><math-ss|Set>>
   which is called, for some historical reason, <with|font-series|bold|hom
   functor>. The claim that product functor and hom function are adjoint
   means, for each <math|X,Z\<in\><math-ss|Set>>,
 
   <\equation*>
-    <math-ss|Set><around*|(|X,Y,Z|)>\<cong\><math-ss|Set><around*|(|X,<math-ss|Set><around*|(|Y,Z|)>|)>.
+    <math-ss|Set><around*|(|X\<times\>Y,Z|)>\<cong\><math-ss|Set><around*|(|X,<math-ss|Set><around*|(|Y,Z|)>|)>.
   </equation*>
 
   This relation indicates that, (on left hand side) for each function
