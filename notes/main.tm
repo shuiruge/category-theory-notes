@@ -107,7 +107,7 @@
     <no-break><pageref|auto-30>>
 
     <with|par-left|1tab|2.4.3<space|2spc>Natural isomorphism is equivalent to
-    isomorphisms of category. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    isomorphisms in category. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-31>>
 
     <with|par-left|1tab|2.4.4<space|2spc>Isomorphic objects should be viewed
@@ -239,17 +239,25 @@
     adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-77>>
 
+    <with|par-left|1tab|3.5.5<space|2spc>Product-hom adjunction implies
+    currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-78>>
+
     3.6<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-78>
+    <no-break><pageref|auto-79>
 
     <with|par-left|1tab|3.6.1<space|2spc>Embedding in the framework of
     category theory is the right way to extend category theory
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-79>>
+    <no-break><pageref|auto-80>>
 
     <with|par-left|1tab|3.6.2<space|2spc>\PTypes\Q help to restrict the
     possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-80>>
+    <no-break><pageref|auto-81>>
+
+    <with|par-left|1tab|3.6.3<space|2spc>\PTypes\Q help check the correctness
+    of derivation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-82>>
   </table-of-contents>
 
   <include|Preface.tm>
@@ -342,10 +350,12 @@
     <associate|auto-75|<tuple|3.12|26|Representation.tm>>
     <associate|auto-76|<tuple|3.13|27|Representation.tm>>
     <associate|auto-77|<tuple|3.5.4|27|Representation.tm>>
-    <associate|auto-78|<tuple|3.6|27|Representation.tm>>
-    <associate|auto-79|<tuple|3.6.1|27|Representation.tm>>
+    <associate|auto-78|<tuple|3.5.5|27|Representation.tm>>
+    <associate|auto-79|<tuple|3.6|28|Representation.tm>>
     <associate|auto-8|<tuple|2.1|5|Category.tm>>
-    <associate|auto-80|<tuple|3.6.2|27|Representation.tm>>
+    <associate|auto-80|<tuple|3.6.1|28|Representation.tm>>
+    <associate|auto-81|<tuple|3.6.2|28|Representation.tm>>
+    <associate|auto-82|<tuple|3.6.3|28|Representation.tm>>
     <associate|auto-9|<tuple|2.1.1|5|Category.tm>>
     <associate|chapter: Category, Functor, and Natural
     Transformation|<tuple|2|5|Category.tm>>
@@ -617,7 +627,7 @@
       <no-break><pageref|auto-30>>
 
       <with|par-left|<quote|1tab>|2.4.3<space|2spc>Natural isomorphism is
-      equivalent to isomorphisms of category.
+      equivalent to isomorphisms in category.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-31>>
 
@@ -755,17 +765,25 @@
       functors are adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-77>>
 
+      <with|par-left|<quote|1tab>|3.5.5<space|2spc>Product-hom adjunction
+      implies currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-78>>
+
       3.6<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-78>
+      <no-break><pageref|auto-79>
 
       <with|par-left|<quote|1tab>|3.6.1<space|2spc>Embedding in the framework
       of category theory is the right way to extend category theory
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-79>>
+      <no-break><pageref|auto-80>>
 
       <with|par-left|<quote|1tab>|3.6.2<space|2spc>\PTypes\Q help to restrict
       the possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-80>>
+      <no-break><pageref|auto-81>>
+
+      <with|par-left|<quote|1tab>|3.6.3<space|2spc>\PTypes\Q help check the
+      correctness of derivation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-82>>
     </associate>
   </collection>
 </auxiliary>

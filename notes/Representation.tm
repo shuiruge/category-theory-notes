@@ -1017,8 +1017,7 @@
   adjunction, we get the unit; and once we have a unit, we also gain the
   adjunction.
 
-  In the end, we clear up the previous analysis, summarizing this section as
-  follow.
+  In the end, we clear up the previous analysis, summarizing as follow.
 
   <\definition>
     [Universal Morphism] Let <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> a
@@ -1063,17 +1062,15 @@
   linear transformations as morphisms. In addition, map should be functorial.
   That is, the map that forgets the linear structure should be is a functor
   <math|U:<math-ss|Vect><rsub|\<bbb-R\>>\<rightarrow\><math-ss|Set>>, the
-  forgetful functor.
+  <with|font-series|bold|forgetful functor>.
 
   Besides, a vector space can be constructed out of a set without introducing
-  extra information. To be explicit, consider a set
-  <math|<around*|{|x,y,z|}>> where the elements are abstract, a vector space
-  on field <math|\<bbb-R\>> can be built by
-  <math|\<alpha\>x+\<beta\>y+\<gamma\>z> for each
-  <math|\<alpha\>,\<beta\>,\<gamma\>\<in\>\<bbb-R\>>, that is, using the set
-  as bases. In addition, linear transformation can be induced by function
-  <math|f> on <math|<around*|{|x,y,z|}>> as
-  <math|L<around*|(|\<alpha\>x+\<beta\>y+\<gamma\>z|)>\<assign\>\<alpha\>f<around*|(|x|)>+\<beta\>f<around*|(|y|)>+\<gamma\>f<around*|(|z|)>>.
+  extra information. To be explicit, consider a set <math|<around*|{|x,y|}>>
+  where the elements are abstract, a vector space on field <math|\<bbb-R\>>
+  can be built by <math|\<alpha\>x+\<beta\>y> for each
+  <math|\<alpha\>,\<beta\>\<in\>\<bbb-R\>>, that is, using the set as bases.
+  In addition, linear transformation can be induced by function <math|f> on
+  <math|<around*|{|x,y|}>> as <math|L<around*|(|\<alpha\>x+\<beta\>y|)>\<assign\>\<alpha\>f<around*|(|x|)>+\<beta\>f<around*|(|y|)>>.
   So, we have constructed a vector space out of a set freely <\footnote>
     \PFree\Q means free of charge.
   </footnote>! The same goes for free group, discrete topological space, and
@@ -1081,15 +1078,41 @@
 
   Again, in the language of category theory, the free construction should be
   described by a functor <math|F:<math-ss|Set>\<rightarrow\><math-ss|Vect><rsub|\<bbb-R\>>>,
-  the free functor.
+  the <with|font-series|bold|free functor>.
 
   At the first sight, the forgetting and the free construction have nothing
   to do with each other. In fact, they are deeply connected: the forgetful
   functor and the free functor are adjoint!
 
-  To see why they are adjoint, we have to figure out what the unit and counit
-  are and to check whether they are universal or not. can be found
-  <hlink|here|https://www.math3ma.com/blog/what-is-an-adjunction-part-2#:~:text=forgetful%20adjunction.-,The%20unit,.,-Notice%20the%20clarity>.
+  The unit <math|\<eta\><rsub|S>:S\<rightarrow\>U\<circ\>F<around*|(|S|)>>
+  maps from, say, <math|S=<around*|{|x,y|}>> to
+  <math|U\<circ\>F<around*|(|S|)>=<around*|{|\<alpha\>x+\<beta\>y\|\<alpha\>,\<beta\>\<in\>\<bbb-R\>|}>>,
+  which is <math|\<bbb-R\><rsup|2>>. The universality tells that, for each
+  vector space <math|V> and each function
+  <math|f:S\<rightarrow\>U<around*|(|V|)>>, where <math|U<around*|(|V|)>>
+  forgets the linear structure of <math|V>, there is a unique extension of
+  <math|f> to a linear transformation <math|f<rsup|\<sharp\>>> that can be
+  reduced, by forgetting, to the original <math|f>.
+
+  <subsection|Product-hom adjunction implies currying>
+
+  For any set <math|Y> given, the <with|font-series|bold|product-hom
+  adjunction> relates the <with|font-series|bold|product functor>
+  <math|-\<times\>Y:<math-ss|Set>\<rightarrow\><math-ss|Set>>, and the
+  functor <math|<math-ss|Set><around*|(|Y,-|)>:<math-ss|Set>\<rightarrow\><math-ss|Set>>
+  which is called, for some historical reason, <with|font-series|bold|hom
+  functor>. The claim that product functor and hom function are adjoint
+  means, for each <math|X,Z\<in\><math-ss|Set>>,
+
+  <\equation*>
+    <math-ss|Set><around*|(|X,Y,Z|)>\<cong\><math-ss|Set><around*|(|X,<math-ss|Set><around*|(|Y,Z|)>|)>.
+  </equation*>
+
+  This relation indicates that, (on left hand side) for each function
+  <math|f:X\<times\>Y\<rightarrow\>Z>, (on right hand side) there is a unique
+  function <math|f<rsup|\<sharp\>>> that takes <math|X> and returns a
+  function of <math|Y\<rightarrow\>Z>. In computer science, this is nothing
+  but <hlink|currying|https://stackoverflow.com/a/36321>.
 
   <section|Summary>
 
@@ -1111,6 +1134,10 @@
   that \Ptypes\Q are extremely helpful for restricting the possibility of
   construction, almost make it unique. So, when construct something in
   category theory, types should be considered at the first place.
+
+  <subsection|\PTypes\Q help check the correctness of derivation>
+
+  TODO
 </body>
 
 <\initial>
@@ -1149,25 +1176,27 @@
     <associate|auto-32|<tuple|4.7|9>>
     <associate|auto-33|<tuple|5|10>>
     <associate|auto-34|<tuple|5.1|10>>
-    <associate|auto-35|<tuple|10|10>>
-    <associate|auto-36|<tuple|5.2|?>>
-    <associate|auto-37|<tuple|5.3|?>>
-    <associate|auto-38|<tuple|11|?>>
-    <associate|auto-39|<tuple|12|?>>
+    <associate|auto-35|<tuple|10|11>>
+    <associate|auto-36|<tuple|5.2|11>>
+    <associate|auto-37|<tuple|5.3|11>>
+    <associate|auto-38|<tuple|11|12>>
+    <associate|auto-39|<tuple|12|12>>
     <associate|auto-4|<tuple|1.2|1>>
-    <associate|auto-40|<tuple|13|?>>
-    <associate|auto-41|<tuple|5.4|?>>
-    <associate|auto-42|<tuple|6|?>>
-    <associate|auto-43|<tuple|6.1|?>>
-    <associate|auto-44|<tuple|6.2|?>>
+    <associate|auto-40|<tuple|13|13>>
+    <associate|auto-41|<tuple|5.4|13>>
+    <associate|auto-42|<tuple|5.5|14>>
+    <associate|auto-43|<tuple|6|14>>
+    <associate|auto-44|<tuple|6.1|14>>
+    <associate|auto-45|<tuple|6.2|14>>
+    <associate|auto-46|<tuple|6.3|14>>
     <associate|auto-5|<tuple|1.3|1>>
     <associate|auto-6|<tuple|2|1>>
     <associate|auto-7|<tuple|2.1|1>>
     <associate|auto-8|<tuple|2.2|1>>
     <associate|auto-9|<tuple|1|2>>
     <associate|definition: Universal Element|<tuple|10|5>>
-    <associate|figure: Adjoint|<tuple|10|?>>
-    <associate|figure: Adjoint and Universal Element|<tuple|11|?>>
+    <associate|figure: Adjoint|<tuple|10|11>>
+    <associate|figure: Adjoint and Universal Element|<tuple|11|12>>
     <associate|figure: Colimit|<tuple|8|8>>
     <associate|figure: Cone|<tuple|5|7>>
     <associate|figure: Cone Functor|<tuple|6|7>>
@@ -1178,33 +1207,26 @@
     <associate|figure: Universal Element|<tuple|4|5>>
     <associate|figure: Yoneda functor is full|<tuple|3|4>>
     <associate|footnote-1|<tuple|1|1>>
-    <associate|footnote-10|<tuple|10|?>>
-    <associate|footnote-11|<tuple|11|?>>
-    <associate|footnote-12|<tuple|12|?>>
     <associate|footnote-2|<tuple|2|4>>
-    <associate|footnote-3|<tuple|3|?>>
+    <associate|footnote-3|<tuple|3|10>>
     <associate|footnote-4|<tuple|4|?>>
-    <associate|footnote-5|<tuple|5|?>>
-    <associate|footnote-6|<tuple|6|?>>
-    <associate|footnote-7|<tuple|7|?>>
-    <associate|footnote-8|<tuple|8|?>>
-    <associate|footnote-9|<tuple|9|?>>
+    <associate|footnote-5|<tuple|5|10>>
+    <associate|footnote-6|<tuple|6|11>>
+    <associate|footnote-7|<tuple|7|12>>
+    <associate|footnote-8|<tuple|8|12>>
+    <associate|footnote-9|<tuple|9|13>>
     <associate|footnr-1|<tuple|1|1>>
-    <associate|footnr-10|<tuple|10|?>>
-    <associate|footnr-11|<tuple|1|?>>
-    <associate|footnr-12|<tuple|12|?>>
     <associate|footnr-2|<tuple|7|4>>
-    <associate|footnr-3|<tuple|3|?>>
-    <associate|footnr-4|<tuple|4|?>>
-    <associate|footnr-5|<tuple|5|?>>
-    <associate|footnr-6|<tuple|6|?>>
-    <associate|footnr-7|<tuple|7|?>>
-    <associate|footnr-8|<tuple|1|?>>
-    <associate|footnr-9|<tuple|9|?>>
+    <associate|footnr-4|<tuple|4|10>>
+    <associate|footnr-5|<tuple|5|10>>
+    <associate|footnr-6|<tuple|6|11>>
+    <associate|footnr-7|<tuple|7|12>>
+    <associate|footnr-8|<tuple|1|12>>
+    <associate|footnr-9|<tuple|9|13>>
     <associate|lemma: Yoneda Lemma|<tuple|7|4>>
     <associate|section: From Representability to Universality|<tuple|3|5>>
     <associate|section: Functor is representable if there exists universal
-    element|<tuple|3.1|?>>
+    element|<tuple|3.1|5>>
     <associate|section: Representable Functor and Yoneda Functor|<tuple|2|1>>
     <associate|section: Representation is unique|<tuple|3.2|6>>
     <associate|theorem: Universal Element|<tuple|11|5>>
@@ -1262,6 +1284,27 @@
       shown as dots. The right hand side is the commutative diagram for the
       definition of product. The green arrows is for the constant functor,
       and red arrows for the diagram functor.>|<pageref|auto-31>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|10>|>
+        \ Indicates the natural isomorphism
+        <with|mode|<quote|math>|\<varphi\>:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
+        \PNatural in <with|mode|<quote|math>|X>\Q means varying the first
+        variable, and \Pnatural in <with|mode|<quote|math>|Y>\Q varies the
+        second. The commuative diagrams have been rotated by
+        <with|mode|<quote|math>|90<rsup|\<circ\>>> for convenience.
+      </surround>|<pageref|auto-35>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|11>|| Indicates the
+      universal elements. In both triangles, bottoms are fixed and top
+      vertices are arbitrarily chosen.>|<pageref|auto-38>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|12>||Indicates that
+      <with|mode|<quote|math>|\<eta\>> and
+      <with|mode|<quote|math>|\<varepsilon\>> are natural
+      transformations.>|<pageref|auto-39>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|13>||Indicates
+      universal morphism.>|<pageref|auto-40>>
     </associate>
     <\associate|toc>
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Representation>
@@ -1359,18 +1402,46 @@
       mathematics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-32>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Summary>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Adjunction>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-33><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|5.1<space|2spc>Embedding in the framework
-      of category theory is the right way to extend category theory
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|5.1<space|2spc>Adjoint functors represents
+      each other <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-34>>
 
-      <with|par-left|<quote|1tab>|5.2<space|2spc>\PTypes\Q help to restrict
+      <with|par-left|<quote|1tab>|5.2<space|2spc>Adjoint is unique
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-36>>
+
+      <with|par-left|<quote|1tab>|5.3<space|2spc>Unit and counit are
+      universal elements <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-37>>
+
+      <with|par-left|<quote|1tab>|5.4<space|2spc>Free and forgetful functors
+      are adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-41>>
+
+      <with|par-left|<quote|1tab>|5.5<space|2spc>Product-hom adjunction
+      implies currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-42>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Summary>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-43><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|6.1<space|2spc>Embedding in the framework
+      of category theory is the right way to extend category theory
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-44>>
+
+      <with|par-left|<quote|1tab>|6.2<space|2spc>\PTypes\Q help to restrict
       the possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>>
+      <no-break><pageref|auto-45>>
+
+      <with|par-left|<quote|1tab>|6.3<space|2spc>\PTypes\Q help check the
+      correctness of derivation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-46>>
     </associate>
   </collection>
 </auxiliary>

@@ -742,7 +742,7 @@
 
   TODO
 
-  <subsection|Natural isomorphism is equivalent to isomorphisms of category.>
+  <subsection|Natural isomorphism is equivalent to isomorphisms in category.>
 
   With the category of functors, we can discuss whether two functors are
   equivalent or not. This relates to the isomorphism between functors. Since
@@ -925,7 +925,7 @@
     <associate|auto-28|<tuple|5|10>>
     <associate|auto-29|<tuple|5.1|10>>
     <associate|auto-3|<tuple|1.1|1>>
-    <associate|auto-30|<tuple|5.2|?>>
+    <associate|auto-30|<tuple|5.2|10>>
     <associate|auto-4|<tuple|1.2|2>>
     <associate|auto-5|<tuple|1.3|2>>
     <associate|auto-6|<tuple|1.4|3>>
@@ -1078,6 +1078,10 @@
       <with|par-left|<quote|1tab>|5.1<space|2spc>Category theory is built by
       recursion <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-29>>
+
+      <with|par-left|<quote|1tab>|5.2<space|2spc>Proof in category theory is
+      easy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-30>>
     </associate>
   </collection>
 </auxiliary>
