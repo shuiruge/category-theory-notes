@@ -223,8 +223,9 @@
     3.5<space|2spc>Adjunction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-69>
 
-    <with|par-left|1tab|3.5.1<space|2spc>Adjoint functors represents each
-    other <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|3.5.1<space|2spc>Adjoint functors preserve
+    representations of presheaves and copresheaves
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-70>>
 
     <with|par-left|1tab|3.5.2<space|2spc>Adjoint is unique
@@ -235,29 +236,33 @@
     elements <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-73>>
 
-    <with|par-left|1tab|3.5.4<space|2spc>Free and forgetful functors are
-    adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|3.5.4<space|2spc>Universality is weaker than
+    isomorphism <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-77>>
 
-    <with|par-left|1tab|3.5.5<space|2spc>Product-hom adjunction implies
-    currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|3.5.5<space|2spc>Free and forgetful functors are
+    adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-78>>
 
+    <with|par-left|1tab|3.5.6<space|2spc>Product-hom adjunction implies
+    currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-79>>
+
     3.6<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-79>
+    <no-break><pageref|auto-80>
 
     <with|par-left|1tab|3.6.1<space|2spc>Embedding in the framework of
     category theory is the right way to extend category theory
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-80>>
+    <no-break><pageref|auto-81>>
 
     <with|par-left|1tab|3.6.2<space|2spc>\PTypes\Q help to restrict the
     possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-81>>
+    <no-break><pageref|auto-82>>
 
     <with|par-left|1tab|3.6.3<space|2spc>\PTypes\Q help check the correctness
     of derivation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-82>>
+    <no-break><pageref|auto-83>>
   </table-of-contents>
 
   <include|Preface.tm>
@@ -280,8 +285,8 @@
     <associate|auto-11|<tuple|2.1.3|6|Category.tm>>
     <associate|auto-12|<tuple|2.1.4|7|Category.tm>>
     <associate|auto-13|<tuple|2.1.5|7|Category.tm>>
-    <associate|auto-14|<tuple|2.2|7|Category.tm>>
-    <associate|auto-15|<tuple|2.2.1|7|Category.tm>>
+    <associate|auto-14|<tuple|2.2|8|Category.tm>>
+    <associate|auto-15|<tuple|2.2.1|8|Category.tm>>
     <associate|auto-16|<tuple|2.2.2|8|Category.tm>>
     <associate|auto-17|<tuple|2.3|9|Category.tm>>
     <associate|auto-18|<tuple|2.3.1|9|Category.tm>>
@@ -299,11 +304,11 @@
     <associate|auto-29|<tuple|2.3|12|Category.tm>>
     <associate|auto-3|<tuple|1.2|3|Preface.tm>>
     <associate|auto-30|<tuple|2.4.2|12|Category.tm>>
-    <associate|auto-31|<tuple|2.4.3|12|Category.tm>>
+    <associate|auto-31|<tuple|2.4.3|13|Category.tm>>
     <associate|auto-32|<tuple|2.4.4|13|Category.tm>>
     <associate|auto-33|<tuple|2.4.5|13|Category.tm>>
-    <associate|auto-34|<tuple|2.5|13|Category.tm>>
-    <associate|auto-35|<tuple|2.5.1|13|Category.tm>>
+    <associate|auto-34|<tuple|2.5|14|Category.tm>>
+    <associate|auto-35|<tuple|2.5.1|14|Category.tm>>
     <associate|auto-36|<tuple|2.5.2|14|Category.tm>>
     <associate|auto-37|<tuple|3|15|Representation.tm>>
     <associate|auto-38|<tuple|3.1|15|Representation.tm>>
@@ -340,22 +345,23 @@
     <associate|auto-66|<tuple|3.4.6|23|Representation.tm>>
     <associate|auto-67|<tuple|3.9|23|Representation.tm>>
     <associate|auto-68|<tuple|3.4.7|23|Representation.tm>>
-    <associate|auto-69|<tuple|3.5|24|Representation.tm>>
+    <associate|auto-69|<tuple|3.5|23|Representation.tm>>
     <associate|auto-7|<tuple|2|5|Category.tm>>
-    <associate|auto-70|<tuple|3.5.1|24|Representation.tm>>
-    <associate|auto-71|<tuple|3.10|25|Representation.tm>>
+    <associate|auto-70|<tuple|3.5.1|23|Representation.tm>>
+    <associate|auto-71|<tuple|3.10|24|Representation.tm>>
     <associate|auto-72|<tuple|3.5.2|25|Representation.tm>>
     <associate|auto-73|<tuple|3.5.3|25|Representation.tm>>
-    <associate|auto-74|<tuple|3.11|26|Representation.tm>>
+    <associate|auto-74|<tuple|3.11|25|Representation.tm>>
     <associate|auto-75|<tuple|3.12|26|Representation.tm>>
-    <associate|auto-76|<tuple|3.13|27|Representation.tm>>
-    <associate|auto-77|<tuple|3.5.4|27|Representation.tm>>
+    <associate|auto-76|<tuple|3.13|26|Representation.tm>>
+    <associate|auto-77|<tuple|3.5.4|26|Representation.tm>>
     <associate|auto-78|<tuple|3.5.5|27|Representation.tm>>
-    <associate|auto-79|<tuple|3.6|28|Representation.tm>>
+    <associate|auto-79|<tuple|3.5.6|27|Representation.tm>>
     <associate|auto-8|<tuple|2.1|5|Category.tm>>
-    <associate|auto-80|<tuple|3.6.1|28|Representation.tm>>
-    <associate|auto-81|<tuple|3.6.2|28|Representation.tm>>
-    <associate|auto-82|<tuple|3.6.3|28|Representation.tm>>
+    <associate|auto-80|<tuple|3.6|27|Representation.tm>>
+    <associate|auto-81|<tuple|3.6.1|27|Representation.tm>>
+    <associate|auto-82|<tuple|3.6.2|27|Representation.tm>>
+    <associate|auto-83|<tuple|3.6.3|27|Representation.tm>>
     <associate|auto-9|<tuple|2.1.1|5|Category.tm>>
     <associate|chapter: Category, Functor, and Natural
     Transformation|<tuple|2|5|Category.tm>>
@@ -363,12 +369,12 @@
     Objects|<tuple|2.17|8|Category.tm>>
     <associate|definition: Poset|<tuple|2.10|7|Category.tm>>
     <associate|definition: Poset as Category|<tuple|2.11|7|Category.tm>>
-    <associate|definition: Preorder|<tuple|2.9|6|Category.tm>>
+    <associate|definition: Preorder|<tuple|2.9|7|Category.tm>>
     <associate|definition: Product of Two Objects|<tuple|2.14|8|Category.tm>>
     <associate|definition: Universal Element|<tuple|3.10|19|Representation.tm>>
-    <associate|figure: Adjoint|<tuple|3.10|25|Representation.tm>>
+    <associate|figure: Adjoint|<tuple|3.10|24|Representation.tm>>
     <associate|figure: Adjoint and Universal
-    Element|<tuple|3.11|26|Representation.tm>>
+    Element|<tuple|3.11|25|Representation.tm>>
     <associate|figure: Colimit|<tuple|3.8|22|Representation.tm>>
     <associate|figure: Cone|<tuple|3.5|21|Representation.tm>>
     <associate|figure: Cone Functor|<tuple|3.6|21|Representation.tm>>
@@ -385,20 +391,17 @@
     <associate|footnote-3.1|<tuple|3.1|15|Representation.tm>>
     <associate|footnote-3.2|<tuple|3.2|18|Representation.tm>>
     <associate|footnote-3.3|<tuple|3.3|24|Representation.tm>>
-    <associate|footnote-3.4|<tuple|3.4|?|Representation.tm>>
-    <associate|footnote-3.5|<tuple|3.5|24|Representation.tm>>
+    <associate|footnote-3.4|<tuple|3.4|24|Representation.tm>>
+    <associate|footnote-3.5|<tuple|3.5|25|Representation.tm>>
     <associate|footnote-3.6|<tuple|3.6|25|Representation.tm>>
-    <associate|footnote-3.7|<tuple|3.7|26|Representation.tm>>
-    <associate|footnote-3.8|<tuple|3.8|26|Representation.tm>>
-    <associate|footnote-3.9|<tuple|3.9|27|Representation.tm>>
+    <associate|footnote-3.7|<tuple|3.7|27|Representation.tm>>
     <associate|footnr-3.1|<tuple|3.1|15|Representation.tm>>
     <associate|footnr-3.2|<tuple|3.7|18|Representation.tm>>
+    <associate|footnr-3.3|<tuple|3.3|24|Representation.tm>>
     <associate|footnr-3.4|<tuple|3.4|24|Representation.tm>>
-    <associate|footnr-3.5|<tuple|3.5|24|Representation.tm>>
-    <associate|footnr-3.6|<tuple|3.6|25|Representation.tm>>
-    <associate|footnr-3.7|<tuple|3.7|26|Representation.tm>>
-    <associate|footnr-3.8|<tuple|1|26|Representation.tm>>
-    <associate|footnr-3.9|<tuple|3.9|27|Representation.tm>>
+    <associate|footnr-3.5|<tuple|3.5|25|Representation.tm>>
+    <associate|footnr-3.6|<tuple|1|25|Representation.tm>>
+    <associate|footnr-3.7|<tuple|3.7|27|Representation.tm>>
     <associate|lemma: Fully Faithful Functor|<tuple|2.21|11|Category.tm>>
     <associate|lemma: Natural Isomorphism|<tuple|2.25|13|Category.tm>>
     <associate|lemma: Yoneda Lemma|<tuple|3.7|18|Representation.tm>>
@@ -406,7 +409,7 @@
     <associate|part:Preface.tm|<tuple|?|3>>
     <associate|part:Representation.tm|<tuple|2.5.2|15>>
     <associate|section: Arrows generalize concepts and theorems from one area
-    to every area in mathematics|<tuple|2.2.1|7|Category.tm>>
+    to every area in mathematics|<tuple|2.2.1|8|Category.tm>>
     <associate|section: From Representability to
     Universality|<tuple|3.3|19|Representation.tm>>
     <associate|section: Functor is representable if there exists universal
@@ -422,7 +425,7 @@
     <associate|section: Surjective functor may not be
     full|<tuple|2.3.4|10|Category.tm>>
     <associate|theorem: Functorial Image as
-    Category|<tuple|2.22|11|Category.tm>>
+    Category|<tuple|2.22|12|Category.tm>>
     <associate|theorem: Universal Element|<tuple|3.11|19|Representation.tm>>
   </collection>
 </references>
@@ -749,8 +752,9 @@
       3.5<space|2spc>Adjunction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-69>
 
-      <with|par-left|<quote|1tab>|3.5.1<space|2spc>Adjoint functors
-      represents each other <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|3.5.1<space|2spc>Adjoint functors preserve
+      representations of presheaves and copresheaves
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-70>>
 
       <with|par-left|<quote|1tab>|3.5.2<space|2spc>Adjoint is unique
@@ -761,29 +765,33 @@
       universal elements <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-73>>
 
-      <with|par-left|<quote|1tab>|3.5.4<space|2spc>Free and forgetful
-      functors are adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|3.5.4<space|2spc>Universality is weaker
+      than isomorphism <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-77>>
 
-      <with|par-left|<quote|1tab>|3.5.5<space|2spc>Product-hom adjunction
-      implies currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|3.5.5<space|2spc>Free and forgetful
+      functors are adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-78>>
 
+      <with|par-left|<quote|1tab>|3.5.6<space|2spc>Product-hom adjunction
+      implies currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-79>>
+
       3.6<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-79>
+      <no-break><pageref|auto-80>
 
       <with|par-left|<quote|1tab>|3.6.1<space|2spc>Embedding in the framework
       of category theory is the right way to extend category theory
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-80>>
+      <no-break><pageref|auto-81>>
 
       <with|par-left|<quote|1tab>|3.6.2<space|2spc>\PTypes\Q help to restrict
       the possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-81>>
+      <no-break><pageref|auto-82>>
 
       <with|par-left|<quote|1tab>|3.6.3<space|2spc>\PTypes\Q help check the
       correctness of derivation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-82>>
+      <no-break><pageref|auto-83>>
     </associate>
   </collection>
 </auxiliary>

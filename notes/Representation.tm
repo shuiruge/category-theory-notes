@@ -294,8 +294,8 @@
 
   We conclude the analysis in this section as follow.<\footnote>
     For a locally small category <math|<math-ss|C>>, functor from
-    <math|<math-ss|C><rsup|op>> to <math|<math-ss|Set>> is quite useful so
-    that it should have name, presheaf.
+    <math|<math-ss|C><rsup|op>> to <math|<math-ss|Set>> is almost everywhere
+    so that it deserves a name, presheaf.
 
     <\definition>
       [Presheaf] Let <math|<math-ss|C>> a locally small category. Functor
@@ -380,14 +380,16 @@
   them should be a natural transformation. So, the problem should be claimed
   as what is the condition for the existence of
   <math|<wide|F|^>\<in\><math-ss|C>> such that there is a natural isomorphism
-  <math|\<varphi\>:F\<rightarrow\><math-ss|C><around*|(|-,<wide|F|^>|)>>.
+  <math|\<psi\>:<math-ss|C><around*|(|-,<wide|F|^>|)>\<rightarrow\>F>, for
+  which we say the presheaf (functor of \Ptype\Q
+  <math|<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>) <math|F> is
+  <with|font-series|bold|represented> by the object <math|<wide|F|^>>.
 
   So, suppose that there exists <math|<wide|F|^>\<in\><math-ss|C>> and
-  natural isomorphism <math|\<varphi\>:F\<rightarrow\><math-ss|C><around*|(|-,<wide|F|^>|)>>
-  with inverse <math|\<psi\>:<math-ss|C><around*|(|-,<wide|F|^>|)>\<rightarrow\>F>.
-  So, the figure <reference|figure: Universal Element> commutes. It implies
-  how the <math|\<psi\>> works. Given <math|X\<in\><math-ss|C>>, the
-  component <math|\<psi\><rsub|X>> maps an object
+  natural isomorphism <math|\<psi\>:<math-ss|C><around*|(|-,<wide|F|^>|)>\<rightarrow\>F>,
+  then figure <reference|figure: Universal Element> commutes. It implies how
+  the component <math|\<psi\><rsub|X>> acts for any
+  <math|X\<in\><math-ss|C>>: <math|\<psi\><rsub|X>> maps an object
   <math|f\<in\><math-ss|C><around*|(|X,<wide|F|^>|)>> to
   <math|F<around*|(|f|)><around*|(|e|)>>. Since <math|\<psi\><rsub|X>> is
   isomorphic, we have, for every object <math|x\<in\>F<around*|(|X|)>>, there
@@ -732,165 +734,80 @@
 
   <section|Adjunction>
 
-  <subsection|Adjoint functors represents each other>
+  <subsection|Adjoint functors preserve representations of presheaves and
+  copresheaves>
 
-  Let <math|<math-ss|C>> and <math|<math-ss|D>> locally small
-  categories.<\footnote>
-    One way of introducing adjunction is as follow. This material is quite
-    long and somehow irrelevant to the main stream. So, it is stated at here,
-    a footnote.
+  Given a presheaf (or copresheaf) and its representation (if exists), it is
+  natural to wonder how a functor maps the presheaf and representation? Is it
+  still a representation? And if so, what does it represent?
 
-    Recall that, in a locally small category <math|<math-ss|C>>, an object
-    <math|Y\<in\><math-ss|C>> corresponds to a representable functor
-    <math|<math-ss|C><around*|(|-,Y|)>;<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>.
-    Conversely, a functor (or say, presheaf)
-    <math|F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>> is representable
-    if there exists a universal element <math|<wide|F|^>\<in\><math-ss|C>>
-    such that <math|F<around*|(|X|)>\<cong\><math-ss|C><around*|(|X,<wide|F|^>|)>>
-    natural in <math|X> (here we omit the <math|e> paired with
-    <math|<wide|F|^>>). While discussing representable functor,
-    <math|<math-ss|C>> is the only category under consideration.
-
-    A natural way of generalizing the previous ideas is to consider more
-    categories, say two. Also, we should consider a functor that connects
-    them. That is, let <math|<math-ss|C>> and <math|<math-ss|D>> locally
-    small categories, and functor <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>.
-    What is the generalization of representable functor
-    <math|<math-ss|C><around*|(|-,Y|)>> herein? We should insert <math|F>
-    into it. There are only two possible ways. One way of insertion is
-    <math|<math-ss|D><around*|(|-,F<around*|(|Y|)>|)>>. Notice that we have
-    replaced <math|<math-ss|C>> with <math|<math-ss|D>>, since the
-    <math|F<around*|(|-|)>> is in <math|<math-ss|D>>. This is nothing but a
-    representable functor on <math|<math-ss|D>>, like
-    <math|<math-ss|D><around*|(|-,Z|)>>, thus not a generalization. The other
-    way of insertion is <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>,
-    where <math|Y\<in\><math-ss|D>>. This indeed is a generalization, since
-    it cannot be directly re-written as a representable functor.
-
-    <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>> is indeed a functor.
-    In fact, <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>,
-    sending <math|f:B\<rightarrow\>A> to <math|<around*|(|F<around*|(|f|)>|)><rsup|\<ast\>>:<math-ss|D><around*|(|F<around*|(|A|)>,Y|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|B|)>,Y|)>>.
-    Axioms of composition and identity are directly implied from the
-    functoriality of <math|F> and the definition of pullback
-    <math|<around*|(|-|)><rsup|\<ast\>>>.
-
-    Interestingly, <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>> is
-    presheaf. So, it is natural to ask when
-    <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>> would be
-    representable. This means there exists <math|<wide|Y|^>\<in\><math-ss|D>>
-    and natural isomorphism <math|\<varphi\>:<math-ss|C><around*|(|-,<wide|Y|^>|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>.
-    Notice that, when <math|F> is given, the universal element
-    <math|<wide|Y|^>\<in\><math-ss|C>> depends only on the
-    <math|Y\<in\><math-ss|D>>. So, it is natural to consider the map from
-    <math|Y> to <math|<wide|Y|^>>. Remind that, in category theory, a map
-    between categories is useful only when it is functorial. So, let us
-    expect what would happen if there is a functor
-    <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> such that
-    <math|<wide|Y|^>=G<around*|(|Y|)>>.
-
-    For <math|G>, the variable is <math|Y>. Substituting
-    <math|<wide|Y|^>=G<around*|(|Y|)>> to component <math|\<varphi\><rsub|X>>
-    for an <math|X\<in\><math-ss|C>>, we get
-    <math|\<varphi\><rsub|X>:<math-ss|C><around*|(|X,G<around*|(|Y|)>|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|X|)>,Y|)>>.
-    At the first sight, this is also a map with the <math|Y> as variable,
-    that is, <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|X|)>,\<ast\>|)>>,
-    where we employed \P<math|\<ast\>>\Q as placeholder. Surprisingly, it can
-    be recognized that this expression is in fact a representation of the
-    functor <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>> by the
-    object <math|F<around*|(|X|)>> <\footnote>
-      This is valid, since <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>>
-      is a copresheaf on <math|<math-ss|D>>, which is a functor of the
-      \Ptype\Q <math|<math-ss|D>\<rightarrow\><math-ss|Set>>. The
-      <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>> can be viewd
-      as a generalization of the copresheaf
-      <math|<math-ss|C><around*|(|X,\<ast\>|)>> from single category to
-      multiple, as what we have done for presheaf
-      <math|<math-ss|C><around*|(|-,Y|)>>.
-    </footnote>. This hints that we should consider varying both <math|X> and
-    <math|Y>. That is, consider bi-functor
-    <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>:<math-ss|C><rsup|op>\<times\><math-ss|D>\<rightarrow\><math-ss|Set>>
-    that maps <math|<around*|(|X,Y|)>> to
-    <math|<math-ss|D><around*|(|F<around*|(|X|)>,Y|)>>, and bi-functor
-    <math|<math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>:<math-ss|C><rsup|op>\<times\><math-ss|D>\<rightarrow\><math-ss|Set>>
-    that maps <math|<around*|(|X,Y|)>> to
-    <math|<math-ss|C><around*|(|X,G<around*|(|Y|)>|)>>, as well as natural
-    isomorphism <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>,
-    whose component should be double index, like <math|\<varphi\><rsub|X,Y>>,
-    that furnishes the representations.
-  </footnote> For a functor <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>, we
-  have (bi-) functor <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>:<math-ss|C><rsup|op>\<times\><math-ss|D>\<rightarrow\><math-ss|Set>>.
-  We employed <math|-> as placeholder for the first variable and
-  <math|\<ast\>> for the second. The same, for a functor
-  <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>, we have (bi-) functor
-  <math|<math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>:<math-ss|C><rsup|op>\<times\><math-ss|D>\<rightarrow\><math-ss|Set>>.
-  Interestingly, for each <math|X\<in\><math-ss|C>>,
-  <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>> is a co-presheaf,
-  and <math|<math-ss|D><around*|(|F<around*|(|X|)>,\<ast\>|)>> is a
-  representable functor of co-presheaf. As discussed in section
-  <reference|section: Functor is representable if there exists universal
-  element>, it is possible that the later is the representable functor of the
-  former, that is, there is a natural isomorphism
+  First, we are to claim the questions in the framework of cateogry theory.
+  Let <math|H:<math-ss|D><rsup|op>\<rightarrow\><math-ss|Set>> a presheaf and
+  <math|<wide|H|^>\<in\><math-ss|D>> represents <math|H>, that is, there is a
+  natural isomorphism <math|<math-ss|D><around*|(|-,<wide|H|^>|)>\<cong\>H>.
+  Let <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
+  <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> two functors, prepared for
+  the following analysis. A functor can map a presheaf by composition, and
+  the only way of composing <math|H> by <math|F> or <math|G> is
+  <math|H\<circ\>F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>. So, our
+  problems turn to be what is the relation between the representation of
+  <math|H\<circ\>F> and <math|<wide|H|^>>? The representation of
+  <math|H\<circ\>F> is in <math|<math-ss|C>>, so it must be
+  <math|G<around*|(|<wide|H|^>|)>> (recall that only the \Ptype\Q of <math|G>
+  is given, and the details of <math|G> are still to be determined.) That is,
+  we wonder if
 
   <\equation*>
-    \<varphi\><rsub|X>:<math-ss|D><around*|(|F<around*|(|X|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>
+    <math-ss|C><around*|(|-,G<around*|(|<wide|H|^>|)>|)><above|\<cong\>|?>H\<circ\>F.
   </equation*>
 
-  for each <math|X> given <\footnote>
-    Up to now, the <math|\<varphi\><rsub|X>> is itself a natural
-    transformation, instead of a component of some natural transformation
-    called <math|\<varphi\>>; the <math|X> simply hints for the dependence on
-    <math|X>. But, as we will see later, this subscript does also hint for a
-    component. It is for this reason that we employed this confusing
-    notation.
-  </footnote>. The same, for each <math|Y\<in\><math-ss|D>>,
-  <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>> is a presheaf, and
-  <math|<math-ss|C><around*|(|-,G<around*|(|Y|)>|)>> is a representable
-  functor of presheaf. So, it is also possible that the later is the
-  representable functor of the former, that is, there is a natural
-  isomorphism
+  Since <math|<wide|H|^>> represents <math|H> and it is easy to prove that
+  <math|<math-ss|D><around*|(|-,<wide|H|^>|)>\<cong\>H> implies
+  <math|<math-ss|D><around*|(|F<around*|(|-|)>,<wide|H|^>|)>\<cong\>H\<circ\>F>
+  <\footnote>
+    Proof is left to reader.
+  </footnote>, the problem turns to be if
+  <math|<math-ss|D><around*|(|F<around*|(|-|)>,<wide|H|^>|)><above|\<cong\>|?><math-ss|C><around*|(|-,G<around*|(|<wide|H|^>|)>|)>>.
+
+  Applying the previous analysis to copresheaf
+  <math|K:<math-ss|C>\<rightarrow\><math-ss|Set>>, which is represented by
+  <math|<wide|K|^>\<in\><math-ss|C>>, we will find that the unique valid
+  statement of the problem is
 
   <\equation*>
-    \<varphi\><rsub|Y>:<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|Y|)>|)>
+    <math-ss|D><around*|(|F<around*|(|<wide|K|^>|)>,\<ast\>|)><above|\<cong\>|?>K\<circ\>G,
   </equation*>
 
-  for each <math|Y> given. This hints for a wonderful natural isomorphism
-  <math|\<varphi\>>
+  where <math|\<ast\>> is employed as placeholder. And again, since
+  <math|<wide|K|^>> represents <math|K>, it turns to be
+  <math|<math-ss|D><around*|(|F<around*|(|<wide|K|^>|)>,\<ast\>|)><above|\<cong\>|?><math-ss|C><around*|(|<wide|K|^>,G<around*|(|\<ast\>|)>|)>>.
+
+  Altogether, if representations of both presheaves and copresheaves are to
+  be preserved by functorial maps <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>
+  and <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>, then we should demand
+  <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<cong\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>,
+  where <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>> and
+  <math|<math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>> are bi-functors of
+  the \Ptype\Q <math|<math-ss|C><rsup|op>\<times\><math-ss|D>\<rightarrow\><math-ss|Set>>.
+  This indicates a double-index component
 
   <\equation*>
-    \<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>.
+    \<varphi\><rsub|X,Y>:<math-ss|D><around*|(|F<around*|(|X|)>,Y|)>\<rightarrow\><math-ss|C><around*|(|X,G<around*|(|Y|)>|)>
   </equation*>
 
-  Notice that component of <math|\<varphi\>> has double index,
-  <math|\<varphi\><rsub|X,Y>:<math-ss|D><around*|(|F<around*|(|X|)>,Y|)>\<rightarrow\><math-ss|C><around*|(|X,G<around*|(|Y|)>|)>>
-  for each <math|X\<in\><math-ss|C>> and each <math|Y\<in\><math-ss|D>>.
+  for each <math|X\<in\><math-ss|C>> and <math|Y\<in\><math-ss|D>>. This
+  means, to preserve presheaves and copresheaves, the <math|F> and <math|G>
+  can be arbitrary except that the relation
+  <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<cong\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>
+  must be held.
 
-  <\big-figure|<image|figures/adjoint.png|0.8par|||>>
-    <label|figure: Adjoint> Indicates the natural isomorphism
-    <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
-    \PNatural in <math|X>\Q means varying the first variable, and \Pnatural
-    in <math|Y>\Q varies the second. The commuative diagrams have been
-    rotated by <math|90<rsup|\<circ\>>> for convenience.
-  </big-figure>
-
-  As a summary, we have a natural isomorphism with double index component
-  <math|\<varphi\><rsub|X,Y>:<math-ss|D><around*|(|F<around*|(|X|)>,Y|)>\<rightarrow\><math-ss|C><around*|(|X,G<around*|(|Y|)>|)>>
-  for each <math|X\<in\><math-ss|C>> and each <math|Y\<in\><math-ss|D>>. On
-  one side, <math|\<varphi\><rsub|X,\<ast\>>:<math-ss|D><around*|(|F<around*|(|X|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>>
-  means that <math|F<around*|(|X|)>> represents
-  <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>>; and on the other
-  side, <math|\<varphi\><rsub|-,Y>:<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|Y|)>|)>>
-  indicates that <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>> is
-  represented by <math|G<around*|(|Y|)>>. This structure tightly connects the
-  two functors <math|F> and <math|G>, just like the adjunction in vector
-  space, that is, two linear transformations <math|f> and <math|g> are
-  adjoint if <math|<around*|\<langle\>|f<around*|(|u|)>,v|\<rangle\>>=<around*|\<langle\>|u,g<around*|(|v|)>|\<rangle\>>>
-  for each vectors <math|u> and <math|v>, where bracket indicates inner
-  product.
+  We summarize this section as follow.
 
   <\definition>
-    [Adjoint & Adjunction] Let <math|<math-ss|C>> and <math|<math-ss|D>>
-    locally small categories. Functors <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>
-    and <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> are
+    [Adjoint Functors & Adjunction] Let <math|<math-ss|C>> and
+    <math|<math-ss|D>> locally small categories. Functors
+    <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
+    <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> are
     <with|font-series|bold|adjoint>, denoted by <math|F\<dashv\>G>, if there
     exists a natural isomorphsim <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
     The <math|\<varphi\>> is called an <with|font-series|bold|adjunction>.<\footnote>
@@ -903,6 +820,40 @@
       from which we read out <math|F> and <math|G>.
     </footnote>
   </definition>
+
+  <\big-figure|<image|figures/adjoint.png|0.8par|||>>
+    <label|figure: Adjoint> Indicates the natural isomorphism
+    <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
+    \PNatural in <math|X>\Q means varying the first variable, and \Pnatural
+    in <math|Y>\Q varies the second. The commuative diagrams have been
+    rotated by <math|90<rsup|\<circ\>>> for convenience.
+  </big-figure>
+
+  <\theorem>
+    [Adjoint Functors Preserve Representations] Let <math|<math-ss|C>> and
+    <math|<math-ss|D>> locally small categories. Let
+    <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
+    <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> adjoint functors, as
+    <math|F\<dashv\>G>. We have,
+
+    <\itemize>
+      <item>if <math|<wide|H|^>\<in\><math-ss|D>> represents
+      <math|H:<math-ss|D><rsup|op>\<rightarrow\><math-ss|Set>>, then
+      <math|G<around*|(|<wide|H|^>|)>\<in\><math-ss|C>> represents
+      <math|H\<circ\>F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>; and
+
+      <item>if <math|<wide|K|^>\<in\><math-ss|C>> represents
+      <math|K:<math-ss|C>\<rightarrow\><math-ss|Set>>, then
+      <math|F<around*|(|<wide|K|^>|)>\<in\><math-ss|D>> represents
+      <math|K\<circ\>G:<math-ss|D>\<rightarrow\><math-ss|Set>>.
+    </itemize>
+  </theorem>
+
+  It is called adjunction because of the analogy to the adjunction in vector
+  space: two linear transformations <math|f> and <math|g> are adjoint if
+  <math|<around*|\<langle\>|f<around*|(|u|)>,v|\<rangle\>>=<around*|\<langle\>|u,g<around*|(|v|)>|\<rangle\>>>
+  for each vectors <math|u> and <math|v>, where bracket indicates inner
+  product.
 
   <subsection|Adjoint is unique>
 
@@ -1045,9 +996,17 @@
   </definition>
 
   <\theorem>
-    [Adjunction & Unit] An adjunction can be uniquely determined by its unit,
-    and vice versa.
+    [Adjunction & Unit] An adjunction can be uniquely determined by its unit
+    (or counit), and vice versa.
   </theorem>
+
+  <subsection|Universality is weaker than isomorphism>
+
+  Let us see how adjunction preserves representation is an explicit instance.
+  We have known that limit represents cone functor, and product is a limit.
+  So, product is a representation.
+
+  TODO
 
   <subsection|Free and forgetful functors are adjoint>
 
@@ -1186,10 +1145,12 @@
     <associate|auto-40|<tuple|13|13>>
     <associate|auto-41|<tuple|5.4|13>>
     <associate|auto-42|<tuple|5.5|14>>
-    <associate|auto-43|<tuple|6|14>>
-    <associate|auto-44|<tuple|6.1|14>>
-    <associate|auto-45|<tuple|6.2|14>>
-    <associate|auto-46|<tuple|6.3|14>>
+    <associate|auto-43|<tuple|5.6|14>>
+    <associate|auto-44|<tuple|6|14>>
+    <associate|auto-45|<tuple|6.1|14>>
+    <associate|auto-46|<tuple|6.2|14>>
+    <associate|auto-47|<tuple|6.3|?>>
+    <associate|auto-48|<tuple|6.3|?>>
     <associate|auto-5|<tuple|1.3|1>>
     <associate|auto-6|<tuple|2|1>>
     <associate|auto-7|<tuple|2.1|1>>
@@ -1208,6 +1169,7 @@
     <associate|figure: Universal Element|<tuple|4|5>>
     <associate|figure: Yoneda functor is full|<tuple|3|4>>
     <associate|footnote-1|<tuple|1|1>>
+    <associate|footnote-10|<tuple|10|?>>
     <associate|footnote-2|<tuple|2|4>>
     <associate|footnote-3|<tuple|3|10>>
     <associate|footnote-4|<tuple|4|?>>
@@ -1217,13 +1179,15 @@
     <associate|footnote-8|<tuple|8|12>>
     <associate|footnote-9|<tuple|9|13>>
     <associate|footnr-1|<tuple|1|1>>
+    <associate|footnr-10|<tuple|10|?>>
     <associate|footnr-2|<tuple|7|4>>
+    <associate|footnr-3|<tuple|3|?>>
     <associate|footnr-4|<tuple|4|10>>
     <associate|footnr-5|<tuple|5|10>>
-    <associate|footnr-6|<tuple|6|11>>
+    <associate|footnr-6|<tuple|1|11>>
     <associate|footnr-7|<tuple|7|12>>
-    <associate|footnr-8|<tuple|1|12>>
-    <associate|footnr-9|<tuple|9|13>>
+    <associate|footnr-8|<tuple|8|12>>
+    <associate|footnr-9|<tuple|1|13>>
     <associate|lemma: Yoneda Lemma|<tuple|7|4>>
     <associate|section: From Representability to Universality|<tuple|3|5>>
     <associate|section: Functor is representable if there exists universal

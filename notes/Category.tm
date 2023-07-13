@@ -800,6 +800,14 @@
   now reduces to a family of isomorphisms on <math|<math-ss|D>>, which is
   quite familiar to us.
 
+  It also implies that natural isomorphism has two parts: \Pnatural\Q and
+  \Pismorphism\Q. Naturality means figure <reference|figure: Natural
+  Transformation> commutes; isomorphism means there is an isomorphism between
+  <math|F<around*|(|X|)>> and <math|G<around*|(|X|)>> for each
+  <math|X\<in\><math-ss|C>>. So, there is another way of saying that there is
+  a natural isomorphism between <math|F> and <math|G>, that is,
+  \P<math|F<around*|(|X|)>\<cong\>G<around*|(|X|)>> natural in <math|X>\Q.
+
   <subsection|Isomorphic objects should be viewed as one>
 
   Isomorphic topological spaces are the same. So it is for the isomorphic
@@ -1058,7 +1066,7 @@
       <no-break><pageref|auto-24>>
 
       <with|par-left|<quote|1tab>|4.3<space|2spc>Natural isomorphism is
-      equivalent to isomorphisms of category.
+      equivalent to isomorphisms in category.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-25>>
 
