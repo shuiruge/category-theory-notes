@@ -747,15 +747,18 @@
   category, say <math|<math-ss|C>>, is composing <math|H> by a functor
   <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> as
   <math|H\<circ\>F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>. Let
-  <math|<wide|H|^>\<in\><math-ss|D>> represent <math|H>, that is,
-  <math|<math-ss|D><around*|(|-,<wide|H|^>|)>\<cong\>H>. It is natural to
-  wonder if there is a (functorial) map that sends <math|<wide|H|^>> to the
-  representation of the presheaf <math|H\<circ\>F> (if it is representable).
-  The only way of mapping <math|<wide|H|^>> to that which may represent
-  <math|H\<circ\>F> is <math|G<around*|(|<wide|H|^>|)>\<in\><math-ss|C>> for
-  some functor <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>. So, our problem
-  turns to be what is the condition for <math|G<around*|(|<wide|H|^>|)>> to
-  represent <math|H\<circ\>F>, that is,
+  <math|<wide|H|^>> represent <math|H>, that is,
+  <math|<math-ss|D><around*|(|-,<wide|H|^>|)>\<cong\>H>. Since
+  <math|<wide|H|^>> is in <math|<math-ss|D>>, it cannot represents
+  <math|H\<circ\>F>, which is a presheaf on <math|<math-ss|C>>. It is natural
+  to wonder if there is a functorial map (recall that, in the framework of
+  category theory, a map should be functorial) that sends <math|<wide|H|^>>
+  to the representation of the presheaf <math|H\<circ\>F> (if it is
+  representable). This calls for another functor
+  <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> so that
+  <math|G<around*|(|<wide|H|^>|)>> may represent <math|H\<circ\>F>. So, our
+  problem turns to be what is the condition for
+  <math|G<around*|(|<wide|H|^>|)>> to represent <math|H\<circ\>F>, that is,
 
   <\equation*>
     <math-ss|C><around*|(|-,G<around*|(|<wide|H|^>|)>|)><above|\<cong\>|?>H\<circ\>F.
@@ -1404,7 +1407,7 @@
       <no-break><pageref|auto-36>>
 
       <with|par-left|<quote|1tab>|5.3<space|2spc>Unit and counit are
-      universal morphisms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      universal <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37>>
 
       <with|par-left|<quote|1tab>|5.4<space|2spc>Free and forgetful functors
