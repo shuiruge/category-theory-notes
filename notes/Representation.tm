@@ -737,25 +737,25 @@
   <subsection|Adjoint functors preserve representations of presheaves and
   copresheaves>
 
-  Given a presheaf (or copresheaf) and its representation (if exists), it is
-  natural to wonder how a functor maps the presheaf and representation? Is it
-  still a representation? And if so, what does it represent?
-
-  First, we are to claim the questions in the framework of cateogry theory.
-  Let <math|H:<math-ss|D><rsup|op>\<rightarrow\><math-ss|Set>> a presheaf and
-  <math|<wide|H|^>\<in\><math-ss|D>> represents <math|H>, that is, there is a
-  natural isomorphism <math|<math-ss|D><around*|(|-,<wide|H|^>|)>\<cong\>H>.
-  Let <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
-  <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> two functors, prepared for
-  the following analysis. A functor can map a presheaf by composition, and
-  the only way of composing <math|H> by <math|F> or <math|G> is
-  <math|H\<circ\>F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>. So, our
-  problems turn to be what is the relation between the representation of
-  <math|H\<circ\>F> and <math|<wide|H|^>>? The representation of
-  <math|H\<circ\>F> is in <math|<math-ss|C>>, so it must be
-  <math|G<around*|(|<wide|H|^>|)>> (recall that only the \Ptype\Q of <math|G>
-  is given, and the details of <math|G> are still to be determined.) That is,
-  we wonder if
+  Up to now, representation only occurs in single category (except for the
+  <math|<math-ss|Set>>). For instance, the representation of a representable
+  presheaf <math|H:<math-ss|D><rsup|op>\<rightarrow\><math-ss|Set>> is still
+  in <math|<math-ss|D>>. No other category is involved. It is natural to
+  generalize representation to involve multiple categories. But how? We have
+  known that, in the framework of category theory, the key is using
+  functorial maps. The only way of mapping <math|H> to a presheaf on another
+  category, say <math|<math-ss|C>>, is composing <math|H> by a functor
+  <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> as
+  <math|H\<circ\>F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>. Let
+  <math|<wide|H|^>\<in\><math-ss|D>> represent <math|H>, that is,
+  <math|<math-ss|D><around*|(|-,<wide|H|^>|)>\<cong\>H>. It is natural to
+  wonder if there is a (functorial) map that sends <math|<wide|H|^>> to the
+  representation of the presheaf <math|H\<circ\>F> (if it is representable).
+  The only way of mapping <math|<wide|H|^>> to that which may represent
+  <math|H\<circ\>F> is <math|G<around*|(|<wide|H|^>|)>\<in\><math-ss|C>> for
+  some functor <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>. So, our problem
+  turns to be what is the condition for <math|G<around*|(|<wide|H|^>|)>> to
+  represent <math|H\<circ\>F>, that is,
 
   <\equation*>
     <math-ss|C><around*|(|-,G<around*|(|<wide|H|^>|)>|)><above|\<cong\>|?>H\<circ\>F.
@@ -766,25 +766,32 @@
   <math|<math-ss|D><around*|(|F<around*|(|-|)>,<wide|H|^>|)>\<cong\>H\<circ\>F>
   <\footnote>
     Proof is left to reader.
-  </footnote>, the problem turns to be if
-  <math|<math-ss|D><around*|(|F<around*|(|-|)>,<wide|H|^>|)><above|\<cong\>|?><math-ss|C><around*|(|-,G<around*|(|<wide|H|^>|)>|)>>.
+  </footnote>, the problem turns to be <math|<math-ss|D><around*|(|F<around*|(|-|)>,<wide|H|^>|)><above|\<cong\>|?><math-ss|C><around*|(|-,G<around*|(|<wide|H|^>|)>|)>>.
+  If this relation holds, then <math|G<around*|(|<wide|H|^>|)>> represents
+  <math|H\<circ\>F>, and we say the representation of a representable
+  presheaf is preserved by functorial maps <math|F> and <math|G>.
 
-  Applying the previous analysis to copresheaf
-  <math|K:<math-ss|C>\<rightarrow\><math-ss|Set>>, which is represented by
+  Applying the previous analysis to a representable copresheaf
+  <math|K:<math-ss|C>\<rightarrow\><math-ss|Set>> which is represented by
   <math|<wide|K|^>\<in\><math-ss|C>>, we will find that the unique valid
-  statement of the problem is
+  statement of the problem is what is the condition for
+  <math|F<around*|(|<wide|K|^>|)>> to represent <math|K\<circ\>G>, that is,
 
   <\equation*>
-    <math-ss|D><around*|(|F<around*|(|<wide|K|^>|)>,\<ast\>|)><above|\<cong\>|?>K\<circ\>G,
+    <math-ss|D><around*|(|F<around*|(|<wide|K|^>|)>,\<ast\>|)><above|\<cong\>|?>K\<circ\>G.
   </equation*>
 
-  where <math|\<ast\>> is employed as placeholder. And again, since
+  (The <math|\<ast\>> is employed as placeholder.) And again, since
   <math|<wide|K|^>> represents <math|K>, it turns to be
   <math|<math-ss|D><around*|(|F<around*|(|<wide|K|^>|)>,\<ast\>|)><above|\<cong\>|?><math-ss|C><around*|(|<wide|K|^>,G<around*|(|\<ast\>|)>|)>>.
+  If this relation holds, then <math|F<around*|(|<wide|K|^>|)>> represents
+  <math|K\<circ\>G>, and we say the representation of a representable
+  copresheaf is preserved by functorial maps <math|F> and <math|G>.
 
-  Altogether, if representations of both presheaves and copresheaves are to
-  be preserved by functorial maps <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>
-  and <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>, then we should demand
+  Altogether, if representations of all representable presheaves and
+  copresheaves are to be preserved by functorial maps
+  <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
+  <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>, then we should demand
   <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<cong\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>,
   where <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>> and
   <math|<math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>> are bi-functors of
@@ -809,7 +816,7 @@
     <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
     <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> are
     <with|font-series|bold|adjoint>, denoted by <math|F\<dashv\>G>, if there
-    exists a natural isomorphsim <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
+    exists a natural isomorphism <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
     The <math|\<varphi\>> is called an <with|font-series|bold|adjunction>.<\footnote>
       In some texture, for instance MacLane, adjunction is defined as the
       triplet <math|<around*|(|F,G,\<varphi\>|)>>. However, the
@@ -825,7 +832,7 @@
     <label|figure: Adjoint> Indicates the natural isomorphism
     <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
     \PNatural in <math|X>\Q means varying the first variable, and \Pnatural
-    in <math|Y>\Q varies the second. The commuative diagrams have been
+    in <math|Y>\Q varies the second. The commutative diagrams have been
     rotated by <math|90<rsup|\<circ\>>> for convenience.
   </big-figure>
 
@@ -849,8 +856,8 @@
     </itemize>
   </theorem>
 
-  It is called adjunction because of the analogy to the adjunction in vector
-  space: two linear transformations <math|f> and <math|g> are adjoint if
+  It is called adjoint because of the analogy to the adjoint in vector space:
+  two linear transformations <math|f> and <math|g> are adjoint if
   <math|<around*|\<langle\>|f<around*|(|u|)>,v|\<rangle\>>=<around*|\<langle\>|u,g<around*|(|v|)>|\<rangle\>>>
   for each vectors <math|u> and <math|v>, where bracket indicates inner
   product.
@@ -884,7 +891,7 @@
   <with|font-shape|italic|the> <with|font-series|bold|right adjoint> of
   <math|F>.
 
-  <subsection|Unit and counit are universal elements>
+  <subsection|Unit and counit are universal>
 
   Recall the condition for being representable, lemma <reference|theorem:
   Universal Element>, that <math|G<around*|(|Y|)>> can represent
@@ -901,7 +908,7 @@
 
   The same, <math|F<around*|(|X|)>> can represent
   <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>> if and only if
-  <math|F<around*|(|X|)>>, eqiupped with <math|\<eta\><rsub|X>:X\<rightarrow\>G\<circ\>F<around*|(|X|)>>,
+  <math|F<around*|(|X|)>>, equipped with <math|\<eta\><rsub|X>:X\<rightarrow\>G\<circ\>F<around*|(|X|)>>,
   is a universal element of <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>>.
   That is, for each <math|Y\<in\><math-ss|D>>, and each
   <math|g:X\<rightarrow\>G<around*|(|Y|)>>, there exists a unique
@@ -1000,13 +1007,23 @@
     (or counit), and vice versa.
   </theorem>
 
-  <subsection|Universality is weaker than isomorphism>
+  In the end, let us see how adjoint functors preserve representation in an
+  explicit instance. We have known that limit represents cone functor, and
+  product is a limit. So, product is a representation. Figure
+  <reference|figure: Adjoint functors preserve product> illustrates how the
+  adjoint functors <math|F\<dashv\>G> preserve the product
+  <math|<around*|(|A\<times\>B,\<alpha\>,\<beta\>|)>>.
 
-  Let us see how adjunction preserves representation is an explicit instance.
-  We have known that limit represents cone functor, and product is a limit.
-  So, product is a representation.
-
-  TODO
+  <big-figure|<image|figures/adjoint-4.png|0.7par|||>|<label|figure: Adjoint
+  functors preserve product> Illustrates how the product is preserved by
+  adjoint functors <math|F\<dashv\>G>, where
+  <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
+  <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>. The red part indicates that
+  <math|A\<times\>B> is the product of <math|A> and <math|B> in
+  <math|<math-ss|D>>. The blue part indicates that
+  <math|\<varepsilon\><rsub|A\<times\>B>> is universal. By putting the red
+  and blue parts together, we find the relation
+  <math|f=F<around*|(|f<rsup|\<sharp\>>|)>\<circ\>\<varepsilon\><rsub|A\<times\>B>>.>
 
   <subsection|Free and forgetful functors are adjoint>
 
@@ -1143,14 +1160,13 @@
     <associate|auto-39|<tuple|12|12>>
     <associate|auto-4|<tuple|1.2|1>>
     <associate|auto-40|<tuple|13|13>>
-    <associate|auto-41|<tuple|5.4|13>>
-    <associate|auto-42|<tuple|5.5|14>>
-    <associate|auto-43|<tuple|5.6|14>>
+    <associate|auto-41|<tuple|14|13>>
+    <associate|auto-42|<tuple|5.4|14>>
+    <associate|auto-43|<tuple|5.5|14>>
     <associate|auto-44|<tuple|6|14>>
     <associate|auto-45|<tuple|6.1|14>>
     <associate|auto-46|<tuple|6.2|14>>
-    <associate|auto-47|<tuple|6.3|?>>
-    <associate|auto-48|<tuple|6.3|?>>
+    <associate|auto-47|<tuple|6.3|14>>
     <associate|auto-5|<tuple|1.3|1>>
     <associate|auto-6|<tuple|2|1>>
     <associate|auto-7|<tuple|2.1|1>>
@@ -1159,6 +1175,7 @@
     <associate|definition: Universal Element|<tuple|10|5>>
     <associate|figure: Adjoint|<tuple|10|11>>
     <associate|figure: Adjoint and Universal Element|<tuple|11|12>>
+    <associate|figure: Adjoint functors preserve product|<tuple|14|13>>
     <associate|figure: Colimit|<tuple|8|8>>
     <associate|figure: Cone|<tuple|5|7>>
     <associate|figure: Cone Functor|<tuple|6|7>>
@@ -1169,25 +1186,19 @@
     <associate|figure: Universal Element|<tuple|4|5>>
     <associate|figure: Yoneda functor is full|<tuple|3|4>>
     <associate|footnote-1|<tuple|1|1>>
-    <associate|footnote-10|<tuple|10|?>>
     <associate|footnote-2|<tuple|2|4>>
     <associate|footnote-3|<tuple|3|10>>
-    <associate|footnote-4|<tuple|4|?>>
-    <associate|footnote-5|<tuple|5|10>>
-    <associate|footnote-6|<tuple|6|11>>
-    <associate|footnote-7|<tuple|7|12>>
-    <associate|footnote-8|<tuple|8|12>>
-    <associate|footnote-9|<tuple|9|13>>
+    <associate|footnote-4|<tuple|4|10>>
+    <associate|footnote-5|<tuple|5|12>>
+    <associate|footnote-6|<tuple|6|12>>
+    <associate|footnote-7|<tuple|7|14>>
     <associate|footnr-1|<tuple|1|1>>
-    <associate|footnr-10|<tuple|10|?>>
     <associate|footnr-2|<tuple|7|4>>
-    <associate|footnr-3|<tuple|3|?>>
+    <associate|footnr-3|<tuple|3|10>>
     <associate|footnr-4|<tuple|4|10>>
-    <associate|footnr-5|<tuple|5|10>>
-    <associate|footnr-6|<tuple|1|11>>
-    <associate|footnr-7|<tuple|7|12>>
-    <associate|footnr-8|<tuple|8|12>>
-    <associate|footnr-9|<tuple|1|13>>
+    <associate|footnr-5|<tuple|5|12>>
+    <associate|footnr-6|<tuple|1|12>>
+    <associate|footnr-7|<tuple|7|14>>
     <associate|lemma: Yoneda Lemma|<tuple|7|4>>
     <associate|section: From Representability to Universality|<tuple|3|5>>
     <associate|section: Functor is representable if there exists universal
@@ -1255,7 +1266,7 @@
         <with|mode|<quote|math>|\<varphi\>:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
         \PNatural in <with|mode|<quote|math>|X>\Q means varying the first
         variable, and \Pnatural in <with|mode|<quote|math>|Y>\Q varies the
-        second. The commuative diagrams have been rotated by
+        second. The commutative diagrams have been rotated by
         <with|mode|<quote|math>|90<rsup|\<circ\>>> for convenience.
       </surround>|<pageref|auto-35>>
 
@@ -1270,6 +1281,18 @@
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|13>||Indicates
       universal morphism.>|<pageref|auto-40>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|14>|| Illustrates how
+      the product is preserved by adjoint functors
+      <with|mode|<quote|math>|F\<dashv\>G>, where
+      <with|mode|<quote|math>|F:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>
+      and <with|mode|<quote|math>|G:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>>.
+      The red part indicates that <with|mode|<quote|math>|A\<times\>B> is the
+      product of <with|mode|<quote|math>|A> and <with|mode|<quote|math>|B> in
+      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>.
+      The blue part indicates that <with|mode|<quote|math>|\<varepsilon\><rsub|A\<times\>B>>
+      is universal. By putting the red and blue parts together, we find the
+      relation <with|mode|<quote|math>|f=F<around*|(|f<rsup|\<sharp\>>|)>\<circ\>\<varepsilon\><rsub|A\<times\>B>>.>|<pageref|auto-41>>
     </associate>
     <\associate|toc>
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Representation>
@@ -1371,8 +1394,9 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-33><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|5.1<space|2spc>Adjoint functors represents
-      each other <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|5.1<space|2spc>Adjoint functors preserve
+      representations of presheaves and copresheaves
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-34>>
 
       <with|par-left|<quote|1tab>|5.2<space|2spc>Adjoint is unique
@@ -1380,33 +1404,33 @@
       <no-break><pageref|auto-36>>
 
       <with|par-left|<quote|1tab>|5.3<space|2spc>Unit and counit are
-      universal elements <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      universal morphisms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37>>
 
       <with|par-left|<quote|1tab>|5.4<space|2spc>Free and forgetful functors
       are adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-41>>
+      <no-break><pageref|auto-42>>
 
       <with|par-left|<quote|1tab>|5.5<space|2spc>Product-hom adjunction
       implies currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42>>
+      <no-break><pageref|auto-43>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Summary>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-43><vspace|0.5fn>
+      <no-break><pageref|auto-44><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|6.1<space|2spc>Embedding in the framework
       of category theory is the right way to extend category theory
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-44>>
+      <no-break><pageref|auto-45>>
 
       <with|par-left|<quote|1tab>|6.2<space|2spc>\PTypes\Q help to restrict
       the possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-45>>
+      <no-break><pageref|auto-46>>
 
       <with|par-left|<quote|1tab>|6.3<space|2spc>\PTypes\Q help check the
       correctness of derivation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-46>>
+      <no-break><pageref|auto-47>>
     </associate>
   </collection>
 </auxiliary>

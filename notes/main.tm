@@ -233,18 +233,14 @@
     <no-break><pageref|auto-72>>
 
     <with|par-left|1tab|3.5.3<space|2spc>Unit and counit are universal
-    elements <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-73>>
 
-    <with|par-left|1tab|3.5.4<space|2spc>Universality is weaker than
-    isomorphism <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-77>>
-
-    <with|par-left|1tab|3.5.5<space|2spc>Free and forgetful functors are
+    <with|par-left|1tab|3.5.4<space|2spc>Free and forgetful functors are
     adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-78>>
 
-    <with|par-left|1tab|3.5.6<space|2spc>Product-hom adjunction implies
+    <with|par-left|1tab|3.5.5<space|2spc>Product-hom adjunction implies
     currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-79>>
 
@@ -354,14 +350,14 @@
     <associate|auto-74|<tuple|3.11|25|Representation.tm>>
     <associate|auto-75|<tuple|3.12|26|Representation.tm>>
     <associate|auto-76|<tuple|3.13|26|Representation.tm>>
-    <associate|auto-77|<tuple|3.5.4|26|Representation.tm>>
-    <associate|auto-78|<tuple|3.5.5|27|Representation.tm>>
-    <associate|auto-79|<tuple|3.5.6|27|Representation.tm>>
+    <associate|auto-77|<tuple|3.14|27|Representation.tm>>
+    <associate|auto-78|<tuple|3.5.4|27|Representation.tm>>
+    <associate|auto-79|<tuple|3.5.5|27|Representation.tm>>
     <associate|auto-8|<tuple|2.1|5|Category.tm>>
-    <associate|auto-80|<tuple|3.6|27|Representation.tm>>
-    <associate|auto-81|<tuple|3.6.1|27|Representation.tm>>
-    <associate|auto-82|<tuple|3.6.2|27|Representation.tm>>
-    <associate|auto-83|<tuple|3.6.3|27|Representation.tm>>
+    <associate|auto-80|<tuple|3.6|28|Representation.tm>>
+    <associate|auto-81|<tuple|3.6.1|28|Representation.tm>>
+    <associate|auto-82|<tuple|3.6.2|28|Representation.tm>>
+    <associate|auto-83|<tuple|3.6.3|28|Representation.tm>>
     <associate|auto-9|<tuple|2.1.1|5|Category.tm>>
     <associate|chapter: Category, Functor, and Natural
     Transformation|<tuple|2|5|Category.tm>>
@@ -375,6 +371,8 @@
     <associate|figure: Adjoint|<tuple|3.10|24|Representation.tm>>
     <associate|figure: Adjoint and Universal
     Element|<tuple|3.11|25|Representation.tm>>
+    <associate|figure: Adjoint functors preserve
+    product|<tuple|3.14|27|Representation.tm>>
     <associate|figure: Colimit|<tuple|3.8|22|Representation.tm>>
     <associate|figure: Cone|<tuple|3.5|21|Representation.tm>>
     <associate|figure: Cone Functor|<tuple|3.6|21|Representation.tm>>
@@ -500,7 +498,7 @@
         <with|mode|<quote|math>|\<varphi\>:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
         \PNatural in <with|mode|<quote|math>|X>\Q means varying the first
         variable, and \Pnatural in <with|mode|<quote|math>|Y>\Q varies the
-        second. The commuative diagrams have been rotated by
+        second. The commutative diagrams have been rotated by
         <with|mode|<quote|math>|90<rsup|\<circ\>>> for convenience.
       </surround>|<pageref|auto-71>>
 
@@ -515,6 +513,18 @@
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.13>||Indicates
       universal morphism.>|<pageref|auto-76>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|3.14>|| Illustrates how
+      the product is preserved by adjoint functors
+      <with|mode|<quote|math>|F\<dashv\>G>, where
+      <with|mode|<quote|math>|F:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>
+      and <with|mode|<quote|math>|G:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>>.
+      The red part indicates that <with|mode|<quote|math>|A\<times\>B> is the
+      product of <with|mode|<quote|math>|A> and <with|mode|<quote|math>|B> in
+      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>.
+      The blue part indicates that <with|mode|<quote|math>|\<varepsilon\><rsub|A\<times\>B>>
+      is universal. By putting the red and blue parts together, we find the
+      relation <with|mode|<quote|math>|f=F<around*|(|f<rsup|\<sharp\>>|)>\<circ\>\<varepsilon\><rsub|A\<times\>B>>.>|<pageref|auto-77>>
     </associate>
     <\associate|parts>
       <tuple|Preface.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
@@ -762,18 +772,14 @@
       <no-break><pageref|auto-72>>
 
       <with|par-left|<quote|1tab>|3.5.3<space|2spc>Unit and counit are
-      universal elements <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      universal <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-73>>
 
-      <with|par-left|<quote|1tab>|3.5.4<space|2spc>Universality is weaker
-      than isomorphism <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-77>>
-
-      <with|par-left|<quote|1tab>|3.5.5<space|2spc>Free and forgetful
+      <with|par-left|<quote|1tab>|3.5.4<space|2spc>Free and forgetful
       functors are adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-78>>
 
-      <with|par-left|<quote|1tab>|3.5.6<space|2spc>Product-hom adjunction
+      <with|par-left|<quote|1tab>|3.5.5<space|2spc>Product-hom adjunction
       implies currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-79>>
 
