@@ -801,12 +801,13 @@
   quite familiar to us.
 
   It also implies that natural isomorphism has two parts: \Pnatural\Q and
-  \Pismorphism\Q. Naturality means figure <reference|figure: Natural
-  Transformation> commutes; isomorphism means there is an isomorphism between
-  <math|F<around*|(|X|)>> and <math|G<around*|(|X|)>> for each
-  <math|X\<in\><math-ss|C>>. So, there is another way of saying that there is
-  a natural isomorphism between <math|F> and <math|G>, that is,
-  \P<math|F<around*|(|X|)>\<cong\>G<around*|(|X|)>> natural in <math|X>\Q.
+  \Pismorphism\Q. Isomorphism means <math|F<around*|(|X|)>\<cong\>G<around*|(|X|)>>
+  for each <math|X\<in\><math-ss|C>> (recall that the <math|\<cong\>> between
+  objects indicates an isomorphism); and naturality means figure
+  <reference|figure: Natural Transformation> commutes. So, there is another
+  way of saying that there is a natural isomorphism between <math|F> and
+  <math|G>, that is, \P<math|F<around*|(|X|)>\<cong\>G<around*|(|X|)>>
+  natural in <math|X>\Q.
 
   <subsection|Isomorphic objects should be viewed as one>
 

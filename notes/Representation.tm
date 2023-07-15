@@ -355,8 +355,8 @@
   at the destination by proving that Yoneda functor is injective (on objects)
   and fully faithful. So, indeed, all is arrow, including object.
 
-  <section|From Representability to Universality><label|section: From
-  Representability to Universality>
+  <section|Universality><label|section: From Representability to
+  Universality>
 
   <subsection|Functor is representable if there exists universal
   element><label|section: Functor is representable if there exists universal
@@ -383,7 +383,24 @@
   <math|\<psi\>:<math-ss|C><around*|(|-,<wide|F|^>|)>\<rightarrow\>F>, for
   which we say the presheaf (functor of \Ptype\Q
   <math|<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>) <math|F> is
-  <with|font-series|bold|represented> by the object <math|<wide|F|^>>.
+  <with|font-series|bold|representable> and is
+  <with|font-series|bold|represented> by the object <math|<wide|F|^>>
+  <\footnote>
+    <\warning>
+      [Ambiguous \PRepresentable\Q] You should carefully distinguish,
+      depending on the context, the meaning of \Prepesentable\Q in the words
+      \P<math|F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>> is a
+      representable functor\Q. On one hand, it may indicate <math|F> can be
+      represented by an object <math|<wide|F|^>>, so that
+      <math|F\<cong\><math-ss|C><around*|(|-,<wide|F|^>|)>>. On the other
+      hand, it may also indicate <math|F> itself is a \Prepresentable
+      functor\Q (two words together as a noun), that is,
+      <math|F=<math-ss|C><around*|(|-,X|)>> for some
+      <math|X\<in\><math-ss|C>>. The problem raises from the confusing name
+      \Prepresentable functor\Q: a representable functor is representable,
+      while not every functor that is representable is representable functor!
+    </warning>
+  </footnote>.
 
   So, suppose that there exists <math|<wide|F|^>\<in\><math-ss|C>> and
   natural isomorphism <math|\<psi\>:<math-ss|C><around*|(|-,<wide|F|^>|)>\<rightarrow\>F>,
@@ -441,296 +458,6 @@
   is unique up to isomorphism. With this, we can say the object
   <math|<wide|F|^>> is <with|font-shape|italic|the>
   <with|font-series|bold|representation> of the functor <math|F>.
-
-  <section|Cone and Limit>
-
-  In this section, we discuss an important application of universal element
-  or representation: limit. We are to show that limit is a representation of
-  a functor that generates objects called cones.
-
-  Now, the problem turns to be why cones are important. Because many
-  important mathematical concepts are turn out to be cones. Remember in
-  chapter <reference|chapter: Category, Functor, and Natural Transformation>,
-  we have embedded some concepts in the framework of category theory, such as
-  supremum and infimum, Cartesian product and adjoint union. These concepts,
-  once re-written by arrows, looks weird. You may wonder where these weird
-  stuffs come from. In fact, they come from cones.
-
-  So, let us introduce the cone.
-
-  <subsection|Diagram as a part of category is a functor>
-
-  When we were discussing category, functor, and natural transformation, we
-  used the metaphor that a category is a collection of diagrams. Well, what
-  is a diagram precisely? Naturally, a diagram is a part of a category, say
-  <math|<math-ss|C>>. By part, we indicates two aspects: the set of dots
-  (objects) in a diagram is a subset of the <math|ob<rsub|<math-ss|C>>>, and
-  the set of arrows (morphisms) between dots <math|X> and <math|Y> is a
-  subset of the <math|<math-ss|C><around*|(|X,Y|)>>.
-
-  Remind that, in category theory, everything should be described by arrows.
-  So, how to describe a diagram by arrows?
-
-  Let us consider a simpler case: set theory, where a part simply means a
-  finite subset. Such a subset of set <math|S> is written as
-  <math|A\<assign\><around*|{|x<rsub|1>,\<ldots\>,x<rsub|n>|}>>, where
-  <math|x<rsub|i>\<in\>S>. A set corresponds to a discrete category, and a
-  function between sets to a functor between discrete categories. (A discrete
-  category <math|<math-ss|C>> is that with
-  <math|<math-ss|C><around*|(|X,X|)>=<around*|{|1<rsub|X>|}>> and
-  <math|<math-ss|C><around*|(|X,Y|)>=\<varnothing\>> for each
-  <math|X,Y\<in\><math-ss|C>>.) So, we are to describe <math|A> by function.
-  A natural one is <math|f:I\<rightarrow\>S>, where
-  <math|I\<assign\><around*|{|1,\<ldots\>,n|}>> as an \Pindexing set\Q, and
-  <math|f<around*|(|i|)>\<assign\>x<rsub|i>>.
-
-  Back to category theory, the indexing set analyzes to a small category
-  <math|<math-ss|I>> called indexing category, and the function <math|f>
-  analyzes to functor <math|F:<math-ss|I>\<rightarrow\><math-ss|C>>. Indexing
-  category is used for filtering the objects and morphisms in
-  <math|<math-ss|C>>, so that the image is a part of <math|<math-ss|C>>, that
-  is, a diagram. We summarize the previous analysis as follow.
-
-  <\definition>
-    [Diagram] Let <math|<math-ss|I>> a small category and <math|<math-ss|C>>
-    a category. An <math|<math-ss|I>>-shaped <with|font-series|bold|diagram>
-    in <math|<math-ss|C>> is a functor <math|F:<math-ss|I>\<rightarrow\><math-ss|C>>.
-    It is small or locally small if <math|<math-ss|C>> is small or locally
-    small respectively.
-  </definition>
-
-  <subsection|Cone irradiates diagram>
-
-  With diagram declared, we come to cone. A light cone generated by a table
-  lamp irradiates the table. The table lamp is an object, and the table is a
-  diagram. So, a cone irradiates a diagram.
-
-  But, how can we describe the relation between an object and a diagram,
-  which is a functor? To make this possible, we have to make the most boring
-  definition so far: the constant functor. Constant functor converts an
-  object to a functor.
-
-  <\definition>
-    [Constant Functor] Let <math|<math-ss|C>> and <math|<math-ss|D>>
-    categories. For each <math|X\<in\><math-ss|D>>, the
-    <with|font-series|bold|constant functor> of <math|X>,
-    <math|Const<rsub|X>:<math-ss|C>\<rightarrow\><math-ss|D>>, is defined by
-
-    <\itemize>
-      <item>for each <math|A\<in\><math-ss|C>>,
-      <math|Const<rsub|X><around*|(|A|)>=X>, and
-
-      <item>for each <math|f:A\<rightarrow\>B>,
-      <math|Const<rsub|X><around*|(|f|)>=1<rsub|X>>.
-    </itemize>
-  </definition>
-
-  With this trivial definition, we can describe the relation between an
-  object, or its constant functor, and a diagram.
-
-  <\definition>
-    [Cone] For each diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>> and
-    each object <math|X\<in\><math-ss|C>>, a cone from <math|X> to <math|D>
-    is a natural transformation <math|\<lambda\>:Const<rsub|X>\<rightarrow\>D>.
-  </definition>
-
-  <big-figure|<image|figures/cone.png|0.75par|||>|<label|figure: Cone> The
-  left hand side indicates the indexing category <math|<math-ss|I>>. And the
-  right hand side indicates the cone from <math|X> to <math|D>. The green
-  arrows are for functor <math|Const<rsub|X>>, and the red ones for functor
-  <math|D>, wherein maps on morphisms are not shown. As usual, identities are
-  hidden. Since the <math|\<lambda\>> is a natural transformation, the right
-  hand side commutes.>
-
-  <subsection|Cone functor generates cones>
-
-  Notice a cone consists two parts: the diagram and the summit object. Given
-  a diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>> and a summit object
-  <math|X\<in\><math-ss|C>>, the natural transformation
-  <math|\<lambda\>:Const<rsub|X>\<rightarrow\>D> is not unique. There can be
-  a plenty of such natural transformations, depending on how many morphisms
-  there are between objects in <math|<math-ss|C>>. We can collect these
-  natural transformations together as a set, <math|Cone<around*|(|X,D|)>>.
-
-  For the set of morphisms from <math|X> to <math|Y>,
-  <math|<math-ss|C><around*|(|X,Y|)>>, we constructed a functor
-  <math|<math-ss|C><around*|(|-,Y|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>.
-  The same goes for <math|Cone<around*|(|X,D|)>>. We can construct a functor
-  <math|Cone<around*|(|-,D|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>.
-  Naturally, it maps <math|X\<in\><math-ss|C>> to
-  <math|Cone<around*|(|X,D|)>>, but what about the morphism, say
-  <math|f:Y\<rightarrow\>X>? Consider a cone
-  <math|\<lambda\>\<in\>Cone<around*|(|X,D|)>>, which is a natural
-  transformation from <math|Const<rsub|X>:<math-ss|I>\<rightarrow\><math-ss|C>>
-  to <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>. A component
-  <math|\<lambda\><rsub|A>:X\<rightarrow\>D<around*|(|A|)>>. To construct a
-  morphism <math|Y\<rightarrow\>D<around*|(|A|)>> out of
-  <math|\<lambda\><rsub|A>> and <math|f>, the only possibility is
-  <math|Y<above|\<rightarrow\>|f>X<above|\<rightarrow\>|\<lambda\><rsub|A>>D<around*|(|A|)>>,
-  that is <math|\<lambda\><rsub|A>\<circ\>f>.
-
-  <\definition>
-    [Cone Functor] For each diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>,
-    the <with|font-series|bold|cone functor>
-    <math|Cone<around*|(|-,D|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
-    is defined by
-
-    <\itemize>
-      <item>for each <math|X\<in\><math-ss|C>>, mapping <math|X> to
-      <math|Cone<around*|(|X,D|)>>, the set of all cones from <math|X> to
-      <math|D>, and
-
-      <item>for each <math|f:Y\<rightarrow\>X>, mapping <math|f> to function
-      <math|f<rsup|\<ast\>>:Cone<around*|(|X,D|)>\<rightarrow\>Cone<around*|(|Y,D|)>>
-      defined by <math|f<rsup|\<ast\>><around*|(|\<lambda\><rsub|A>|)>=\<lambda\><rsub|A>\<circ\>f>
-      for each component <math|\<lambda\><rsub|A>>. (See also figure
-      <reference|figure: Cone Functor>.)
-    </itemize>
-  </definition>
-
-  <big-figure|<image|figures/cone-1.png|0.5par|||>|<label|figure: Cone
-  Functor> Indicates the map on <math|f>. As an instance, the indexing
-  category <math|<math-ss|I>> is simply <math|A<above|\<rightarrow\>|g>B>.>
-
-  <subsection|Limit is the representation of cone functor>
-
-  As discussed in section <reference|section: From Representability to
-  Universality>, for a locally small category <math|<math-ss|C>>, a functor
-  <math|F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>> can be represented
-  by an object in <math|<math-ss|C>>, if universal element exists. Given a
-  diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>> where
-  <math|<math-ss|C>> is locally small (or say, a locally small diagram), a
-  cone functor <math|Cone<around*|(|-,D|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
-  thus can be represented by an object in <math|<math-ss|C>>, which we call
-  the limit of <math|D>, if universal cone exists.
-
-  Let us restate the universal element for cone functor, which is the
-  universal cone. We copy definition <reference|definition: Universal
-  Element> to here, with some replacement for cone functor.
-
-  <\definition>
-    [Universal Cone] For a locally small diagram
-    <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>, a
-    <with|font-series|bold|universal cone> is a pair
-    <math|><math|<around*|(|lim<rsub|<math-ss|I>>D,e|)>> where <math|lim
-    D\<in\><math-ss|C>> and <math|e\<in\>Cone<around*|(|lim<rsub|<math-ss|I>>D,D|)>>
-    such that for each <math|X\<in\><math-ss|C>> and
-    <math|\<lambda\>\<in\>Cone<around*|(|X,D|)>>, there is a unique morphism
-    <math|f:X\<rightarrow\>lim<rsub|<math-ss|I>>D> such that
-    <math|\<lambda\>=f<rsup|\<ast\>><around*|(|e|)>>. The
-    <math|lim<rsub|<math-ss|I>>D> is called the <with|font-series|bold|limit>
-    of <math|D>. (See also figure <reference|figure: Limit>.)
-  </definition>
-
-  <big-figure|<image|figures/limit.png|0.5par|||>|<label|figure: Limit>
-  Indicates the limit. The dash arrow is for implication. As an instance, the
-  indexing category <math|<math-ss|I>> is simply
-  <math|A<above|\<rightarrow\>|g>B>.>
-
-  As figure <reference|figure: Limit> indicates, the limit is the lowest
-  object towards (the image of) the diagram. So, a limit is the closest
-  object to the diagram, thus literally a limit.
-
-  The dual limit is colimit, by simply exchanging domain and codomain in
-  limit. As figure <reference|figure: Colimit> shows.
-
-  \ <big-figure|<image|figures/colimit.png|0.5par|||>|<label|figure: Colimit>
-  Indicates the colimit. The dash arrow is for implication. As an instance,
-  the indexing category <math|<math-ss|I>> is simply
-  <math|A<above|\<rightarrow\>|g>B>.>
-
-  Since representation of a functor, if exists, is unique up to isomorphism,
-  the limit and colimit, which are representation of the cone and cocone
-  functor respectively, are unique up to isomorphism.
-
-  <\theorem>
-    [Limit (Colimit) is Unique] The limit (colimit) of a locally small
-    diagram is unique up to isomorphism.
-  </theorem>
-
-  <subsection|Infimum is a limit on poset <math|\<bbb-R\>>>
-
-  In section <reference|section: Supremum and infimum are dual>, we roughly
-  showed what infimum would be like in the framework of category theory.
-  Here, we make it more precise. Recalling the definition of poset (see
-  definition <reference|definition: Poset>), the field <math|\<bbb-R\>> forms
-  a poset by preorder <math|\<leqslant\>>. So, it forms a poset category
-  <math|<math-ss|Poset>>, with object a real number and morphism
-  <math|x\<rightarrow\>y> if <math|x\<leqslant\>y>. Consider an indexing
-  category <math|<math-ss|I>> as the poset
-  <math|<around*|(|A,\<leqslant\>|)>> where <math|A\<subset\>\<bbb-R\>>.
-  Diagram <math|D:<math-ss|I>\<rightarrow\>\<bbb-R\>> is defined by
-  <math|D<around*|(|x|)>\<assign\>x> for each <math|x\<in\>\<bbb-R\>>. So,
-  <math|lim<rsub|<math-ss|I>>D> has the property that, for each
-  <math|x\<in\>\<bbb-R\>> and <math|a\<in\>A>, if
-  <math|x\<leqslant\>D<around*|(|a|)>>, then
-  <math|x\<leqslant\>lim<rsub|<math-ss|I>>D\<leqslant\>D<around*|(|a|)>>.
-  This means <math|lim<rsub|<math-ss|I>>D> is the infimum of the set
-  <math|A>. So, infimum is a universal cone, or a limit, on poset category.
-
-  Since limit, or generally representation, is unique up to isomorphism,
-  infimum and supremum of a subset of <math|\<bbb-R\>> is unique. (Recall
-  that the only isomorphism in poset <math|\<bbb-R\>> is
-  <math|x\<leqslant\>x> for each <math|x\<in\>\<bbb-R\>>.)
-
-  The same goes for its dual, supremum. If we flip the arrows in the
-  definitions of limit, we get the dual, colimit . So, directly, we find
-  supremum is the colimit on <math|<math-ss|Poset>>.
-
-  <subsection|Product is a limit with discrete indexing category>
-
-  In section <reference|section: Arrows generalize concepts and theorems from
-  one area to every area in mathematics>, we showed what Cartesian product
-  would be like in the framework of category theory. Let <math|<math-ss|C>> a
-  category. For any <math|A,B\<in\><math-ss|C>>, the product of <math|A> and
-  <math|B> is another object <math|C\<in\><math-ss|C>> together with two
-  morphisms <math|\<alpha\>:C\<rightarrow\>A> and
-  <math|\<beta\>:C\<rightarrow\>B> such that, for any
-  <math|C<rprime|'>\<in\><math-ss|C>>, any
-  <math|\<alpha\><rprime|'>:C<rprime|'>\<rightarrow\>A> and
-  <math|\<beta\><rprime|'>:C<rprime|'>\<rightarrow\>B>, there exists a unique
-  morphism <math|\<gamma\>:C<rprime|'>\<rightarrow\>C> so that
-  <math|\<alpha\><rprime|'>=\<alpha\>\<circ\>\<gamma\>> and
-  <math|\<beta\><rprime|'>=\<beta\>\<circ\>\<gamma\>>. If we convert this
-  statement to commutative diagram (figure <reference|figure: Product is
-  Limit>), then it is apparent that product is a limit, in which the discrete
-  category with two elements is the indexing category.
-
-  <big-figure|<image|figures/limit-1.png|0.75par|||>|<label|figure: Product
-  is Limit> Indicates that product is a limit. The left hand side is the
-  indexing category. There is no morphism (except the hidden identities)
-  since it is a discrete category. The name of the object is irrelevant, so
-  the two objects are shown as dots. The right hand side is the commutative
-  diagram for the definition of product. The green arrows is for the constant
-  functor, and red arrows for the diagram functor.>
-
-  Again, since representation of a functor is unique up to isomorphism. The
-  product is unique up to isomorphism. Recall that we have proved the
-  uniqueness before. Now, the proof is apparent on its own.
-
-  The same goes for coproduct (definition <reference|definition: Coproduct of
-  Two Objects>).
-
-  <subsection|Limit is everywhere in mathematics>
-
-  Lots of very interesting instances can be found in the <hlink|wonderful
-  blog|https://www.math3ma.com/blog/limits-and-colimits-part-3> posted by
-  Tai-Danae Bradley. The definition of diagram
-  <math|D:<math-ss|I>\<rightarrow\><math-ss|C>> depends on two categories:
-  the indexing category <math|<math-ss|I>> and the target category
-  <math|<math-ss|C>>. By providing a concrete <math|<math-ss|I>>, we can
-  construct lots of families of limits. For instance, families named
-  \Pterminal object\Q, \Ppullback\Q, and \Pequilizer\Q. \ And for each family
-  of limits, by applying to a concrete <math|<math-ss|C>>, we obtain a
-  mathematical concept. For instance, applying poset <math|\<bbb-N\>> to
-  pullback furnishes greatest common divisor of integers. This is how
-  mathematical concepts are built and organized by limit.
-
-  Why limit is everywhere in mathematics? The reason may come from its
-  pattern. Limit has the generic pattern:
-  \P<math|\<forall\>\<cdots\>\<exists\>!\<cdots\>\<Rightarrow\>\<cdots\>>\Q.
-  This is the general pattern of first-order logic. So, an educated guess is
-  that limit is everywhere since first-order logic is everywhere.
 
   <section|Adjunction>
 
@@ -797,8 +524,20 @@
   <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>, then we should demand
   <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<cong\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>,
   where <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>> and
-  <math|<math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>> are bi-functors of
-  the \Ptype\Q <math|<math-ss|C><rsup|op>\<times\><math-ss|D>\<rightarrow\><math-ss|Set>>.
+  <math|<math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>> are bi-functors
+  <\footnote>
+    <with|font-series|bold|Bi-functor> is a functor with two variables, like
+    a function with two variables, say <math|f<around*|(|x,y|)>>. As a
+    function, <math|f<around*|(|x,y|)>> is reduced to a function of single
+    variable, <math|f<rsub|y><around*|(|x|)>>, when <math|y> is given. The
+    same goes for a bi-functor <math|F<around*|(|-,\<ast\>|)>>. Given an
+    object <math|Y>, <math|F<around*|(|-,Y|)>> is reduced to the single
+    variable functor that we have been familiar with,
+    <math|F<rsub|Y><around*|(|-|)>>. The functoriality of
+    <math|F<around*|(|-,\<ast\>|)>>, which preserves the structure of
+    category, is satisfied in the sense of <math|F<rsub|Y><around*|(|-|)>>
+    for each <math|Y>.
+  </footnote> of the \Ptype\Q <math|<math-ss|C><rsup|op>\<times\><math-ss|D>\<rightarrow\><math-ss|Set>>.
   This indicates a double-index component
 
   <\equation*>
@@ -860,10 +599,10 @@
   </theorem>
 
   It is called adjoint because of the analogy to the adjoint in vector space:
-  two linear transformations <math|f> and <math|g> are adjoint if
-  <math|<around*|\<langle\>|f<around*|(|u|)>,v|\<rangle\>>=<around*|\<langle\>|u,g<around*|(|v|)>|\<rangle\>>>
-  for each vectors <math|u> and <math|v>, where bracket indicates inner
-  product.
+  two linear transformations <math|T> and <math|T<rsup|\<ast\>>> are adjoint
+  if <math|<around*|\<langle\>|T<rsup|\<ast\>>u,v|\<rangle\>>=<around*|\<langle\>|u,T
+  v|\<rangle\>>> for each vectors <math|u> and <math|v>, where bracket
+  indicates inner product.
 
   <subsection|Adjoint is unique>
 
@@ -1010,24 +749,6 @@
     (or counit), and vice versa.
   </theorem>
 
-  In the end, let us see how adjoint functors preserve representation in an
-  explicit instance. We have known that limit represents cone functor, and
-  product is a limit. So, product is a representation. Figure
-  <reference|figure: Adjoint functors preserve product> illustrates how the
-  adjoint functors <math|F\<dashv\>G> preserve the product
-  <math|<around*|(|A\<times\>B,\<alpha\>,\<beta\>|)>>.
-
-  <big-figure|<image|figures/adjoint-4.png|0.7par|||>|<label|figure: Adjoint
-  functors preserve product> Illustrates how the product is preserved by
-  adjoint functors <math|F\<dashv\>G>, where
-  <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
-  <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>. The red part indicates that
-  <math|A\<times\>B> is the product of <math|A> and <math|B> in
-  <math|<math-ss|D>>. The blue part indicates that
-  <math|\<varepsilon\><rsub|A\<times\>B>> is universal. By putting the red
-  and blue parts together, we find the relation
-  <math|f=F<around*|(|f<rsup|\<sharp\>>|)>\<circ\>\<varepsilon\><rsub|A\<times\>B>>.>
-
   <subsection|Free and forgetful functors are adjoint>
 
   A vector space is a set equipped with some extra structure. The same goes
@@ -1132,9 +853,9 @@
     <associate|auto-10|<tuple|2.3|2>>
     <associate|auto-11|<tuple|2|3>>
     <associate|auto-12|<tuple|2.4|3>>
-    <associate|auto-13|<tuple|2.5|4>>
+    <associate|auto-13|<tuple|2.5|3>>
     <associate|auto-14|<tuple|3|4>>
-    <associate|auto-15|<tuple|2.6|5>>
+    <associate|auto-15|<tuple|2.6|4>>
     <associate|auto-16|<tuple|3|5>>
     <associate|auto-17|<tuple|3.1|5>>
     <associate|auto-18|<tuple|4|5>>
@@ -1142,73 +863,59 @@
     <associate|auto-2|<tuple|1|1>>
     <associate|auto-20|<tuple|4|6>>
     <associate|auto-21|<tuple|4.1|6>>
-    <associate|auto-22|<tuple|4.2|6>>
-    <associate|auto-23|<tuple|5|7>>
+    <associate|auto-22|<tuple|5|7>>
+    <associate|auto-23|<tuple|4.2|7>>
     <associate|auto-24|<tuple|4.3|7>>
-    <associate|auto-25|<tuple|6|7>>
-    <associate|auto-26|<tuple|4.4|8>>
-    <associate|auto-27|<tuple|7|8>>
-    <associate|auto-28|<tuple|8|8>>
+    <associate|auto-25|<tuple|6|8>>
+    <associate|auto-26|<tuple|7|8>>
+    <associate|auto-27|<tuple|8|9>>
+    <associate|auto-28|<tuple|4.4|9>>
     <associate|auto-29|<tuple|4.5|9>>
     <associate|auto-3|<tuple|1.1|1>>
-    <associate|auto-30|<tuple|4.6|9>>
-    <associate|auto-31|<tuple|9|9>>
-    <associate|auto-32|<tuple|4.7|9>>
-    <associate|auto-33|<tuple|5|10>>
-    <associate|auto-34|<tuple|5.1|10>>
-    <associate|auto-35|<tuple|10|11>>
-    <associate|auto-36|<tuple|5.2|11>>
-    <associate|auto-37|<tuple|5.3|11>>
-    <associate|auto-38|<tuple|11|12>>
-    <associate|auto-39|<tuple|12|12>>
+    <associate|auto-30|<tuple|5|10>>
+    <associate|auto-31|<tuple|5.1|10>>
+    <associate|auto-32|<tuple|5.2|10>>
+    <associate|auto-33|<tuple|5.3|10>>
+    <associate|auto-34|<tuple|5.3|10>>
     <associate|auto-4|<tuple|1.2|1>>
-    <associate|auto-40|<tuple|13|13>>
-    <associate|auto-41|<tuple|14|13>>
-    <associate|auto-42|<tuple|5.4|14>>
-    <associate|auto-43|<tuple|5.5|14>>
-    <associate|auto-44|<tuple|6|14>>
-    <associate|auto-45|<tuple|6.1|14>>
-    <associate|auto-46|<tuple|6.2|14>>
-    <associate|auto-47|<tuple|6.3|14>>
     <associate|auto-5|<tuple|1.3|1>>
     <associate|auto-6|<tuple|2|1>>
     <associate|auto-7|<tuple|2.1|1>>
     <associate|auto-8|<tuple|2.2|1>>
     <associate|auto-9|<tuple|1|2>>
-    <associate|definition: Universal Element|<tuple|10|5>>
-    <associate|figure: Adjoint|<tuple|10|11>>
-    <associate|figure: Adjoint and Universal Element|<tuple|11|12>>
-    <associate|figure: Adjoint functors preserve product|<tuple|14|13>>
-    <associate|figure: Colimit|<tuple|8|8>>
-    <associate|figure: Cone|<tuple|5|7>>
-    <associate|figure: Cone Functor|<tuple|6|7>>
-    <associate|figure: Limit|<tuple|7|8>>
-    <associate|figure: Product is Limit|<tuple|9|9>>
+    <associate|definition: Universal Element|<tuple|11|5>>
+    <associate|figure: Adjoint|<tuple|5|7>>
+    <associate|figure: Adjoint and Universal Element|<tuple|6|8>>
+    <associate|figure: Adjoint functors preserve product|<tuple|9|9>>
     <associate|figure: Representable Functor|<tuple|1|2>>
     <associate|figure: The f_* is Natural Transformation|<tuple|2|3>>
     <associate|figure: Universal Element|<tuple|4|5>>
     <associate|figure: Yoneda functor is full|<tuple|3|4>>
     <associate|footnote-1|<tuple|1|1>>
     <associate|footnote-2|<tuple|2|4>>
-    <associate|footnote-3|<tuple|3|10>>
-    <associate|footnote-4|<tuple|4|10>>
-    <associate|footnote-5|<tuple|5|12>>
-    <associate|footnote-6|<tuple|6|12>>
-    <associate|footnote-7|<tuple|7|14>>
+    <associate|footnote-3|<tuple|3|5>>
+    <associate|footnote-4|<tuple|4|6>>
+    <associate|footnote-5|<tuple|5|6>>
+    <associate|footnote-6|<tuple|6|7>>
+    <associate|footnote-7|<tuple|7|8>>
+    <associate|footnote-8|<tuple|8|8>>
+    <associate|footnote-9|<tuple|9|10>>
     <associate|footnr-1|<tuple|1|1>>
     <associate|footnr-2|<tuple|7|4>>
-    <associate|footnr-3|<tuple|3|10>>
-    <associate|footnr-4|<tuple|4|10>>
-    <associate|footnr-5|<tuple|5|12>>
-    <associate|footnr-6|<tuple|1|12>>
-    <associate|footnr-7|<tuple|7|14>>
+    <associate|footnr-3|<tuple|10|5>>
+    <associate|footnr-4|<tuple|4|6>>
+    <associate|footnr-5|<tuple|5|6>>
+    <associate|footnr-6|<tuple|6|7>>
+    <associate|footnr-7|<tuple|7|8>>
+    <associate|footnr-8|<tuple|1|8>>
+    <associate|footnr-9|<tuple|9|10>>
     <associate|lemma: Yoneda Lemma|<tuple|7|4>>
     <associate|section: From Representability to Universality|<tuple|3|5>>
     <associate|section: Functor is representable if there exists universal
     element|<tuple|3.1|5>>
     <associate|section: Representable Functor and Yoneda Functor|<tuple|2|1>>
     <associate|section: Representation is unique|<tuple|3.2|6>>
-    <associate|theorem: Universal Element|<tuple|11|5>>
+    <associate|theorem: Universal Element|<tuple|12|5>>
   </collection>
 </references>
 
@@ -1231,61 +938,28 @@
       <with|mode|<quote|math>|e> in a universal element is
       defined.>|<pageref|auto-18>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|5>|| The left hand side
-      indicates the indexing category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>.
-      And the right hand side indicates the cone from
-      <with|mode|<quote|math>|X> to <with|mode|<quote|math>|D>. The green
-      arrows are for functor <with|mode|<quote|math>|Const<rsub|X>>, and the
-      red ones for functor <with|mode|<quote|math>|D>, wherein maps on
-      morphisms are not shown. As usual, identities are hidden. Since the
-      <with|mode|<quote|math>|\<lambda\>> is a natural transformation, the
-      right hand side commutes.>|<pageref|auto-23>>
-
-      <tuple|normal|<surround|<hidden-binding|<tuple>|6>|| Indicates the map
-      on <with|mode|<quote|math>|f>. As an instance, the indexing category
-      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
-      is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-25>>
-
-      <tuple|normal|<surround|<hidden-binding|<tuple>|7>|| Indicates the
-      limit. The dash arrow is for implication. As an instance, the indexing
-      category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
-      is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-27>>
-
-      <tuple|normal|<surround|<hidden-binding|<tuple>|8>|| Indicates the
-      colimit. The dash arrow is for implication. As an instance, the
-      indexing category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
-      is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-28>>
-
-      <tuple|normal|<surround|<hidden-binding|<tuple>|9>|| Indicates that
-      product is a limit. The left hand side is the indexing category. There
-      is no morphism (except the hidden identities) since it is a discrete
-      category. The name of the object is irrelevant, so the two objects are
-      shown as dots. The right hand side is the commutative diagram for the
-      definition of product. The green arrows is for the constant functor,
-      and red arrows for the diagram functor.>|<pageref|auto-31>>
-
-      <tuple|normal|<\surround|<hidden-binding|<tuple>|10>|>
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|5>|>
         \ Indicates the natural isomorphism
         <with|mode|<quote|math>|\<varphi\>:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
         \PNatural in <with|mode|<quote|math>|X>\Q means varying the first
         variable, and \Pnatural in <with|mode|<quote|math>|Y>\Q varies the
         second. The commutative diagrams have been rotated by
         <with|mode|<quote|math>|90<rsup|\<circ\>>> for convenience.
-      </surround>|<pageref|auto-35>>
+      </surround>|<pageref|auto-22>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|11>|| Indicates the
+      <tuple|normal|<surround|<hidden-binding|<tuple>|6>|| Indicates the
       universal elements. In both triangles, bottoms are fixed and top
-      vertices are arbitrarily chosen.>|<pageref|auto-38>>
+      vertices are arbitrarily chosen.>|<pageref|auto-25>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|12>||Indicates that
+      <tuple|normal|<surround|<hidden-binding|<tuple>|7>||Indicates that
       <with|mode|<quote|math>|\<eta\>> and
       <with|mode|<quote|math>|\<varepsilon\>> are natural
-      transformations.>|<pageref|auto-39>>
+      transformations.>|<pageref|auto-26>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|13>||Indicates
-      universal morphism.>|<pageref|auto-40>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|8>||Indicates universal
+      morphism.>|<pageref|auto-27>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|14>|| Illustrates how
+      <tuple|normal|<surround|<hidden-binding|<tuple>|9>|| Illustrates how
       the product is preserved by adjoint functors
       <with|mode|<quote|math>|F\<dashv\>G>, where
       <with|mode|<quote|math>|F:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>
@@ -1295,7 +969,7 @@
       <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>.
       The blue part indicates that <with|mode|<quote|math>|\<varepsilon\><rsub|A\<times\>B>>
       is universal. By putting the red and blue parts together, we find the
-      relation <with|mode|<quote|math>|f=F<around*|(|f<rsup|\<sharp\>>|)>\<circ\>\<varepsilon\><rsub|A\<times\>B>>.>|<pageref|auto-41>>
+      relation <with|mode|<quote|math>|f=F<around*|(|f<rsup|\<sharp\>>|)>\<circ\>\<varepsilon\><rsub|A\<times\>B>>.>|<pageref|auto-28>>
     </associate>
     <\associate|toc>
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Representation>
@@ -1361,79 +1035,47 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Cone
-      and Limit> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Adjunction>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|4.1<space|2spc>Diagram as a part of
-      category is a functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21>>
-
-      <with|par-left|<quote|1tab>|4.2<space|2spc>Cone irradiates diagram
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>>
-
-      <with|par-left|<quote|1tab>|4.3<space|2spc>Cone functor generates cones
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24>>
-
-      <with|par-left|<quote|1tab>|4.4<space|2spc>Limit is the representation
-      of cone functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>>
-
-      <with|par-left|<quote|1tab>|4.5<space|2spc>Infimum is a limit on poset
-      <with|mode|<quote|math>|\<bbb-R\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>>
-
-      <with|par-left|<quote|1tab>|4.6<space|2spc>Product is a limit with
-      discrete indexing category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>>
-
-      <with|par-left|<quote|1tab>|4.7<space|2spc>Limit is everywhere in
-      mathematics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>>
-
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Adjunction>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33><vspace|0.5fn>
-
-      <with|par-left|<quote|1tab>|5.1<space|2spc>Adjoint functors preserve
+      <with|par-left|<quote|1tab>|4.1<space|2spc>Adjoint functors preserve
       representations of presheaves and copresheaves
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>>
+      <no-break><pageref|auto-21>>
 
-      <with|par-left|<quote|1tab>|5.2<space|2spc>Adjoint is unique
+      <with|par-left|<quote|1tab>|4.2<space|2spc>Adjoint is unique
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36>>
+      <no-break><pageref|auto-23>>
 
-      <with|par-left|<quote|1tab>|5.3<space|2spc>Unit and counit are
+      <with|par-left|<quote|1tab>|4.3<space|2spc>Unit and counit are
       universal <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>>
+      <no-break><pageref|auto-24>>
 
-      <with|par-left|<quote|1tab>|5.4<space|2spc>Free and forgetful functors
+      <with|par-left|<quote|1tab>|4.4<space|2spc>Free and forgetful functors
       are adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42>>
+      <no-break><pageref|auto-29>>
 
-      <with|par-left|<quote|1tab>|5.5<space|2spc>Product-hom adjunction
+      <with|par-left|<quote|1tab>|4.5<space|2spc>Product-hom adjunction
       implies currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-43>>
+      <no-break><pageref|auto-30>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Summary>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Summary>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-44><vspace|0.5fn>
+      <no-break><pageref|auto-31><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|6.1<space|2spc>Embedding in the framework
+      <with|par-left|<quote|1tab>|5.1<space|2spc>Embedding in the framework
       of category theory is the right way to extend category theory
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-45>>
+      <no-break><pageref|auto-32>>
 
-      <with|par-left|<quote|1tab>|6.2<space|2spc>\PTypes\Q help to restrict
+      <with|par-left|<quote|1tab>|5.2<space|2spc>\PTypes\Q help to restrict
       the possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-46>>
+      <no-break><pageref|auto-33>>
 
-      <with|par-left|<quote|1tab>|6.3<space|2spc>\PTypes\Q help check the
+      <with|par-left|<quote|1tab>|5.3<space|2spc>\PTypes\Q help check the
       correctness of derivation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-47>>
+      <no-break><pageref|auto-34>>
     </associate>
   </collection>
 </auxiliary>

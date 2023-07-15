@@ -177,8 +177,7 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-51>>
 
-    3.3<space|2spc>From Representability to Universality
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    3.3<space|2spc>Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-52>
 
     <with|par-left|1tab|3.3.1<space|2spc>Functor is representable if there
@@ -189,76 +188,45 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-55>>
 
-    3.4<space|2spc>Cone and Limit <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    3.4<space|2spc>Adjunction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-56>
 
-    <with|par-left|1tab|3.4.1<space|2spc>Diagram as a part of category is a
-    functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|3.4.1<space|2spc>Adjoint functors preserve
+    representations of presheaves and copresheaves
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-57>>
 
-    <with|par-left|1tab|3.4.2<space|2spc>Cone irradiates diagram
+    <with|par-left|1tab|3.4.2<space|2spc>Adjoint is unique
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-58>>
+    <no-break><pageref|auto-59>>
 
-    <with|par-left|1tab|3.4.3<space|2spc>Cone functor generates cones
+    <with|par-left|1tab|3.4.3<space|2spc>Unit and counit are universal
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-60>>
 
-    <with|par-left|1tab|3.4.4<space|2spc>Limit is the representation of cone
-    functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-62>>
+    <with|par-left|1tab|3.4.4<space|2spc>Free and forgetful functors are
+    adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-64>>
 
-    <with|par-left|1tab|3.4.5<space|2spc>Infimum is a limit on poset
-    <with|mode|math|\<bbb-R\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|3.4.5<space|2spc>Product-hom adjunction implies
+    currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-65>>
 
-    <with|par-left|1tab|3.4.6<space|2spc>Product is a limit with discrete
-    indexing category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-66>>
+    3.5<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-66>
 
-    <with|par-left|1tab|3.4.7<space|2spc>Limit is everywhere in mathematics
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-68>>
-
-    3.5<space|2spc>Adjunction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-69>
-
-    <with|par-left|1tab|3.5.1<space|2spc>Adjoint functors preserve
-    representations of presheaves and copresheaves
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-70>>
-
-    <with|par-left|1tab|3.5.2<space|2spc>Adjoint is unique
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-72>>
-
-    <with|par-left|1tab|3.5.3<space|2spc>Unit and counit are universal
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-73>>
-
-    <with|par-left|1tab|3.5.4<space|2spc>Free and forgetful functors are
-    adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-78>>
-
-    <with|par-left|1tab|3.5.5<space|2spc>Product-hom adjunction implies
-    currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-79>>
-
-    3.6<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-80>
-
-    <with|par-left|1tab|3.6.1<space|2spc>Embedding in the framework of
+    <with|par-left|1tab|3.5.1<space|2spc>Embedding in the framework of
     category theory is the right way to extend category theory
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-81>>
+    <no-break><pageref|auto-67>>
 
-    <with|par-left|1tab|3.6.2<space|2spc>\PTypes\Q help to restrict the
+    <with|par-left|1tab|3.5.2<space|2spc>\PTypes\Q help to restrict the
     possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-82>>
+    <no-break><pageref|auto-68>>
 
-    <with|par-left|1tab|3.6.3<space|2spc>\PTypes\Q help check the correctness
+    <with|par-left|1tab|3.5.3<space|2spc>\PTypes\Q help check the correctness
     of derivation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-83>>
+    <no-break><pageref|auto-69>>
   </table-of-contents>
 
   <include|Preface.tm>
@@ -329,35 +297,21 @@
     <associate|auto-55|<tuple|3.3.2|20|Representation.tm>>
     <associate|auto-56|<tuple|3.4|20|Representation.tm>>
     <associate|auto-57|<tuple|3.4.1|20|Representation.tm>>
-    <associate|auto-58|<tuple|3.4.2|20|Representation.tm>>
-    <associate|auto-59|<tuple|3.5|21|Representation.tm>>
+    <associate|auto-58|<tuple|3.5|21|Representation.tm>>
+    <associate|auto-59|<tuple|3.4.2|21|Representation.tm>>
     <associate|auto-6|<tuple|1.5|3|Preface.tm>>
-    <associate|auto-60|<tuple|3.4.3|21|Representation.tm>>
-    <associate|auto-61|<tuple|3.6|21|Representation.tm>>
-    <associate|auto-62|<tuple|3.4.4|21|Representation.tm>>
-    <associate|auto-63|<tuple|3.7|22|Representation.tm>>
-    <associate|auto-64|<tuple|3.8|22|Representation.tm>>
-    <associate|auto-65|<tuple|3.4.5|22|Representation.tm>>
-    <associate|auto-66|<tuple|3.4.6|23|Representation.tm>>
-    <associate|auto-67|<tuple|3.9|23|Representation.tm>>
-    <associate|auto-68|<tuple|3.4.7|23|Representation.tm>>
-    <associate|auto-69|<tuple|3.5|23|Representation.tm>>
+    <associate|auto-60|<tuple|3.4.3|22|Representation.tm>>
+    <associate|auto-61|<tuple|3.6|22|Representation.tm>>
+    <associate|auto-62|<tuple|3.7|22|Representation.tm>>
+    <associate|auto-63|<tuple|3.8|23|Representation.tm>>
+    <associate|auto-64|<tuple|3.4.4|23|Representation.tm>>
+    <associate|auto-65|<tuple|3.4.5|24|Representation.tm>>
+    <associate|auto-66|<tuple|3.5|24|Representation.tm>>
+    <associate|auto-67|<tuple|3.5.1|24|Representation.tm>>
+    <associate|auto-68|<tuple|3.5.2|24|Representation.tm>>
+    <associate|auto-69|<tuple|3.5.3|24|Representation.tm>>
     <associate|auto-7|<tuple|2|5|Category.tm>>
-    <associate|auto-70|<tuple|3.5.1|23|Representation.tm>>
-    <associate|auto-71|<tuple|3.10|24|Representation.tm>>
-    <associate|auto-72|<tuple|3.5.2|25|Representation.tm>>
-    <associate|auto-73|<tuple|3.5.3|25|Representation.tm>>
-    <associate|auto-74|<tuple|3.11|25|Representation.tm>>
-    <associate|auto-75|<tuple|3.12|26|Representation.tm>>
-    <associate|auto-76|<tuple|3.13|26|Representation.tm>>
-    <associate|auto-77|<tuple|3.14|27|Representation.tm>>
-    <associate|auto-78|<tuple|3.5.4|27|Representation.tm>>
-    <associate|auto-79|<tuple|3.5.5|27|Representation.tm>>
     <associate|auto-8|<tuple|2.1|5|Category.tm>>
-    <associate|auto-80|<tuple|3.6|28|Representation.tm>>
-    <associate|auto-81|<tuple|3.6.1|28|Representation.tm>>
-    <associate|auto-82|<tuple|3.6.2|28|Representation.tm>>
-    <associate|auto-83|<tuple|3.6.3|28|Representation.tm>>
     <associate|auto-9|<tuple|2.1.1|5|Category.tm>>
     <associate|chapter: Category, Functor, and Natural
     Transformation|<tuple|2|5|Category.tm>>
@@ -367,20 +321,13 @@
     <associate|definition: Poset as Category|<tuple|2.11|7|Category.tm>>
     <associate|definition: Preorder|<tuple|2.9|7|Category.tm>>
     <associate|definition: Product of Two Objects|<tuple|2.14|8|Category.tm>>
-    <associate|definition: Universal Element|<tuple|3.10|19|Representation.tm>>
-    <associate|figure: Adjoint|<tuple|3.10|24|Representation.tm>>
+    <associate|definition: Universal Element|<tuple|3.11|19|Representation.tm>>
+    <associate|figure: Adjoint|<tuple|3.5|21|Representation.tm>>
     <associate|figure: Adjoint and Universal
-    Element|<tuple|3.11|25|Representation.tm>>
-    <associate|figure: Adjoint functors preserve
-    product|<tuple|3.14|27|Representation.tm>>
-    <associate|figure: Colimit|<tuple|3.8|22|Representation.tm>>
-    <associate|figure: Cone|<tuple|3.5|21|Representation.tm>>
-    <associate|figure: Cone Functor|<tuple|3.6|21|Representation.tm>>
+    Element|<tuple|3.6|22|Representation.tm>>
     <associate|figure: Functor|<tuple|2.1|9|Category.tm>>
     <associate|figure: Functor Composition|<tuple|2.2|10|Category.tm>>
-    <associate|figure: Limit|<tuple|3.7|22|Representation.tm>>
     <associate|figure: Natural Transformation|<tuple|2.3|12|Category.tm>>
-    <associate|figure: Product is Limit|<tuple|3.9|23|Representation.tm>>
     <associate|figure: Representable Functor|<tuple|3.1|16|Representation.tm>>
     <associate|figure: The f_* is Natural
     Transformation|<tuple|3.2|17|Representation.tm>>
@@ -388,18 +335,22 @@
     <associate|figure: Yoneda functor is full|<tuple|3.3|18|Representation.tm>>
     <associate|footnote-3.1|<tuple|3.1|15|Representation.tm>>
     <associate|footnote-3.2|<tuple|3.2|18|Representation.tm>>
-    <associate|footnote-3.3|<tuple|3.3|24|Representation.tm>>
-    <associate|footnote-3.4|<tuple|3.4|24|Representation.tm>>
-    <associate|footnote-3.5|<tuple|3.5|25|Representation.tm>>
-    <associate|footnote-3.6|<tuple|3.6|25|Representation.tm>>
-    <associate|footnote-3.7|<tuple|3.7|27|Representation.tm>>
+    <associate|footnote-3.3|<tuple|3.3|19|Representation.tm>>
+    <associate|footnote-3.4|<tuple|3.4|20|Representation.tm>>
+    <associate|footnote-3.5|<tuple|3.5|20|Representation.tm>>
+    <associate|footnote-3.6|<tuple|3.6|21|Representation.tm>>
+    <associate|footnote-3.7|<tuple|3.7|22|Representation.tm>>
+    <associate|footnote-3.8|<tuple|3.8|22|Representation.tm>>
+    <associate|footnote-3.9|<tuple|3.9|23|Representation.tm>>
     <associate|footnr-3.1|<tuple|3.1|15|Representation.tm>>
     <associate|footnr-3.2|<tuple|3.7|18|Representation.tm>>
-    <associate|footnr-3.3|<tuple|3.3|24|Representation.tm>>
-    <associate|footnr-3.4|<tuple|3.4|24|Representation.tm>>
-    <associate|footnr-3.5|<tuple|3.5|25|Representation.tm>>
-    <associate|footnr-3.6|<tuple|1|25|Representation.tm>>
-    <associate|footnr-3.7|<tuple|3.7|27|Representation.tm>>
+    <associate|footnr-3.3|<tuple|3.10|19|Representation.tm>>
+    <associate|footnr-3.4|<tuple|3.4|20|Representation.tm>>
+    <associate|footnr-3.5|<tuple|3.5|20|Representation.tm>>
+    <associate|footnr-3.6|<tuple|3.6|21|Representation.tm>>
+    <associate|footnr-3.7|<tuple|3.7|22|Representation.tm>>
+    <associate|footnr-3.8|<tuple|1|22|Representation.tm>>
+    <associate|footnr-3.9|<tuple|3.9|23|Representation.tm>>
     <associate|lemma: Fully Faithful Functor|<tuple|2.21|11|Category.tm>>
     <associate|lemma: Natural Isomorphism|<tuple|2.25|13|Category.tm>>
     <associate|lemma: Yoneda Lemma|<tuple|3.7|18|Representation.tm>>
@@ -424,7 +375,7 @@
     full|<tuple|2.3.4|10|Category.tm>>
     <associate|theorem: Functorial Image as
     Category|<tuple|2.22|12|Category.tm>>
-    <associate|theorem: Universal Element|<tuple|3.11|19|Representation.tm>>
+    <associate|theorem: Universal Element|<tuple|3.12|20|Representation.tm>>
   </collection>
 </references>
 
@@ -459,72 +410,26 @@
       the <with|mode|<quote|math>|e> in a universal element is
       defined.>|<pageref|auto-54>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|3.5>|| The left hand
-      side indicates the indexing category
-      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>.
-      And the right hand side indicates the cone from
-      <with|mode|<quote|math>|X> to <with|mode|<quote|math>|D>. The green
-      arrows are for functor <with|mode|<quote|math>|Const<rsub|X>>, and the
-      red ones for functor <with|mode|<quote|math>|D>, wherein maps on
-      morphisms are not shown. As usual, identities are hidden. Since the
-      <with|mode|<quote|math>|\<lambda\>> is a natural transformation, the
-      right hand side commutes.>|<pageref|auto-59>>
-
-      <tuple|normal|<surround|<hidden-binding|<tuple>|3.6>|| Indicates the
-      map on <with|mode|<quote|math>|f>. As an instance, the indexing
-      category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
-      is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-61>>
-
-      <tuple|normal|<surround|<hidden-binding|<tuple>|3.7>|| Indicates the
-      limit. The dash arrow is for implication. As an instance, the indexing
-      category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
-      is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-63>>
-
-      <tuple|normal|<surround|<hidden-binding|<tuple>|3.8>|| Indicates the
-      colimit. The dash arrow is for implication. As an instance, the
-      indexing category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
-      is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-64>>
-
-      <tuple|normal|<surround|<hidden-binding|<tuple>|3.9>|| Indicates that
-      product is a limit. The left hand side is the indexing category. There
-      is no morphism (except the hidden identities) since it is a discrete
-      category. The name of the object is irrelevant, so the two objects are
-      shown as dots. The right hand side is the commutative diagram for the
-      definition of product. The green arrows is for the constant functor,
-      and red arrows for the diagram functor.>|<pageref|auto-67>>
-
-      <tuple|normal|<\surround|<hidden-binding|<tuple>|3.10>|>
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|3.5>|>
         \ Indicates the natural isomorphism
         <with|mode|<quote|math>|\<varphi\>:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
         \PNatural in <with|mode|<quote|math>|X>\Q means varying the first
         variable, and \Pnatural in <with|mode|<quote|math>|Y>\Q varies the
         second. The commutative diagrams have been rotated by
         <with|mode|<quote|math>|90<rsup|\<circ\>>> for convenience.
-      </surround>|<pageref|auto-71>>
+      </surround>|<pageref|auto-58>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|3.11>|| Indicates the
+      <tuple|normal|<surround|<hidden-binding|<tuple>|3.6>|| Indicates the
       universal elements. In both triangles, bottoms are fixed and top
-      vertices are arbitrarily chosen.>|<pageref|auto-74>>
+      vertices are arbitrarily chosen.>|<pageref|auto-61>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|3.12>||Indicates that
+      <tuple|normal|<surround|<hidden-binding|<tuple>|3.7>||Indicates that
       <with|mode|<quote|math>|\<eta\>> and
       <with|mode|<quote|math>|\<varepsilon\>> are natural
-      transformations.>|<pageref|auto-75>>
+      transformations.>|<pageref|auto-62>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|3.13>||Indicates
-      universal morphism.>|<pageref|auto-76>>
-
-      <tuple|normal|<surround|<hidden-binding|<tuple>|3.14>|| Illustrates how
-      the product is preserved by adjoint functors
-      <with|mode|<quote|math>|F\<dashv\>G>, where
-      <with|mode|<quote|math>|F:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>
-      and <with|mode|<quote|math>|G:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>>.
-      The red part indicates that <with|mode|<quote|math>|A\<times\>B> is the
-      product of <with|mode|<quote|math>|A> and <with|mode|<quote|math>|B> in
-      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>.
-      The blue part indicates that <with|mode|<quote|math>|\<varepsilon\><rsub|A\<times\>B>>
-      is universal. By putting the red and blue parts together, we find the
-      relation <with|mode|<quote|math>|f=F<around*|(|f<rsup|\<sharp\>>|)>\<circ\>\<varepsilon\><rsub|A\<times\>B>>.>|<pageref|auto-77>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|3.8>||Indicates
+      universal morphism.>|<pageref|auto-63>>
     </associate>
     <\associate|parts>
       <tuple|Preface.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
@@ -715,8 +620,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-51>>
 
-      3.3<space|2spc>From Representability to Universality
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      3.3<space|2spc>Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-52>
 
       <with|par-left|<quote|1tab>|3.3.1<space|2spc>Functor is representable
@@ -727,77 +631,45 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-55>>
 
-      3.4<space|2spc>Cone and Limit <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      3.4<space|2spc>Adjunction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-56>
 
-      <with|par-left|<quote|1tab>|3.4.1<space|2spc>Diagram as a part of
-      category is a functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-57>>
-
-      <with|par-left|<quote|1tab>|3.4.2<space|2spc>Cone irradiates diagram
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-58>>
-
-      <with|par-left|<quote|1tab>|3.4.3<space|2spc>Cone functor generates
-      cones <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-60>>
-
-      <with|par-left|<quote|1tab>|3.4.4<space|2spc>Limit is the
-      representation of cone functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-62>>
-
-      <with|par-left|<quote|1tab>|3.4.5<space|2spc>Infimum is a limit on
-      poset <with|mode|<quote|math>|\<bbb-R\>>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-65>>
-
-      <with|par-left|<quote|1tab>|3.4.6<space|2spc>Product is a limit with
-      discrete indexing category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-66>>
-
-      <with|par-left|<quote|1tab>|3.4.7<space|2spc>Limit is everywhere in
-      mathematics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-68>>
-
-      3.5<space|2spc>Adjunction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-69>
-
-      <with|par-left|<quote|1tab>|3.5.1<space|2spc>Adjoint functors preserve
+      <with|par-left|<quote|1tab>|3.4.1<space|2spc>Adjoint functors preserve
       representations of presheaves and copresheaves
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-70>>
+      <no-break><pageref|auto-57>>
 
-      <with|par-left|<quote|1tab>|3.5.2<space|2spc>Adjoint is unique
+      <with|par-left|<quote|1tab>|3.4.2<space|2spc>Adjoint is unique
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-72>>
+      <no-break><pageref|auto-59>>
 
-      <with|par-left|<quote|1tab>|3.5.3<space|2spc>Unit and counit are
+      <with|par-left|<quote|1tab>|3.4.3<space|2spc>Unit and counit are
       universal <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-73>>
+      <no-break><pageref|auto-60>>
 
-      <with|par-left|<quote|1tab>|3.5.4<space|2spc>Free and forgetful
+      <with|par-left|<quote|1tab>|3.4.4<space|2spc>Free and forgetful
       functors are adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-78>>
+      <no-break><pageref|auto-64>>
 
-      <with|par-left|<quote|1tab>|3.5.5<space|2spc>Product-hom adjunction
+      <with|par-left|<quote|1tab>|3.4.5<space|2spc>Product-hom adjunction
       implies currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-79>>
+      <no-break><pageref|auto-65>>
 
-      3.6<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-80>
+      3.5<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-66>
 
-      <with|par-left|<quote|1tab>|3.6.1<space|2spc>Embedding in the framework
+      <with|par-left|<quote|1tab>|3.5.1<space|2spc>Embedding in the framework
       of category theory is the right way to extend category theory
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-81>>
+      <no-break><pageref|auto-67>>
 
-      <with|par-left|<quote|1tab>|3.6.2<space|2spc>\PTypes\Q help to restrict
+      <with|par-left|<quote|1tab>|3.5.2<space|2spc>\PTypes\Q help to restrict
       the possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-82>>
+      <no-break><pageref|auto-68>>
 
-      <with|par-left|<quote|1tab>|3.6.3<space|2spc>\PTypes\Q help check the
+      <with|par-left|<quote|1tab>|3.5.3<space|2spc>\PTypes\Q help check the
       correctness of derivation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-83>>
+      <no-break><pageref|auto-69>>
     </associate>
   </collection>
 </auxiliary>
