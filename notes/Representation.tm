@@ -118,7 +118,7 @@
   <\align>
     <tformat|<table|<row|<cell|>|<cell|<math-ss|C><around*|(|-,X|)><around*|(|1<rsub|A>|)><around*|(|\<varphi\>|)>>>|<row|<cell|<around*|{|definition
     of <math-ss|C><around*|(|-,X|)>|}>=>|<cell|<around*|(|1<rsub|A>|)><rsup|\<ast\>><around*|(|\<varphi\>|)>>>|<row|<cell|<around*|{|definition
-    of-<rsup|\<ast\>>|}>=>|<cell|\<varphi\>\<circ\>1<rsub|A>>>|<row|<cell|<around*|{|identity|}>=>|<cell|\<varphi\>>>|<row|<cell|<around*|{|definition
+    of <around*|(|-|)><rsup|\<ast\>>|}>=>|<cell|\<varphi\>\<circ\>1<rsub|A>>>|<row|<cell|<around*|{|identity|}>=>|<cell|\<varphi\>>>|<row|<cell|<around*|{|definition
     of identity|}>=>|<cell|1<rsub|<math-ss|C><around*|(|A,X|)>><around*|(|\<varphi\>|)>,>>>>
   </align>
 
@@ -355,7 +355,7 @@
   at the destination by proving that Yoneda functor is injective (on objects)
   and fully faithful. So, indeed, all is arrow, including object.
 
-  <section|Universality><label|section: From Representability to
+  <section|Universal Element><label|section: From Representability to
   Universality>
 
   <subsection|Functor is representable if there exists universal
@@ -508,12 +508,12 @@
   <math|F<around*|(|<wide|K|^>|)>> to represent <math|K\<circ\>G>, that is,
 
   <\equation*>
-    <math-ss|D><around*|(|F<around*|(|<wide|K|^>|)>,\<ast\>|)><above|\<cong\>|?>K\<circ\>G.
+    <math-ss|D><around*|(|F<around*|(|<wide|K|^>|)>,\<star\>|)><above|\<cong\>|?>K\<circ\>G.
   </equation*>
 
-  (The <math|\<ast\>> is employed as placeholder.) And again, since
+  (The <math|\<star\>> is employed as placeholder.) And again, since
   <math|<wide|K|^>> represents <math|K>, it turns to be
-  <math|<math-ss|D><around*|(|F<around*|(|<wide|K|^>|)>,\<ast\>|)><above|\<cong\>|?><math-ss|C><around*|(|<wide|K|^>,G<around*|(|\<ast\>|)>|)>>.
+  <math|<math-ss|D><around*|(|F<around*|(|<wide|K|^>|)>,\<star\>|)><above|\<cong\>|?><math-ss|C><around*|(|<wide|K|^>,G<around*|(|\<star\>|)>|)>>.
   If this relation holds, then <math|F<around*|(|<wide|K|^>|)>> represents
   <math|K\<circ\>G>, and we say the representation of a representable
   copresheaf is preserved by functorial maps <math|F> and <math|G>.
@@ -522,19 +522,19 @@
   copresheaves are to be preserved by functorial maps
   <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
   <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>, then we should demand
-  <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<cong\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>,
-  where <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>> and
-  <math|<math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>> are bi-functors
+  <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>\<cong\><math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>>,
+  where <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>> and
+  <math|<math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>> are bi-functors
   <\footnote>
     <with|font-series|bold|Bi-functor> is a functor with two variables, like
     a function with two variables, say <math|f<around*|(|x,y|)>>. As a
     function, <math|f<around*|(|x,y|)>> is reduced to a function of single
     variable, <math|f<rsub|y><around*|(|x|)>>, when <math|y> is given. The
-    same goes for a bi-functor <math|F<around*|(|-,\<ast\>|)>>. Given an
+    same goes for a bi-functor <math|F<around*|(|-,\<star\>|)>>. Given an
     object <math|Y>, <math|F<around*|(|-,Y|)>> is reduced to the single
     variable functor that we have been familiar with,
     <math|F<rsub|Y><around*|(|-|)>>. The functoriality of
-    <math|F<around*|(|-,\<ast\>|)>>, which preserves the structure of
+    <math|F<around*|(|-,\<star\>|)>>, which preserves the structure of
     category, is satisfied in the sense of <math|F<rsub|Y><around*|(|-|)>>
     for each <math|Y>.
   </footnote> of the \Ptype\Q <math|<math-ss|C><rsup|op>\<times\><math-ss|D>\<rightarrow\><math-ss|Set>>.
@@ -547,7 +547,7 @@
   for each <math|X\<in\><math-ss|C>> and <math|Y\<in\><math-ss|D>>. This
   means, to preserve presheaves and copresheaves, the <math|F> and <math|G>
   can be arbitrary except that the relation
-  <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<cong\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>
+  <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>\<cong\><math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>>
   must be held.
 
   We summarize this section as follow.
@@ -558,21 +558,21 @@
     <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
     <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> are
     <with|font-series|bold|adjoint>, denoted by <math|F\<dashv\>G>, if there
-    exists a natural isomorphism <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
+    exists a natural isomorphism <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>>.
     The <math|\<varphi\>> is called an <with|font-series|bold|adjunction>.<\footnote>
       In some texture, for instance MacLane, adjunction is defined as the
       triplet <math|<around*|(|F,G,\<varphi\>|)>>. However, the
       <math|\<varphi\>> itself, like any other morphism, has indicated what
       the domain and codomain are, that is, the
-      <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>> and
-      <math|<math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>> respectively,
+      <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>> and
+      <math|<math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>> respectively,
       from which we read out <math|F> and <math|G>.
     </footnote>
   </definition>
 
   <\big-figure|<image|figures/adjoint.png|0.8par|||>>
     <label|figure: Adjoint> Indicates the natural isomorphism
-    <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
+    <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>>.
     \PNatural in <math|X>\Q means varying the first variable, and \Pnatural
     in <math|Y>\Q varies the second. The commutative diagrams have been
     rotated by <math|90<rsup|\<circ\>>> for convenience.
@@ -649,15 +649,15 @@
   as <math|\<varepsilon\><rsub|Y>=\<varphi\><rsub|G<around*|(|Y|)>,Y><rsup|-1><around*|(|1<rsub|G<around*|(|Y|)>>|)>>.
 
   The same, <math|F<around*|(|X|)>> can represent
-  <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>> if and only if
+  <math|<math-ss|C><around*|(|X,G<around*|(|\<star\>|)>|)>> if and only if
   <math|F<around*|(|X|)>>, equipped with <math|\<eta\><rsub|X>:X\<rightarrow\>G\<circ\>F<around*|(|X|)>>,
-  is a universal element of <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>>.
+  is a universal element of <math|<math-ss|C><around*|(|X,G<around*|(|\<star\>|)>|)>>.
   That is, for each <math|Y\<in\><math-ss|D>>, and each
   <math|g:X\<rightarrow\>G<around*|(|Y|)>>, there exists a unique
   <math|g<rsup|\<sharp\>>:F<around*|(|X|)>\<rightarrow\>Y> such that
   <math|g=G<around*|(|g<rsup|\<sharp\>>|)><rsub|\<ast\>><around*|(|\<eta\><rsub|X>|)>\<equiv\>G<around*|(|g<rsup|\<sharp\>>|)>\<circ\>\<eta\><rsub|X>>.
   And the <math|\<eta\><rsub|X>> can be induced from
-  <math|\<varphi\><rsub|X,\<ast\>>:<math-ss|D><around*|(|F<around*|(|X|)>,\<ast\>|)>\<rightarrow\><math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)>>
+  <math|\<varphi\><rsub|X,\<star\>>:<math-ss|D><around*|(|F<around*|(|X|)>,\<star\>|)>\<rightarrow\><math-ss|C><around*|(|X,G<around*|(|\<star\>|)>|)>>
   as <math|\<eta\><rsub|X>\<assign\>\<varphi\><rsub|X,F<around*|(|X|)>><around*|(|1<rsub|F<around*|(|X|)>>|)>>.
 
   <big-figure|<image|figures/adjoint-1.png|0.8par|||>|<label|figure: Adjoint
@@ -692,9 +692,9 @@
   Also by lemma <reference|theorem: Universal Element>, from
   <math|\<eta\><rsub|X>> we can construct the adjunction <math|\<varphi\>>.
   Indeed, for each <math|f:F<around*|(|X|)>\<rightarrow\>Y>, we have
-  <math|\<varphi\><rsub|X,Y><around*|(|f|)>=<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)><around*|(|f|)><around*|(|\<eta\><rsub|X>|)>>.
+  <math|\<varphi\><rsub|X,Y><around*|(|f|)>=<math-ss|C><around*|(|X,G<around*|(|\<star\>|)>|)><around*|(|f|)><around*|(|\<eta\><rsub|X>|)>>.
   From figure <reference|figure: Adjoint>, we can read out
-  <math|<math-ss|C><around*|(|X,G<around*|(|\<ast\>|)>|)><around*|(|f|)>=G<around*|(|f|)><rsub|\<ast\>>>
+  <math|<math-ss|C><around*|(|X,G<around*|(|\<star\>|)>|)><around*|(|f|)>=G<around*|(|f|)><rsub|\<ast\>>>
   and by the definition of pushforward <math|g<rsub|\<ast\>><around*|(|h|)>=g\<circ\>h>,
   we arrive at
 
@@ -853,9 +853,9 @@
     <associate|auto-10|<tuple|2.3|2>>
     <associate|auto-11|<tuple|2|3>>
     <associate|auto-12|<tuple|2.4|3>>
-    <associate|auto-13|<tuple|2.5|3>>
+    <associate|auto-13|<tuple|2.5|4>>
     <associate|auto-14|<tuple|3|4>>
-    <associate|auto-15|<tuple|2.6|4>>
+    <associate|auto-15|<tuple|2.6|5>>
     <associate|auto-16|<tuple|3|5>>
     <associate|auto-17|<tuple|3.1|5>>
     <associate|auto-18|<tuple|4|5>>
@@ -865,18 +865,17 @@
     <associate|auto-21|<tuple|4.1|6>>
     <associate|auto-22|<tuple|5|7>>
     <associate|auto-23|<tuple|4.2|7>>
-    <associate|auto-24|<tuple|4.3|7>>
+    <associate|auto-24|<tuple|4.3|8>>
     <associate|auto-25|<tuple|6|8>>
     <associate|auto-26|<tuple|7|8>>
     <associate|auto-27|<tuple|8|9>>
     <associate|auto-28|<tuple|4.4|9>>
-    <associate|auto-29|<tuple|4.5|9>>
+    <associate|auto-29|<tuple|4.5|10>>
     <associate|auto-3|<tuple|1.1|1>>
     <associate|auto-30|<tuple|5|10>>
     <associate|auto-31|<tuple|5.1|10>>
     <associate|auto-32|<tuple|5.2|10>>
     <associate|auto-33|<tuple|5.3|10>>
-    <associate|auto-34|<tuple|5.3|10>>
     <associate|auto-4|<tuple|1.2|1>>
     <associate|auto-5|<tuple|1.3|1>>
     <associate|auto-6|<tuple|2|1>>
@@ -886,7 +885,6 @@
     <associate|definition: Universal Element|<tuple|11|5>>
     <associate|figure: Adjoint|<tuple|5|7>>
     <associate|figure: Adjoint and Universal Element|<tuple|6|8>>
-    <associate|figure: Adjoint functors preserve product|<tuple|9|9>>
     <associate|figure: Representable Functor|<tuple|1|2>>
     <associate|figure: The f_* is Natural Transformation|<tuple|2|3>>
     <associate|figure: Universal Element|<tuple|4|5>>
@@ -899,7 +897,7 @@
     <associate|footnote-6|<tuple|6|7>>
     <associate|footnote-7|<tuple|7|8>>
     <associate|footnote-8|<tuple|8|8>>
-    <associate|footnote-9|<tuple|9|10>>
+    <associate|footnote-9|<tuple|9|9>>
     <associate|footnr-1|<tuple|1|1>>
     <associate|footnr-2|<tuple|7|4>>
     <associate|footnr-3|<tuple|10|5>>
@@ -908,14 +906,14 @@
     <associate|footnr-6|<tuple|6|7>>
     <associate|footnr-7|<tuple|7|8>>
     <associate|footnr-8|<tuple|1|8>>
-    <associate|footnr-9|<tuple|9|10>>
+    <associate|footnr-9|<tuple|9|9>>
     <associate|lemma: Yoneda Lemma|<tuple|7|4>>
     <associate|section: From Representability to Universality|<tuple|3|5>>
     <associate|section: Functor is representable if there exists universal
     element|<tuple|3.1|5>>
     <associate|section: Representable Functor and Yoneda Functor|<tuple|2|1>>
     <associate|section: Representation is unique|<tuple|3.2|6>>
-    <associate|theorem: Universal Element|<tuple|12|5>>
+    <associate|theorem: Universal Element|<tuple|12|6>>
   </collection>
 </references>
 
@@ -940,7 +938,7 @@
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|5>|>
         \ Indicates the natural isomorphism
-        <with|mode|<quote|math>|\<varphi\>:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>><around*|(|F<around*|(|-|)>,\<ast\>|)>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,G<around*|(|\<ast\>|)>|)>>.
+        <with|mode|<quote|math>|\<varphi\>:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>><around*|(|F<around*|(|-|)>,\<star\>|)>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,G<around*|(|\<star\>|)>|)>>.
         \PNatural in <with|mode|<quote|math>|X>\Q means varying the first
         variable, and \Pnatural in <with|mode|<quote|math>|Y>\Q varies the
         second. The commutative diagrams have been rotated by
@@ -958,18 +956,6 @@
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|8>||Indicates universal
       morphism.>|<pageref|auto-27>>
-
-      <tuple|normal|<surround|<hidden-binding|<tuple>|9>|| Illustrates how
-      the product is preserved by adjoint functors
-      <with|mode|<quote|math>|F\<dashv\>G>, where
-      <with|mode|<quote|math>|F:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>
-      and <with|mode|<quote|math>|G:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>>.
-      The red part indicates that <with|mode|<quote|math>|A\<times\>B> is the
-      product of <with|mode|<quote|math>|A> and <with|mode|<quote|math>|B> in
-      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>.
-      The blue part indicates that <with|mode|<quote|math>|\<varepsilon\><rsub|A\<times\>B>>
-      is universal. By putting the red and blue parts together, we find the
-      relation <with|mode|<quote|math>|f=F<around*|(|f<rsup|\<sharp\>>|)>\<circ\>\<varepsilon\><rsub|A\<times\>B>>.>|<pageref|auto-28>>
     </associate>
     <\associate|toc>
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Representation>
@@ -1023,8 +1009,8 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>From
-      Representability to Universality> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Universal
+      Elements> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-16><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|3.1<space|2spc>Functor is representable if
@@ -1054,28 +1040,28 @@
 
       <with|par-left|<quote|1tab>|4.4<space|2spc>Free and forgetful functors
       are adjoint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>>
+      <no-break><pageref|auto-28>>
 
       <with|par-left|<quote|1tab>|4.5<space|2spc>Product-hom adjunction
       implies currying <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>>
+      <no-break><pageref|auto-29>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Summary>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31><vspace|0.5fn>
+      <no-break><pageref|auto-30><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|5.1<space|2spc>Embedding in the framework
       of category theory is the right way to extend category theory
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>>
+      <no-break><pageref|auto-31>>
 
       <with|par-left|<quote|1tab>|5.2<space|2spc>\PTypes\Q help to restrict
       the possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>>
+      <no-break><pageref|auto-32>>
 
       <with|par-left|<quote|1tab>|5.3<space|2spc>\PTypes\Q help check the
       correctness of derivation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>>
+      <no-break><pageref|auto-33>>
     </associate>
   </collection>
 </auxiliary>
