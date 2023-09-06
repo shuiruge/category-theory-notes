@@ -5,7 +5,7 @@
 <\body>
   <chapter|Limit>
 
-  <section|Cone and Limit>
+  <section|Cone Functor and Limit>
 
   In this section, we discuss an important application of universal element
   or representation: limit. We are to show that limit is a representation of
@@ -105,6 +105,13 @@
   hidden. Since the <math|\<lambda\>> is a natural transformation, the right
   hand side commutes.>
 
+  It should be noted that, in figure <reference|figure: Cone>, some morphism
+  are redundant. For instance, <math|\<lambda\><rsub|A>=D<around*|(|h|)>\<circ\>\<lambda\><rsub|C>>
+  and <math|\<lambda\><rsub|B>=D<around*|(|f|)>\<circ\>\<lambda\><rsub|A>=D<around*|(|f|)>\<circ\>D<around*|(|h|)>\<circ\>\<lambda\><rsub|C>>.
+  So, when <math|\<lambda\><rsub|C>> has been drawn,
+  <math|\<lambda\><rsub|A>> and <math|\<lambda\><rsub|B>> are omitable,
+  usually absent in the diagram.
+
   <subsection|Cone functor generates cones>
 
   Notice a cone consists two parts: the diagram and the summit object. Given
@@ -151,14 +158,14 @@
     </itemize>
   </definition>
 
-  <big-figure|<image|figures/cone-1.png|0.5par|||>|<label|figure: Cone
+  <big-figure|<image|figures/cone-1.png|0.55par|||>|<label|figure: Cone
   Functor> Indicates the map on <math|f>. As an instance, the indexing
   category <math|<math-ss|I>> is simply <math|A<above|\<rightarrow\>|g>B>.>
 
   <subsection|Limit is the representation of cone functor>
 
-  As discussed in section <reference|section: From Representability to
-  Universality>, for a locally small category <math|<math-ss|C>>, a functor
+  As discussed in section <reference|section: Universal Element>, for a
+  locally small category <math|<math-ss|C>>, a functor
   <math|F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>> can be represented
   by an object in <math|<math-ss|C>>, if universal element exists. Given a
   diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>> where
@@ -208,7 +215,7 @@
 
   <\theorem>
     [Limit (Colimit) is Unique] The limit (colimit) of a locally small
-    diagram is unique up to isomorphism.
+    diagram is unique up to isomorphism.s
   </theorem>
 
   <subsection|Infimum is a limit on poset <math|\<bbb-R\>>>
@@ -240,7 +247,9 @@
   definitions of limit, we get the dual, colimit . So, directly, we find
   supremum is the colimit on <math|<math-ss|Poset>>.
 
-  <subsection|Product is a limit with discrete indexing category>
+  <subsection|Product is a limit with discrete indexing
+  category><label|section: Product is a limit with discrete indexing
+  category>
 
   In section <reference|section: Arrows generalize concepts and theorems from
   one area to every area in mathematics>, we showed what Cartesian product
@@ -274,14 +283,13 @@
   The same goes for coproduct (definition <reference|definition: Coproduct of
   Two Objects>).
 
-  <section|Drafts>
+  <subsection|Example: product is preserved by adjoint functors>
 
-  Let us see how adjoint functors preserve representation in an explicit
-  instance. We have known that limit represents cone functor, and product is
-  a limit. So, product is a representation. Figure <reference|figure: Adjoint
-  functors preserve product> illustrates how the adjoint functors
-  <math|F\<dashv\>G> preserve the product
-  <math|<around*|(|A\<times\>B,\<alpha\>,\<beta\>|)>>.
+  In section <reference|section: Adjoint functors preserve representations of
+  presheaves and copresheaves>, we showed that adjoint functors preserve
+  representations. Figure <reference|figure: Adjoint functors preserve
+  product> illustrates explicitly how the adjoint functors <math|F\<dashv\>G>
+  preserve the product <math|<around*|(|A\<times\>B,\<alpha\>,\<beta\>|)>>.
 
   <big-figure|<image|figures/adjoint-4.png|0.7par|||>|<label|figure: Adjoint
   functors preserve product> Illustrates how the product is preserved by
@@ -293,6 +301,238 @@
   <math|\<varepsilon\><rsub|A\<times\>B>> is universal. By putting the red
   and blue parts together, we find the relation
   <math|f=F<around*|(|f<rsup|\<sharp\>>|)>\<circ\>\<varepsilon\><rsub|A\<times\>B>>.>
+
+  <section|Construction of Limit>
+
+  <subsection|Category may not be complete>
+
+  Limit is quite general in mathematics, but not everywhere. It is easy to
+  construct a category that has no product. For instance, the simple category
+  indicated by figure <reference|figure: Incomplete Category>.
+
+  <big-figure|<image|figures/limit-2.png|0.3par|||>|<label|figure: Incomplete
+  Category> Indicates a simple category that has no product. Indeed, only
+  <math|A> and <math|C> have the potential to be a product, but if <math|A>
+  were a product, there is no arrow from <math|C> to <math|A>; and if
+  <math|C> were a product, there is no arrow from <math|A> to <math|C>. So,
+  none of them is a product.>
+
+  On the other side, there does be categories that has all kinds of limit,
+  that is, there exists limit for every small diagram. For example, the
+  <math|<math-ss|Set>> (we will prove that it has all kinds of limit). A
+  category like <math|<math-ss|Set>> is called complete.
+
+  <\definition>
+    [Completeness] A locally small category <math|<math-ss|C>> is
+    <with|font-series|bold|(finitely) complete> if any (finitely) small
+    diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>> has limit in
+    <math|<math-ss|C>>.
+  </definition>
+
+  Recall that a diagram is small if its indexing category (for instance, the
+  <math|<math-ss|I>> of diagram <math|D>) is small; and a diagram is finite
+  if its indexing category has finite number of objects and of morphisms. A
+  finite diagram is small by its own.s
+
+  <subsection|A limit can be constructed by products and equalizers>
+
+  Naturally, we are to wonder how we can tell a given category, such as
+  <math|<math-ss|Set>>, is complete (or finitely complete). This problem can
+  be ceased if there is a way of constructing any limit by some \Pbasic\Q
+  limits. In this situation, if a category has these basic limits, then we
+  can claim that this category is complete.
+
+  TODO
+
+  <\theorem>
+    <label|theorem: Limit Construction by Product and Equalizer> TODO
+  </theorem>
+
+  <subsection|<math|<math-ss|Set>> is complete>
+
+  In category <math|<math-ss|Set>>, product is Cartesian product, and
+  equalizer is equalizer of sets. So, by theorem <reference|theorem: Limit
+  Construction by Product and Equalizer>, we conclude that
+  <math|<math-ss|Set>> is complete.
+
+  <subsection|Limit helps generalize concepts from set theory to category
+  theory>
+
+  Mathematical concepts are built on the base of set theory, including
+  concepts in analysis, topology, and even algebra. But, generalizing a
+  concept in set theory by arrows, as shown by generalizing Cartesian product
+  in section <reference|section: Arrows generalize concepts and theorems from
+  one area to every area in mathematics>, is far from straight forward. At
+  the first sight, it seems that Cartesian product of sets and its
+  generalization, product of objects, have no relationship. So, you may
+  wonder, how can we get some hint for generalizing Cartesian product, or
+  even more complicated concepts in set theory, to its categorical version.
+
+  We are to deal with this very problem by considering some instance. A
+  proper instance is the fibered product of sets <\footnote>
+    We can consider Cartesian product of sets. But, it turns out to be quite
+    trivial. The fiber product, however, is non-trivial but still easy to
+    compute.
+  </footnote>. A <with|font-series|bold|fiber product> of two sets <math|A>
+  and <math|B> is another set denoted by <math|A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B>,
+  where <math|A>, and <math|B> are sets, <math|\<zeta\>:A\<rightarrow\>C> and
+  <math|\<eta\>:B\<rightarrow\>C> are functions for some set <math|C>.
+  Precisely,
+
+  <\equation*>
+    A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B\<assign\><around*|{|<around*|(|a,b|)>\|a\<in\>A,b\<in\>B,\<zeta\><around*|(|a|)>=\<eta\><around*|(|b|)>|}>.
+  </equation*>
+
+  Now, we are to represent this by arrows. As we have been familiar with, for
+  a locally small category <math|<math-ss|C>>, the collection of morphisms,
+  say <math|<math-ss|C><around*|(|X,Y|)>> for some
+  <math|X,Y\<in\><math-ss|C>>, is a set. So, we can consider the fibered
+  product of the sets of morphisms. Materials for constructing the
+  categorical version of fibered product should be restricted, as far as
+  posssible, to those appeared in the definition of fibered product, so that
+  the categorical version will go back to fibered product when
+  <math|<math-ss|C>> is <math|<math-ss|Set>>. So, we start constructing the
+  sets of morphisms by using <math|A> and <math|B>, which is nothing but the
+  <math|<math-ss|C><around*|(|A,B|)>>. This, however, will not work, since
+  nothing can be done with only one set. The smallest extension is
+  introducing another object <math|X\<in\><math-ss|C>>, so that we can
+  consider <math|<math-ss|C><around*|(|X,A|)>> and
+  <math|<math-ss|C><around*|(|X,B|)>>. Explorations of the other several
+  possibilities, such as the fibered product of sets
+  <math|<math-ss|C><around*|(|A,X|)>> and
+  <math|<math-ss|C><around*|(|B,X|)>>, are left to reader.
+
+  So, we replace the sets in the definition of fibered product by
+  <math|A\<rightarrow\><math-ss|C><around*|(|X,A|)>>,
+  <math|B\<rightarrow\><math-ss|C><around*|(|X,B|)>>, and in addition,
+  <math|C\<rightarrow\><math-ss|C><around*|(|X,C|)>>. What about the
+  functions <math|\<zeta\>> and <math|\<eta\>>? We have to construct a
+  function <math|<wide|\<zeta\>|^>:<math-ss|C><around*|(|X,A|)>\<rightarrow\><math-ss|C><around*|(|X,C|)>>
+  for replacing <math|\<zeta\>:A\<rightarrow\>C>. The only possibility that
+  construct such <math|<wide|\<zeta\>|^>> using the materials used to define
+  fibered product is <math|<wide|\<zeta\>|^>:X\<rightarrow\>A<above|\<rightarrow\>|\<zeta\>>C>,
+  or say <math|<wide|\<zeta\>|^>\<assign\>\<zeta\><rsub|\<ast\>>>. The same,
+  we replace <math|\<eta\>> by <math|\<eta\><rsub|\<ast\>>>. Thus, the
+  <math|A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B> is replaced to be
+
+  <\equation*>
+    <math-ss|C><around*|(|X,A|)>\<times\><rsub|<around*|(|\<zeta\><rsub|\<ast\>>,\<eta\><rsub|\<ast\>>|)>><math-ss|C><around*|(|X,B|)>=<around*|{|<around*|(|f,g|)>\|f:X\<rightarrow\>A,g:X\<rightarrow\>B,\<zeta\>\<circ\>f=\<eta\>\<circ\>g|}>.
+  </equation*>
+
+  The right hand side is an expression of arrows, which is what we want. It
+  simply means the commutative diagram as follow.
+
+  <big-figure|<image|figures/limit-3.png|0.3par|||>|Indicates the fibered
+  product <math|<math-ss|C><around*|(|X,A|)>\<times\><rsub|<around*|(|\<zeta\><rsub|\<ast\>>,\<eta\><rsub|\<ast\>>|)>><math-ss|C><around*|(|X,B|)>>.>
+
+  This hints for a cone with the \Pbase\Q
+  <math|A<above|\<rightarrow\>|\<zeta\>>C<above|\<leftarrow\>|\<eta\>>B>, or
+  with the indexing category like <math|\<bullet\>\<rightarrow\>\<bullet\>\<leftarrow\>\<bullet\>>.
+  From this diagram, we build cone, and from the cone, we get the limit,
+  called pullback.
+
+  <\definition>
+    [Pullback] Let <math|<math-ss|C>> a category. An object in
+    <math|<math-ss|C>>, denoted by <math|A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B>,
+    together with <math|A,B\<in\><math-ss|C>> and
+    <math|\<zeta\>:A\<rightarrow\>C,\<eta\>:B\<rightarrow\>C> is called a
+    <with|font-series|bold|pullback> if for each <math|X\<in\><math-ss|C>>,
+    there exists <math|\<gamma\>:X\<rightarrow\>A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B>
+    such that figure <reference|figure: Pullback> commutes.
+  </definition>
+
+  <big-figure|<image|figures/limit-4.png|0.3par|||>|<label|figure: Pullback>
+  Indicates the pullback <math|A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B>.
+  Principaly, there should be a morphism from
+  <math|A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B> to <math|C> (and
+  also from <math|X> to <math|C>). But, since the figure commutes, such a
+  morphism can be represented by <math|\<zeta\>\<circ\>\<alpha\>> or by
+  <math|\<eta\>\<circ\>\<beta\>>, thus is redundant and omitted.>
+
+  We are left to check that pullback is indeed the fibered product in the
+  case of <math|<math-ss|Set>>. This is left to reader. The only trick for
+  proving this is using the uniqueness of representation.
+
+  We summarize the previous steps as follow <\footnote>
+    There is a theorem that relates to these steps.
+
+    <\theorem>
+      Let <math|<math-ss|C>> a locally small category. For each diagram
+      <math|D:<math-ss|I>\<rightarrow\><math-ss|C>> and for each
+      <math|X\<in\><math-ss|C>>, we have
+
+      <\equation*>
+        lim<rsub|<math-ss|I>><math-ss|C><around*|(|X,D<around*|(|-|)>|)>\<cong\><math-ss|C><around*|(|X,lim<rsub|<math-ss|I>>D|)>,
+      </equation*>
+
+      and (the dual)
+
+      <\equation*>
+        lim<rsub|<math-ss|I>><math-ss|C><around*|(|D<around*|(|-|)>,X|)>\<cong\><math-ss|C><around*|(|colim<rsub|<math-ss|I>>D,X|)>.
+      </equation*>
+    </theorem>
+
+    But, I cannot figure out what is the explicit relationship to these
+    steps.
+  </footnote>.
+
+  <\enumerate-numeric>
+    <item>Write down the expression of the concept in terms of sets and
+    functions.
+
+    <item>In the expression of the concept:
+
+    <\itemize>
+      <item>replace the sets by the pattern
+      <math|A\<rightarrow\><math-ss|C><around*|(|X,A|)>>, where the left hand
+      side is some set <math|A> while, in the right hand side, <math|X> and
+      <math|A> are object in the generic (locally small) category
+      <math|<math-ss|C>>; and
+
+      <item>replace the functions by functions between the sets of morphisms
+      constructed out of those appeared in the expression of the concept.
+    </itemize>
+
+    <item>Draw the commutative diagram for the replaced expression, from
+    which the \Pbase\Q of cone can be read out.
+
+    <item>Write down the limit implied by the cone; and then prove that this
+    limit will reduce to the concept in set theory when <math|<math-ss|C>> is
+    <math|<math-ss|Set>>.
+  </enumerate-numeric>
+
+  This series of steps is generic. By following these steps, we can
+  \Pcategorify\Q equalizer in set theory <\footnote>
+    In set theory, given two sets <math|A,B> and two functions
+    <math|u,v:A\<rightarrow\>B>, the equalizer of <math|u> and <math|v> is
+    defined as the subset of <math|A>
+
+    <\equation*>
+      eq<around*|(|u,v|)>\<assign\><around*|{|a\|a\<in\>A,u<around*|(|a|)>=v<around*|(|a|)>|}>.
+    </equation*>
+
+    Following the same strategy, we arrive at
+
+    <\equation*>
+      eq<around*|(|u<rsub|\<ast\>>,v<rsub|\<ast\>>|)>=<around*|{|f\|f:X\<rightarrow\>A,u\<circ\>f=v\<circ\>f|}>.
+    </equation*>
+
+    Again, the right hand side is an expression of arrows, which hints for a
+    cone with the \Pbase\Q <math|A<below|<above|\<rightrightarrows\>|u>|v>B>,
+    or with the indexing category like <math|\<bullet\>\<rightrightarrows\>\<bullet\>>,
+    as figure <reference|figure: Equalizer> shows.
+
+    <big-figure|<image|figures/limit-5.png|0.3par|||>|<label|figure:
+    Equalizer> Indicates the equalizer <math|eq<around*|(|u,v|)>>.
+    Principaly, there should be a morphism from <math|eq<around*|(|u,v|)>> to
+    <math|B> (and also from <math|X> to <math|B>). They are omitted for the
+    same reason in figure <reference|figure: Pullback>.>
+
+    The final step is to prove that this is indeed the equalizer in the case
+    of <math|<math-ss|Set>>. Now, by following the same steps, we can
+    generalize equalizer from set theory to its categorical version. Details
+    are left to reader.
+  </footnote>.
 </body>
 
 <\initial>
@@ -303,28 +543,49 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|1|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|auto-10|<tuple|4|3|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|auto-11|<tuple|1.5|4|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|auto-12|<tuple|1.6|4|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|auto-13|<tuple|5|4|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|auto-14|<tuple|2|?|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|auto-15|<tuple|6|?|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|auto-2|<tuple|1|1|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|auto-3|<tuple|1.1|1|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|auto-4|<tuple|1.2|1|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|auto-5|<tuple|1|2|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|auto-6|<tuple|1.3|2|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|auto-7|<tuple|2|2|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|auto-8|<tuple|1.4|3|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|auto-9|<tuple|3|3|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|figure: Adjoint functors preserve
-    product|<tuple|6|?|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|figure: Colimit|<tuple|4|3|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|figure: Cone|<tuple|1|2|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|figure: Cone Functor|<tuple|2|2|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|figure: Limit|<tuple|3|3|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
-    <associate|figure: Product is Limit|<tuple|5|4|../../../.TeXmacs/texts/scratch/no_name_3.tm>>
+    <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|4|3>>
+    <associate|auto-11|<tuple|1.5|4>>
+    <associate|auto-12|<tuple|1.6|4>>
+    <associate|auto-13|<tuple|5|4>>
+    <associate|auto-14|<tuple|1.7|5>>
+    <associate|auto-15|<tuple|6|5>>
+    <associate|auto-16|<tuple|2|6>>
+    <associate|auto-17|<tuple|2.1|6>>
+    <associate|auto-18|<tuple|7|6>>
+    <associate|auto-19|<tuple|2.2|6>>
+    <associate|auto-2|<tuple|1|1>>
+    <associate|auto-20|<tuple|2.3|6>>
+    <associate|auto-21|<tuple|2.4|7>>
+    <associate|auto-22|<tuple|8|7>>
+    <associate|auto-23|<tuple|9|8>>
+    <associate|auto-24|<tuple|10|9>>
+    <associate|auto-3|<tuple|1.1|1>>
+    <associate|auto-4|<tuple|1.2|1>>
+    <associate|auto-5|<tuple|1|2>>
+    <associate|auto-6|<tuple|1.3|2>>
+    <associate|auto-7|<tuple|2|2>>
+    <associate|auto-8|<tuple|1.4|3>>
+    <associate|auto-9|<tuple|3|3>>
+    <associate|figure: Adjoint functors preserve product|<tuple|6|5>>
+    <associate|figure: Colimit|<tuple|4|3>>
+    <associate|figure: Cone|<tuple|1|2>>
+    <associate|figure: Cone Functor|<tuple|2|2>>
+    <associate|figure: Equalizer|<tuple|10|9>>
+    <associate|figure: Incomplete Category|<tuple|7|6>>
+    <associate|figure: Limit|<tuple|3|3>>
+    <associate|figure: Product is Limit|<tuple|5|4>>
+    <associate|figure: Pullback|<tuple|9|8>>
+    <associate|footnote-1|<tuple|1|7>>
+    <associate|footnote-2|<tuple|2|8>>
+    <associate|footnote-3|<tuple|3|9>>
+    <associate|footnr-1|<tuple|1|7>>
+    <associate|footnr-2|<tuple|10|8>>
+    <associate|footnr-3|<tuple|10|9>>
+    <associate|section: Product is a limit with discrete indexing
+    category|<tuple|1.6|4>>
+    <associate|theorem: Limit Construction by Product and
+    Equalizer|<tuple|8|6>>
   </collection>
 </references>
 
@@ -363,6 +624,47 @@
       shown as dots. The right hand side is the commutative diagram for the
       definition of product. The green arrows is for the constant functor,
       and red arrows for the diagram functor.>|<pageref|auto-13>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|6>|| Illustrates how
+      the product is preserved by adjoint functors
+      <with|mode|<quote|math>|F\<dashv\>G>, where
+      <with|mode|<quote|math>|F:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>
+      and <with|mode|<quote|math>|G:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>>.
+      The red part indicates that <with|mode|<quote|math>|A\<times\>B> is the
+      product of <with|mode|<quote|math>|A> and <with|mode|<quote|math>|B> in
+      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>.
+      The blue part indicates that <with|mode|<quote|math>|\<varepsilon\><rsub|A\<times\>B>>
+      is universal. By putting the red and blue parts together, we find the
+      relation <with|mode|<quote|math>|f=F<around*|(|f<rsup|\<sharp\>>|)>\<circ\>\<varepsilon\><rsub|A\<times\>B>>.>|<pageref|auto-15>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|7>|| Indicates a simple
+      category that has no product. Indeed, only <with|mode|<quote|math>|A>
+      and <with|mode|<quote|math>|C> have the potential to be a product, but
+      if <with|mode|<quote|math>|A> were a product, there is no arrow from
+      <with|mode|<quote|math>|C> to <with|mode|<quote|math>|A>; and if
+      <with|mode|<quote|math>|C> were a product, there is no arrow from
+      <with|mode|<quote|math>|A> to <with|mode|<quote|math>|C>. So, none of
+      them is a product.>|<pageref|auto-18>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|8>||Indicates the
+      fibered product <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|X,A|)>\<times\><rsub|<around*|(|\<zeta\><rsub|\<ast\>>,\<eta\><rsub|\<ast\>>|)>><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|X,B|)>>.>|<pageref|auto-22>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|9>|| Indicates the
+      pullback <with|mode|<quote|math>|A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B>.
+      Principaly, there should be a morphism from
+      <with|mode|<quote|math>|A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B>
+      to <with|mode|<quote|math>|C> (and also from <with|mode|<quote|math>|X>
+      to <with|mode|<quote|math>|C>). But, since the figure commutes, such a
+      morphism can be represented by <with|mode|<quote|math>|\<zeta\>\<circ\>\<alpha\>>
+      or by <with|mode|<quote|math>|\<eta\>\<circ\>\<beta\>>, thus is
+      redundant and omitted.>|<pageref|auto-23>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|10>|| Indicates the
+      equalizer <with|mode|<quote|math>|eq<around*|(|u,v|)>>. Principaly,
+      there should be a morphism from <with|mode|<quote|math>|eq<around*|(|u,v|)>>
+      to <with|mode|<quote|math>|B> (and also from <with|mode|<quote|math>|X>
+      to <with|mode|<quote|math>|B>). They are omitted for the same reason in
+      figure <reference|figure: Pullback>.>|<pageref|auto-24>>
     </associate>
     <\associate|toc>
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Limit>
@@ -370,7 +672,7 @@
       <no-break><pageref|auto-1><vspace|1fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Cone
-      and Limit> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Functor and Limit> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|1.1<space|2spc>Diagram as a part of
@@ -396,6 +698,31 @@
       <with|par-left|<quote|1tab>|1.6<space|2spc>Product is a limit with
       discrete indexing category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
+
+      <with|par-left|<quote|1tab>|1.7<space|2spc>Example: product is
+      preserved by adjoint functors <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-14>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Construction
+      of Limit> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Category may not be complete
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-17>>
+
+      <with|par-left|<quote|1tab>|2.2<space|2spc>A limit can be constructed
+      by products and equalizers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-19>>
+
+      <with|par-left|<quote|1tab>|2.3<space|2spc><with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>
+      is complete <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-20>>
+
+      <with|par-left|<quote|1tab>|2.4<space|2spc>Limit helps generalize
+      concepts from set theory to category theory
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-21>>
     </associate>
   </collection>
 </auxiliary>

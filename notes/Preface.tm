@@ -13,10 +13,9 @@
   mathematical background on many areas, making it hard to read.
 
   In this note we focus on the core concepts of category theory, trying to
-  understand them in an intuitive way. This endeavor make us think about
-  things from the view of category theory, whenever we meet a mathematical
-  concept, no matter it is known or new to us, \ Examples are shown only when
-  it is essential.
+  understand them in an intuitive way, and <with|font-shape|italic|to build
+  theory from the ground up>. This endeavor make us think about things in the
+  framework of category theory. Examples are shown only when it is essential.
 
   <section|Writing Style>
 
@@ -46,12 +45,12 @@
   <section|Notations>
 
   Since category theory is the math of arrows, we use arrow notation
-  <math|\<rightarrow\>> thoroughly. This means the notation like
-  <math|\<Rightarrow\>> and the words like \Pnatural in <math|X>\Q are
-  avoided. Instead, for <math|A\<rightarrow\>B>, by recognizing the \Ptype\Q
-  of <math|A> and <math|B>, we know this arrow indicates a functor if both
-  <math|A> and <math|B> are categories, a natural transformation if both are
-  functors, and so on.
+  <math|\<rightarrow\>> thoroughly. This means the general notations like
+  <math|\<Rightarrow\>> and the general expression like \Pnatural in
+  <math|X>\Q are avoided. Instead, for <math|A\<rightarrow\>B>, by
+  recognizing the \Ptype\Q of <math|A> and <math|B>, we know this arrow
+  indicates a functor if both <math|A> and <math|B> are categories, a natural
+  transformation if both are functors, and so on.
 </body>
 
 <\initial>
@@ -67,7 +66,7 @@
     <associate|auto-3|<tuple|2|1>>
     <associate|auto-4|<tuple|3|1>>
     <associate|auto-5|<tuple|4|1>>
-    <associate|auto-6|<tuple|5|?>>
+    <associate|auto-6|<tuple|5|1>>
   </collection>
 </references>
 
@@ -93,6 +92,10 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>How
       to Read> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Notations>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

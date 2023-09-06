@@ -580,9 +580,9 @@
   For the same reason, injection on objects and faithfulness are two
   independent properties of functor.
 
-  <subsection|Fully faithful functor reflects isomorphisms>
+  <subsection|Fully faithful functor preserves isomorphisms>
 
-  Fully faithful functor is found to be important because it reflects
+  Fully faithful functor is found to be important because it preserves
   isomorphisms. To be clear, recall that notation <math|X\<cong\>Y> means
   there is an isomorphism between objects <math|X> and <math|Y>, we have the
   following lemma.
