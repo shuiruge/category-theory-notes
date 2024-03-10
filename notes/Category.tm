@@ -241,9 +241,8 @@
     <\itemize>
       <item>for <math|\<forall\>a\<in\>A>, <math|a\<rightarrow\>x> and,
 
-      <item>for <math|\<forall\>y\<in\>\<bbb-R\>> and
-      <math|\<forall\>a\<in\>A>, if <math|y\<rightarrow\>a>, then
-      <math|y\<rightarrow\>x>.
+      <item>for <math|\<forall\>y\<in\>\<bbb-R\>>, if <math|a\<rightarrow\>y>
+      for <math|\<forall\>a\<in\>A>, then <math|x\<rightarrow\>y>.
     </itemize>
   </definition>
 
@@ -259,9 +258,8 @@
     <\itemize>
       <item>for <math|\<forall\>a\<in\>A>, <math|x\<rightarrow\>a> and,
 
-      <item>for <math|\<forall\>y\<in\>\<bbb-R\>> and
-      <math|\<forall\>a\<in\>A>, if <math|a\<rightarrow\>y>, then
-      <math|x\<rightarrow\>y>.
+      <item>for <math|\<forall\>y\<in\>\<bbb-R\>>, if <math|y\<rightarrow\>a>
+      for <math|\<forall\>a\<in\>A>, then <math|y\<rightarrow\>x>.
     </itemize>
   </definition>
 
@@ -285,8 +283,8 @@
   exchanging the domain and codomain for each morphism in <math|<math-ss|C>>.
 
   So, in the dual category of <math|<math-ss|Set>>, i.e.
-  <math|<math-ss|Set><rsup|op>>, we find that arrows are not functions, not
-  even maps! Yet another example whose morphisms are not maps.
+  <math|<math-ss|Set><rsup|op>>, we find that morphisms are not functions,
+  not even maps! Yet another example whose morphisms are not maps.
 
   <section|Why Category?>
 
@@ -364,7 +362,7 @@
   This theorem holds not only for Cartesian product of sets, but also, for
   instance, for the group direct product.
 
-  <subsection|Duality Helps Create New Concepts and Theorems, Freely!>
+  <subsection|Duality helps create new concepts and theorems, freely!>
 
   Another benefit of viewing everything in arrows is duality. In category
   theory, it is natural to think what would happen if we exchange domain and
@@ -491,11 +489,6 @@
   Functor Composition> Extending the commutative diagram <reference|figure:
   Functor> to the right. This diagram commutes.>
 
-  Imagine a category as a series of diagrams with dots and arrows between
-  dots. The apply of a functor changes the style of the dots and arrows. This
-  means it has become another category, but the structure, or form, of the
-  diagrams are invariant.
-
   <subsection|Functor preserves the structure of category>
 
   It should be checked that functor preserves the structure of category.
@@ -553,12 +546,12 @@
   is surjective, for which we say <math|F> is <with|font-series|bold|full>.
 
   Surjection on objects and fullness are two independent properties of
-  functor. We may find a functor is not surjective on objects, but is full.
-  That is, there is object in <math|<math-ss|D>> that is out of the image of
-  <math|F>, but for every two objects in the image of <math|F>, say
+  functor. We may find a functor that is not surjective on objects, but is
+  full. That is, there is object in <math|<math-ss|D>> that is out of the
+  image of <math|F>, but for every two objects in the image of <math|F>, say
   <math|F<around*|(|A|)>> and <math|F<around*|(|B|)>>, the map on morphisms
   <math|F:<math-ss|C><around*|(|A,B|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|A|)>,F<around*|(|B|)>|)>>
-  is surjective.
+  is always surjective.
 
   <subsection|Injective functor may not be faithful><label|section: Injective
   functor may not be faithful>
@@ -640,8 +633,7 @@
   composition.
 
   Consider a functor <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>, the
-  generic pattern to be examined would be
-  <math|F<around*|(|A|)><above|\<rightarrow\>|F<around*|(|f|)>>F<around*|(|B|)><above|\<rightarrow\>|F<around*|(|g|)>>F<around*|(|C|)>>
+  generic pattern to be examined will be <math|F<around*|(|A|)><above|\<rightarrow\>|F<around*|(|f|)>>F<around*|(|B|)><above|\<rightarrow\>|F<around*|(|g|)>>F<around*|(|C|)>>
   in the image <math|F<around*|(|<math-ss|C>|)>>. The problem is if
   <math|F<around*|(|g|)>\<circ\>F<around*|(|f|)>> still in the
   <math|F<around*|(|<math-ss|C>|)>>? By the axiom of composition,
@@ -703,7 +695,7 @@
     <math|F,G:<math-ss|C>\<rightarrow\><math-ss|D>>, a
     <with|font-series|bold|natural transformation>
     <math|\<eta\>:F\<rightarrow\>G> is a family of morphisms in
-    <math|<math-ss|D>>, <math|<around*|{|\<eta\><rsub|A>:F<around*|(|A|)>\<rightarrow\>G<around*|(|A|)>\|\<forall\>A\<in\><math-ss|C>|}>>,
+    <math|<math-ss|D>>, <math|\<eta\>\<assign\><around*|{|\<eta\><rsub|A>:F<around*|(|A|)>\<rightarrow\>G<around*|(|A|)>\|\<forall\>A\<in\><math-ss|C>|}>>,
     such that for each <math|A,B\<in\><math-ss|C>> and each
     <math|f:A\<rightarrow\>B>, we have <math|G<around*|(|f|)>\<circ\>\<eta\><rsub|A>=\<eta\><rsub|B>\<circ\>F<around*|(|f|)>>.
     The <math|\<eta\><rsub|A>> is called a <with|font-series|bold|component>
@@ -733,11 +725,6 @@
   the target category). Finally, associativity and identity axioms can be
   checked directly.
 
-  Remember the metaphor for functor, wherein the action of a functor is like
-  applying a style to the dots and arrows of the diagrams, the action of
-  <math|\<eta\>> is like changing the style of dots and arrows from style
-  <math|F> to style <math|G>.
-
   <subsection|Natural transformation preserves the structure of functor>
 
   TODO
@@ -759,10 +746,10 @@
 
   This definition is quite complicated, since it is an isomorphism on
   <math|<around*|[|<math-ss|C>,<math-ss|D>|]>>, which we are not familiar
-  with. But, because <math|\<alpha\>> is a family of morphisms of category
+  with. But, because <math|\<alpha\>> is a family of morphisms in category
   <math|<math-ss|D>>, we can first consider a much simpler case, that is,
   <math|\<alpha\><rsub|A>:F<around*|(|A|)>\<rightarrow\>G<around*|(|A|)>> is
-  isomorphic. This isomorphism is of category <math|<math-ss|D>>, instead of
+  isomorphic. This isomorphism is in category <math|<math-ss|D>>, instead of
   <math|<around*|[|<math-ss|C>,<math-ss|D>|]>>. So, we guess, or hope, that,
   if for each <math|A\<in\><math-ss|C>>, there exists a morphism on
   <math|<math-ss|D>>, <math|\<beta\><rsub|A>:G<around*|(|A|)>\<rightarrow\>F<around*|(|A|)>>,
@@ -796,7 +783,7 @@
     <math|<math-ss|D>>.
   </proof>
 
-  With this lemma, a isomorphism on <math|<around*|[|<math-ss|C>,<math-ss|D>|]>>
+  With this lemma, an isomorphism in <math|<around*|[|<math-ss|C>,<math-ss|D>|]>>
   now reduces to a family of isomorphisms on <math|<math-ss|D>>, which is
   quite familiar to us.
 
@@ -812,22 +799,19 @@
   <subsection|Isomorphic objects should be viewed as one>
 
   Isomorphic topological spaces are the same. So it is for the isomorphic
-  groups, isomorphic vector spaces, and so on. This means we should view
+  groups, isomorphic vector spaces, and so on. This means we shall view
   isomorphic objects are one object. Regarding to morphisms, consider
   isomorphic objects <math|X> and <math|Y>, and another object <math|Z> of
   the same category. If <math|X> and <math|Y> are viewed as one, then there
-  should be bijections between <math|mor<around*|(|X,Z|)>> and
+  will be bijections between <math|mor<around*|(|X,Z|)>> and
   <math|mor<around*|(|Y,Z|)>>, and between <math|mor<around*|(|Z,X|)>> and
   <math|mor<around*|(|Z,Y|)>>.
 
   If visualizing a category as diagrams of dots and arrows between dots, then
-  we should pinch two isomorphic objects together. This leads to equivalent,
+  we shall pinch two isomorphic objects together. This leads to equivalent,
   but simplified, diagrams. The category obtained by pinching isomorphic
   objects as one in category <math|<math-ss|C>> is called the
   <with|font-series|bold|skeleton> of <math|<math-ss|C>>.
-
-  Currently, this viewpoint is simply for intuition. Later in TODO, we will
-  prove this fact seriously.
 
   <subsection|Natural isomorphism describes equivalence between categories>
 
@@ -838,18 +822,19 @@
   <math|G\<circ\>F=1<rsub|<math-ss|C>>> and
   <math|F\<circ\>G=1<rsub|<math-ss|D>>>. Even though this definition is quite
   natural, however, it is not true. The reason is that there exist isomorphic
-  objects. For instance, if <math|G\<circ\>F<around*|(|A|)>=B>, which is not
-  equal, but isomorphic, to <math|A>, then the categories can still be
-  equivalent. This reflects our previous idea that isomorphic objects should
-  be viewed as one. So, instead of <math|G\<circ\>F<around*|(|A|)>=A>, as
-  <math|G\<circ\>F=1<rsub|<math-ss|C>>> indicates, we should say
-  <math|G\<circ\>F<around*|(|A|)>\<cong\>A>. By lemma <reference|lemma:
-  Natural Isomorphism>, <math|G\<circ\>F\<cong\>1<rsub|<math-ss|C>>> means,
-  for each <math|A\<in\><math-ss|C>>, there exists an isomorphism
+  objects. For instance, if <math|<around*|(|G\<circ\>F|)><around*|(|A|)>=B>,
+  which is not equal, but isomorphic, to <math|A>, then the categories can
+  still be equivalent. This reflects our previous idea that isomorphic
+  objects shall be viewed as one. So, instead of
+  <math|G\<circ\>F<around*|(|A|)>=A>, as <math|G\<circ\>F=1<rsub|<math-ss|C>>>
+  indicates, we should say <math|<around*|(|G\<circ\>F|)><around*|(|A|)>\<cong\>A>.
+  By lemma <reference|lemma: Natural Isomorphism>,
+  <math|G\<circ\>F\<cong\>1<rsub|<math-ss|C>>> means, for each
+  <math|A\<in\><math-ss|C>>, there exists an isomorphism
   <math|\<alpha\><rsub|A>:<around*|(|G\<circ\>F|)><around*|(|A|)>\<rightarrow\>A>,
   that is <math|<around*|(|G\<circ\>F|)><around*|(|A|)>\<cong\>A>. This
   implies that, instead of <math|G\<circ\>F=1<rsub|<math-ss|C>>>, the correct
-  condition for equivalence should be <math|G\<circ\>F\<cong\>1<rsub|<math-ss|C>>>.
+  condition for equivalence shall be <math|G\<circ\>F\<cong\>1<rsub|<math-ss|C>>>.
   The same, <math|F\<circ\>G\<cong\>1<rsub|<math-ss|D>>>.
 
   <\definition>
@@ -871,12 +856,11 @@
 
   In this chapter we first defined category. This was the unique starting
   point; and all the left were built by recursion. When the category was
-  defined, the object was quite abstract and generic. It could be anything.
-  So, it could be category itself! This implied a category of categories.
-  Therein, the morphism, or functor, was defined as the structure preserving
-  map. Again, when functor was defined, object could then be functor! A
-  category of functors could be built, where the morphism was natural
-  transformation.
+  defined, the object was quite abstract and generic. It can be anything. So,
+  it can be category itself! This implied a category of categories. Therein,
+  the morphism, or functor, was defined as the structure preserving map.
+  Again, when functor was defined, object can then be functor! A category of
+  functors could be built, where the morphism was natural transformation.
 
   So, the basic conceptions, which are category, functor, and natural
   transformation, were defined recursively.
@@ -892,7 +876,7 @@
   concept, there are a plenty of lemmas, theorems, and corollaries related to
   this concept. This is because analysis is not fundamental, and is supported
   by other mathematical areas, such as set theory, topology, and linear
-  algebra (for higher dimension). So, to prove a theorem, there would be a
+  algebra (for higher dimension). So, to prove a theorem, there will be a
   large amount of combinations of the more fundamental lemmas, theorems, and
   corollaries. The proof, thus, cannot be generally easy. But, for category
   theory, there is no other mathematical area that supports, and the
@@ -1046,7 +1030,7 @@
       <no-break><pageref|auto-18>>
 
       <with|par-left|<quote|1tab>|3.6<space|2spc>Fully faithful functor
-      reflects isomorphisms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      preserves isomorphisms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>>
 
       <with|par-left|<quote|1tab>|3.7<space|2spc>Image of functor may not be

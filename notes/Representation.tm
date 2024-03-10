@@ -56,7 +56,7 @@
   represented by hom-functor>
 
   Given the object, there will be many morphisms with this object as codomain
-  (or domain). But, for the convenience of discussion, it would be better to
+  (or domain). But, for the convenience of discussion, it will be better to
   use one morphism to represent them all. Precisely, consider a locally small
   category <math|<math-ss|C>>. For each <math|X\<in\><math-ss|C>>, we are to
   represent the collection <math|<around*|{|<math-ss|C><around*|(|Y,X|)>\|\<forall\>Y\<in\><math-ss|C>|}>>
@@ -77,14 +77,14 @@
   <math|Y>, but there is no arrow that emits to <math|Y>! So, we conclude
   that there is no such functor map from <math|<math-ss|C>>. One possibility
   to solve this problem is consider the dual of <math|<math-ss|C>>, the
-  <math|<math-ss|C><rsup|op>>, where in the arrow in <math|f> is flipped to
+  <math|<math-ss|C><rsup|op>>, where the arrow of <math|f> is flipped to
   <math|f:Z\<rightarrow\>Y>. Now, we find an arrow emits to <math|Y>! And, by
   chaining objects by morphisms, it is easy to find
   <math|\<psi\>=\<varphi\>\<circ\>f>. By denoting
   <math|f<rsup|\<ast\>><around*|(|\<varphi\>|)>\<assign\>\<varphi\>\<circ\>f>,
   we have <math|\<psi\>=f<rsup|\<ast\>><around*|(|\<varphi\>|)>>. So, we
   guess that, for each morphism <math|f:Z\<rightarrow\>Y> in
-  <math|<math-ss|C>>, <math|<math-ss|C><around*|(|-,X|)><around*|(|f|)>\<assign\>f<rsup|\<ast\>>>.
+  <math|<math-ss|C><rsup|op>>, <math|<math-ss|C><around*|(|-,X|)><around*|(|f|)>\<assign\>f<rsup|\<ast\>>>.
 
   <\remark>
     In the course of this reasoning, we find that making an educated guess in
@@ -166,7 +166,7 @@
   Our aim is to study the relation between an object and its hom-functor, say
   between <math|X> and <math|<math-ss|C><around*|(|-,X|)>>. In category
   theory, we shall put the situation in the framework of category. So, to
-  discuss this problem, we should first consider the categories they belong
+  discuss this problem, we shall first consider the categories they belong
   to. Obviously, <math|X\<in\><math-ss|C>>. And since
   <math|<math-ss|C><around*|(|-,X|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>,
   we have <math|<math-ss|C><around*|(|-,X|)>\<in\><around*|[|<math-ss|C><rsup|op>,<math-ss|Set>|]>>,
@@ -175,8 +175,8 @@
 
   With this preparation, we consider the map from <math|<math-ss|C>> to
   <math|<around*|[|<math-ss|C><rsup|op>,<math-ss|Set>|]>>, which preserves
-  the structure of category. This map, thus, should be functorial. On
-  objects, as we expected, the functor should send <math|X> to
+  the structure of category. This map, thus, shall be functorial. On objects,
+  as we expected, the functor shall send <math|X> to
   <math|<math-ss|C><around*|(|-,X|)>>. The question is how the functor maps
   on morphism. So, the problem reduces to how to construct the map from
   <math|<math-ss|C><around*|(|X,Y|)>> to <math|<math-ss|Nat><around*|(|<math-ss|C><around*|(|-,X|)>,<math-ss|C><around*|(|-,Y|)>|)>>,
@@ -185,7 +185,7 @@
   That is, for each <math|f:X\<rightarrow\>Y>, what is the corresponding
   natural transformation <math|\<eta\><around*|(|f|)>:<math-ss|C><around*|(|-,X|)>\<rightarrow\><math-ss|C><around*|(|-,Y|)>>?
 
-  We should consider the component of <math|\<eta\><around*|(|f|)>>, say
+  We shall consider the component of <math|\<eta\><around*|(|f|)>>, say
   <math|\<eta\><around*|(|f|)><rsub|A>> for any object
   <math|A\<in\><math-ss|C>>. We have <math|\<eta\><around*|(|f|)><rsub|A>:<math-ss|C><around*|(|A,X|)>\<rightarrow\><math-ss|C><around*|(|A,Y|)>>,
   which sends a morphism <math|\<varphi\>:A\<rightarrow\>X> to one of
@@ -267,7 +267,7 @@
 
   For surjection, we mean, for each natural transformation
   <math|\<eta\>:<math-ss|C><around*|(|-,X|)>\<rightarrow\><math-ss|C><around*|(|-,Y|)>>,
-  there should be a morphism <math|f:X\<rightarrow\>Y> such that
+  there will be a morphism <math|f:X\<rightarrow\>Y> such that
   <math|\<eta\>=\<cal-Y\><around*|(|f|)>>. Construct such <math|f> out of
   <math|\<eta\>> is to find a morphism in
   <math|<math-ss|C><around*|(|X,Y|)>>. Notice
@@ -284,7 +284,7 @@
   Yoneda functor is full> commutes. This forces
   <math|\<eta\><rsub|B><around*|(|g|)>=f\<circ\>g=f<rsub|\<ast\>><around*|(|g|)>>
   for each <math|B\<in\><math-ss|C>> and each <math|g:B\<rightarrow\>X>. This
-  implies <math|\<eta\>=\<cal-Y\><around*|(|f|)>>.
+  implies <math|\<eta\>=f<rsub|\<ast\>>=\<cal-Y\><around*|(|f|)>>.
 
   <big-figure|<image|figures/yoneda-2.png|300pt|150pt||>|<label|figure:
   Yoneda functor is full> The dash arrow indicates what is implied.>
@@ -295,13 +295,13 @@
 
   Again, for injection, we mean, for each
   <math|f,f<rprime|'>:X\<rightarrow\>Y> with <math|f\<neq\>f<rprime|'>>, we
-  should have <math|\<cal-Y\><around*|(|f|)>\<neq\>\<cal-Y\><around*|(|f<rprime|'>|)>>.
+  will have <math|\<cal-Y\><around*|(|f|)>\<neq\>\<cal-Y\><around*|(|f<rprime|'>|)>>.
   Indeed, consider <math|1<rsub|X>>, <math|\<cal-Y\><around*|(|f|)><around*|(|1<rsub|X>|)>=f\<circ\>1<rsub|X>=f>
   and <math|\<cal-Y\><around*|(|f<rprime|'>|)><around*|(|1<rsub|X>|)>=f<rprime|'>\<circ\>1<rsub|X>=f<rprime|'>>.
   This implies <math|\<cal-Y\><around*|(|f|)>\<neq\>\<cal-Y\><around*|(|f<rprime|'>|)>>.
   So, we get the conclusion that the map from
   <math|<math-ss|C><around*|(|X,Y|)>> to <math|<math-ss|Nat><around*|(|<math-ss|C><around*|(|-,X|)>,<math-ss|C><around*|(|-,Y|)>|)>>
-  surjective is injective.
+  is injective.
 
   We conclude the analysis in this section as follow.<\footnote>
     For a locally small category <math|<math-ss|C>>, functor from
@@ -384,11 +384,11 @@
   <math|<wide|F|^>\<in\><math-ss|C>> such that <math|F> is the hom-functor of
   <math|<wide|F|^>>?
 
-  Again, we should claim the problem in the framework of category theory.
+  Again, we shall claim the problem in the framework of category theory.
   Notice <math|F> is a functor, so is the
   <math|<math-ss|C><around*|(|-,<wide|F|^>|)>>, then the connection between
-  them should be a natural transformation. So, the problem should be claimed
-  as what is the condition for the existence of
+  them shall be a natural transformation. So, the problem shall be claimed as
+  what is the condition for the existence of
   <math|<wide|F|^>\<in\><math-ss|C>> such that there is a natural isomorphism
   <math|\<psi\>:<math-ss|C><around*|(|-,<wide|F|^>|)>\<rightarrow\>F>. In
   this situation, we say that the presheaf (functor of \Ptype\Q
@@ -427,7 +427,10 @@
   is the dual category of <math|<math-ss|C>>, so it should be
   <math|F<around*|(|f\<circ\>g|)>=F<around*|(|g|)>\<circ\>F<around*|(|f|)>>.>
 
-  The previous discussion can be summarized as follow.
+  The <math|e> in the expression <math|\<psi\><rsub|X>=F<around*|(|-|)><around*|(|e|)>>
+  holds for all <math|X\<in\><math-ss|C>>. For this reason, it is called a
+  <with|font-shape|italic|universal> element, reminding that <math|e> is an
+  element of <math|F<around*|(|<wide|F|^>|)>> which is a set.
 
   <\definition>
     <label|definition: Universal Element>[Universal Element] Given a functor
@@ -438,20 +441,20 @@
     is isomorphic for all <math|X\<in\><math-ss|C>>.
   </definition>
 
-  <\remark>
-    The <math|e> in the expression <math|\<psi\><rsub|X>=F<around*|(|-|)><around*|(|e|)>>
-    holds for all <math|X\<in\><math-ss|C>>. For this reason, it is called a
-    <with|font-shape|italic|universal> element, reminding that <math|e> is an
-    element of <math|F<around*|(|<wide|F|^>|)>> which is a set.
-  </remark>
+  The previous discussion can be summarized as follow.
 
   <\theorem>
-    <label|theorem: Universal Element>[Universal Element] A functor
-    <math|F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>> is representable
-    if and only if there exists a universal element of <math|F>. And if
-    <math|e> is a universal element of <math|F>, then
-    <math|F<around*|(|-|)><around*|(|e|)>:<math-ss|C><around*|(|-,<wide|F|^>|)>\<rightarrow\>F>
-    defines a natural isomorphism.
+    <label|theorem: Universal Element>[Universal Element]
+
+    <\itemize>
+      <item>A functor <math|F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
+      is representable if and only if there exists a universal element of
+      <math|F>.
+
+      <item>If <math|e> is a universal element of <math|F>, then
+      <math|F<around*|(|-|)><around*|(|e|)>:<math-ss|C><around*|(|-,<wide|F|^>|)>\<rightarrow\>F>
+      defines a natural isomorphism.
+    </itemize>
   </theorem>
 
   <subsection|Representation is unique up to isomorphism><label|section:
@@ -476,6 +479,97 @@
 
   It is in this sense that we say the object <math|<wide|F|^>> is
   <with|font-shape|italic|the> representation of the presheaf <math|F>.
+
+  <subsection|Dual to representation>
+
+  We have discussed the hom-functor and the possibility that a general
+  presheaf can be isomorphic to a hom-functor, that is, representation. It is
+  worthy of considering the dual theory of these. Since duality is free of
+  charge, we will not tell the whole story in its dual version, but simply
+  claim the conclusions by directly flipping arrows in the corresponding
+  commutative diagrams. This can be seen as an exercise of flipping arrow
+  too.
+
+  We start at the duality of hom-functor.
+
+  <\definition>
+    [Co-Hom-Functor] Let <math|<math-ss|C>> a locally small category. For any
+    object <math|X\<in\><math-ss|C>>, functor
+    <math|<math-ss|C><around*|(|X,\<star\>|)>:<math-ss|C>\<rightarrow\><math-ss|Set>>
+    is defined by
+
+    <\itemize>
+      <item>for each <math|Y\<in\><math-ss|C>>,
+      <math|<math-ss|C><around*|(|X,-|)><around*|(|Y|)>\<assign\><math-ss|C><around*|(|X,Y|)>>,
+      and
+
+      <item>for each <math|Y,Z\<in\><math-ss|C>> and each
+      <math|f:Y\<rightarrow\>Z>, <math|<math-ss|C><around*|(|X,-|)><around*|(|f|)>\<assign\>f<rsub|\<ast\>>>,
+      where <math|f<rsub|\<ast\>><around*|(|\<varphi\>|)>\<assign\>f\<circ\>\<varphi\>>.
+    </itemize>
+
+    This <math|<math-ss|C><around*|(|X,-|)>> is called the
+    <with|font-series|bold|co-hom-functor> of <math|X> in <math|<math-ss|C>>.
+  </definition>
+
+  Then, we have the dual Yoneda functor.
+
+  <\definition>
+    [Co-Yoneda functor] Let <math|<math-ss|C>> a locally small category. A
+    functor <math|\<cal-Y\><rsup|op>:<math-ss|C><rsup|op>\<rightarrow\><around*|[|<math-ss|C>,<math-ss|Set>|]>>
+    defined by
+
+    <\itemize>
+      <item>for each <math|X\<in\><math-ss|C>>,
+      <math|\<cal-Y\><rsup|op><around*|(|X|)>\<assign\><math-ss|C><around*|(|X,-|)>>,
+      and
+
+      <item>for each <math|X,Y\<in\>C> and each <math|f:X\<rightarrow\>Y>,
+      <math|\<cal-Y\><around*|(|f|)>:<math-ss|C><around*|(|Y,-|)>\<rightarrow\><math-ss|C><around*|(|Z,-|)>>
+      is a natural transformation with component
+      <math|\<cal-Y\><around*|(|f|)><rsub|A>\<assign\>f<rsup|\<ast\>>> for
+      any <math|A\<in\><math-ss|C>>, where
+      <math|f<rsup|\<ast\>><around*|(|\<varphi\>|)>\<assign\>\<varphi\>\<circ\>f>
+    </itemize>
+
+    is called the <with|font-series|bold|Co-Yoneda functor> (or
+    <with|font-series|bold|Co-Yoneda embedding>) of <math|<math-ss|C>>.
+  </definition>
+
+  <\lemma>
+    Let <math|<math-ss|C>> a locally small category. We have, for each
+    <math|X,Y\<in\><math-ss|C>>,
+
+    <\equation*>
+      <math-ss|C><around*|(|X,Y|)>\<cong\><math-ss|Nat><around*|(|<math-ss|C><around*|(|X,-|)>,<math-ss|C><around*|(|Y,-|)>|)>.
+    </equation*>
+  </lemma>
+
+  <\theorem>
+    Co-Yoneda functor is fully faithful.
+  </theorem>
+
+  Finally, the duality of universal element relates to the representability
+  of co-presheaf.
+
+  <\definition>
+    <label|definition: Co-Universal Element>[Co-Universal Element] Given a
+    functor <math|F:<math-ss|C>\<rightarrow\><math-ss|Set>>, an element
+    <math|e\<in\>F<around*|(|<wide|F|^>|)>>, for some
+    <math|<wide|F|^>\<in\><math-ss|C>>, is a
+    <with|font-series|bold|co-universal element> of <math|F> if
+    <math|F<around*|(|-|)><around*|(|e|)>:<math-ss|C><around*|(|<wide|F|^>,X|)>\<rightarrow\>F<around*|(|X|)>>
+    is isomorphic for all <math|X\<in\><math-ss|C>>.
+  </definition>
+
+  <\theorem>
+    <label|theorem: Co-Universal Element>[Co-Universal Element] A functor
+    <math|F:<math-ss|C>\<rightarrow\><math-ss|Set>> is representable if and
+    only if there exists a co-universal element of <math|F>. And if <math|e>
+    is a co-universal element of <math|F>, then
+    <math|F<around*|(|-|)><around*|(|e|)>:<math-ss|C><around*|(|<wide|F|^>,-|)>\<rightarrow\>F>
+    defines a natural isomorphism.
+  </theorem>
 
   <section|Summary>
 
@@ -515,22 +609,23 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|2.3|3>>
+    <associate|auto-10|<tuple|2.3|2>>
     <associate|auto-11|<tuple|2|3>>
-    <associate|auto-12|<tuple|2.4|4>>
+    <associate|auto-12|<tuple|2.4|3>>
     <associate|auto-13|<tuple|2.5|4>>
     <associate|auto-14|<tuple|3|4>>
     <associate|auto-15|<tuple|2.6|5>>
     <associate|auto-16|<tuple|3|5>>
     <associate|auto-17|<tuple|3.1|5>>
-    <associate|auto-18|<tuple|4|6>>
+    <associate|auto-18|<tuple|4|5>>
     <associate|auto-19|<tuple|5|6>>
     <associate|auto-2|<tuple|1|1>>
-    <associate|auto-20|<tuple|3.2|7>>
-    <associate|auto-21|<tuple|4|7>>
-    <associate|auto-22|<tuple|4.1|7>>
-    <associate|auto-23|<tuple|4.2|7>>
-    <associate|auto-24|<tuple|4.3|7>>
+    <associate|auto-20|<tuple|3.2|6>>
+    <associate|auto-21|<tuple|3.3|6>>
+    <associate|auto-22|<tuple|4|7>>
+    <associate|auto-23|<tuple|4.1|7>>
+    <associate|auto-24|<tuple|4.2|7>>
+    <associate|auto-25|<tuple|4.3|7>>
     <associate|auto-3|<tuple|1.1|1>>
     <associate|auto-4|<tuple|1.2|1>>
     <associate|auto-5|<tuple|1.3|1>>
@@ -538,28 +633,30 @@
     <associate|auto-7|<tuple|2.1|1>>
     <associate|auto-8|<tuple|2.2|1>>
     <associate|auto-9|<tuple|1|2>>
+    <associate|definition: Co-Universal Element|<tuple|18|7>>
     <associate|definition: Universal Element|<tuple|11|6>>
     <associate|figure: Naturality of psi|<tuple|5|6>>
     <associate|figure: Representable Functor|<tuple|1|2>>
     <associate|figure: The f_* is Natural Transformation|<tuple|2|3>>
-    <associate|figure: Universal Element|<tuple|4|6>>
+    <associate|figure: Universal Element|<tuple|4|5>>
     <associate|figure: Yoneda functor is full|<tuple|3|4>>
     <associate|footnote-1|<tuple|1|1>>
-    <associate|footnote-2|<tuple|2|5>>
-    <associate|footnote-3|<tuple|3|6>>
+    <associate|footnote-2|<tuple|2|4>>
+    <associate|footnote-3|<tuple|3|5>>
     <associate|footnr-1|<tuple|1|1>>
-    <associate|footnr-2|<tuple|8|5>>
-    <associate|footnr-3|<tuple|3|6>>
-    <associate|lemma: Yoneda Lemma|<tuple|8|5>>
+    <associate|footnr-2|<tuple|8|4>>
+    <associate|footnr-3|<tuple|3|5>>
+    <associate|lemma: Yoneda Lemma|<tuple|8|4>>
     <associate|section: Functor is representable if there exists universal
     element|<tuple|3.1|5>>
     <associate|section: Morphisms with fixed codomain can be represented by
     hom-functor|<tuple|2.2|1>>
     <associate|section: Representable Functor and Yoneda Functor|<tuple|2|1>>
-    <associate|section: Representation is unique|<tuple|3.2|7>>
+    <associate|section: Representation is unique|<tuple|3.2|6>>
     <associate|section: Universal Element|<tuple|3|5>>
     <associate|section: Yoneda functor is fully faithful|<tuple|2.5|4>>
-    <associate|theorem: Universal Element|<tuple|13|6>>
+    <associate|theorem: Co-Universal Element|<tuple|19|7>>
+    <associate|theorem: Universal Element|<tuple|12|6>>
   </collection>
 </references>
 
@@ -585,7 +682,7 @@
       <with|mode|<quote|math>|e>.>|<pageref|auto-18>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|5>|| This
-      <locus|<id|%AF3D188-54ACAA0>|<link|hyperlink|<id|%AF3D188-54ACAA0>|<url|https://q.uiver.app/#q=WzAsMTEsWzAsMCwiWSJdLFsyLDAsIkMoWSxcXGhhdHtGfSkiXSxbMywxLCJcXHpldGEiXSxbMywyLCJcXHpldGEgXFxjaXJjIGYiXSxbNSwxLCJGKFxcemV0YSkoZSkiXSxbNSwyLCJGKGYpIFxcY2lyYyBGKFxcemV0YSkoZSkiXSxbNCwyLCJGKFxcemV0YSBcXGNpcmMgZikoZSkgIl0sWzYsMCwiRihZKSJdLFsyLDMsIkMoWixcXGhhdHtGfSkiXSxbMCwzLCJaIl0sWzYsMywiRihaKSJdLFsyLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMiw0LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzQsNSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFszLDYsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMSw3LCJGKC0pKGUpIiwxXSxbMSw4LCJmXioiLDFdLFs5LDAsImYiLDFdLFs3LDEwLCJGKGYpIiwxXSxbOCwxMCwiRigtKShlKSIsMV1d>>|figure>
+      <locus|<id|%73C4768-7BB4228>|<link|hyperlink|<id|%73C4768-7BB4228>|<url|https://q.uiver.app/#q=WzAsMTEsWzAsMCwiWSJdLFsyLDAsIkMoWSxcXGhhdHtGfSkiXSxbMywxLCJcXHpldGEiXSxbMywyLCJcXHpldGEgXFxjaXJjIGYiXSxbNSwxLCJGKFxcemV0YSkoZSkiXSxbNSwyLCJGKGYpIFxcY2lyYyBGKFxcemV0YSkoZSkiXSxbNCwyLCJGKFxcemV0YSBcXGNpcmMgZikoZSkgIl0sWzYsMCwiRihZKSJdLFsyLDMsIkMoWixcXGhhdHtGfSkiXSxbMCwzLCJaIl0sWzYsMywiRihaKSJdLFsyLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMiw0LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzQsNSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFszLDYsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMSw3LCJGKC0pKGUpIiwxXSxbMSw4LCJmXioiLDFdLFs5LDAsImYiLDFdLFs3LDEwLCJGKGYpIiwxXSxbOCwxMCwiRigtKShlKSIsMV1d>>|figure>
       proves that the naturality of <with|mode|<quote|math>|\<psi\>> is an
       immediate result of the functoriality of <with|mode|<quote|math>|F>. It
       should be noticed that the domain of <with|mode|<quote|math>|F> is the
@@ -655,22 +752,26 @@
       to isomorphism <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20>>
 
+      <with|par-left|<quote|1tab>|3.3<space|2spc>Dual to representation
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-21>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Summary>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21><vspace|0.5fn>
+      <no-break><pageref|auto-22><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|4.1<space|2spc>Embedding in the framework
       of category theory is the right way to extend category theory
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>>
+      <no-break><pageref|auto-23>>
 
       <with|par-left|<quote|1tab>|4.2<space|2spc>\PTypes\Q help to restrict
       the possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23>>
+      <no-break><pageref|auto-24>>
 
       <with|par-left|<quote|1tab>|4.3<space|2spc>\PTypes\Q help check the
       correctness of derivation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24>>
+      <no-break><pageref|auto-25>>
     </associate>
   </collection>
 </auxiliary>
