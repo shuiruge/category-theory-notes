@@ -5,7 +5,7 @@
 <\body>
   <chapter|Representation>
 
-  <section|Preliminary: Small Category (TODO)>
+  <section|Preliminary: Russell's Paradox (TODO)>
 
   <subsection|The set of all sets implies Russell's paradox>
 
@@ -473,14 +473,14 @@
   following theorem.
 
   <\theorem>
-    If a presheaf <math|F> is represented by both <math|A> and <math|B>, then
-    <math|A\<cong\>B>.
+    If a presheaf <math|F> is represented by both object <math|A> and object
+    <math|B>, then <math|A\<cong\>B>.
   </theorem>
 
   It is in this sense that we say the object <math|<wide|F|^>> is
   <with|font-shape|italic|the> representation of the presheaf <math|F>.
 
-  <subsection|Dual to representation>
+  <subsection|Dual representation is free of charge>
 
   We have discussed the hom-functor and the possibility that a general
   presheaf can be isomorphic to a hom-functor, that is, representation. It is
@@ -682,7 +682,7 @@
       <with|mode|<quote|math>|e>.>|<pageref|auto-18>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|5>|| This
-      <locus|<id|%73C4768-7BB4228>|<link|hyperlink|<id|%73C4768-7BB4228>|<url|https://q.uiver.app/#q=WzAsMTEsWzAsMCwiWSJdLFsyLDAsIkMoWSxcXGhhdHtGfSkiXSxbMywxLCJcXHpldGEiXSxbMywyLCJcXHpldGEgXFxjaXJjIGYiXSxbNSwxLCJGKFxcemV0YSkoZSkiXSxbNSwyLCJGKGYpIFxcY2lyYyBGKFxcemV0YSkoZSkiXSxbNCwyLCJGKFxcemV0YSBcXGNpcmMgZikoZSkgIl0sWzYsMCwiRihZKSJdLFsyLDMsIkMoWixcXGhhdHtGfSkiXSxbMCwzLCJaIl0sWzYsMywiRihaKSJdLFsyLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMiw0LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzQsNSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFszLDYsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMSw3LCJGKC0pKGUpIiwxXSxbMSw4LCJmXioiLDFdLFs5LDAsImYiLDFdLFs3LDEwLCJGKGYpIiwxXSxbOCwxMCwiRigtKShlKSIsMV1d>>|figure>
+      <locus|<id|%9901388-464AC08>|<link|hyperlink|<id|%9901388-464AC08>|<url|https://q.uiver.app/#q=WzAsMTEsWzAsMCwiWSJdLFsyLDAsIkMoWSxcXGhhdHtGfSkiXSxbMywxLCJcXHpldGEiXSxbMywyLCJcXHpldGEgXFxjaXJjIGYiXSxbNSwxLCJGKFxcemV0YSkoZSkiXSxbNSwyLCJGKGYpIFxcY2lyYyBGKFxcemV0YSkoZSkiXSxbNCwyLCJGKFxcemV0YSBcXGNpcmMgZikoZSkgIl0sWzYsMCwiRihZKSJdLFsyLDMsIkMoWixcXGhhdHtGfSkiXSxbMCwzLCJaIl0sWzYsMywiRihaKSJdLFsyLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMiw0LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzQsNSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFszLDYsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMSw3LCJGKC0pKGUpIiwxXSxbMSw4LCJmXioiLDFdLFs5LDAsImYiLDFdLFs3LDEwLCJGKGYpIiwxXSxbOCwxMCwiRigtKShlKSIsMV1d>>|figure>
       proves that the naturality of <with|mode|<quote|math>|\<psi\>> is an
       immediate result of the functoriality of <with|mode|<quote|math>|F>. It
       should be noticed that the domain of <with|mode|<quote|math>|F> is the
@@ -695,7 +695,7 @@
       <no-break><pageref|auto-1><vspace|1fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Preliminary:
-      Small Category (TODO)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Russell's Paradox (TODO)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|1.1<space|2spc>The set of all sets implies

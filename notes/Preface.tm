@@ -9,13 +9,15 @@
 
   This note is about the basic aspects of category theory. There have been
   many books on category theory, almost all of them contains many examples
-  from multiple areas of mathematics. These examples, however, needs
+  from multiple areas of mathematics. These examples, however, need
   mathematical background on many areas, making it hard to read.
 
   In this note we focus on the core concepts of category theory, trying to
   understand them in an intuitive way, and <with|font-shape|italic|to build
-  theory from the ground up>. This endeavor make us think about things in the
-  framework of category theory. Examples are shown only when it is essential.
+  theory from the ground up>.<\footnote>
+    Richard Feynman: \PWhat I cannot create, I do not understand.\Q
+  </footnote> This endeavor make us think about things in the framework of
+  category theory. Examples are shown only when it is essential.
 
   <section|Writing Style>
 
@@ -34,7 +36,8 @@
 
   It is hard to draw diagrams in <TeXmacs>. So, all the commutative diagrams
   are drawn by <hlink|quiver|https://q.uiver.app/> online, and pasted to the
-  text by screenshot.
+  text by screenshot. For each commutative diagram, the link to quiver is
+  provided.
 
   <section|How to Read>
 
@@ -67,6 +70,8 @@
     <associate|auto-4|<tuple|3|1>>
     <associate|auto-5|<tuple|4|1>>
     <associate|auto-6|<tuple|5|1>>
+    <associate|footnote-1|<tuple|1|?>>
+    <associate|footnr-1|<tuple|1|?>>
   </collection>
 </references>
 

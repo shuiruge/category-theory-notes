@@ -133,7 +133,7 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-37><vspace|0.5fn>
 
-    3.1<space|2spc>Preliminary: Small Category (TODO)
+    3.1<space|2spc>Preliminary: Russell's Paradox (TODO)
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-38>
 
@@ -188,8 +188,8 @@
     isomorphism <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-56>>
 
-    <with|par-left|1tab|3.3.3<space|2spc>Dual to representation
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|3.3.3<space|2spc>Dual representation is free of
+    charge <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-57>>
 
     3.4<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
@@ -375,6 +375,7 @@
     Transformation|<tuple|3.2|17|Representation.tm>>
     <associate|figure: Universal Element|<tuple|3.4|19|Representation.tm>>
     <associate|figure: Yoneda functor is full|<tuple|3.3|18|Representation.tm>>
+    <associate|footnote-1.1|<tuple|1.1|3|Preface.tm>>
     <associate|footnote-3.1|<tuple|3.1|15|Representation.tm>>
     <associate|footnote-3.2|<tuple|3.2|18|Representation.tm>>
     <associate|footnote-3.3|<tuple|3.3|19|Representation.tm>>
@@ -382,6 +383,7 @@
     <associate|footnote-4.2|<tuple|4.2|27|Limit.tm>>
     <associate|footnote-4.3|<tuple|4.3|28|Limit.tm>>
     <associate|footnote-4.4|<tuple|4.4|29|Limit.tm>>
+    <associate|footnr-1.1|<tuple|1.1|3|Preface.tm>>
     <associate|footnr-3.1|<tuple|3.1|15|Representation.tm>>
     <associate|footnr-3.2|<tuple|3.8|18|Representation.tm>>
     <associate|footnr-3.3|<tuple|3.3|19|Representation.tm>>
@@ -458,7 +460,7 @@
       <with|mode|<quote|math>|e>.>|<pageref|auto-54>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.5>|| This
-      <locus|<id|%BA33908-E6AF310-39E1AAF8>|<link|hyperlink|<id|%BA33908-E6AF310-39E1AAF8>|<url|https://q.uiver.app/#q=WzAsMTEsWzAsMCwiWSJdLFsyLDAsIkMoWSxcXGhhdHtGfSkiXSxbMywxLCJcXHpldGEiXSxbMywyLCJcXHpldGEgXFxjaXJjIGYiXSxbNSwxLCJGKFxcemV0YSkoZSkiXSxbNSwyLCJGKGYpIFxcY2lyYyBGKFxcemV0YSkoZSkiXSxbNCwyLCJGKFxcemV0YSBcXGNpcmMgZikoZSkgIl0sWzYsMCwiRihZKSJdLFsyLDMsIkMoWixcXGhhdHtGfSkiXSxbMCwzLCJaIl0sWzYsMywiRihaKSJdLFsyLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMiw0LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzQsNSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFszLDYsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMSw3LCJGKC0pKGUpIiwxXSxbMSw4LCJmXioiLDFdLFs5LDAsImYiLDFdLFs3LDEwLCJGKGYpIiwxXSxbOCwxMCwiRigtKShlKSIsMV1d>>|figure>
+      <locus|<id|%A014CE8-D45DE28-39E1AAF8>|<link|hyperlink|<id|%A014CE8-D45DE28-39E1AAF8>|<url|https://q.uiver.app/#q=WzAsMTEsWzAsMCwiWSJdLFsyLDAsIkMoWSxcXGhhdHtGfSkiXSxbMywxLCJcXHpldGEiXSxbMywyLCJcXHpldGEgXFxjaXJjIGYiXSxbNSwxLCJGKFxcemV0YSkoZSkiXSxbNSwyLCJGKGYpIFxcY2lyYyBGKFxcemV0YSkoZSkiXSxbNCwyLCJGKFxcemV0YSBcXGNpcmMgZikoZSkgIl0sWzYsMCwiRihZKSJdLFsyLDMsIkMoWixcXGhhdHtGfSkiXSxbMCwzLCJaIl0sWzYsMywiRihaKSJdLFsyLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMiw0LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzQsNSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFszLDYsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMSw3LCJGKC0pKGUpIiwxXSxbMSw4LCJmXioiLDFdLFs5LDAsImYiLDFdLFs3LDEwLCJGKGYpIiwxXSxbOCwxMCwiRigtKShlKSIsMV1d>>|figure>
       proves that the naturality of <with|mode|<quote|math>|\<psi\>> is an
       immediate result of the functoriality of <with|mode|<quote|math>|F>. It
       should be noticed that the domain of <with|mode|<quote|math>|F> is the
@@ -500,7 +502,7 @@
       and red arrows for the diagram functor.>|<pageref|auto-75>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|4.6>||This
-      <locus|<id|%BA33908-E947808-39E1AAF8>|<link|hyperlink|<id|%BA33908-E947808-39E1AAF8>|<url|https://q.uiver.app/#q=WzAsNCxbMSwwLCJcXGZvcmFsbCBYIl0sWzAsMSwiQSJdLFsxLDIsIkMiXSxbMiwxLCJCIl0sWzAsMSwiXFxmb3JhbGwgZiIsMV0sWzEsMiwiXFx6ZXRhIiwxXSxbMCwzLCJcXGZvcmFsbCBnIiwxXSxbMywyLCJcXGV0YSIsMV1d>>|figure>
+      <locus|<id|%A014CE8-D8428C8-39E1AAF8>|<link|hyperlink|<id|%A014CE8-D8428C8-39E1AAF8>|<url|https://q.uiver.app/#q=WzAsNCxbMSwwLCJcXGZvcmFsbCBYIl0sWzAsMSwiQSJdLFsxLDIsIkMiXSxbMiwxLCJCIl0sWzAsMSwiXFxmb3JhbGwgZiIsMV0sWzEsMiwiXFx6ZXRhIiwxXSxbMCwzLCJcXGZvcmFsbCBnIiwxXSxbMywyLCJcXGV0YSIsMV1d>>|figure>
       indicates the fibered product <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|X,A|)>\<times\><rsub|<around*|(|\<zeta\><rsub|\<ast\>>,\<eta\><rsub|\<ast\>>|)>><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|X,B|)>>.>|<pageref|auto-78>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|4.7>|| Indicates the
@@ -664,7 +666,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37><vspace|0.5fn>
 
-      3.1<space|2spc>Preliminary: Small Category (TODO)
+      3.1<space|2spc>Preliminary: Russell's Paradox (TODO)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-38>
 
@@ -721,8 +723,8 @@
       up to isomorphism <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-56>>
 
-      <with|par-left|<quote|1tab>|3.3.3<space|2spc>Dual to representation
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|3.3.3<space|2spc>Dual representation is
+      free of charge <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-57>>
 
       3.4<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>

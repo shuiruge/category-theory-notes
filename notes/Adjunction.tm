@@ -106,7 +106,7 @@
   there is a unique <math|\<zeta\>:X\<rightarrow\>W> such that
   <math|f=e\<circ\>F<around*|(|\<zeta\>|)>>.>
 
-  <subsection|Universal arrow furnish natural structure><label|section:
+  <subsection|Universal arrow furnishes natural structure><label|section:
   Universal arrows furnish natural structure>
 
   As it is known, structure is very essential for enriching mathematics. For
@@ -228,19 +228,19 @@
   <\collection>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|4|3>>
-    <associate|auto-11|<tuple|2|?>>
+    <associate|auto-11|<tuple|2|3>>
     <associate|auto-2|<tuple|1|1>>
     <associate|auto-3|<tuple|1.1|1>>
     <associate|auto-4|<tuple|1.2|1>>
     <associate|auto-5|<tuple|1|2>>
     <associate|auto-6|<tuple|1.3|2>>
     <associate|auto-7|<tuple|1.4|2>>
-    <associate|auto-8|<tuple|2|3>>
+    <associate|auto-8|<tuple|2|2>>
     <associate|auto-9|<tuple|3|3>>
     <associate|figure: Composition Axiom|<tuple|3|3>>
     <associate|figure: Identity Axiom|<tuple|4|3>>
     <associate|figure: Universal Arrow Is Functorial|<tuple|2|2>>
-    <associate|figure: Universality|<tuple|1|1>>
+    <associate|figure: Universality|<tuple|1|2>>
     <associate|footnote-1|<tuple|1|1>>
     <associate|footnr-1|<tuple|1|1>>
     <associate|section: Universal arrows furnish natural
@@ -252,25 +252,26 @@
   <\collection>
     <\associate|figure>
       <tuple|normal|<surround|<hidden-binding|<tuple>|1>|| This
-      <locus|<id|%B8E2F08-864FA60>|<link|hyperlink|<id|%B8E2F08-864FA60>|<url|https://q.uiver.app/#q=WzAsNSxbMSwwLCJGKFgpIl0sWzEsMiwiRihXKSJdLFswLDIsIlciXSxbMCwwLCJYIl0sWzMsMiwiWSJdLFswLDEsIkYoXFx6ZXRhKSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFszLDIsIlxcZXhpc3RzICEgXFx6ZXRhIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsNCwiZV9ZIiwxXSxbMCw0LCJcXGZvcmFsbCBmIiwxXV0=>>|figure>
-      declared a universal element of <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>><around*|(|F<around*|(|-|)>,Y|)>>.
-      For each <with|mode|<quote|math>|X\<in\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>>
+      <locus|<id|%A66B028-51C4350>|<link|hyperlink|<id|%A66B028-51C4350>|<url|https://q.uiver.app/#q=WzAsNSxbMSwwLCJGKFgpIl0sWzEsMiwiRihXKSJdLFswLDIsIlciXSxbMCwwLCJYIl0sWzMsMiwiWSJdLFswLDEsIkYoXFx6ZXRhKSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFszLDIsIlxcZXhpc3RzICEgXFx6ZXRhIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsNCwiZV9ZIiwxXSxbMCw0LCJcXGZvcmFsbCBmIiwxXV0=>>|figure>
+      illustrates a universal arrow from <with|mode|<quote|math>|F> to
+      <with|mode|<quote|math>|Y>. For each
+      <with|mode|<quote|math>|X\<in\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>>
       and each <with|mode|<quote|math>|f:F<around*|(|X|)>\<rightarrow\>Y>,
       there is a unique <with|mode|<quote|math>|\<zeta\>:X\<rightarrow\>W>
-      such that <with|mode|<quote|math>|f=e\<circ\>F<around*|(|\<zeta\>|)>>.>|<pageref|auto-4>>
+      such that <with|mode|<quote|math>|f=e\<circ\>F<around*|(|\<zeta\>|)>>.>|<pageref|auto-5>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|2>|| This
-      <locus|<id|%B8E2F08-8668088>|<link|hyperlink|<id|%B8E2F08-8668088>|<url|https://q.uiver.app/#q=WzAsNixbMSwwLCJGKFdfWCkiXSxbMywwLCJYIl0sWzEsMiwiRihXX1kpIl0sWzAsMiwiV19ZIl0sWzAsMCwiV19YIl0sWzMsMiwiWSJdLFswLDEsImVfWCIsMV0sWzAsMiwiRihmXntcXCN9KSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDUsImVfWSIsMV0sWzEsNSwiZiIsMV0sWzQsMywiXFxleGlzdHMgISBmXntcXCN9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsNSwiZiBcXGNpcmMgZV9YIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d>>|figure>
+      <locus|<id|%A66B028-515E230>|<link|hyperlink|<id|%A66B028-515E230>|<url|https://q.uiver.app/#q=WzAsNixbMSwwLCJGKFdfWCkiXSxbMywwLCJYIl0sWzEsMiwiRihXX1kpIl0sWzAsMiwiV19ZIl0sWzAsMCwiV19YIl0sWzMsMiwiWSJdLFswLDEsImVfWCIsMV0sWzAsMiwiRihmXntcXCN9KSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDUsImVfWSIsMV0sWzEsNSwiZiIsMV0sWzQsMywiXFxleGlzdHMgISBmXntcXCN9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsNSwiZiBcXGNpcmMgZV9YIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d>>|figure>
       defines <with|mode|<quote|math>|f<rsup|\<sharp\>>>. For each
       <with|mode|<quote|math>|f:X\<rightarrow\>Y>, we have
       <with|mode|<quote|math>|f\<circ\>e<rsub|X>:F<around*|(|W<rsub|X>|)>\<rightarrow\>Y>.
       Since <with|mode|<quote|math>|<around*|(|W<rsub|Y>,e<rsub|Y>|)>> is a
       universal arrow, there is a unique <with|mode|<quote|math>|f<rsup|\<sharp\>>:W<rsub|X>\<rightarrow\>W<rsub|Y>>
       such that the red part commutes, which implies that the whole diagram
-      commutes.>|<pageref|auto-7>>
+      commutes.>|<pageref|auto-8>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3>|| This
-      <locus|<id|%B8E2F08-853F308>|<link|hyperlink|<id|%B8E2F08-853F308>|<url|https://q.uiver.app/#q=WzAsNixbMSwwLCJGKFdfWCkiXSxbMywwLCJYIl0sWzEsMiwiRihXX1gpIl0sWzAsMiwiV19YIl0sWzAsMCwiV19YIl0sWzMsMiwiWCJdLFswLDEsImVfWCIsMV0sWzAsMiwiRigxX3tXX1h9KSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDUsImVfWCIsMV0sWzEsNSwiMV9YIiwxXSxbNCwzLCIxX3tXX1h9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsNSwiZV9YIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d>>|figure>
+      <locus|<id|%A66B028-4D1A490>|<link|hyperlink|<id|%A66B028-4D1A490>|<url|https://q.uiver.app/#q=WzAsNixbMSwwLCJGKFdfWCkiXSxbMywwLCJYIl0sWzEsMiwiRihXX1gpIl0sWzAsMiwiV19YIl0sWzAsMCwiV19YIl0sWzMsMiwiWCJdLFswLDEsImVfWCIsMV0sWzAsMiwiRigxX3tXX1h9KSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDUsImVfWCIsMV0sWzEsNSwiMV9YIiwxXSxbNCwzLCIxX3tXX1h9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsNSwiZV9YIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d>>|figure>
       illustrates that composition axiom is satisfied. Composition axiom
       states that <with|mode|<quote|math>|<around*|(|g\<circ\>f|)><rsup|\<sharp\>>=g<rsup|\<sharp\>>\<circ\>f<rsup|\<sharp\>>>.
       First, notice that replacing <with|mode|<quote|math>|<around*|(|g\<circ\>f|)><rsup|\<sharp\>>>
@@ -279,10 +280,10 @@
       functorality of <with|mode|<quote|math>|F>. Next, because of
       universality, the <with|mode|<quote|math>|<around*|(|g\<circ\>f|)><rsup|\<sharp\>>>
       that makes this diagram commutes is unique. So, we conclude that
-      <with|mode|<quote|math>|<around*|(|g\<circ\>f|)><rsup|\<sharp\>>=g<rsup|\<sharp\>>\<circ\>f<rsup|\<sharp\>>>.>|<pageref|auto-8>>
+      <with|mode|<quote|math>|<around*|(|g\<circ\>f|)><rsup|\<sharp\>>=g<rsup|\<sharp\>>\<circ\>f<rsup|\<sharp\>>>.>|<pageref|auto-9>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|4>|| This
-      <locus|<id|%B8E2F08-85F8E90>|<link|hyperlink|<id|%B8E2F08-85F8E90>|<url|https://q.uiver.app/#q=WzAsNixbMSwwLCJGKFdfWCkiXSxbMywwLCJYIl0sWzEsMiwiRihXX1gpIl0sWzAsMiwiV19YIl0sWzAsMCwiV19YIl0sWzMsMiwiWCJdLFswLDEsImVfWCIsMV0sWzAsMiwiRigxX3tXX1h9KSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDUsImVfWCIsMV0sWzEsNSwiMV9YIiwxXSxbNCwzLCIxX3tXX1h9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsNSwiZV9YIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d>>|figure>
+      <locus|<id|%A66B028-4D19618>|<link|hyperlink|<id|%A66B028-4D19618>|<url|https://q.uiver.app/#q=WzAsNixbMSwwLCJGKFdfWCkiXSxbMywwLCJYIl0sWzEsMiwiRihXX1gpIl0sWzAsMiwiV19YIl0sWzAsMCwiV19YIl0sWzMsMiwiWCJdLFswLDEsImVfWCIsMV0sWzAsMiwiRigxX3tXX1h9KSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDUsImVfWCIsMV0sWzEsNSwiMV9YIiwxXSxbNCwzLCIxX3tXX1h9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsNSwiZV9YIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d>>|figure>
       illustrates that identity axiom is satisfied. Identity axiom states
       that <with|mode|<quote|math>|<around*|(|1<rsub|X>|)><rsup|\<sharp\>>=1<rsub|W<rsub|X>>>.
       First, notice that replacing <with|mode|<quote|math>|<around*|(|1<rsub|X>|)><rsup|\<sharp\>>>
@@ -290,7 +291,7 @@
       commutes. Next, because of universality, the
       <with|mode|<quote|math>|<around*|(|1<rsub|X>|)><rsup|\<sharp\>>> that
       makes this diagram commutes is unique. So, we conclude that
-      <with|mode|<quote|math>|<around*|(|1<rsub|X>|)><rsup|\<sharp\>>=1<rsub|W<rsub|X>>>.>|<pageref|auto-9>>
+      <with|mode|<quote|math>|<around*|(|1<rsub|X>|)><rsup|\<sharp\>>=1<rsub|W<rsub|X>>>.>|<pageref|auto-10>>
     </associate>
     <\associate|toc>
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Universality,
@@ -301,21 +302,27 @@
       (TODO)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|1.1<space|2spc>Universal arrow connects
-      morphisms in different categories <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.1<space|2spc>Hom-functor can be
+      generalized for multiple categories
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|1tab>|1.2<space|2spc>Universal arrows furnish
-      natural structure <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-5>>
+      <with|par-left|<quote|1tab>|1.2<space|2spc>Universal arrow is the
+      representation of generalized hom-functor
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4>>
 
-      <with|par-left|<quote|1tab>|1.3<space|2spc>Universal Arrows Are
-      Functorial <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.3<space|2spc>Universal arrow furnish
+      natural structure <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
+
+      <with|par-left|<quote|1tab>|1.4<space|2spc>Universal arrows are
+      functorial <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Adjunction>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-10><vspace|0.5fn>
+      <no-break><pageref|auto-11><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
