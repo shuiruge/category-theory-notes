@@ -1,4 +1,4 @@
-<TeXmacs|2.1>
+<TeXmacs|2.1.4>
 
 <style|generic>
 
@@ -47,7 +47,7 @@
   <math|I\<assign\><around*|{|1,\<ldots\>,n|}>> as an \Pindexing set\Q, and
   <math|f<around*|(|i|)>\<assign\>x<rsub|i>>.
 
-  Back to category theory, the indexing set analogies to a small category
+  Back to category theory, the indexing set analogies to a category
   <math|<math-ss|I>> called indexing category, and the function <math|f>
   analogies to functor <math|F:<math-ss|I>\<rightarrow\><math-ss|C>>.
   Indexing category is used for filtering the objects and morphisms in
@@ -55,11 +55,9 @@
   is, a diagram. We summarize the previous discussion as follow.
 
   <\definition>
-    [Diagram] Let <math|<math-ss|I>> a small category and <math|<math-ss|C>>
-    a category. An <math|<math-ss|I>>-shaped <with|font-series|bold|diagram>
-    in <math|<math-ss|C>> is a functor <math|F:<math-ss|I>\<rightarrow\><math-ss|C>>.
-    It is small or locally small if <math|<math-ss|C>> is small or locally
-    small respectively.
+    [Diagram] Let <math|<math-ss|I>> and <math|<math-ss|C>> categories. An
+    <math|<math-ss|I>>-shaped <with|font-series|bold|diagram> in
+    <math|<math-ss|C>> is a functor <math|F:<math-ss|I>\<rightarrow\><math-ss|C>>.
   </definition>
 
   <subsection|Cone irradiates diagram>
@@ -164,9 +162,8 @@
 
   <subsection|Limit is the representation of cone functor>
 
-  Given diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>> where
-  <math|<math-ss|C>> is locally small (or say, a locally small diagram), a
-  cone functor <math|Cone<around*|(|-,D|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
+  Given diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>, a cone functor
+  <math|Cone<around*|(|-,D|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
   is a presheaf, thus may be representable. Theorem <reference|theorem:
   Universal Element> states that a presheaf is representable if and only if
   there is a universal element of it. Let us restate the definition of
@@ -194,9 +191,8 @@
   <math|A\<in\><math-ss|I>>. Finally, we put these together as follow.
 
   <\definition>
-    [Universal Cone] For a locally small diagram
-    <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>, a
-    <with|font-series|bold|universal cone> is a cone
+    [Universal Cone] For a diagram <math|D:<math-ss|I>\<rightarrow\><math-ss|C>>,
+    a <with|font-series|bold|universal cone> is a cone
     <math|e\<in\>Cone<around*|(|lim D,D|)>> for some <math|lim
     D\<in\><math-ss|C>> such that, for each <math|X\<in\><math-ss|C>> and
     each cone <math|\<lambda\>\<in\>Cone<around*|(|X,D|)>>, there is a unique
@@ -230,8 +226,8 @@
   and cocone functor respectively, are unique up to isomorphism.
 
   <\theorem>
-    [Limit (Colimit) is Unique] The limit (colimit) of a locally small
-    diagram is unique up to isomorphism.
+    [Limit (Colimit) is Unique] The limit (colimit) of a diagram is unique up
+    to isomorphism.
   </theorem>
 
   <subsection|Infimum is a limit on poset <math|\<bbb-R\>>>
@@ -329,18 +325,17 @@
   </equation*>
 
   Now, we are to represent this by arrows. As we have been familiar with, for
-  a locally small category <math|<math-ss|C>>, the collection of morphisms,
-  say <math|<math-ss|C><around*|(|X,Y|)>> for some
-  <math|X,Y\<in\><math-ss|C>>, is a set. So, we can consider the fibered
-  product of the sets of morphisms. Materials for constructing the
-  categorical version of fibered product should be restricted, as far as
-  posssible, to those appeared in the definition of fibered product, so that
-  the categorical version can go back to fibered product when
-  <math|<math-ss|C>> is <math|<math-ss|Set>>. So, we start constructing the
-  sets of morphisms by using <math|A> and <math|B>, which is nothing but the
-  <math|<math-ss|C><around*|(|A,B|)>>. This, however, will not work, since
-  nothing can be done with only one set. The smallest extension is
-  considering <math|<math-ss|C><around*|(|-,A|)>> and
+  a category <math|<math-ss|C>>, the collection of morphisms, say
+  <math|<math-ss|C><around*|(|X,Y|)>> for some <math|X,Y\<in\><math-ss|C>>,
+  is a set. So, we can consider the fibered product of the sets of morphisms.
+  Materials for constructing the categorical version of fibered product
+  should be restricted, as far as posssible, to those appeared in the
+  definition of fibered product, so that the categorical version can go back
+  to fibered product when <math|<math-ss|C>> is <math|<math-ss|Set>>. So, we
+  start constructing the sets of morphisms by using <math|A> and <math|B>,
+  which is nothing but the <math|<math-ss|C><around*|(|A,B|)>>. This,
+  however, will not work, since nothing can be done with only one set. The
+  smallest extension is considering <math|<math-ss|C><around*|(|-,A|)>> and
   <math|<math-ss|C><around*|(|-,B|)>>, which means
   <math|<math-ss|C><around*|(|X,A|)>> and <math|<math-ss|C><around*|(|X,B|)>>
   for arbitrary object <math|X\<in\><math-ss|C>>. Exploration of the other
@@ -404,7 +399,7 @@
     There is a theorem that relates to these steps.
 
     <\theorem>
-      Let <math|<math-ss|C>> a locally small category. For each diagram
+      Let <math|<math-ss|C>> a category. For each diagram
       <math|D:<math-ss|I>\<rightarrow\><math-ss|C>> and for each
       <math|X\<in\><math-ss|C>>, we have
 
@@ -435,7 +430,7 @@
       <item>replace the sets by the pattern
       <math|A\<rightarrow\><math-ss|C><around*|(|-,A|)>>, where the left hand
       side is some set <math|A> while, in the right hand side, <math|A> is an
-      generic object in the locally small category <math|<math-ss|C>>; and
+      generic object in the category <math|<math-ss|C>>; and
 
       <item>replace the functions by Yoneda functor.
     </itemize>
@@ -491,51 +486,41 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|4|3>>
+    <associate|auto-10|<tuple|4|4>>
     <associate|auto-11|<tuple|1.5|4>>
     <associate|auto-12|<tuple|1.6|4>>
     <associate|auto-13|<tuple|1.7|4>>
-    <associate|auto-14|<tuple|5|4>>
+    <associate|auto-14|<tuple|5|5>>
     <associate|auto-15|<tuple|2|5>>
     <associate|auto-16|<tuple|2.1|5>>
-    <associate|auto-17|<tuple|6|5>>
-    <associate|auto-18|<tuple|7|5>>
-    <associate|auto-19|<tuple|8|5>>
+    <associate|auto-17|<tuple|6|6>>
+    <associate|auto-18|<tuple|7|6>>
+    <associate|auto-19|<tuple|8|7>>
     <associate|auto-2|<tuple|1|1>>
-    <associate|auto-20|<tuple|8|6>>
-    <associate|auto-21|<tuple|9|6>>
-    <associate|auto-22|<tuple|9|6>>
-    <associate|auto-23|<tuple|9|7>>
-    <associate|auto-24|<tuple|9|7>>
-    <associate|auto-25|<tuple|10|8>>
     <associate|auto-3|<tuple|1.1|1>>
     <associate|auto-4|<tuple|1.2|1>>
     <associate|auto-5|<tuple|1|2>>
     <associate|auto-6|<tuple|1.3|2>>
-    <associate|auto-7|<tuple|2|2>>
+    <associate|auto-7|<tuple|2|3>>
     <associate|auto-8|<tuple|1.4|3>>
     <associate|auto-9|<tuple|3|3>>
-    <associate|figure: Adjoint functors preserve product|<tuple|6|5>>
-    <associate|figure: Colimit|<tuple|4|3>>
+    <associate|figure: Colimit|<tuple|4|4>>
     <associate|figure: Cone|<tuple|1|2>>
-    <associate|figure: Cone Functor|<tuple|2|2>>
-    <associate|figure: Equalizer|<tuple|8|8>>
-    <associate|figure: Incomplete Category|<tuple|6|5>>
+    <associate|figure: Cone Functor|<tuple|2|3>>
+    <associate|figure: Equalizer|<tuple|8|7>>
     <associate|figure: Limit|<tuple|3|3>>
-    <associate|figure: Product is Limit|<tuple|5|4>>
-    <associate|figure: Pullback|<tuple|7|7>>
-    <associate|footnote-1|<tuple|1|6>>
-    <associate|footnote-2|<tuple|2|8>>
-    <associate|footnote-3|<tuple|3|8>>
-    <associate|footnote-4|<tuple|4|?>>
-    <associate|footnr-1|<tuple|1|6>>
-    <associate|footnr-2|<tuple|2|8>>
-    <associate|footnr-3|<tuple|8|8>>
-    <associate|footnr-4|<tuple|8|?>>
+    <associate|figure: Product is Limit|<tuple|5|5>>
+    <associate|figure: Pullback|<tuple|7|6>>
+    <associate|footnote-1|<tuple|1|5>>
+    <associate|footnote-2|<tuple|2|5>>
+    <associate|footnote-3|<tuple|3|7>>
+    <associate|footnote-4|<tuple|4|7>>
+    <associate|footnr-1|<tuple|1|5>>
+    <associate|footnr-2|<tuple|2|5>>
+    <associate|footnr-3|<tuple|8|7>>
+    <associate|footnr-4|<tuple|8|7>>
     <associate|section: Product is a limit with discrete indexing
     category|<tuple|1.7|4>>
-    <associate|theorem: Limit Construction by Product and
-    Equalizer|<tuple|7|6>>
   </collection>
 </references>
 
@@ -543,7 +528,7 @@
   <\collection>
     <\associate|figure>
       <tuple|normal|<surround|<hidden-binding|<tuple>|1>|| The left hand side
-      indicates the indexing category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>.
+      indicates the indexing category <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>.
       And the right hand side indicates the cone from
       <with|mode|<quote|math>|X> to <with|mode|<quote|math>|D>. The green
       arrows are for functor <with|mode|<quote|math>|Const<rsub|X>>, and the
@@ -554,17 +539,17 @@
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|2>|| Indicates the map
       on <with|mode|<quote|math>|f>. As an instance, the indexing category
-      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
+      <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>
       is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-7>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3>|| Indicates the
       limit. The dash arrow is for implication. As an instance, the indexing
-      category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
+      category <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>
       is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-9>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|4>|| Indicates the
       colimit. The dash arrow is for implication. As an instance, the
-      indexing category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
+      indexing category <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>
       is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-10>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|5>|| Indicates that
@@ -575,31 +560,11 @@
       definition of product. The green arrows is for the constant functor,
       and red arrows for the diagram functor.>|<pageref|auto-14>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|6>|| Illustrates how
-      the product is preserved by adjoint functors
-      <with|mode|<quote|math>|F\<dashv\>G>, where
-      <with|mode|<quote|math>|F:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>
-      and <with|mode|<quote|math>|G:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>>.
-      The red part indicates that <with|mode|<quote|math>|A\<times\>B> is the
-      product of <with|mode|<quote|math>|A> and <with|mode|<quote|math>|B> in
-      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>.
-      The blue part indicates that <with|mode|<quote|math>|\<varepsilon\><rsub|A\<times\>B>>
-      is universal. By putting the red and blue parts together, we find the
-      relation <with|mode|<quote|math>|f=F<around*|(|f<rsup|\<sharp\>>|)>\<circ\>\<varepsilon\><rsub|A\<times\>B>>.>|<pageref|auto-16>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|6>||This
+      <locus|<id|%3EEAAA68-3E5C3AC0>|<link|hyperlink|<id|%3EEAAA68-3E5C3AC0>|<url|https://q.uiver.app/#q=WzAsNCxbMSwwLCJcXGZvcmFsbCBYIl0sWzAsMSwiQSJdLFsxLDIsIkMiXSxbMiwxLCJCIl0sWzAsMSwiXFxmb3JhbGwgZiIsMV0sWzEsMiwiXFx6ZXRhIiwxXSxbMCwzLCJcXGZvcmFsbCBnIiwxXSxbMywyLCJcXGV0YSIsMV1d>>|figure>
+      indicates the fibered product <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|X,A|)>\<times\><rsub|<around*|(|\<zeta\><rsub|\<ast\>>,\<eta\><rsub|\<ast\>>|)>><with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|X,B|)>>.>|<pageref|auto-17>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|7>|| Indicates a simple
-      category that has no product. Indeed, only <with|mode|<quote|math>|A>
-      and <with|mode|<quote|math>|C> have the potential to be a product, but
-      if <with|mode|<quote|math>|A> were a product, there is no arrow from
-      <with|mode|<quote|math>|C> to <with|mode|<quote|math>|A>; and if
-      <with|mode|<quote|math>|C> were a product, there is no arrow from
-      <with|mode|<quote|math>|A> to <with|mode|<quote|math>|C>. So, none of
-      them is a product.>|<pageref|auto-19>>
-
-      <tuple|normal|<surround|<hidden-binding|<tuple>|8>||Indicates the
-      fibered product <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|X,A|)>\<times\><rsub|<around*|(|\<zeta\><rsub|\<ast\>>,\<eta\><rsub|\<ast\>>|)>><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|X,B|)>>.>|<pageref|auto-23>>
-
-      <tuple|normal|<surround|<hidden-binding|<tuple>|9>|| Indicates the
+      <tuple|normal|<surround|<hidden-binding|<tuple>|7>|| Indicates the
       pullback <with|mode|<quote|math>|A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B>.
       Principaly, there should be a morphism from
       <with|mode|<quote|math>|A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B>
@@ -607,14 +572,14 @@
       to <with|mode|<quote|math>|C>). But, since the figure commutes, such a
       morphism can be represented by <with|mode|<quote|math>|\<zeta\>\<circ\>\<alpha\>>
       or by <with|mode|<quote|math>|\<eta\>\<circ\>\<beta\>>, thus is
-      redundant and omitted.>|<pageref|auto-24>>
+      redundant and omitted.>|<pageref|auto-18>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|10>|| Indicates the
+      <tuple|normal|<surround|<hidden-binding|<tuple>|8>|| Indicates the
       equalizer <with|mode|<quote|math>|eq<around*|(|u,v|)>>. Principaly,
       there should be a morphism from <with|mode|<quote|math>|eq<around*|(|u,v|)>>
       to <with|mode|<quote|math>|B> (and also from <with|mode|<quote|math>|X>
       to <with|mode|<quote|math>|B>). They are omitted for the same reason in
-      figure <reference|figure: Pullback>.>|<pageref|auto-25>>
+      figure <reference|figure: Pullback>.>|<pageref|auto-19>>
     </associate>
     <\associate|toc>
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Limit>
@@ -653,30 +618,14 @@
       discrete indexing category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
-      <with|par-left|<quote|1tab>|1.8<space|2spc>Example: product is
-      preserved by adjoint functors <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15>>
-
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Construction
       of Limit> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17><vspace|0.5fn>
+      <no-break><pageref|auto-15><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|2.1<space|2spc>Category may not be complete
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>>
-
-      <with|par-left|<quote|1tab>|2.2<space|2spc>A limit can be constructed
-      by products and equalizers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20>>
-
-      <with|par-left|<quote|1tab>|2.3<space|2spc><with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>
-      is complete <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21>>
-
-      <with|par-left|<quote|1tab>|2.4<space|2spc>Limit helps generalize
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Limit helps generalize
       concepts from set theory to category theory
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>>
+      <no-break><pageref|auto-16>>
     </associate>
   </collection>
 </auxiliary>

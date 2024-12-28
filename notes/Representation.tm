@@ -1,39 +1,9 @@
 <TeXmacs|2.1.4>
 
-<style|generic>
+<style|book>
 
 <\body>
   <chapter|Representation>
-
-  <section|Preliminary: Russell's Paradox (TODO)>
-
-  <subsection|The set of all sets implies Russell's paradox>
-
-  <subsection|Class extends set to avoid Russell's paradox>
-
-  <subsection|Category can be small or locally small>
-
-  <\definition>
-    [Small Category] A category <math|<math-ss|C>> is
-    <with|font-series|bold|small> if
-
-    <\itemize>
-      <item>the collection <math|ob<rsub|<math-ss|C>>> is a set, and
-
-      <item>for each <math|A,B\<in\><math-ss|C>>, the collection
-      <math|mor<rsub|<math-ss|C>><around*|(|A,B|)>> is a set.
-    </itemize>
-  </definition>
-
-  <\definition>
-    [Locally Small Category] A category <math|<math-ss|C>> is
-    <with|font-series|bold|locally small> if
-
-    <\itemize>
-      <item>for each <math|A,B\<in\><math-ss|C>>, the collection
-      <math|mor<rsub|<math-ss|C>><around*|(|A,B|)>> is a set.
-    </itemize>
-  </definition>
 
   <section|Hom-Functor and Yoneda Functor><label|section: Representable
   Functor and Yoneda Functor><\footnote>
@@ -44,18 +14,13 @@
     Tai-Danae Bradley .
   </footnote>
 
-  <subsection|Object equals to its relations with others and with itself
-  (TODO)>
+  <subsection|Object equals to its relations with others and with itself>
 
-  If you want to know someone, but you are so shy to talk with him or her,
-  what should you do? Just talk with everyone who know this person, realizing
-  their relationship. Then, we know this person without directly talking with
-  him or her.
-
-  Who are you, and what is your self? Your self is encoded in your
-  relationships with others as well as with yourself. So is an object in a
-  locally small category. In this section, we are to show that an object can
-  be defined by the morphisms to (or from) this object in the category.
+  If you want to know someone, what should you do? You can talk with this
+  person, but this is not enough. You shall also talk with everyone who knows
+  this person, realizing their impressions about him. Only then can you say
+  you have known this person. Namely, the information of an object (the
+  person) is encoded in the morphisms (impressions) toward the object.
 
   <subsection|Morphisms with fixed codomain can be represented by
   hom-functor><label|section: Morphisms with fixed codomain can be
@@ -63,9 +28,9 @@
 
   Given the object, there will be many morphisms with this object as codomain
   (or domain). But, for the convenience of discussion, it will be better to
-  use one morphism to represent them all. Precisely, consider a locally small
-  category <math|<math-ss|C>>. For each <math|X\<in\><math-ss|C>>, we are to
-  represent the collection <math|<around*|{|<math-ss|C><around*|(|Y,X|)>\|\<forall\>Y\<in\><math-ss|C>|}>>
+  use one morphism to represent them all. Precisely, consider a category
+  <math|<math-ss|C>>. For each <math|X\<in\><math-ss|C>>, we are to represent
+  the collection <math|<around*|{|<math-ss|C><around*|(|Y,X|)>\|\<forall\>Y\<in\><math-ss|C>|}>>
   by a map <math|Y\<rightarrow\><math-ss|C><around*|(|Y,X|)>>. Say, a map
   <math|<math-ss|C><around*|(|-,X|)>:Y\<rightarrow\><math-ss|C><around*|(|Y,X|)>>.
   In addition, we hope that this map will preserve the structure of category,
@@ -133,13 +98,10 @@
   the identity axiom, <math|<math-ss|C><around*|(|-,X|)><around*|(|1<rsub|A>|)>=1<rsub|<math-ss|C><around*|(|A,X|)>>>
   is satisfied. So, the <math|<math-ss|C><around*|(|-,X|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
   <math|>does be a functor, which is called the hom-functor of <math|X>.
-  (Recall that <math|<math-ss|C><around*|(|Y,X|)>> is a set for each
-  <math|Y\<in\><math-ss|C>> when <math|<math-ss|C>> is locally small.)
 
   <\definition>
-    [Hom-Functor] Let <math|<math-ss|C>> a locally small category. For any
-    object <math|X\<in\><math-ss|C>>, functor
-    <math|<math-ss|C><around*|(|-,X|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
+    [Hom-Functor] Let <math|<math-ss|C>> a category. For any object
+    <math|X\<in\><math-ss|C>>, functor <math|<math-ss|C><around*|(|-,X|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
     is defined by
 
     <\itemize>
@@ -223,8 +185,8 @@
   summarize the definition as follow.
 
   <\definition>
-    [Yoneda functor] Let <math|<math-ss|C>> a locally small category. A
-    functor <math|\<cal-Y\>:<math-ss|C>\<rightarrow\><around*|[|<math-ss|C><rsup|op>,<math-ss|Set>|]>>
+    [Yoneda functor] Let <math|<math-ss|C>> a category. A functor
+    <math|\<cal-Y\>:<math-ss|C>\<rightarrow\><around*|[|<math-ss|C><rsup|op>,<math-ss|Set>|]>>
     defined by
 
     <\itemize>
@@ -310,13 +272,13 @@
   is injective.
 
   We conclude the analysis in this section as follow.<\footnote>
-    For a locally small category <math|<math-ss|C>>, functor from
+    For a category <math|<math-ss|C>>, functor from
     <math|<math-ss|C><rsup|op>> to <math|<math-ss|Set>> is almost everywhere
     so that it deserves a name, presheaf.
 
     <\definition>
-      [Presheaf] Let <math|<math-ss|C>> a locally small category. Functor
-      from <math|<math-ss|C><rsup|op>> to <math|<math-ss|Set>> is called a
+      [Presheaf] Let <math|<math-ss|C>> a category. Functor from
+      <math|<math-ss|C><rsup|op>> to <math|<math-ss|Set>> is called a
       <with|font-series|bold|presheaf> on <math|<math-ss|C>>.
     </definition>
 
@@ -327,8 +289,8 @@
 
     <\lemma>
       [Yoneda Lemma]<label|lemma: Yoneda Lemma> Let <math|<math-ss|C>> a
-      locally small category and <math|F> a presheaf on <math|<math-ss|C>>.
-      We have, for each <math|X\<in\><math-ss|C>>,
+      category and <math|F> a presheaf on <math|<math-ss|C>>. We have, for
+      each <math|X\<in\><math-ss|C>>,
 
       <\equation*>
         F<around*|(|X|)>\<cong\><math-ss|Nat><around*|(|<math-ss|C><around*|(|-,X|)>,F|)>.
@@ -343,7 +305,7 @@
   </footnote>
 
   <\lemma>
-    Let <math|<math-ss|C>> a locally small category. We have, for each
+    Let <math|<math-ss|C>> a category. We have, for each
     <math|X,Y\<in\><math-ss|C>>,
 
     <\equation*>
@@ -499,9 +461,8 @@
   We start at the duality of hom-functor.
 
   <\definition>
-    [Co-Hom-Functor] Let <math|<math-ss|C>> a locally small category. For any
-    object <math|X\<in\><math-ss|C>>, functor
-    <math|<math-ss|C><around*|(|X,\<star\>|)>:<math-ss|C>\<rightarrow\><math-ss|Set>>
+    [Co-Hom-Functor] Let <math|<math-ss|C>> a category. For any object
+    <math|X\<in\><math-ss|C>>, functor <math|<math-ss|C><around*|(|X,\<star\>|)>:<math-ss|C>\<rightarrow\><math-ss|Set>>
     is defined by
 
     <\itemize>
@@ -521,8 +482,8 @@
   Then, we have the dual Yoneda functor.
 
   <\definition>
-    [Co-Yoneda functor] Let <math|<math-ss|C>> a locally small category. A
-    functor <math|\<cal-Y\><rsup|op>:<math-ss|C><rsup|op>\<rightarrow\><around*|[|<math-ss|C>,<math-ss|Set>|]>>
+    [Co-Yoneda functor] Let <math|<math-ss|C>> a category. A functor
+    <math|\<cal-Y\><rsup|op>:<math-ss|C><rsup|op>\<rightarrow\><around*|[|<math-ss|C>,<math-ss|Set>|]>>
     defined by
 
     <\itemize>
@@ -543,7 +504,7 @@
   </definition>
 
   <\lemma>
-    Let <math|<math-ss|C>> a locally small category. We have, for each
+    Let <math|<math-ss|C>> a category. We have, for each
     <math|X,Y\<in\><math-ss|C>>,
 
     <\equation*>
@@ -615,80 +576,81 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|2.3|2>>
-    <associate|auto-11|<tuple|2|3>>
-    <associate|auto-12|<tuple|2.4|3>>
-    <associate|auto-13|<tuple|2.5|4>>
-    <associate|auto-14|<tuple|3|4>>
-    <associate|auto-15|<tuple|2.6|5>>
-    <associate|auto-16|<tuple|3|5>>
-    <associate|auto-17|<tuple|3.1|5>>
-    <associate|auto-18|<tuple|4|5>>
-    <associate|auto-19|<tuple|5|6>>
-    <associate|auto-2|<tuple|1|1>>
-    <associate|auto-20|<tuple|3.2|6>>
-    <associate|auto-21|<tuple|3.3|6>>
-    <associate|auto-22|<tuple|4|7>>
-    <associate|auto-23|<tuple|4.1|7>>
-    <associate|auto-24|<tuple|4.2|7>>
-    <associate|auto-25|<tuple|4.3|7>>
-    <associate|auto-3|<tuple|1.1|1>>
-    <associate|auto-4|<tuple|1.2|1>>
-    <associate|auto-5|<tuple|1.3|1>>
-    <associate|auto-6|<tuple|2|1>>
-    <associate|auto-7|<tuple|2.1|1>>
-    <associate|auto-8|<tuple|2.2|1>>
-    <associate|auto-9|<tuple|1|2>>
-    <associate|definition: Co-Universal Element|<tuple|18|7>>
-    <associate|definition: Universal Element|<tuple|11|6>>
-    <associate|figure: Naturality of psi|<tuple|5|6>>
-    <associate|figure: Representable Functor|<tuple|1|2>>
-    <associate|figure: The f_* is Natural Transformation|<tuple|2|3>>
-    <associate|figure: Universal Element|<tuple|4|5>>
-    <associate|figure: Yoneda functor is full|<tuple|3|4>>
-    <associate|footnote-1|<tuple|1|1>>
-    <associate|footnote-2|<tuple|2|4>>
-    <associate|footnote-3|<tuple|3|5>>
-    <associate|footnr-1|<tuple|1|1>>
-    <associate|footnr-2|<tuple|8|4>>
-    <associate|footnr-3|<tuple|3|5>>
-    <associate|lemma: Yoneda Lemma|<tuple|8|4>>
+    <associate|auto-10|<tuple|1.3|3>>
+    <associate|auto-11|<tuple|1.1.6|3>>
+    <associate|auto-12|<tuple|1.2|4>>
+    <associate|auto-13|<tuple|1.2.1|4>>
+    <associate|auto-14|<tuple|1.4|4>>
+    <associate|auto-15|<tuple|1.5|5>>
+    <associate|auto-16|<tuple|1.2.2|5>>
+    <associate|auto-17|<tuple|1.2.3|5>>
+    <associate|auto-18|<tuple|1.3|6>>
+    <associate|auto-19|<tuple|1.3.1|6>>
+    <associate|auto-2|<tuple|1.1|1>>
+    <associate|auto-20|<tuple|1.3.2|6>>
+    <associate|auto-21|<tuple|1.3.3|7>>
+    <associate|auto-22|<tuple|1.4|7>>
+    <associate|auto-23|<tuple|1.4.1|7>>
+    <associate|auto-24|<tuple|1.4.2|7>>
+    <associate|auto-25|<tuple|1.4.3|7>>
+    <associate|auto-3|<tuple|1.1.1|1>>
+    <associate|auto-4|<tuple|1.1.2|1>>
+    <associate|auto-5|<tuple|1.1|1>>
+    <associate|auto-6|<tuple|1.1.3|1>>
+    <associate|auto-7|<tuple|1.2|1>>
+    <associate|auto-8|<tuple|1.1.4|1>>
+    <associate|auto-9|<tuple|1.1.5|3>>
+    <associate|definition: Co-Universal Element|<tuple|1.16|7>>
+    <associate|definition: Universal Element|<tuple|1.9|6>>
+    <associate|figure: Naturality of psi|<tuple|1.5|6>>
+    <associate|figure: Representable Functor|<tuple|1.1|3>>
+    <associate|figure: The f_* is Natural Transformation|<tuple|1.2|3>>
+    <associate|figure: Universal Element|<tuple|1.4|6>>
+    <associate|figure: Yoneda functor is full|<tuple|1.3|4>>
+    <associate|footnote-1.1|<tuple|1.1|1>>
+    <associate|footnote-1.2|<tuple|1.2|5>>
+    <associate|footnote-1.3|<tuple|1.3|5>>
+    <associate|footnr-1.1|<tuple|1.1|1>>
+    <associate|footnr-1.2|<tuple|1.6|5>>
+    <associate|footnr-1.3|<tuple|1.3|5>>
+    <associate|lemma: Yoneda Lemma|<tuple|1.6|5>>
     <associate|section: Functor is representable if there exists universal
-    element|<tuple|3.1|5>>
+    element|<tuple|1.2.1|5>>
     <associate|section: Morphisms with fixed codomain can be represented by
-    hom-functor|<tuple|2.2|1>>
-    <associate|section: Representable Functor and Yoneda Functor|<tuple|2|1>>
-    <associate|section: Representation is unique|<tuple|3.2|6>>
-    <associate|section: Universal Element|<tuple|3|5>>
-    <associate|section: Yoneda functor is fully faithful|<tuple|2.5|4>>
-    <associate|theorem: Co-Universal Element|<tuple|19|7>>
-    <associate|theorem: Universal Element|<tuple|12|6>>
+    hom-functor|<tuple|1.1.2|1>>
+    <associate|section: Representable Functor and Yoneda
+    Functor|<tuple|1.1|1>>
+    <associate|section: Representation is unique|<tuple|1.2.2|6>>
+    <associate|section: Universal Element|<tuple|1.2|5>>
+    <associate|section: Yoneda functor is fully faithful|<tuple|1.1.5|4>>
+    <associate|theorem: Co-Universal Element|<tuple|1.17|7>>
+    <associate|theorem: Universal Element|<tuple|1.10|6>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|figure>
-      <tuple|normal|<surround|<hidden-binding|<tuple>|1>||Indicates
+      <tuple|normal|<surround|<hidden-binding|<tuple>|1.1>||Indicates
       <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|-,X|)>:<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><rsup|op>\<rightarrow\><with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>.>|<pageref|auto-9>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|2>|| Indicates that the
-      <with|mode|<quote|math>|f<rsub|\<ast\>>> is a natural transformation
-      from <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|-,X|)>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|1.2>|| Indicates that
+      the <with|mode|<quote|math>|f<rsub|\<ast\>>> is a natural
+      transformation from <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|-,X|)>>
       to <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|-,Y|)>>.
       The inner circle indicates the element-wise map.>|<pageref|auto-11>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|3>|| The dash arrow
+      <tuple|normal|<surround|<hidden-binding|<tuple>|1.3>|| The dash arrow
       indicates what is implied.>|<pageref|auto-14>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|4>|| Indicates how the
-      <with|mode|<quote|math>|e> is defined by
+      <tuple|normal|<surround|<hidden-binding|<tuple>|1.4>|| Indicates how
+      the <with|mode|<quote|math>|e> is defined by
       <with|mode|<quote|math>|\<psi\><rsub|F>>, or conversely how the
       <with|mode|<quote|math>|\<psi\><rsub|X>> is defined by
       <with|mode|<quote|math>|e>.>|<pageref|auto-18>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|5>|| This
-      <locus|<id|%216BD8E8-21030360>|<link|hyperlink|<id|%216BD8E8-21030360>|<url|https://q.uiver.app/#q=WzAsMTEsWzAsMCwiWSJdLFsyLDAsIkMoWSxcXGhhdHtGfSkiXSxbMywxLCJcXHpldGEiXSxbMywyLCJcXHpldGEgXFxjaXJjIGYiXSxbNSwxLCJGKFxcemV0YSkoZSkiXSxbNSwyLCJGKGYpIFxcY2lyYyBGKFxcemV0YSkoZSkiXSxbNCwyLCJGKFxcemV0YSBcXGNpcmMgZikoZSkgIl0sWzYsMCwiRihZKSJdLFsyLDMsIkMoWixcXGhhdHtGfSkiXSxbMCwzLCJaIl0sWzYsMywiRihaKSJdLFsyLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMiw0LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzQsNSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFszLDYsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMSw3LCJGKC0pKGUpIiwxXSxbMSw4LCJmXioiLDFdLFs5LDAsImYiLDFdLFs3LDEwLCJGKGYpIiwxXSxbOCwxMCwiRigtKShlKSIsMV1d>>|figure>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|1.5>|| This
+      <locus|<id|%222591C8-239E8D00>|<link|hyperlink|<id|%222591C8-239E8D00>|<url|https://q.uiver.app/#q=WzAsMTEsWzAsMCwiWSJdLFsyLDAsIkMoWSxcXGhhdHtGfSkiXSxbMywxLCJcXHpldGEiXSxbMywyLCJcXHpldGEgXFxjaXJjIGYiXSxbNSwxLCJGKFxcemV0YSkoZSkiXSxbNSwyLCJGKGYpIFxcY2lyYyBGKFxcemV0YSkoZSkiXSxbNCwyLCJGKFxcemV0YSBcXGNpcmMgZikoZSkgIl0sWzYsMCwiRihZKSJdLFsyLDMsIkMoWixcXGhhdHtGfSkiXSxbMCwzLCJaIl0sWzYsMywiRihaKSJdLFsyLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMiw0LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzQsNSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFszLDYsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMSw3LCJGKC0pKGUpIiwxXSxbMSw4LCJmXioiLDFdLFs5LDAsImYiLDFdLFs3LDEwLCJGKGYpIiwxXSxbOCwxMCwiRigtKShlKSIsMV1d>>|figure>
       proves that the naturality of <with|mode|<quote|math>|\<psi\>> is an
       immediate result of the functoriality of <with|mode|<quote|math>|F>. It
       should be noticed that the domain of <with|mode|<quote|math>|F> is the
@@ -696,86 +658,84 @@
       so it should be <with|mode|<quote|math>|F<around*|(|f\<circ\>g|)>=F<around*|(|g|)>\<circ\>F<around*|(|f|)>>.>|<pageref|auto-19>>
     </associate>
     <\associate|toc>
-      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Representation>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Representation>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-1><vspace|1fn>
+      <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Preliminary:
-      Russell's Paradox (TODO)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2><vspace|0.5fn>
+      1.1<space|2spc>Preliminary: Russell's Paradox (TODO)
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2>
 
-      <with|par-left|<quote|1tab>|1.1<space|2spc>The set of all sets implies
-      Russell's paradox <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.1.1<space|2spc>The set of all sets
+      implies Russell's paradox <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|1tab>|1.2<space|2spc>Class extends set to avoid
+      <with|par-left|<quote|1tab>|1.1.2<space|2spc>Class extends set to avoid
       Russell's paradox <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>>
 
-      <with|par-left|<quote|1tab>|1.3<space|2spc>Category can be small or
+      <with|par-left|<quote|1tab>|1.1.3<space|2spc>Category can be small or
       locally small <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Hom-Functor
-      and Yoneda Functor> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6><vspace|0.5fn>
+      1.2<space|2spc>Hom-Functor and Yoneda Functor
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6>
 
-      <with|par-left|<quote|1tab>|2.1<space|2spc>Object equals to its
-      relations with others and with itself
+      <with|par-left|<quote|1tab>|1.2.1<space|2spc>Object equals to its
+      relations with others and with itself (TODO)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|1tab>|2.2<space|2spc>Morphisms with fixed
+      <with|par-left|<quote|1tab>|1.2.2<space|2spc>Morphisms with fixed
       codomain can be represented by hom-functor
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <with|par-left|<quote|1tab>|2.3<space|2spc>Yoneda functor connects an
+      <with|par-left|<quote|1tab>|1.2.3<space|2spc>Yoneda functor connects an
       object to its hom-functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>>
 
-      <with|par-left|<quote|1tab>|2.4<space|2spc>On objects, Yoneda functor
+      <with|par-left|<quote|1tab>|1.2.4<space|2spc>On objects, Yoneda functor
       is injective but not surjective <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
 
-      <with|par-left|<quote|1tab>|2.5<space|2spc>Yoneda functor is fully
+      <with|par-left|<quote|1tab>|1.2.5<space|2spc>Yoneda functor is fully
       faithful <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
-      <with|par-left|<quote|1tab>|2.6<space|2spc>All is arrow
+      <with|par-left|<quote|1tab>|1.2.6<space|2spc>All is arrow
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Universal
-      Element> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16><vspace|0.5fn>
+      1.3<space|2spc>Universal Element <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16>
 
-      <with|par-left|<quote|1tab>|3.1<space|2spc>Functor is representable if
-      there exists universal element <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.3.1<space|2spc>Functor is representable
+      if there exists universal element <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-17>>
 
-      <with|par-left|<quote|1tab>|3.2<space|2spc>Representation is unique up
-      to isomorphism <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.3.2<space|2spc>Representation is unique
+      up to isomorphism <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20>>
 
-      <with|par-left|<quote|1tab>|3.3<space|2spc>Dual representation is free
-      of charge <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.3.3<space|2spc>Dual representation is
+      free of charge <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Summary>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22><vspace|0.5fn>
+      1.4<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-22>
 
-      <with|par-left|<quote|1tab>|4.1<space|2spc>Embedding in the framework
+      <with|par-left|<quote|1tab>|1.4.1<space|2spc>Embedding in the framework
       of category theory is the right way to extend category theory
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-23>>
 
-      <with|par-left|<quote|1tab>|4.2<space|2spc>\PTypes\Q help to restrict
+      <with|par-left|<quote|1tab>|1.4.2<space|2spc>\PTypes\Q help to restrict
       the possibility of construction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-24>>
 
-      <with|par-left|<quote|1tab>|4.3<space|2spc>\PTypes\Q help check the
+      <with|par-left|<quote|1tab>|1.4.3<space|2spc>\PTypes\Q help check the
       correctness of derivation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-25>>
     </associate>
