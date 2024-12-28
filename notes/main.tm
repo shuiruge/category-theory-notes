@@ -1,4 +1,4 @@
-<TeXmacs|2.1>
+<TeXmacs|2.1.4>
 
 <style|book>
 
@@ -47,7 +47,7 @@
     <no-break><pageref|auto-12>>
 
     <with|par-left|1tab|2.1.5<space|2spc>Morphisms in the dual category of
-    <with|mode|math|<rigid|<with|mode|text|<with|font-family|ss|font-shape|right|Set>>>>
+    <with|mode|math|<with|mode|text|<with|font-family|ss|font-shape|right|Set>>>
     are not maps <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-13>>
 
@@ -430,7 +430,7 @@
   <\collection>
     <\associate|figure>
       <tuple|normal|<surround|<hidden-binding|<tuple>|2.1>|| Indicates the
-      functor <with|mode|<quote|math>|F:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>.
+      functor <with|mode|<quote|math>|F:<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>\<rightarrow\><with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>.
       This diagram commutes.>|<pageref|auto-20>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|2.2>|| Extending the
@@ -442,12 +442,12 @@
       The diagram commutes.>|<pageref|auto-29>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.1>||Indicates
-      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,X|)>:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><rsup|op>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>.>|<pageref|auto-45>>
+      <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|-,X|)>:<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><rsup|op>\<rightarrow\><with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>.>|<pageref|auto-45>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.2>|| Indicates that
       the <with|mode|<quote|math>|f<rsub|\<ast\>>> is a natural
-      transformation from <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,X|)>>
-      to <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,Y|)>>.
+      transformation from <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|-,X|)>>
+      to <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|-,Y|)>>.
       The inner circle indicates the element-wise map.>|<pageref|auto-47>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.3>|| The dash arrow
@@ -460,16 +460,16 @@
       <with|mode|<quote|math>|e>.>|<pageref|auto-54>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|3.5>|| This
-      <locus|<id|%A014CE8-D45DE28-39E1AAF8>|<link|hyperlink|<id|%A014CE8-D45DE28-39E1AAF8>|<url|https://q.uiver.app/#q=WzAsMTEsWzAsMCwiWSJdLFsyLDAsIkMoWSxcXGhhdHtGfSkiXSxbMywxLCJcXHpldGEiXSxbMywyLCJcXHpldGEgXFxjaXJjIGYiXSxbNSwxLCJGKFxcemV0YSkoZSkiXSxbNSwyLCJGKGYpIFxcY2lyYyBGKFxcemV0YSkoZSkiXSxbNCwyLCJGKFxcemV0YSBcXGNpcmMgZikoZSkgIl0sWzYsMCwiRihZKSJdLFsyLDMsIkMoWixcXGhhdHtGfSkiXSxbMCwzLCJaIl0sWzYsMywiRihaKSJdLFsyLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMiw0LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzQsNSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFszLDYsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMSw3LCJGKC0pKGUpIiwxXSxbMSw4LCJmXioiLDFdLFs5LDAsImYiLDFdLFs3LDEwLCJGKGYpIiwxXSxbOCwxMCwiRigtKShlKSIsMV1d>>|figure>
+      <locus|<id|%C55C908-10D09508-39E1AAF8>|<link|hyperlink|<id|%C55C908-10D09508-39E1AAF8>|<url|https://q.uiver.app/#q=WzAsMTEsWzAsMCwiWSJdLFsyLDAsIkMoWSxcXGhhdHtGfSkiXSxbMywxLCJcXHpldGEiXSxbMywyLCJcXHpldGEgXFxjaXJjIGYiXSxbNSwxLCJGKFxcemV0YSkoZSkiXSxbNSwyLCJGKGYpIFxcY2lyYyBGKFxcemV0YSkoZSkiXSxbNCwyLCJGKFxcemV0YSBcXGNpcmMgZikoZSkgIl0sWzYsMCwiRihZKSJdLFsyLDMsIkMoWixcXGhhdHtGfSkiXSxbMCwzLCJaIl0sWzYsMywiRihaKSJdLFsyLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMiw0LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzQsNSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFszLDYsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMSw3LCJGKC0pKGUpIiwxXSxbMSw4LCJmXioiLDFdLFs5LDAsImYiLDFdLFs3LDEwLCJGKGYpIiwxXSxbOCwxMCwiRigtKShlKSIsMV1d>>|figure>
       proves that the naturality of <with|mode|<quote|math>|\<psi\>> is an
       immediate result of the functoriality of <with|mode|<quote|math>|F>. It
       should be noticed that the domain of <with|mode|<quote|math>|F> is the
-      dual category of <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>>,
+      dual category of <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>,
       so it should be <with|mode|<quote|math>|F<around*|(|f\<circ\>g|)>=F<around*|(|g|)>\<circ\>F<around*|(|f|)>>.>|<pageref|auto-55>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|4.1>|| The left hand
       side indicates the indexing category
-      <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>.
+      <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>.
       And the right hand side indicates the cone from
       <with|mode|<quote|math>|X> to <with|mode|<quote|math>|D>. The green
       arrows are for functor <with|mode|<quote|math>|Const<rsub|X>>, and the
@@ -480,17 +480,17 @@
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|4.2>|| Indicates the
       map on <with|mode|<quote|math>|f>. As an instance, the indexing
-      category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
+      category <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>
       is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-68>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|4.3>|| Indicates the
       limit. The dash arrow is for implication. As an instance, the indexing
-      category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
+      category <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>
       is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-70>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|4.4>|| Indicates the
       colimit. The dash arrow is for implication. As an instance, the
-      indexing category <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>>
+      indexing category <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|I>>>
       is simply <with|mode|<quote|math>|A<above|\<rightarrow\>|g>B>.>|<pageref|auto-71>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|4.5>|| Indicates that
@@ -502,8 +502,8 @@
       and red arrows for the diagram functor.>|<pageref|auto-75>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|4.6>||This
-      <locus|<id|%A014CE8-D8428C8-39E1AAF8>|<link|hyperlink|<id|%A014CE8-D8428C8-39E1AAF8>|<url|https://q.uiver.app/#q=WzAsNCxbMSwwLCJcXGZvcmFsbCBYIl0sWzAsMSwiQSJdLFsxLDIsIkMiXSxbMiwxLCJCIl0sWzAsMSwiXFxmb3JhbGwgZiIsMV0sWzEsMiwiXFx6ZXRhIiwxXSxbMCwzLCJcXGZvcmFsbCBnIiwxXSxbMywyLCJcXGV0YSIsMV1d>>|figure>
-      indicates the fibered product <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|X,A|)>\<times\><rsub|<around*|(|\<zeta\><rsub|\<ast\>>,\<eta\><rsub|\<ast\>>|)>><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|X,B|)>>.>|<pageref|auto-78>>
+      <locus|<id|%C55C908-1115BA08-39E1AAF8>|<link|hyperlink|<id|%C55C908-1115BA08-39E1AAF8>|<url|https://q.uiver.app/#q=WzAsNCxbMSwwLCJcXGZvcmFsbCBYIl0sWzAsMSwiQSJdLFsxLDIsIkMiXSxbMiwxLCJCIl0sWzAsMSwiXFxmb3JhbGwgZiIsMV0sWzEsMiwiXFx6ZXRhIiwxXSxbMCwzLCJcXGZvcmFsbCBnIiwxXSxbMywyLCJcXGV0YSIsMV1d>>|figure>
+      indicates the fibered product <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|X,A|)>\<times\><rsub|<around*|(|\<zeta\><rsub|\<ast\>>,\<eta\><rsub|\<ast\>>|)>><with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|X,B|)>>.>|<pageref|auto-78>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|4.7>|| Indicates the
       pullback <with|mode|<quote|math>|A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B>.
@@ -577,7 +577,7 @@
       <no-break><pageref|auto-12>>
 
       <with|par-left|<quote|1tab>|2.1.5<space|2spc>Morphisms in the dual
-      category of <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>
+      category of <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>
       are not maps <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
