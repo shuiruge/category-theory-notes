@@ -1,6 +1,6 @@
-<TeXmacs|2.1>
+<TeXmacs|2.1.4>
 
-<style|generic>
+<style|book>
 
 <\body>
   <chapter|Category, Functor, and Natural Transformation><label|chapter:
@@ -30,52 +30,56 @@
     of
 
     <\itemize>
-      <item>a collection of <with|font-series|bold|objects>,
-      <math|ob<rsub|<math-ss|C>>>,
+      <item>a collection<\footnote>
+        Usually in set theory, a collection of something is a set. But in
+        fact, not every collection is a set, such as the collection of all
+        sets that do not contain itself, which is Russell's paradox. In this
+        situation, we call the collection a <strong|class>. It looks like a
+        \Psuper\Q set, beyond the axioms of set theory. Throughout this note,
+        we do not distinguish set from class, just using the word
+        \Pcollection\Q for general purpose. In many textures, a class that is
+        in fact a set is said to be <strong|small>. So, we do not distinguish
+        small from large too. In addition, we employ the notation
+        <math|\<in\>> of set theory for indicating that something is in some
+        collection.
+      </footnote> of <with|font-series|bold|objects>, denoted by
+      <math|<math-ss|C>> itself,
 
-      <item>for each <math|A,B\<in\>ob<rsub|<math-ss|C>>>, a collection of
-      <with|font-series|bold|morphisms> from <math|A> to <math|B>,
-      <math|mor<rsub|<math-ss|C>><around*|(|A,B|)>>, where <math|A> is the
+      <item>for each <math|A,B\<in\><math-ss|C>>, a collection of
+      <with|font-series|bold|morphisms> from <math|A> to <math|B>, denoted by
+      <math|<math-ss|C><around*|(|A,B|)>>, where <math|A> is the
       <with|font-series|bold|domain> and <math|B> the
       <with|font-series|bold|codomain>,
 
-      <item>for each <math|f\<in\>mor<rsub|<math-ss|C>><around*|(|A,B|)>> and
-      <math|g\<in\>mor<rsub|<math-ss|C>><around*|(|B,C|)>>, a
+      <item>for each <math|f\<in\><math-ss|C><around*|(|A,B|)>> and
+      <math|g\<in\><math-ss|C><around*|(|B,C|)>>, a
       <with|font-series|bold|composition> of <math|f> and <math|g> that
-      furnishes a morphism <math|g\<circ\>f\<in\>mor<rsub|<math-ss|C>><around*|(|A,C|)>>,
+      furnishes a morphism <math|g\<circ\>f\<in\><math-ss|C><around*|(|A,C|)>>,
       and
 
-      <item>for each <math|A\<in\>ob<rsub|<math-ss|C>>>, an
-      <with|font-series|bold|identity> <math|1<rsub|A>\<in\>mor<rsub|<math-ss|C>><around*|(|A,A|)>>,
+      <item>for each <math|A\<in\><math-ss|C>>, an
+      <with|font-series|bold|identity> <math|1<rsub|A>\<in\><math-ss|C><around*|(|A,A|)>>,
     </itemize>
 
     such that the following axioms are satisfied:
 
     <\itemize>
       <item><with|font-series|bold|associativity>: for each
-      <math|f\<in\>mor<rsub|<math-ss|C>><around*|(|A,B|)>>,
-      <math|g\<in\>mor<rsub|<math-ss|C>><around*|(|B,C|)>>, and
-      <math|h\<in\>mor<rsub|<math-ss|C>><around*|(|C,D|)>>, we have
+      <math|f\<in\><math|<math-ss|C>><around*|(|A,B|)>>,
+      <math|g\<in\><math|<math-ss|C>><around*|(|B,C|)>>, and
+      <math|h\<in\><math|<math-ss|C>><around*|(|C,D|)>>, we have
       <math|<around*|(|h\<circ\>g|)>\<circ\>f=h\<circ\><around*|(|g\<circ\>f|)>>,
       and
 
       <item><with|font-series|bold|identity>: for each
-      <math|f\<in\>mor<rsub|<math-ss|C>><around*|(|A,B|)>>, we have
+      <math|f\<in\><math|<math-ss|C>><around*|(|A,B|)>>, we have
       <math|f\<circ\>1<rsub|A>=1<rsub|B>\<circ\>f>.
     </itemize>
   </definition>
 
-  But, this notation system is a little complicated. Usually, we simplify it
-  by employing the notations from set theory.
-
-  <\notation>
-    Given category <math|<math-ss|C>>, we simplify the notation
-    <math|A\<in\>ob<rsub|<math-ss|C>>> by <math|A\<in\><math-ss|C>>, and for
-    each <math|A,B\<in\><math-ss|C>>, denote
-    <math|f\<in\>mor<rsub|<math-ss|C>><around*|(|A,B|)>> by
-    <math|f:A\<rightarrow\>B>, <math|A<above|\<longrightarrow\>|f>B>, or
-    <math|f\<in\><math-ss|C><around*|(|A,B|)>>.
-  </notation>
+  We also use the notation <math|f:A\<rightarrow\>B> or
+  <math|A<above|\<longrightarrow\>|f>B> for
+  <math|f\<in\><math|<math-ss|C>><around*|(|A,B|)>>.
 
   Now, category becomes much more familiar to us. We can think the objects of
   <math|<math-ss|C>> as sets, and morphism as function, which is the map
@@ -138,8 +142,9 @@
   arrows!
 
   <\definition>
-    [Group as Category] A <with|font-series|bold|group> is a groupid in which
-    there is only one object.
+    [Group as Category]<label|definition: Group as Category> A
+    <with|font-series|bold|group> is a groupid in which there is only one
+    object.
   </definition>
 
   <\notation>
@@ -153,7 +158,8 @@
   properties (axioms) of group studied in algebra are satisfied.
 
   <\theorem>
-    Let <math|<math-ss|G>> a group, then we have
+    Let <math|<math-ss|G>> a group (defined in <reference|definition: Group
+    as Category>). We have
 
     <\itemize>
       <item><with|font-series|bold|associativity>: for
@@ -216,22 +222,27 @@
 
   <\definition>
     <label|definition: Poset as Category>[Poset as Category] Given poset
-    <math|<around*|(|S,P|)>>, a category <math|<math-ss|Poset>> can be
-    constructed by regarding the elements in <math|S> as objects and
+    <math|<around*|(|S,P|)>>, a category <math|<math-ss|Poset><around*|(|S,P|)>>
+    can be constructed by regarding the elements in <math|S> as objects and
     regarding <math|<around*|(|a,b|)>\<in\>P> as <math|a\<rightarrow\>b>.
   </definition>
 
   Because of the axioms of preorder, the axioms of category are satisfied.
   The category <math|<math-ss|Poset>> illustrates that morphisms are not
-  maps. In <math|<math-ss|Poset>>, morphisms are \Pno greater than\Qs or \Pis
-  subset of\Qs.
+  maps. In <math|<math-ss|Poset><around*|(|\<bbb-R\>,\<leqslant\>|)>>,
+  morphisms are \Pno greater than\Qs. And in
+  <math|<math-ss|Poset><around*|(|pow<around*|(|\<bbb-R\>|)>,\<subseteq\>|)>>
+  where <math|pow> represents power set<\footnote>
+    Let <math|A> be a set. The <strong|power set> of <math|A>, denoted by
+    <math|pow<around*|(|A|)>>, is the set of all subsets of <math|A>.
+  </footnote>, they are \Pbeing subset of\Q.
 
   <subsection|Supremum and infimum are dual><label|section: Supremum and
   infimum are dual>
 
   Arrows can represent many mathematical objects. For example, in
-  <math-ss|<math|Poset>> with set <math|\<bbb-R\>> and preorder
-  <math|\<leqslant\>>, we can describe supremum as follow.
+  <math|<math-ss|Poset><around*|(|\<bbb-R\>,\<leqslant\>|)>>, we can describe
+  supremum as follow.
 
   <\definition>
     [Supremum in Category] Given a subset <math|A\<subset\>\<bbb-R\>>. An
@@ -535,12 +546,12 @@
   A functor is not a map. In fact, it has two maps as components: the map on
   objects and that on morphisms. So, <math|F<around*|(|<math-ss|C>|)>> can
   still be a proper subcategory of <math|<math-ss|D>> even though the map
-  <math|F:ob<rsub|<math-ss|C>>\<rightarrow\>ob<rsub|<math-ss|D>>> is
+  <math|F:<math|<math-ss|C>>\<rightarrow\><math-ss|D>> on objects is
   surjective, as long as for some objects <math|A,B\<in\><math-ss|C>>, the
   map <math|F:<math-ss|C><around*|(|A,B|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|A|)>,F<around*|(|B|)>|)>>
-  is not. So, for functor, we have to distinguish two kinds of surjection.
-  One is that the map <math|F:ob<rsub|<math-ss|C>>\<rightarrow\>ob<rsub|<math-ss|D>>>
-  is surjective, for which we say <math|F> is
+  is not surjective. So, for functor, we have to distinguish two kinds of
+  surjection. One is that the map <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>
+  on objects is surjective, for which we say <math|F> is
   <with|font-series|bold|surjective on objects>. The other is that, for every
   <math|A,B\<in\><math-ss|C>>, the map <math|F:<math-ss|C><around*|(|A,B|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|A|)>,F<around*|(|B|)>|)>>
   is surjective, for which we say <math|F> is <with|font-series|bold|full>.
@@ -559,11 +570,11 @@
   The same discussion applies for the injection of functor. Again, you may
   think that <math|F<around*|(|<math-ss|C>|)>> can still be multiple-to-one
   correspondent to <math|<math-ss|C>> even though the map
-  <math|F:ob<rsub|<math-ss|C>>\<rightarrow\>ob<rsub|<math-ss|D>>> is
+  <math|F:<math|<math|<math-ss|C>>\<rightarrow\><math-ss|D>>> on objects is
   injective, as long as for some objects <math|A,B\<in\><math-ss|C>>, the map
   <math|F:<math-ss|C><around*|(|A,B|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|A|)>,F<around*|(|B|)>|)>>
-  is not. So, again, there are two kinds of injection. One is that map
-  <math|F:ob<rsub|<math-ss|C>>\<rightarrow\>ob<rsub|<math-ss|D>>> is
+  is not injective. So, again, there are two kinds of injection. One is that
+  map <math|F:<math|<math-ss|C>>\<rightarrow\><math-ss|D>> on objects is
   injective, for which we say <math|F> is <with|font-series|bold|injective on
   objects>. The other is that, for every <math|A,B\<in\><math-ss|C>>, the map
   <math|F:<math-ss|C><around*|(|A,B|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|A|)>,F<around*|(|B|)>|)>>
@@ -676,7 +687,7 @@
   In the case of group, there is only one object, so a functor, or group
   homomorphism, is always injective on objects.
 
-  <section|Natural Transformation>
+  <section|Natural Transformation (TODO)>
 
   <subsection|Natural transformation is morphism of the category of functors>
 
@@ -802,10 +813,12 @@
   groups, isomorphic vector spaces, and so on. This means we shall view
   isomorphic objects are one object. Regarding to morphisms, consider
   isomorphic objects <math|X> and <math|Y>, and another object <math|Z> of
-  the same category. If <math|X> and <math|Y> are viewed as one, then there
-  will be bijections between <math|mor<around*|(|X,Z|)>> and
-  <math|mor<around*|(|Y,Z|)>>, and between <math|mor<around*|(|Z,X|)>> and
-  <math|mor<around*|(|Z,Y|)>>.
+  category <math|<math-ss|C>><math|>. If <math|X> and <math|Y> are viewed as
+  one, then there will be bijections between
+  <math|<math-ss|C><around*|(|X,Z|)>> and
+  <math|<math-ss|C><around*|(|Y,Z|)>>, and between
+  <math|<math-ss|C><around*|(|Z,X|)>> and
+  <math|<math-ss|C><around*|(|Z,Y|)>>.
 
   If visualizing a category as diagrams of dots and arrows between dots, then
   we shall pinch two isomorphic objects together. This leads to equivalent,
@@ -896,184 +909,186 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|2.2|4>>
-    <associate|auto-11|<tuple|3|5>>
-    <associate|auto-12|<tuple|3.1|5>>
-    <associate|auto-13|<tuple|3.2|5>>
-    <associate|auto-14|<tuple|1|6>>
-    <associate|auto-15|<tuple|2|6>>
-    <associate|auto-16|<tuple|3.3|6>>
-    <associate|auto-17|<tuple|3.4|7>>
-    <associate|auto-18|<tuple|3.5|7>>
-    <associate|auto-19|<tuple|3.6|7>>
-    <associate|auto-2|<tuple|1|1>>
-    <associate|auto-20|<tuple|3.7|8>>
-    <associate|auto-21|<tuple|4|8>>
-    <associate|auto-22|<tuple|4.1|8>>
-    <associate|auto-23|<tuple|3|9>>
-    <associate|auto-24|<tuple|4.2|9>>
-    <associate|auto-25|<tuple|4.3|9>>
-    <associate|auto-26|<tuple|4.4|10>>
-    <associate|auto-27|<tuple|4.5|10>>
-    <associate|auto-28|<tuple|5|10>>
-    <associate|auto-29|<tuple|5.1|10>>
-    <associate|auto-3|<tuple|1.1|1>>
-    <associate|auto-30|<tuple|5.2|10>>
-    <associate|auto-4|<tuple|1.2|2>>
-    <associate|auto-5|<tuple|1.3|2>>
-    <associate|auto-6|<tuple|1.4|3>>
-    <associate|auto-7|<tuple|1.5|4>>
-    <associate|auto-8|<tuple|2|4>>
-    <associate|auto-9|<tuple|2.1|4>>
+    <associate|auto-10|<tuple|1.2.2|4>>
+    <associate|auto-11|<tuple|1.3|5>>
+    <associate|auto-12|<tuple|1.3.1|5>>
+    <associate|auto-13|<tuple|1.3.2|5>>
+    <associate|auto-14|<tuple|1.1|5>>
+    <associate|auto-15|<tuple|1.2|6>>
+    <associate|auto-16|<tuple|1.3.3|6>>
+    <associate|auto-17|<tuple|1.3.4|6>>
+    <associate|auto-18|<tuple|1.3.5|7>>
+    <associate|auto-19|<tuple|1.3.6|7>>
+    <associate|auto-2|<tuple|1.1|1>>
+    <associate|auto-20|<tuple|1.3.7|7>>
+    <associate|auto-21|<tuple|1.4|8>>
+    <associate|auto-22|<tuple|1.4.1|8>>
+    <associate|auto-23|<tuple|1.3|8>>
+    <associate|auto-24|<tuple|1.4.2|8>>
+    <associate|auto-25|<tuple|1.4.3|8>>
+    <associate|auto-26|<tuple|1.4.4|9>>
+    <associate|auto-27|<tuple|1.4.5|9>>
+    <associate|auto-28|<tuple|1.5|9>>
+    <associate|auto-29|<tuple|1.5.1|9>>
+    <associate|auto-3|<tuple|1.1.1|1>>
+    <associate|auto-30|<tuple|1.5.2|10>>
+    <associate|auto-4|<tuple|1.1.2|2>>
+    <associate|auto-5|<tuple|1.1.3|2>>
+    <associate|auto-6|<tuple|1.1.4|3>>
+    <associate|auto-7|<tuple|1.1.5|3>>
+    <associate|auto-8|<tuple|1.2|4>>
+    <associate|auto-9|<tuple|1.2.1|4>>
     <associate|chapter: Category, Functor, and Natural
     Transformation|<tuple|1|1>>
-    <associate|definition: Coproduct of Two Objects|<tuple|17|5>>
-    <associate|definition: Poset|<tuple|10|3>>
-    <associate|definition: Poset as Category|<tuple|11|3>>
-    <associate|definition: Preorder|<tuple|9|3>>
-    <associate|definition: Product of Two Objects|<tuple|14|4>>
-    <associate|figure: Functor|<tuple|1|6>>
-    <associate|figure: Functor Composition|<tuple|2|6>>
-    <associate|figure: Natural Transformation|<tuple|3|9>>
-    <associate|lemma: Fully Faithful Functor|<tuple|21|7>>
-    <associate|lemma: Natural Isomorphism|<tuple|25|9>>
+    <associate|definition: Coproduct of Two Objects|<tuple|1.16|4>>
+    <associate|definition: Group as Category|<tuple|1.5|2>>
+    <associate|definition: Poset|<tuple|1.9|3>>
+    <associate|definition: Poset as Category|<tuple|1.10|3>>
+    <associate|definition: Preorder|<tuple|1.8|2>>
+    <associate|definition: Product of Two Objects|<tuple|1.13|4>>
+    <associate|figure: Functor|<tuple|1.1|5>>
+    <associate|figure: Functor Composition|<tuple|1.2|6>>
+    <associate|figure: Natural Transformation|<tuple|1.3|8>>
+    <associate|footnote-1.1|<tuple|1.1|1>>
+    <associate|footnote-1.2|<tuple|1.2|3>>
+    <associate|footnr-1.1|<tuple|1.1|1>>
+    <associate|footnr-1.2|<tuple|1.2|3>>
+    <associate|lemma: Fully Faithful Functor|<tuple|1.20|7>>
+    <associate|lemma: Natural Isomorphism|<tuple|1.24|9>>
     <associate|section: Arrows generalize concepts and theorems from one area
-    to every area in mathematics|<tuple|2.1|4>>
-    <associate|section: Injective functor may not be faithful|<tuple|3.5|7>>
-    <associate|section: Supremum and infimum are dual|<tuple|1.4|3>>
-    <associate|section: Surjective functor may not be full|<tuple|3.4|7>>
-    <associate|theorem: Functorial Image as Category|<tuple|22|8>>
+    to every area in mathematics|<tuple|1.2.1|4>>
+    <associate|section: Injective functor may not be
+    faithful|<tuple|1.3.5|7>>
+    <associate|section: Supremum and infimum are dual|<tuple|1.1.4|3>>
+    <associate|section: Surjective functor may not be full|<tuple|1.3.4|6>>
+    <associate|theorem: Functorial Image as Category|<tuple|1.21|7>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|figure>
-      <tuple|normal|<surround|<hidden-binding|<tuple>|1>|| Indicates the
-      functor <with|mode|<quote|math>|F:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>>.
+      <tuple|normal|<surround|<hidden-binding|<tuple>|1.1>|| Indicates the
+      functor <with|mode|<quote|math>|F:<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>\<rightarrow\><with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>>.
       This diagram commutes.>|<pageref|auto-14>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|2>|| Extending the
+      <tuple|normal|<surround|<hidden-binding|<tuple>|1.2>|| Extending the
       commutative diagram <reference|figure: Functor> to the right. This
       diagram commutes.>|<pageref|auto-15>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|3>|| Indicates the
+      <tuple|normal|<surround|<hidden-binding|<tuple>|1.3>|| Indicates the
       natural transformation <with|mode|<quote|math>|\<eta\>:F\<rightarrow\>G>.
       The diagram commutes.>|<pageref|auto-23>>
     </associate>
     <\associate|toc>
-      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Category,
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Category,
       Functor, and Natural Transformation>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-1><vspace|1fn>
+      <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Category>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2><vspace|0.5fn>
+      1.1<space|2spc>Category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2>
 
-      <with|par-left|<quote|1tab>|1.1<space|2spc>Category is about arrows
+      <with|par-left|<quote|1tab>|1.1.1<space|2spc>Category is about arrows
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|1tab>|1.2<space|2spc>Objects may not be sets
+      <with|par-left|<quote|1tab>|1.1.2<space|2spc>Objects may not be sets
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>>
 
-      <with|par-left|<quote|1tab>|1.3<space|2spc>Morphisms may not be maps
+      <with|par-left|<quote|1tab>|1.1.3<space|2spc>Morphisms may not be maps
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|1tab>|1.4<space|2spc>Supremum and infimum are
+      <with|par-left|<quote|1tab>|1.1.4<space|2spc>Supremum and infimum are
       dual <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      <with|par-left|<quote|1tab>|1.5<space|2spc>Morphisms in the dual
-      category of <with|mode|<quote|math>|<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>>
+      <with|par-left|<quote|1tab>|1.1.5<space|2spc>Morphisms in the dual
+      category of <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|Set>>>
       are not maps <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Why
-      Category?> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8><vspace|0.5fn>
+      1.2<space|2spc>Why Category? <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>
 
-      <with|par-left|<quote|1tab>|2.1<space|2spc>Arrows generalize concepts
+      <with|par-left|<quote|1tab>|1.2.1<space|2spc>Arrows generalize concepts
       and theorems from one area to every area in mathematics
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
 
-      <with|par-left|<quote|1tab>|2.2<space|2spc>Duality Helps Create New
-      Concepts and Theorems, Freely! <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.2.2<space|2spc>Duality helps create new
+      concepts and theorems, freely! <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Functor>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11><vspace|0.5fn>
+      1.3<space|2spc>Functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>
 
-      <with|par-left|<quote|1tab>|3.1<space|2spc>Structure preserving map
+      <with|par-left|<quote|1tab>|1.3.1<space|2spc>Structure preserving map
       builds category out of objects <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
 
-      <with|par-left|<quote|1tab>|3.2<space|2spc>Functor is the morphism of
+      <with|par-left|<quote|1tab>|1.3.2<space|2spc>Functor is the morphism of
       the category of categories <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
-      <with|par-left|<quote|1tab>|3.3<space|2spc>Functor preserves the
+      <with|par-left|<quote|1tab>|1.3.3<space|2spc>Functor preserves the
       structure of category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-16>>
 
-      <with|par-left|<quote|1tab>|3.4<space|2spc>Surjective functor may not
+      <with|par-left|<quote|1tab>|1.3.4<space|2spc>Surjective functor may not
       be full <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-17>>
 
-      <with|par-left|<quote|1tab>|3.5<space|2spc>Injective functor may not be
-      faithful <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.3.5<space|2spc>Injective functor may not
+      be faithful <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-18>>
 
-      <with|par-left|<quote|1tab>|3.6<space|2spc>Fully faithful functor
+      <with|par-left|<quote|1tab>|1.3.6<space|2spc>Fully faithful functor
       preserves isomorphisms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>>
 
-      <with|par-left|<quote|1tab>|3.7<space|2spc>Image of functor may not be
-      a category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.3.7<space|2spc>Image of functor may not
+      be a category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Natural
-      Transformation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21><vspace|0.5fn>
+      1.4<space|2spc>Natural Transformation (TODO)
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-21>
 
-      <with|par-left|<quote|1tab>|4.1<space|2spc>Natural transformation is
+      <with|par-left|<quote|1tab>|1.4.1<space|2spc>Natural transformation is
       morphism of the category of functors
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-22>>
 
-      <with|par-left|<quote|1tab>|4.2<space|2spc>Natural transformation
+      <with|par-left|<quote|1tab>|1.4.2<space|2spc>Natural transformation
       preserves the structure of functor <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-24>>
 
-      <with|par-left|<quote|1tab>|4.3<space|2spc>Natural isomorphism is
+      <with|par-left|<quote|1tab>|1.4.3<space|2spc>Natural isomorphism is
       equivalent to isomorphisms in category.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-25>>
 
-      <with|par-left|<quote|1tab>|4.4<space|2spc>Isomorphic objects should be
-      viewed as one <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.4.4<space|2spc>Isomorphic objects should
+      be viewed as one <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-26>>
 
-      <with|par-left|<quote|1tab>|4.5<space|2spc>Natural isomorphism
+      <with|par-left|<quote|1tab>|1.4.5<space|2spc>Natural isomorphism
       describes equivalence between categories
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-27>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Summary>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28><vspace|0.5fn>
+      1.5<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-28>
 
-      <with|par-left|<quote|1tab>|5.1<space|2spc>Category theory is built by
-      recursion <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.5.1<space|2spc>Category theory is built
+      by recursion <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-29>>
 
-      <with|par-left|<quote|1tab>|5.2<space|2spc>Proof in category theory is
-      easy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.5.2<space|2spc>Proof in category theory
+      is easy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-30>>
     </associate>
   </collection>

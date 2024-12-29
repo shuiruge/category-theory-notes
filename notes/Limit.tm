@@ -387,9 +387,9 @@
   Indicates the pullback <math|A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B>.
   Principaly, there should be a morphism from
   <math|A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B> to <math|C> (and
-  also from <math|X> to <math|C>). But, since the figure commutes, such a
-  morphism can be represented by <math|\<zeta\>\<circ\>\<alpha\>> or by
-  <math|\<eta\>\<circ\>\<beta\>>, thus is redundant and omitted.>
+  also from <math|X> to <math|C>) too. But, since the figure commutes, such a
+  morphism can be represented by either <math|\<zeta\>\<circ\>\<alpha\>> or
+  <math|\<eta\>\<circ\>\<beta\>>, thus is redundant and negligible.>
 
   We are left to check that pullback is indeed the fibered product in the
   case of <math|<math-ss|Set>>. This is left to reader. The only trick for
@@ -486,14 +486,14 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|4|4>>
+    <associate|auto-10|<tuple|4|3>>
     <associate|auto-11|<tuple|1.5|4>>
     <associate|auto-12|<tuple|1.6|4>>
     <associate|auto-13|<tuple|1.7|4>>
-    <associate|auto-14|<tuple|5|5>>
+    <associate|auto-14|<tuple|5|4>>
     <associate|auto-15|<tuple|2|5>>
     <associate|auto-16|<tuple|2.1|5>>
-    <associate|auto-17|<tuple|6|6>>
+    <associate|auto-17|<tuple|6|5>>
     <associate|auto-18|<tuple|7|6>>
     <associate|auto-19|<tuple|8|7>>
     <associate|auto-2|<tuple|1|1>>
@@ -501,23 +501,23 @@
     <associate|auto-4|<tuple|1.2|1>>
     <associate|auto-5|<tuple|1|2>>
     <associate|auto-6|<tuple|1.3|2>>
-    <associate|auto-7|<tuple|2|3>>
+    <associate|auto-7|<tuple|2|2>>
     <associate|auto-8|<tuple|1.4|3>>
     <associate|auto-9|<tuple|3|3>>
-    <associate|figure: Colimit|<tuple|4|4>>
+    <associate|figure: Colimit|<tuple|4|3>>
     <associate|figure: Cone|<tuple|1|2>>
-    <associate|figure: Cone Functor|<tuple|2|3>>
+    <associate|figure: Cone Functor|<tuple|2|2>>
     <associate|figure: Equalizer|<tuple|8|7>>
     <associate|figure: Limit|<tuple|3|3>>
-    <associate|figure: Product is Limit|<tuple|5|5>>
+    <associate|figure: Product is Limit|<tuple|5|4>>
     <associate|figure: Pullback|<tuple|7|6>>
     <associate|footnote-1|<tuple|1|5>>
     <associate|footnote-2|<tuple|2|5>>
-    <associate|footnote-3|<tuple|3|7>>
+    <associate|footnote-3|<tuple|3|6>>
     <associate|footnote-4|<tuple|4|7>>
     <associate|footnr-1|<tuple|1|5>>
     <associate|footnr-2|<tuple|2|5>>
-    <associate|footnr-3|<tuple|8|7>>
+    <associate|footnr-3|<tuple|8|6>>
     <associate|footnr-4|<tuple|8|7>>
     <associate|section: Product is a limit with discrete indexing
     category|<tuple|1.7|4>>
@@ -561,7 +561,7 @@
       and red arrows for the diagram functor.>|<pageref|auto-14>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|6>||This
-      <locus|<id|%3EEAAA68-3E5C3AC0>|<link|hyperlink|<id|%3EEAAA68-3E5C3AC0>|<url|https://q.uiver.app/#q=WzAsNCxbMSwwLCJcXGZvcmFsbCBYIl0sWzAsMSwiQSJdLFsxLDIsIkMiXSxbMiwxLCJCIl0sWzAsMSwiXFxmb3JhbGwgZiIsMV0sWzEsMiwiXFx6ZXRhIiwxXSxbMCwzLCJcXGZvcmFsbCBnIiwxXSxbMywyLCJcXGV0YSIsMV1d>>|figure>
+      <locus|<id|%1B4F4B98-1AE16AA8>|<link|hyperlink|<id|%1B4F4B98-1AE16AA8>|<url|https://q.uiver.app/#q=WzAsNCxbMSwwLCJcXGZvcmFsbCBYIl0sWzAsMSwiQSJdLFsxLDIsIkMiXSxbMiwxLCJCIl0sWzAsMSwiXFxmb3JhbGwgZiIsMV0sWzEsMiwiXFx6ZXRhIiwxXSxbMCwzLCJcXGZvcmFsbCBnIiwxXSxbMywyLCJcXGV0YSIsMV1d>>|figure>
       indicates the fibered product <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|X,A|)>\<times\><rsub|<around*|(|\<zeta\><rsub|\<ast\>>,\<eta\><rsub|\<ast\>>|)>><with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|X,B|)>>.>|<pageref|auto-17>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|7>|| Indicates the
