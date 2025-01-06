@@ -3,302 +3,219 @@
 <style|generic>
 
 <\body>
-  <chapter|Adjunction and Monad>
+  <chapter|Universality, Adjunction, and Monad>
 
-  <section|Adjunction>
+  <section|Universality (TODO)>
 
-  <subsection|Adjoint functors preserve representations of presheaves and
-  copresheaves><label|section: Adjoint functors preserve representations of
-  presheaves and copresheaves>
+  <subsection|Hom-functor can be generalized for multiple categories>
 
-  Up to now, representation only occurs in single category (except for the
-  <math|<math-ss|Set>>). For instance, the representation of a representable
-  presheaf <math|H:<math-ss|D><rsup|op>\<rightarrow\><math-ss|Set>> is still
-  in <math|<math-ss|D>>. No other category is involved. It is natural to
-  generalize representation to involve multiple categories. But how? We have
-  known that, in the framework of category theory, the key is using
-  functorial maps. The only way of mapping <math|H> to a presheaf on another
-  category, say <math|<math-ss|C>>, is composing <math|H> by a functor
-  <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> as
-  <math|H\<circ\>F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>. Let
-  <math|<wide|H|^>> represent <math|H>, that is,
-  <math|<math-ss|D><around*|(|-,<wide|H|^>|)>\<cong\>H>. Since
-  <math|<wide|H|^>> is in <math|<math-ss|D>>, it cannot represents
-  <math|H\<circ\>F>, which is a presheaf on <math|<math-ss|C>>. It is natural
-  to wonder if there is a functorial map (recall that, in the framework of
-  category theory, a map should be functorial) that sends <math|<wide|H|^>>
-  to the representation of the presheaf <math|H\<circ\>F> (if it is
-  representable). This calls for another functor
-  <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> so that
-  <math|G<around*|(|<wide|H|^>|)>> may represent <math|H\<circ\>F>. So, our
-  problem turns to be what is the condition for
-  <math|G<around*|(|<wide|H|^>|)>> to represent <math|H\<circ\>F>, that is,
+  As discussed in section <reference|section: Morphisms with fixed codomain
+  can be represented by hom-functor>, in a locally small category C, an
+  object <math|Y\<in\><math-ss|C>> corresponds to a representable functor
+  <math|<math-ss|C><around*|(|-,Y|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>.
+  Conversely, as discussed in section <reference|section: Functor is
+  representable if there exists universal element>, a functor
+  <math|F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>> is representable
+  if there exists an element <math|e\<in\>F<around*|(|<wide|F|^>|)>> for some
+  <math|<wide|F|^>\<in\><math-ss|C>> such that
+  <math|F<around*|(|-|)><around*|(|e|)>:<math-ss|C><around*|(|X,<wide|F|^>|)>\<rightarrow\>F<around*|(|X|)>>
+  is isomorphic for all <math|X\<in\><math-ss|C>>.
+
+  In these discussions, <math|<math-ss|C>> is the only category under
+  consideration. A natural way of generalizing this is to consider more
+  categories, say two. We shall also consider a functor that connects them.
+  That is, let <math|<math-ss|C>> and <math|<math-ss|D>> locally small
+  categories, and functor <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>. What
+  is the generalization of the hom-functor
+  <math|<math-ss|C><around*|(|-,Y|)>>? We should insert F into it. There are
+  only two possible ways. One way of insertion is
+  <math|<math-ss|D><around*|(|-,F<around*|(|Y|)>|)>>. Notice that we have
+  replaced <math|<math-ss|C>> by <math|<math-ss|D>>, since the
+  <math|F<around*|(|Y|)>> is in category <math|<math-ss|D>>. This is nothing
+  but a hom-functor on <math|<math-ss|D>> , like
+  <math|<math-ss|D><around*|(|-,Z|)>>, thus not a true generalization. The
+  other way of insertion is <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>,
+  where <math|Y\<in\><math-ss|D>>. This indeed is a generalization, since it
+  cannot be directly re-written as a hom-functor. Next, it is essential to
+  check that <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>> is a functor.
+  In fact, <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
+  sends <math|f:A\<rightarrow\>B> to <math|<around*|(|F<around*|(|f|)>|)><rsup|\<ast\>>:<math-ss|D><around*|(|F<around*|(|B|)>,Y|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|B|)>,Y|)>>.
+  Axioms of composition and identity are directly implied from the
+  functoriality of <math|F> and the definition of pullback
+  <math|<around*|(|-|)><rsup|\<ast\>>>.
+
+  <subsection|Universal arrow is the representation of generalized
+  hom-functor>
+
+  Interestingly, the <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>
+  may be representable. By theorem <reference|theorem: Universal Element>, a
+  presheaf <\footnote>
+    Recall that a presheaf is a functor of the type
+    <math|<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>.
+  </footnote> is representable if and only if there is a universal element of
+  it. Let us restate the definition of universal element for
+  <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>, which is called
+  universal arrow.
+
+  A universal element of <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>
+  is a morphism <math|e\<in\><math-ss|D><around*|(|F<around*|(|W|)>,Y|)>> for
+  some <math|W\<in\><math-ss|C>>, such that
+  <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)><around*|(|e|)>:<math-ss|C><around*|(|X,W|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|X|)>,Y|)>>
+  is an isomorphism for each <math|X\<in\><math-ss|C>>. First, we have to
+  evaluate <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)><around*|(|e|)>>
+  for each <math|X\<in\><math-ss|C>> and each <math|f:X\<rightarrow\>W>, as
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|<math-ss|D><around*|(|F<around*|(|f|)>,Y|)><around*|(|e|)>>>|<row|<cell|<around*|{|definition
+    of <math-ss|D><around*|(|F<around*|(|-|)>,Y|)>|}>=>|<cell|<around*|(|F<around*|(|f|)>|)><rsup|\<ast\>><around*|(|e|)>>>|<row|<cell|<around*|{|definition
+    of <around*|(|-|)><rsup|\<ast\>>|}>=>|<cell|e\<circ\>F<around*|(|f|)>.>>>>
+  </align>
+
+  Next, since both sides of the arrow are sets, that
+  <math|e\<circ\>F<around*|(|-|)>:<math-ss|C><around*|(|X,W|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|X|)>,Y|)>>
+  is an isomorphism means that it is a bijection, which in turn means, for
+  each <math|f\<in\><math-ss|D><around*|(|F<around*|(|X|)>,Y|)>>, there is a
+  unique <math|\<zeta\>\<in\><math-ss|C><around*|(|X,W|)>> such that
+  <math|f=e\<circ\>F<around*|(|\<zeta\>|)>>. Finally, we put all these
+  together as follow.
+
+  <\definition>
+    [Arrow from Functor to Object] Let <math|<math-ss|C>> and
+    <math|<math-ss|D>> locally small categories,
+    <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> a functor, and
+    <math|Y\<in\><math-ss|D>>. An <with|font-series|bold|arrow> from <math|F>
+    to <math|Y> is a pair <math|<around*|(|X,f|)>> where
+    <math|X\<in\><math-ss|C>> and <math|f:F<around*|(|X|)>\<rightarrow\>Y>.
+  </definition>
+
+  <\definition>
+    [Universal Arrow] Let <math|<math-ss|C>> and <math|<math-ss|D>> locally
+    small categories, and <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> a
+    functor. Given <math|Y\<in\><math-ss|D>>, a
+    <with|font-series|bold|universal arrow> from <math|F> to <math|Y> is an
+    arrow from <math|F> to <math|Y>, <math|<around*|(|W,e|)>>, such that for
+    any other arrow from <math|F> to <math|Y>, <math|<around*|(|X,f|)>>,
+    there is a unique <math|\<zeta\>:X\<rightarrow\>W> such that
+    <math|f=e\<circ\>F<around*|(|\<zeta\>|)>>.
+  </definition>
+
+  <big-figure|<image|figures/universality.png|0.4par|||>|<label|figure:
+  Universality> This <hlink|figure|https://q.uiver.app/#q=WzAsNSxbMSwwLCJGKFgpIl0sWzEsMiwiRihXKSJdLFswLDIsIlciXSxbMCwwLCJYIl0sWzMsMiwiWSJdLFswLDEsIkYoXFx6ZXRhKSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFszLDIsIlxcZXhpc3RzICEgXFx6ZXRhIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsNCwiZV9ZIiwxXSxbMCw0LCJcXGZvcmFsbCBmIiwxXV0=>
+  illustrates a universal arrow from <math|F> to <math|Y>. For each
+  <math|X\<in\><math-ss|C>> and each <math|f:F<around*|(|X|)>\<rightarrow\>Y>,
+  there is a unique <math|\<zeta\>:X\<rightarrow\>W> such that
+  <math|f=e\<circ\>F<around*|(|\<zeta\>|)>>.>
+
+  <subsection|Universal arrow furnishes natural structure><label|section:
+  Universal arrows furnish natural structure>
+
+  As it is known, structure is very essential for enriching mathematics. For
+  instance, by adding the structure called open covering on a set, we get a
+  topological space. Furthermore, by adding smooth structure on a topological
+  space, we get manifold. Universal arrow is important because it leads to a
+  natural construction of mathematical structure. We are to declare this
+  statement in the case of group.
+
+  By adding the structure called multiplication on a set, we get a group. At
+  the same time, a function is lifted to be a group homomorphism, if several
+  axioms can be satisfied. Given a set, the structure that is added to form a
+  group can be multiple. We can artifically construct many kinds of group out
+  of the same set.
+
+  Contrarily, by forgetting the multiplication of a group, we get a set. At
+  the same time, a group homomorphism is reduced to a function. In category
+  theory, this is described by a functor from the category of groups to the
+  category of sets, <math|F:<math-ss|Grp>\<rightarrow\><math-ss|Set>>. TODO
+
+  Let <math|Y> a set. A universal arrow <math|<around*|(|W,e|)>> from
+  <math|F> to <math|Y> states that, for each group <math|X>, there is a
+  bijection between functions like <math|f:F<around*|(|X|)>\<rightarrow\>Y>,
+  which maps the underlying set of group <math|X> to the set <math|Y>, and
+  group homomorphism like <math|\<zeta\>:X\<rightarrow\>W>. So, we find a way
+  to construct a group homomorphism out of a function; and this construction
+  does not need any artifitial assignment, thus is free of charge.
+
+  This holds for other categories built on set by adding structure, such as
+  the category of topological space, and the category of rings.
+
+  <subsection|Universal arrows are functorial>
+
+  In previous discussion, the <math|Y\<in\><math-ss|D>> is fixed. It is
+  natural to wonder what will happen if there is a universal arrow for each
+  <math|Y\<in\><math-ss|D>>. Let us start by two objects
+  <math|X,Y\<in\><math-ss|D>>, and their universal arrows
+  <math|<around*|(|W<rsub|X>,e<rsub|X>|)>> and
+  <math|<around*|(|W<rsub|Y>,e<rsub|Y>|)>>. We have \Ptypes\Q
+  <math|e<rsub|X>:F<around*|(|W<rsub|X>|)>\<rightarrow\>X> and
+  <math|e<rsub|Y>:F<around*|(|W<rsub|Y>|)>\<rightarrow\>Y>. Then for each
+  <math|f:X\<rightarrow\>Y>, there exists a unique
+  <math|f<rsup|\<sharp\>>:W<rsub|X>\<rightarrow\>W<rsub|Y>> such that figure
+  <reference|figure: Universal Arrow Is Functorial> commutes.
+
+  <big-figure|<image|figures/universality-1.png|0.4par|||>|<label|figure:
+  Universal Arrow Is Functorial> This <hlink|figure|https://q.uiver.app/#q=WzAsNixbMSwwLCJGKFdfWCkiXSxbMywwLCJYIl0sWzEsMiwiRihXX1kpIl0sWzAsMiwiV19ZIl0sWzAsMCwiV19YIl0sWzMsMiwiWSJdLFswLDEsImVfWCIsMV0sWzAsMiwiRihmXntcXCN9KSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDUsImVfWSIsMV0sWzEsNSwiZiIsMV0sWzQsMywiXFxleGlzdHMgISBmXntcXCN9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsNSwiZiBcXGNpcmMgZV9YIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d>
+  defines <math|f<rsup|\<sharp\>>>. For each <math|f:X\<rightarrow\>Y>, we
+  have <math|f\<circ\>e<rsub|X>:F<around*|(|W<rsub|X>|)>\<rightarrow\>Y>.
+  Since <math|<around*|(|W<rsub|Y>,e<rsub|Y>|)>> is a universal arrow, there
+  is a unique <math|f<rsup|\<sharp\>>:W<rsub|X>\<rightarrow\>W<rsub|Y>> such
+  that the red part commutes, which implies that the whole diagram commutes.>
+
+  This hints for a functor-like map from <math|<math-ss|D>> to
+  <math|<math-ss|C>>. Explicitly, for each <math|X\<in\><math-ss|D>> and each
+  <math|f:X\<rightarrow\>Y> in <math|<math-ss|D>>,
 
   <\equation*>
-    <math-ss|C><around*|(|-,G<around*|(|<wide|H|^>|)>|)><above|\<cong\>|?>H\<circ\>F.
+    <tabular*|<tformat|<table|<row|<cell|X>|<cell|\<mapsto\>>|<cell|W<rsub|X>>>|<row|<cell|f:X\<rightarrow\>Y>|<cell|\<mapsto\>>|<cell|f<rsup|\<sharp\>>:W<rsub|X>\<rightarrow\>W<rsub|Y>>>>>>.
   </equation*>
 
-  Since <math|<wide|H|^>> represents <math|H> and it is easy to prove that
-  <math|<math-ss|D><around*|(|-,<wide|H|^>|)>\<cong\>H> implies
-  <math|<math-ss|D><around*|(|F<around*|(|-|)>,<wide|H|^>|)>\<cong\>H\<circ\>F>
-  <\footnote>
-    Proof is left to reader.
-  </footnote>, the problem turns to be <math|<math-ss|D><around*|(|F<around*|(|-|)>,<wide|H|^>|)><above|\<cong\>|?><math-ss|C><around*|(|-,G<around*|(|<wide|H|^>|)>|)>>.
-  If this relation holds, then <math|G<around*|(|<wide|H|^>|)>> represents
-  <math|H\<circ\>F>, and we say the representation of a representable
-  presheaf is preserved by functorial maps <math|F> and <math|G>.
+  It is natural to wonder if this functor-like map is really a functor. That
+  is, if it satisfies the axioms of composition and identity. The composition
+  axiom is implied from the functoriality of <math|F>, illustrated by figure
+  <reference|figure: Composition Axiom>. And the identity axiom is naturally
+  satisfied, illustrated by figure <reference|figure: Identity Axiom>. So, we
+  conclude that functor-like map is indeed a functor.
 
-  Applying the previous analysis to a representable copresheaf
-  <math|K:<math-ss|C>\<rightarrow\><math-ss|Set>> which is represented by
-  <math|<wide|K|^>\<in\><math-ss|C>>, we will find that the unique valid
-  statement of the problem is what is the condition for
-  <math|F<around*|(|<wide|K|^>|)>> to represent <math|K\<circ\>G>, that is,
+  <big-figure|<image|figures/adjunction-1.png|0.6par|||>|<label|figure:
+  Composition Axiom> This <hlink|figure|https://q.uiver.app/#q=WzAsNixbMSwwLCJGKFdfWCkiXSxbMywwLCJYIl0sWzEsMiwiRihXX1gpIl0sWzAsMiwiV19YIl0sWzAsMCwiV19YIl0sWzMsMiwiWCJdLFswLDEsImVfWCIsMV0sWzAsMiwiRigxX3tXX1h9KSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDUsImVfWCIsMV0sWzEsNSwiMV9YIiwxXSxbNCwzLCIxX3tXX1h9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsNSwiZV9YIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d>
+  illustrates that composition axiom is satisfied. Composition axiom states
+  that <math|<around*|(|g\<circ\>f|)><rsup|\<sharp\>>=g<rsup|\<sharp\>>\<circ\>f<rsup|\<sharp\>>>.
+  First, notice that replacing <math|<around*|(|g\<circ\>f|)><rsup|\<sharp\>>>
+  by <math|g<rsup|\<sharp\>>\<circ\>f<rsup|\<sharp\>>> makes this diagram
+  commutes. Indeed, this is implied by the functorality of <math|F>. Next,
+  because of universality, the <math|<around*|(|g\<circ\>f|)><rsup|\<sharp\>>>
+  that makes this diagram commutes is unique. So, we conclude that
+  <math|<around*|(|g\<circ\>f|)><rsup|\<sharp\>>=g<rsup|\<sharp\>>\<circ\>f<rsup|\<sharp\>>>.>
 
-  <\equation*>
-    <math-ss|D><around*|(|F<around*|(|<wide|K|^>|)>,\<star\>|)><above|\<cong\>|?>K\<circ\>G.
-  </equation*>
-
-  (The <math|\<star\>> is employed as placeholder.) And again, since
-  <math|<wide|K|^>> represents <math|K>, it turns to be
-  <math|<math-ss|D><around*|(|F<around*|(|<wide|K|^>|)>,\<star\>|)><above|\<cong\>|?><math-ss|C><around*|(|<wide|K|^>,G<around*|(|\<star\>|)>|)>>.
-  If this relation holds, then <math|F<around*|(|<wide|K|^>|)>> represents
-  <math|K\<circ\>G>, and we say the representation of a representable
-  copresheaf is preserved by functorial maps <math|F> and <math|G>.
-
-  Altogether, if representations of all representable presheaves and
-  copresheaves are to be preserved by functorial maps
-  <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
-  <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>, then we should demand
-  <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>\<cong\><math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>>,
-  where <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>> and
-  <math|<math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>> are bi-functors
-  <\footnote>
-    <with|font-series|bold|Bi-functor> is a functor with two variables, like
-    a function with two variables, say <math|f<around*|(|x,y|)>>. As a
-    function, <math|f<around*|(|x,y|)>> is reduced to a function of single
-    variable, <math|f<rsub|y><around*|(|x|)>>, when <math|y> is given. The
-    same goes for a bi-functor <math|F<around*|(|-,\<star\>|)>>. Given an
-    object <math|Y>, <math|F<around*|(|-,Y|)>> is reduced to the single
-    variable functor that we have been familiar with,
-    <math|F<rsub|Y><around*|(|-|)>>. The functoriality of
-    <math|F<around*|(|-,\<star\>|)>>, which preserves the structure of
-    category, is satisfied in the sense of <math|F<rsub|Y><around*|(|-|)>>
-    for each <math|Y>.
-  </footnote> of the \Ptype\Q <math|<math-ss|C><rsup|op>\<times\><math-ss|D>\<rightarrow\><math-ss|Set>>.
-  This indicates a double-index component
-
-  <\equation*>
-    \<varphi\><rsub|X,Y>:<math-ss|D><around*|(|F<around*|(|X|)>,Y|)>\<rightarrow\><math-ss|C><around*|(|X,G<around*|(|Y|)>|)>
-  </equation*>
-
-  for each <math|X\<in\><math-ss|C>> and <math|Y\<in\><math-ss|D>>. This
-  means, to preserve presheaves and copresheaves, the <math|F> and <math|G>
-  can be arbitrary except that the relation
-  <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>\<cong\><math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>>
-  must be held.
+  <big-figure|<image|figures/adjunction-2.png|0.45par|||>|<label|figure:
+  Identity Axiom> This <hlink|figure|https://q.uiver.app/#q=WzAsNixbMSwwLCJGKFdfWCkiXSxbMywwLCJYIl0sWzEsMiwiRihXX1gpIl0sWzAsMiwiV19YIl0sWzAsMCwiV19YIl0sWzMsMiwiWCJdLFswLDEsImVfWCIsMV0sWzAsMiwiRigxX3tXX1h9KSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDUsImVfWCIsMV0sWzEsNSwiMV9YIiwxXSxbNCwzLCIxX3tXX1h9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsNSwiZV9YIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d>
+  illustrates that identity axiom is satisfied. Identity axiom states that
+  <math|<around*|(|1<rsub|X>|)><rsup|\<sharp\>>=1<rsub|W<rsub|X>>>. First,
+  notice that replacing <math|<around*|(|1<rsub|X>|)><rsup|\<sharp\>>> by
+  <math|1<rsub|W<rsub|X>>> makes this diagram commutes. Next, because of
+  universality, the <math|<around*|(|1<rsub|X>|)><rsup|\<sharp\>>> that makes
+  this diagram commutes is unique. So, we conclude that
+  <math|<around*|(|1<rsub|X>|)><rsup|\<sharp\>>=1<rsub|W<rsub|X>>>.>
 
   We summarize this section as follow.
 
-  <\definition>
-    [Adjoint Functors & Adjunction] Let <math|<math-ss|C>> and
-    <math|<math-ss|D>> locally small categories. Functors
-    <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
-    <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> are
-    <with|font-series|bold|adjoint>, denoted by <math|F\<dashv\>G>, if there
-    exists a natural isomorphism <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>>.
-    The <math|\<varphi\>> is called an <with|font-series|bold|adjunction>.<\footnote>
-      In some texture, for instance MacLane, adjunction is defined as the
-      triplet <math|<around*|(|F,G,\<varphi\>|)>>. However, the
-      <math|\<varphi\>> itself, like any other morphism, has indicated what
-      the domain and codomain are, that is, the
-      <math|<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>> and
-      <math|<math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>> respectively,
-      from which we read out <math|F> and <math|G>.
-    </footnote>
-  </definition>
-
-  <\big-figure|<image|figures/adjoint.png|0.8par|||>>
-    <label|figure: Adjoint> Indicates the natural isomorphism
-    <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>>.
-    \PNatural in <math|X>\Q means varying the first variable, and \Pnatural
-    in <math|Y>\Q varies the second. The commutative diagrams have been
-    rotated by <math|90<rsup|\<circ\>>> for convenience.
-  </big-figure>
-
   <\theorem>
-    [Adjoint Functors Preserve Representations] Let <math|<math-ss|C>> and
-    <math|<math-ss|D>> locally small categories. Let
-    <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
-    <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> adjoint functors, as
-    <math|F\<dashv\>G>. We have,
+    Let <math|<math-ss|C>> and <math|<math-ss|D>> locally small categories,
+    and <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> a functor. If for each
+    <math|X\<in\><math-ss|D>>, there is a universal arrow from <math|F> to
+    <math|X>, then there is a functor <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>
+    that maps <math|X\<in\><math-ss|D>> to <math|W<rsub|X>\<in\><math-ss|C>>
 
-    <\itemize>
-      <item>if <math|<wide|H|^>\<in\><math-ss|D>> represents
-      <math|H:<math-ss|D><rsup|op>\<rightarrow\><math-ss|Set>>, then
-      <math|G<around*|(|<wide|H|^>|)>\<in\><math-ss|C>> represents
-      <math|H\<circ\>F:<math-ss|C><rsup|op>\<rightarrow\><math-ss|Set>>; and
+    the maps that assign <math|X> to <math|W<rsub|X>>, where
+    <math|<around*|(|W<rsub|X>,e<rsub|X>|)>>
 
-      <item>if <math|<wide|K|^>\<in\><math-ss|C>> represents
-      <math|K:<math-ss|C>\<rightarrow\><math-ss|Set>>, then
-      <math|F<around*|(|<wide|K|^>|)>\<in\><math-ss|D>> represents
-      <math|K\<circ\>G:<math-ss|D>\<rightarrow\><math-ss|Set>>.
-    </itemize>
+    <\equation*>
+      <tabular*|<tformat|<table|<row|<cell|X>|<cell|\<mapsto\>>|<cell|W<rsub|X>>>|<row|<cell|f:X\<rightarrow\>Y>|<cell|\<mapsto\>>|<cell|f<rsup|\<sharp\>>:W<rsub|X>\<rightarrow\>W<rsub|Y>>>>>>
+    </equation*>
+
+    form a functor.\ 
   </theorem>
 
-  It is called adjoint because of the analogy to the adjoint in vector space:
-  two linear transformations <math|T> and <math|T<rsup|\<ast\>>> are adjoint
-  if <math|<around*|\<langle\>|T<rsup|\<ast\>>u,v|\<rangle\>>=<around*|\<langle\>|u,T
-  v|\<rangle\>>> for each vectors <math|u> and <math|v>, where bracket
-  indicates inner product.
-
-  <subsection|Adjoint is unique>
-
-  As discussed in section <reference|section: Representation is unique>,
-  representation is unique up to isomorphism. So, it is natural to wonder if
-  the adjoint of a functor is unique.
-
-  <\theorem>
-    [Adjoint is Unique] If <math|F\<dashv\>G> and
-    <math|F\<dashv\>G<rprime|'>>, then we have <math|G> and
-    <math|G<rprime|'>> are natural isomorphic. The same goes for <math|F>.
-  </theorem>
-
-  <\proof>
-    For each <math|Y\<in\><math-ss|D>>, <math|\<varphi\><rsub|-,Y>:<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|Y|)>|)>>
-    indicates that <math|G<around*|(|Y|)>> represents
-    <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>. Since representation
-    is unique up to isomorphism, if <math|G<around*|(|Y|)>> and
-    <math|G<rprime|'><around*|(|Y|)>> both represents
-    <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>, then we should have
-    <math|G<around*|(|Y|)>\<cong\>G<rprime|'><around*|(|Y|)>> for each
-    <math|Y\<in\><math-ss|D>>. This simply means <math|G> and
-    <math|G<rprime|'>> are natural isomorphic. The same goes for <math|F>.
-  </proof>
-
-  With this uniqueness, we can say <math|F> is <with|font-shape|italic|the>
-  <with|font-series|bold|left adjoint> of <math|G>, and <math|G> is
-  <with|font-shape|italic|the> <with|font-series|bold|right adjoint> of
-  <math|F>.
-
-  <subsection|Unit and counit are universal elements>
-
-  It is natural to ask, given a functor <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>,
-  whether or not there exists a functor <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>
-  such that <math|F\<dashv\>G> holds. This question is quite complicated, and
-  is left to section TODO. Temporally, we are to consider a much simpler one:
-  for adjoint functors <math|F\<dashv\>G>, how to find the natural
-  isomorphism <math|\<varphi\>:<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>\<rightarrow\><math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>>.
-
-  First, we shall check what <math|F\<dashv\>G> means. From the definition,
-  it is easy to see that <math|F<around*|(|X|)>> represents
-  <math|<math-ss|C><around*|(|X,G<around*|(|\<star\>|)>|)>> and
-  <math|G<around*|(|Y|)>> represents <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>.
-  As it is shown in lemma <reference|theorem: Universal Element>, a presheaf
-  is representable if and only if there is a universal element for it, and a
-  natural isomorphism that makes the representation can be defined by the
-  universal element. This fact suggests a way to find the <math|\<varphi\>>,
-  by the universal elements of the presheaves
-  <math|<math-ss|C><around*|(|X,G<around*|(|\<star\>|)>|)>> and
-  <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>.
-
-  Explicitly, given <math|X>, the universal element of
-  <math|<math-ss|C><around*|(|X,G<around*|(|\<star\>|)>|)>>, denoted by
-  <math|\<eta\><rsub|X>:X\<rightarrow\>G\<circ\>F<around*|(|X|)>>, defines a
-  natural isomorphism in component <math|\<varphi\><rsub|X,Y>:<math-ss|D><around*|(|F<around*|(|X|)>,Y|)>\<rightarrow\><math-ss|C><around*|(|X,G<around*|(|Y|)>|)>>
-  as <math|G<around*|(|-|)>\<circ\>\<eta\><rsub|X>>.<\footnote>
-    Interestingly, in category theory, we can directly check whether we have
-    derived correctly or not by \Ptype checking\Q! By recalling the types
-    <math|\<eta\><rsub|X>:X\<rightarrow\>G\<circ\>F<around*|(|X|)>> and
-    <math|f:F<around*|(|X|)>\<rightarrow\>Y>, we find
-    <math|\<varphi\><rsub|X,Y><around*|(|f|)>:X<above|\<longrightarrow\>|\<eta\><rsub|X>>G\<circ\>F<around*|(|X|)><above|\<longrightarrow\>|G<around*|(|f|)>>G<around*|(|Y|)>>,
-    which is the correct \Ptype\Q.
-  </footnote> The same, given <math|Y>, the universal element of
-  <math|<math-ss|D><around*|(|F<around*|(|-|)>,Y|)>>, denoted by
-  <math|\<varepsilon\><rsub|Y>:F\<circ\>G<around*|(|Y|)>\<rightarrow\>Y>,
-  defines a natural isomorphism in component
-  <math|\<psi\><rsub|X,Y>:<math-ss|C><around*|(|X,G<around*|(|Y|)>|)>\<rightarrow\><math-ss|D><around*|(|F<around*|(|X|)>,Y|)>>
-  as <math|\<varepsilon\><rsub|Y>\<circ\>F<around*|(|-|)>>. Here, both the
-  <math|X> of <math|\<eta\><rsub|X>> and the <math|Y> of
-  <math|\<varepsilon\><rsub|Y>> are labels, which do not indicate any
-  naturality.
-
-  To be the adjunction, the <math|\<varphi\><rsub|X,Y>> constructed by the
-  universal element <math|\<eta\><rsub|X>> still lacks some natuality; and
-  the relation between the <math|\<varphi\><rsub|X,Y>> and the
-  <math|\<psi\><rsub|X,Y>> is still unclear. So, we consider what are the
-  properties that should be added to <math|\<eta\><rsub|X>> and
-  <math|\<varepsilon\><rsub|Y>> so that the <math|\<varphi\>> is an
-  adjunction and that the <math|\<varphi\>> and the <math|\<psi\>> are
-  mutually inverse.
-
-  First, we demand <math|\<varphi\><rsub|X,Y>> to be natural in both indices.
-  The naturality in <math|Y> is a result of universal element. And naturality
-  in <math|X> demands that <math|\<eta\><rsub|X>> should not be simply a
-  morphism, but a component of a natural transformation
-  <math|\<eta\>:1<rsub|<math-ss|C>>\<rightarrow\>G\<circ\>F>. The same,
-  naturality of <math|\<psi\>> demands that <math|\<varepsilon\><rsub|Y>>
-  should be a component of a natural transformation
-  <math|\<varepsilon\>:F\<circ\>G\<rightarrow\>1<rsub|<math-ss|D>>>.
-
-  Next, we demand that the <math|\<varphi\>> and the <math|\<psi\>> are not
-  individual natural isomorphisms, but are inverse to each other. That is,
-  <math|\<varphi\>\<circ\>\<psi\>=1<rsub|<math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>>>
-  and <math|\<psi\>\<circ\>\<varphi\>=1<rsub|<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>>>.
-  Since for each <math|f:X\<rightarrow\>G<around*|(|Y|)>>,
-
-  <\align>
-    <tformat|<table|<row|<cell|>|<cell|\<varphi\><rsub|X,Y>\<circ\>\<psi\><rsub|X,Y><around*|(|f|)>>>|<row|<cell|<around*|{|definitions|}>=>|<cell|G<around*|(|\<varepsilon\><rsub|Y>\<circ\>F<around*|(|f|)>|)>\<circ\>\<eta\><rsub|X>>>|<row|<cell|<around*|{|functorality
-    of G|}>=>|<cell|G<around*|(|\<varepsilon\><rsub|Y>|)>\<circ\><around*|(|G\<circ\>F|)><around*|(|f|)>\<circ\>\<eta\><rsub|X>>>|<row|<cell|<around*|{|naturality
-    of \<eta\>|}>=>|<cell|G<around*|(|\<varepsilon\><rsub|Y>|)>\<circ\>\<eta\><rsub|G<around*|(|Y|)>>\<circ\>f,>>>>
-  </align>
-
-  we find that <math|\<varphi\>\<circ\>\<psi\>=1<rsub|<math-ss|C><around*|(|-,G<around*|(|\<star\>|)>|)>>>
-  is equivalent to <math|G<around*|(|\<varepsilon\><rsub|Y>|)>\<circ\>\<eta\><rsub|G<around*|(|Y|)>>=1<rsub|G<around*|(|Y|)>>>.
-  The same, <math|\<psi\>\<circ\>\<varphi\>=1<rsub|<math-ss|D><around*|(|F<around*|(|-|)>,\<star\>|)>>>
-  is equivalent to <math|\<varepsilon\><rsub|F<around*|(|X|)>>\<circ\>F<around*|(|\<eta\><rsub|X>|)>=1<rsub|F<around*|(|X|)>>>.
-  As figure <reference|figure: Triangle Identities> shows, these two
-  identities form triangles respectively, thus called
-  <with|font-series|bold|triangle identities>.
-
-  <big-figure|<image|figures/yoneda-5.png|0.75par|||>|<label|figure: Triangle
-  Identities> This <hlink|figure|https://q.uiver.app/#q=WzAsNixbMCwwLCJHKFkpIl0sWzIsMCwiRyBcXGNpcmMgRiBcXGNpcmMgRyhZKSJdLFsyLDIsIkcoWSkiXSxbNCwwLCJGIFxcY2lyYyBHIFxcY2lyYyBGKFgpIl0sWzYsMCwiRihYKSJdLFs0LDIsIkYoWCkiXSxbMCwxLCJcXGV0YV97RyhZKX0iLDFdLFsxLDIsIkcoXFx2YXJlcHNpbG9uX1kpIiwxXSxbMCwyLCIxX3tHKFkpfSIsMV0sWzMsNCwiXFx2YXJlcHNpbG9uX3tGKFgpfSIsMV0sWzUsMywiRihcXGV0YV9YKSIsMV0sWzQsNSwiMV97RihYKX0iLDFdXQ==>
-  indicates <math|G<around*|(|\<varepsilon\><rsub|Y>|)>\<circ\>\<eta\><rsub|G<around*|(|Y|)>>=1<rsub|G<around*|(|Y|)>>>
-  and <math|\<varepsilon\><rsub|F<around*|(|X|)>>\<circ\>F<around*|(|\<eta\><rsub|X>|)>=1<rsub|F<around*|(|X|)>>>
-  respectively.>
-
-  Finally, we find that the demanded adjunction <math|\<varphi\>> and its
-  inverse <math|\<psi\>> can be constructed out of the natural
-  transformations <math|\<eta\>:1<rsub|<math-ss|C>>\<rightarrow\>G\<circ\>F>
-  and <math|\<varepsilon\>:F\<circ\>G\<rightarrow\>1<rsub|<math-ss|D>>> that
-  satisfy the triangle identities.
-
-  In the end, we clear up the previous analysis, summarizing as follow.
-
-  <\definition>
-    [Unit & Counit] Let <math|<math-ss|C>> and <math|<math-ss|D>> locally
-    small categories, and functors <math|F:<math-ss|C>\<rightarrow\><math-ss|D>>,
-    <math|G:<math-ss|D>\<rightarrow\><math-ss|C>>. Natural transformations
-    <math|\<eta\>:1<rsub|<math-ss|C>>\<rightarrow\>G\<circ\>F> and
-    <math|\<varepsilon\>:F\<circ\>G\<rightarrow\>1<rsub|<math-ss|D>>> are
-    <with|font-series|bold|unit> and <with|font-series|bold|counit>
-    respectively if they satisfy the triangle identities (figure
-    <reference|figure: Triangle Identities>).
-  </definition>
-
-  <\theorem>
-    [Unit & Counit] Let <math|<math-ss|C>> and <math|<math-ss|D>> locally
-    small categories, <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
-    <math|G:<math-ss|D>\<rightarrow\><math-ss|C>> adjoint functors. If
-    <math|\<eta\>:1<rsub|<math-ss|C>>\<rightarrow\>G\<circ\>F> and
-    <math|\<varepsilon\>:F\<circ\>G\<rightarrow\>1<rsub|<math-ss|D>>> are
-    unit and counit respectively, then <math|G\<circ\>\<eta\>> is an
-    adjunction of <math|F\<dashv\>G> with inverse
-    <math|\<varepsilon\>\<circ\>F>.
-  </theorem>
-
-  <section|Monad>
-
-  \;
+  <section|Adjunction>
 </body>
 
 <\initial>
@@ -310,71 +227,102 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|4|3>>
+    <associate|auto-11|<tuple|2|3>>
     <associate|auto-2|<tuple|1|1>>
     <associate|auto-3|<tuple|1.1|1>>
-    <associate|auto-4|<tuple|1|2>>
-    <associate|auto-5|<tuple|1.2|2>>
-    <associate|auto-6|<tuple|1.3|3>>
-    <associate|auto-7|<tuple|2|3>>
-    <associate|auto-8|<tuple|2|4>>
-    <associate|figure: Adjoint|<tuple|1|2>>
-    <associate|figure: Triangle Identities|<tuple|2|3>>
+    <associate|auto-4|<tuple|1.2|1>>
+    <associate|auto-5|<tuple|1|2>>
+    <associate|auto-6|<tuple|1.3|2>>
+    <associate|auto-7|<tuple|1.4|2>>
+    <associate|auto-8|<tuple|2|2>>
+    <associate|auto-9|<tuple|3|3>>
+    <associate|figure: Composition Axiom|<tuple|3|3>>
+    <associate|figure: Identity Axiom|<tuple|4|3>>
+    <associate|figure: Universal Arrow Is Functorial|<tuple|2|2>>
+    <associate|figure: Universality|<tuple|1|2>>
     <associate|footnote-1|<tuple|1|1>>
-    <associate|footnote-2|<tuple|2|1>>
-    <associate|footnote-3|<tuple|3|2>>
-    <associate|footnote-4|<tuple|4|3>>
     <associate|footnr-1|<tuple|1|1>>
-    <associate|footnr-2|<tuple|2|1>>
-    <associate|footnr-3|<tuple|3|2>>
-    <associate|footnr-4|<tuple|4|3>>
-    <associate|section: Adjoint functors preserve representations of
-    presheaves and copresheaves|<tuple|1.1|1>>
+    <associate|section: Universal arrows furnish natural
+    structure|<tuple|1.3|2>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|figure>
-      <tuple|normal|<\surround|<hidden-binding|<tuple>|1>|>
-        \ Indicates the natural isomorphism
-        <with|mode|<quote|math>|\<varphi\>:<rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|D>>><around*|(|F<around*|(|-|)>,\<star\>|)>\<rightarrow\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>><around*|(|-,G<around*|(|\<star\>|)>|)>>.
-        \PNatural in <with|mode|<quote|math>|X>\Q means varying the first
-        variable, and \Pnatural in <with|mode|<quote|math>|Y>\Q varies the
-        second. The commutative diagrams have been rotated by
-        <with|mode|<quote|math>|90<rsup|\<circ\>>> for convenience.
-      </surround>|<pageref|auto-4>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|1>|| This
+      <locus|<id|%A66B028-51C4350>|<link|hyperlink|<id|%A66B028-51C4350>|<url|https://q.uiver.app/#q=WzAsNSxbMSwwLCJGKFgpIl0sWzEsMiwiRihXKSJdLFswLDIsIlciXSxbMCwwLCJYIl0sWzMsMiwiWSJdLFswLDEsIkYoXFx6ZXRhKSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFszLDIsIlxcZXhpc3RzICEgXFx6ZXRhIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsNCwiZV9ZIiwxXSxbMCw0LCJcXGZvcmFsbCBmIiwxXV0=>>|figure>
+      illustrates a universal arrow from <with|mode|<quote|math>|F> to
+      <with|mode|<quote|math>|Y>. For each
+      <with|mode|<quote|math>|X\<in\><rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>>>>
+      and each <with|mode|<quote|math>|f:F<around*|(|X|)>\<rightarrow\>Y>,
+      there is a unique <with|mode|<quote|math>|\<zeta\>:X\<rightarrow\>W>
+      such that <with|mode|<quote|math>|f=e\<circ\>F<around*|(|\<zeta\>|)>>.>|<pageref|auto-5>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|2>|| This
-      <locus|<id|%88DD4B8-9052280>|<link|hyperlink|<id|%88DD4B8-9052280>|<url|https://q.uiver.app/#q=WzAsNixbMCwwLCJHKFkpIl0sWzIsMCwiRyBcXGNpcmMgRiBcXGNpcmMgRyhZKSJdLFsyLDIsIkcoWSkiXSxbNCwwLCJGIFxcY2lyYyBHIFxcY2lyYyBGKFgpIl0sWzYsMCwiRihYKSJdLFs0LDIsIkYoWCkiXSxbMCwxLCJcXGV0YV97RyhZKX0iLDFdLFsxLDIsIkcoXFx2YXJlcHNpbG9uX1kpIiwxXSxbMCwyLCIxX3tHKFkpfSIsMV0sWzMsNCwiXFx2YXJlcHNpbG9uX3tGKFgpfSIsMV0sWzUsMywiRihcXGV0YV9YKSIsMV0sWzQsNSwiMV97RihYKX0iLDFdXQ==>>|figure>
-      indicates <with|mode|<quote|math>|G<around*|(|\<varepsilon\><rsub|Y>|)>\<circ\>\<eta\><rsub|G<around*|(|Y|)>>=1<rsub|G<around*|(|Y|)>>>
-      and <with|mode|<quote|math>|\<varepsilon\><rsub|F<around*|(|X|)>>\<circ\>F<around*|(|\<eta\><rsub|X>|)>=1<rsub|F<around*|(|X|)>>>
-      respectively.>|<pageref|auto-7>>
+      <locus|<id|%A66B028-515E230>|<link|hyperlink|<id|%A66B028-515E230>|<url|https://q.uiver.app/#q=WzAsNixbMSwwLCJGKFdfWCkiXSxbMywwLCJYIl0sWzEsMiwiRihXX1kpIl0sWzAsMiwiV19ZIl0sWzAsMCwiV19YIl0sWzMsMiwiWSJdLFswLDEsImVfWCIsMV0sWzAsMiwiRihmXntcXCN9KSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDUsImVfWSIsMV0sWzEsNSwiZiIsMV0sWzQsMywiXFxleGlzdHMgISBmXntcXCN9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsNSwiZiBcXGNpcmMgZV9YIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d>>|figure>
+      defines <with|mode|<quote|math>|f<rsup|\<sharp\>>>. For each
+      <with|mode|<quote|math>|f:X\<rightarrow\>Y>, we have
+      <with|mode|<quote|math>|f\<circ\>e<rsub|X>:F<around*|(|W<rsub|X>|)>\<rightarrow\>Y>.
+      Since <with|mode|<quote|math>|<around*|(|W<rsub|Y>,e<rsub|Y>|)>> is a
+      universal arrow, there is a unique <with|mode|<quote|math>|f<rsup|\<sharp\>>:W<rsub|X>\<rightarrow\>W<rsub|Y>>
+      such that the red part commutes, which implies that the whole diagram
+      commutes.>|<pageref|auto-8>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|3>|| This
+      <locus|<id|%A66B028-4D1A490>|<link|hyperlink|<id|%A66B028-4D1A490>|<url|https://q.uiver.app/#q=WzAsNixbMSwwLCJGKFdfWCkiXSxbMywwLCJYIl0sWzEsMiwiRihXX1gpIl0sWzAsMiwiV19YIl0sWzAsMCwiV19YIl0sWzMsMiwiWCJdLFswLDEsImVfWCIsMV0sWzAsMiwiRigxX3tXX1h9KSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDUsImVfWCIsMV0sWzEsNSwiMV9YIiwxXSxbNCwzLCIxX3tXX1h9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsNSwiZV9YIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d>>|figure>
+      illustrates that composition axiom is satisfied. Composition axiom
+      states that <with|mode|<quote|math>|<around*|(|g\<circ\>f|)><rsup|\<sharp\>>=g<rsup|\<sharp\>>\<circ\>f<rsup|\<sharp\>>>.
+      First, notice that replacing <with|mode|<quote|math>|<around*|(|g\<circ\>f|)><rsup|\<sharp\>>>
+      by <with|mode|<quote|math>|g<rsup|\<sharp\>>\<circ\>f<rsup|\<sharp\>>>
+      makes this diagram commutes. Indeed, this is implied by the
+      functorality of <with|mode|<quote|math>|F>. Next, because of
+      universality, the <with|mode|<quote|math>|<around*|(|g\<circ\>f|)><rsup|\<sharp\>>>
+      that makes this diagram commutes is unique. So, we conclude that
+      <with|mode|<quote|math>|<around*|(|g\<circ\>f|)><rsup|\<sharp\>>=g<rsup|\<sharp\>>\<circ\>f<rsup|\<sharp\>>>.>|<pageref|auto-9>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|4>|| This
+      <locus|<id|%A66B028-4D19618>|<link|hyperlink|<id|%A66B028-4D19618>|<url|https://q.uiver.app/#q=WzAsNixbMSwwLCJGKFdfWCkiXSxbMywwLCJYIl0sWzEsMiwiRihXX1gpIl0sWzAsMiwiV19YIl0sWzAsMCwiV19YIl0sWzMsMiwiWCJdLFswLDEsImVfWCIsMV0sWzAsMiwiRigxX3tXX1h9KSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDUsImVfWCIsMV0sWzEsNSwiMV9YIiwxXSxbNCwzLCIxX3tXX1h9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsNSwiZV9YIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d>>|figure>
+      illustrates that identity axiom is satisfied. Identity axiom states
+      that <with|mode|<quote|math>|<around*|(|1<rsub|X>|)><rsup|\<sharp\>>=1<rsub|W<rsub|X>>>.
+      First, notice that replacing <with|mode|<quote|math>|<around*|(|1<rsub|X>|)><rsup|\<sharp\>>>
+      by <with|mode|<quote|math>|1<rsub|W<rsub|X>>> makes this diagram
+      commutes. Next, because of universality, the
+      <with|mode|<quote|math>|<around*|(|1<rsub|X>|)><rsup|\<sharp\>>> that
+      makes this diagram commutes is unique. So, we conclude that
+      <with|mode|<quote|math>|<around*|(|1<rsub|X>|)><rsup|\<sharp\>>=1<rsub|W<rsub|X>>>.>|<pageref|auto-10>>
     </associate>
     <\associate|toc>
-      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Adjunction
-      and Monad> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Universality,
+      Adjunction, and Monad> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|1fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Adjunction>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Universality
+      (TODO)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|1.1<space|2spc>Adjoint functors preserve
-      representations of presheaves and copresheaves
+      <with|par-left|<quote|1tab>|1.1<space|2spc>Hom-functor can be
+      generalized for multiple categories
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|1tab>|1.2<space|2spc>Adjoint is unique
+      <with|par-left|<quote|1tab>|1.2<space|2spc>Universal arrow is the
+      representation of generalized hom-functor
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-5>>
+      <no-break><pageref|auto-4>>
 
-      <with|par-left|<quote|1tab>|1.3<space|2spc>Unit and counit are
-      universal elements <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.3<space|2spc>Universal arrow furnish
+      natural structure <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Monad>
+      <with|par-left|<quote|1tab>|1.4<space|2spc>Universal arrows are
+      functorial <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Adjunction>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8><vspace|0.5fn>
+      <no-break><pageref|auto-11><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
