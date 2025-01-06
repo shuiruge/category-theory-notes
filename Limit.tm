@@ -479,6 +479,7 @@
 
 <\initial>
   <\collection>
+    <associate|bg-color|#c7edcc>
     <associate|page-medium|paper>
   </collection>
 </initial>
@@ -561,7 +562,7 @@
       and red arrows for the diagram functor.>|<pageref|auto-14>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|6>||This
-      <locus|<id|%1B4F4B98-1AE16AA8>|<link|hyperlink|<id|%1B4F4B98-1AE16AA8>|<url|https://q.uiver.app/#q=WzAsNCxbMSwwLCJcXGZvcmFsbCBYIl0sWzAsMSwiQSJdLFsxLDIsIkMiXSxbMiwxLCJCIl0sWzAsMSwiXFxmb3JhbGwgZiIsMV0sWzEsMiwiXFx6ZXRhIiwxXSxbMCwzLCJcXGZvcmFsbCBnIiwxXSxbMywyLCJcXGV0YSIsMV1d>>|figure>
+      <locus|<id|%48A9C248-41F7B300>|<link|hyperlink|<id|%48A9C248-41F7B300>|<url|https://q.uiver.app/#q=WzAsNCxbMSwwLCJcXGZvcmFsbCBYIl0sWzAsMSwiQSJdLFsxLDIsIkMiXSxbMiwxLCJCIl0sWzAsMSwiXFxmb3JhbGwgZiIsMV0sWzEsMiwiXFx6ZXRhIiwxXSxbMCwzLCJcXGZvcmFsbCBnIiwxXSxbMywyLCJcXGV0YSIsMV1d>>|figure>
       indicates the fibered product <with|mode|<quote|math>|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|X,A|)>\<times\><rsub|<around*|(|\<zeta\><rsub|\<ast\>>,\<eta\><rsub|\<ast\>>|)>><with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|C>><around*|(|X,B|)>>.>|<pageref|auto-17>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|7>|| Indicates the
@@ -569,10 +570,11 @@
       Principaly, there should be a morphism from
       <with|mode|<quote|math>|A\<times\><rsub|<around*|(|\<zeta\>,\<eta\>|)>>B>
       to <with|mode|<quote|math>|C> (and also from <with|mode|<quote|math>|X>
-      to <with|mode|<quote|math>|C>). But, since the figure commutes, such a
-      morphism can be represented by <with|mode|<quote|math>|\<zeta\>\<circ\>\<alpha\>>
-      or by <with|mode|<quote|math>|\<eta\>\<circ\>\<beta\>>, thus is
-      redundant and omitted.>|<pageref|auto-18>>
+      to <with|mode|<quote|math>|C>) too. But, since the figure commutes,
+      such a morphism can be represented by either
+      <with|mode|<quote|math>|\<zeta\>\<circ\>\<alpha\>> or
+      <with|mode|<quote|math>|\<eta\>\<circ\>\<beta\>>, thus is redundant and
+      negligible.>|<pageref|auto-18>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|8>|| Indicates the
       equalizer <with|mode|<quote|math>|eq<around*|(|u,v|)>>. Principaly,

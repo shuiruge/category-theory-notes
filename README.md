@@ -1,5 +1,4 @@
-# learn-cat
+# category-theory-notes
 
-Notes for category theory while I was learning it.
+Notes about category theory while I was learning it.
 
-See the file `notes/main.pdf`.
