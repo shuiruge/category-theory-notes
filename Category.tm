@@ -3,8 +3,7 @@
 <style|book>
 
 <\body>
-  <chapter|Category, Functor, and Natural Isomorphism><label|chapter:
-  Category, Functor, and Natural Isomorphism>
+  <chapter|Category and Functor><label|chapter: Category and Functor>
 
   <with|font|TeX Gyre Schola|><section|Category>
 
@@ -687,7 +686,7 @@
   In the case of group, there is only one object, so a functor, or group
   homomorphism, is always injective on objects.
 
-  <section|Natural Isomorphism>
+  <section|Equivalences>
 
   <subsection|Isomorphic objects should be viewed as one>
 
@@ -754,7 +753,7 @@
   </equation*>
 
   takes <math|f> to <math|<around*|(|G\<circ\>F|)><around*|(|f|)>>. We are to
-  show <math|\<alpha\>> is bijective between
+  show that <math|\<varphi\>> is bijective between
   <math|<math-ss|C><around*|(|A,B|)>> and
   <math|<math-ss|C><around*|(|A<rprime|'>,B<rprime|'>|)>>. To do this, we
   have to prove that <math|\<varphi\>> is one-to-one (injective) and onto
@@ -815,7 +814,7 @@
     [Natural Isomorphism] Given two functors
     <math|F:<math-ss|C>\<rightarrow\><math-ss|D>> and
     <math|G:<math-ss|<math|>C>\<rightarrow\><math-ss|D>>, a <strong|natural
-    isomorphism> between <math|F> and <math|G> is a set
+    isomorphism> between <math|F> and <math|G> is a set of isomorphisms
     <math|<around*|{|\<alpha\><rsub|X>\|\<forall\>X\<in\><math-ss|D>|}>> such
     that figure <reference|figure: natural isomorphism v1> commutes. The
     element <math|\<alpha\><rsub|X>> is called a <strong|component> of
@@ -884,59 +883,58 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1.3|5>>
-    <associate|auto-11|<tuple|1.3.1|5>>
-    <associate|auto-12|<tuple|1.3.2|5>>
-    <associate|auto-13|<tuple|1.1|5>>
-    <associate|auto-14|<tuple|1.2|6>>
-    <associate|auto-15|<tuple|1.3.3|6>>
-    <associate|auto-16|<tuple|1.3.4|6>>
-    <associate|auto-17|<tuple|1.3.5|7>>
-    <associate|auto-18|<tuple|1.3.6|7>>
-    <associate|auto-19|<tuple|1.3.7|7>>
-    <associate|auto-2|<tuple|1.1|1>>
-    <associate|auto-20|<tuple|1.4|8>>
-    <associate|auto-21|<tuple|1.4.1|8>>
-    <associate|auto-22|<tuple|1.4.2|8>>
-    <associate|auto-23|<tuple|1.3|9>>
-    <associate|auto-24|<tuple|1.4|9>>
-    <associate|auto-25|<tuple|1.5|9>>
-    <associate|auto-26|<tuple|1.5|10>>
-    <associate|auto-27|<tuple|1.5.1|10>>
-    <associate|auto-28|<tuple|1.5.2|10>>
-    <associate|auto-3|<tuple|1.1.1|1>>
-    <associate|auto-4|<tuple|1.1.2|2>>
-    <associate|auto-5|<tuple|1.1.3|2>>
-    <associate|auto-6|<tuple|1.1.4|3>>
-    <associate|auto-7|<tuple|1.2|3>>
-    <associate|auto-8|<tuple|1.2.1|3>>
-    <associate|auto-9|<tuple|1.2.2|4>>
-    <associate|chapter: Category, Functor, and Natural
-    Isomorphism|<tuple|1|1>>
-    <associate|definition: Coproduct of Two Objects|<tuple|1.18|4>>
-    <associate|definition: Group as Category|<tuple|1.6|2>>
-    <associate|definition: Poset|<tuple|1.10|3>>
-    <associate|definition: Poset as Category|<tuple|1.11|3>>
-    <associate|definition: Preorder|<tuple|1.9|2>>
-    <associate|definition: Product of Two Objects|<tuple|1.15|4>>
-    <associate|figure: Functor|<tuple|1.1|5>>
-    <associate|figure: Functor Composition|<tuple|1.2|6>>
-    <associate|figure: natural isomorphism|<tuple|1.3|9>>
-    <associate|figure: natural isomorphism dual|<tuple|1.4|9>>
-    <associate|figure: natural isomorphism v1|<tuple|1.5|9>>
-    <associate|footnote-1.1|<tuple|1.1|1>>
-    <associate|footnote-1.2|<tuple|1.2|3>>
-    <associate|footnr-1.1|<tuple|1.1|1>>
-    <associate|footnr-1.2|<tuple|1.2|3>>
-    <associate|lemma: Fully Faithful Functor|<tuple|1.22|7>>
+    <associate|auto-1|<tuple|1|7>>
+    <associate|auto-10|<tuple|1.3|11>>
+    <associate|auto-11|<tuple|1.3.1|11>>
+    <associate|auto-12|<tuple|1.3.2|11>>
+    <associate|auto-13|<tuple|1.1|11>>
+    <associate|auto-14|<tuple|1.2|12>>
+    <associate|auto-15|<tuple|1.3.3|12>>
+    <associate|auto-16|<tuple|1.3.4|12>>
+    <associate|auto-17|<tuple|1.3.5|13>>
+    <associate|auto-18|<tuple|1.3.6|13>>
+    <associate|auto-19|<tuple|1.3.7|13>>
+    <associate|auto-2|<tuple|1.1|7>>
+    <associate|auto-20|<tuple|1.4|14>>
+    <associate|auto-21|<tuple|1.4.1|14>>
+    <associate|auto-22|<tuple|1.4.2|14>>
+    <associate|auto-23|<tuple|1.3|14>>
+    <associate|auto-24|<tuple|1.4|15>>
+    <associate|auto-25|<tuple|1.5|15>>
+    <associate|auto-26|<tuple|1.5|15>>
+    <associate|auto-27|<tuple|1.5.1|15>>
+    <associate|auto-28|<tuple|1.5.2|16>>
+    <associate|auto-3|<tuple|1.1.1|7>>
+    <associate|auto-4|<tuple|1.1.2|8>>
+    <associate|auto-5|<tuple|1.1.3|8>>
+    <associate|auto-6|<tuple|1.1.4|9>>
+    <associate|auto-7|<tuple|1.2|9>>
+    <associate|auto-8|<tuple|1.2.1|9>>
+    <associate|auto-9|<tuple|1.2.2|10>>
+    <associate|chapter: Category and Functor|<tuple|1|7>>
+    <associate|definition: Coproduct of Two Objects|<tuple|1.18|10>>
+    <associate|definition: Group as Category|<tuple|1.6|8>>
+    <associate|definition: Poset|<tuple|1.10|9>>
+    <associate|definition: Poset as Category|<tuple|1.11|9>>
+    <associate|definition: Preorder|<tuple|1.9|8>>
+    <associate|definition: Product of Two Objects|<tuple|1.15|10>>
+    <associate|figure: Functor|<tuple|1.1|11>>
+    <associate|figure: Functor Composition|<tuple|1.2|12>>
+    <associate|figure: natural isomorphism|<tuple|1.3|14>>
+    <associate|figure: natural isomorphism dual|<tuple|1.4|15>>
+    <associate|figure: natural isomorphism v1|<tuple|1.5|15>>
+    <associate|footnote-1.1|<tuple|1.1|7>>
+    <associate|footnote-1.2|<tuple|1.2|9>>
+    <associate|footnr-1.1|<tuple|1.1|7>>
+    <associate|footnr-1.2|<tuple|1.2|9>>
+    <associate|lemma: Fully Faithful Functor|<tuple|1.22|13>>
     <associate|section: Arrows generalize concepts and theorems from one area
-    to every area in mathematics|<tuple|1.2.1|3>>
+    to every area in mathematics|<tuple|1.2.1|9>>
     <associate|section: Injective functor may not be
-    faithful|<tuple|1.3.5|7>>
-    <associate|section: Supremum and infimum are dual|<tuple|1.1.4|3>>
-    <associate|section: Surjective functor may not be full|<tuple|1.3.4|6>>
-    <associate|theorem: Functorial Image as Category|<tuple|1.23|8>>
+    faithful|<tuple|1.3.5|13>>
+    <associate|section: Supremum and infimum are dual|<tuple|1.1.4|9>>
+    <associate|section: Surjective functor may not be full|<tuple|1.3.4|12>>
+    <associate|theorem: Functorial Image as Category|<tuple|1.23|13>>
   </collection>
 </references>
 
@@ -952,26 +950,26 @@
       diagram commutes.>|<pageref|auto-14>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|1.3>||In this
-      <locus|<id|%45F1BBA8-4A4BB6A0>|<link|hyperlink|<id|%45F1BBA8-4A4BB6A0>|<url|https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzAsMiwiQiJdLFszLDAsIihHIFxcY2lyYyBGKShBKSJdLFszLDIsIihHIFxcY2lyYyBGKShCKSJdLFswLDEsImYiLDFdLFswLDIsIlxcYWxwaGFfQSJdLFsxLDMsIlxcYWxwaGFfe0J9Il0sWzIsMywiKEcgXFxjaXJjIEYpKGYpIiwxXV0=>>|figure>,
+      <locus|<id|%351BA3E8-384CD448>|<link|hyperlink|<id|%351BA3E8-384CD448>|<url|https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzAsMiwiQiJdLFszLDAsIihHIFxcY2lyYyBGKShBKSJdLFszLDIsIihHIFxcY2lyYyBGKShCKSJdLFswLDEsImYiLDFdLFswLDIsIlxcYWxwaGFfQSJdLFsxLDMsIlxcYWxwaGFfe0J9Il0sWzIsMywiKEcgXFxjaXJjIEYpKGYpIiwxXV0=>>|figure>,
       the <with|mode|<quote|math>|\<alpha\><rsub|A>> and
       <with|mode|<quote|math>|\<alpha\><rsub|B>> are
       isomorphisms.>|<pageref|auto-23>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|1.4>||In this
-      <locus|<id|%45F1BBA8-4A4BCF00>|<link|hyperlink|<id|%45F1BBA8-4A4BCF00>|<url|https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzAsMiwiQiJdLFszLDAsIihGIFxcY2lyYyBHKShBKSJdLFszLDIsIihGIFxcY2lyYyBHKShCKSJdLFswLDEsImYiLDFdLFswLDIsIlxcYmV0YV9BIl0sWzEsMywiXFxiZXRhX3tCfSJdLFsyLDMsIihGIFxcY2lyYyBHKShmKSIsMV1d>>|figure>,
+      <locus|<id|%351BA3E8-384CEBF8>|<link|hyperlink|<id|%351BA3E8-384CEBF8>|<url|https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzAsMiwiQiJdLFszLDAsIihGIFxcY2lyYyBHKShBKSJdLFszLDIsIihGIFxcY2lyYyBHKShCKSJdLFswLDEsImYiLDFdLFswLDIsIlxcYmV0YV9BIl0sWzEsMywiXFxiZXRhX3tCfSJdLFsyLDMsIihGIFxcY2lyYyBHKShmKSIsMV1d>>|figure>,
       the <with|mode|<quote|math>|\<beta\><rsub|A>> and
       <with|mode|<quote|math>|\<beta\><rsub|B>> are
       isomorphisms.>|<pageref|auto-24>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|1.5>||In this
-      <locus|<id|%45F1BBA8-4A4C0F88>|<link|hyperlink|<id|%45F1BBA8-4A4C0F88>|<url|https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzAsMiwiQiJdLFszLDAsIihGIFxcY2lyYyBHKShBKSJdLFszLDIsIihGIFxcY2lyYyBHKShCKSJdLFswLDEsImYiLDFdLFswLDIsIlxcYmV0YV9BIl0sWzEsMywiXFxiZXRhX3tCfSJdLFsyLDMsIihGIFxcY2lyYyBHKShmKSIsMV1d>>|figure>,
+      <locus|<id|%351BA3E8-384D3440>|<link|hyperlink|<id|%351BA3E8-384D3440>|<url|https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzAsMiwiQiJdLFszLDAsIihGIFxcY2lyYyBHKShBKSJdLFszLDIsIihGIFxcY2lyYyBHKShCKSJdLFswLDEsImYiLDFdLFswLDIsIlxcYmV0YV9BIl0sWzEsMywiXFxiZXRhX3tCfSJdLFsyLDMsIihGIFxcY2lyYyBHKShmKSIsMV1d>>|figure>,
       the <with|mode|<quote|math>|\<alpha\><rsub|A>> and
       <with|mode|<quote|math>|\<alpha\><rsub|B>> are
       isomorphisms.>|<pageref|auto-25>>
     </associate>
     <\associate|toc>
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Category,
-      Functor, and Natural Isomorphism> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Category
+      and Functor> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
       1.1<space|2spc>Category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
@@ -1036,7 +1034,7 @@
       be a category <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>>
 
-      1.4<space|2spc>Natural Isomorphism <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.4<space|2spc>Equivalences <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20>
 
       <with|par-left|<quote|1tab>|1.4.1<space|2spc>Isomorphic objects should
